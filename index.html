@@ -18,9 +18,11 @@ DARK MODE Landing Page
 <!DOCTYPE html>
 <html> 
     <head>
-        <!-- Meta e Titolo -->
-        <link rel="shortcut icon" href="{Favicon}" />
-        <title>{Title}</title>
+        
+        <!-- Meta e Titolo + Favicon -->
+        <link rel="icon" href="gen-favicon-rd.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="gen-favicon-rd.ico" type="image/x-icon" />
+        <title>GENiALABILE</title>
         
         <!-- Viewport Responsive -->
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
@@ -29,6 +31,8 @@ DARK MODE Landing Page
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
         
+
+
         <!-- Stili CSS -->
         <style>
             /* =============================
@@ -84,6 +88,15 @@ DARK MODE Landing Page
                 padding: var(--spacing);
             }
 
+            /* Margini laterali per Desktop */
+            @media screen and (min-width: 1024px) {
+            main {
+            max-width: 1200px; /* Limita la larghezza del contenuto */
+            padding: 5rem;     /* Mantiene lo spazio interno */
+        m   argin: 0 auto;    /* Centra il contenuto */
+    }
+}
+
             /* Riquadro Informativo */
             .info {
                 box-shadow: var(--box-shadow);
@@ -116,13 +129,22 @@ DARK MODE Landing Page
                Footer
             ============================= */
             footer {
-                width: 100%;
-                padding: var(--spacing);
-                text-align: left;
-                background-color: var(--info-background);
-                color: var(--info-text);
-                margin-top: 1rem;
+            width: 100%;
+            padding: var(--spacing);
+            text-align: left;
+            background-color: var(--info-background);
+            color: var(--info-text);
+            margin-top: 1rem;
             }
+
+            /* Allinea il footer al contenuto come il main */
+            @media screen and (min-width: 1024px) {
+            footer {
+            max-width: 1200px; /* Limita la larghezza */
+            padding: 5rem;     /* Mantiene lo spazio interno */
+            margin: 0 auto;    /* Centra il footer */
+    }
+}
        /* =============================
                links
             ============================= */
@@ -203,5 +225,6 @@ DARK MODE Landing Page
 </html>
 
 <!---//
-//ENDLINE & BYE 
+
+//ENDLINE & BYE BYE
 /--->
