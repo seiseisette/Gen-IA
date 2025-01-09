@@ -21,7 +21,7 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
         <!-- TITLE + More-->
 
 
-        <title>GENiALABILE</title>
+        <title>GENiALABILE - Unlock Your Creativity</title>
 
 
 
@@ -58,8 +58,10 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
         
-
         <!-- Stili CSS -->
+
+
+
         <style>
             /* =============================
                Variabili CSS§
@@ -169,10 +171,56 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
             max-width: 1200px; 
             padding: 5rem;   
             margin: 0 auto;  
-    }
-}
+             }
+        }
             
+
+
+
     
+            /* Contenitore della Card */
+            .card {
+                display: flex; /* Disposizione flessibile per affiancare immagine e testo */
+                align-items: center; /* Allinea verticalmente immagine e testo */
+                background-color: #000000; /* Sfondo nero */
+                color: #ffffff; /* Testo bianco */
+                padding: 0rem; /* Spaziatura interna */
+                border-radius: 10px; /* Angoli arrotondati */
+                box-shadow: 0px 0px 0px #000000; /* Ombreggiatura */
+                width: fit-content; /* Adatta la dimensione al contenuto */
+                max-width: 100%; /* Evita di uscire dalla pagina */
+            }
+
+            /* Contenitore per l'immagine */
+            .card-image-container {
+                flex-shrink: 0; /* Impedisce che l'immagine venga ridotta */
+                margin-right: 1rem; /* Spazio tra immagine e testo */
+            }
+
+            /* Stile dell'immagine */
+            .card-image {
+                width: 70px; /* Larghezza immagine */
+                height: 70px; /* Altezza immagine */
+                border-radius: 50%; /* Rende l'immagine circolare */
+                object-fit: cover; /* Adatta l'immagine senza deformarla */
+            }
+
+            /* Stile del testo */
+            .card-text {
+                font-family: 'Inconsolata', monospace; /* Font minimalista */
+                font-size: 1rem; /* Dimensione del testo */
+                line-height: 1.5; /* Interlinea per leggibilità */
+            }
+
+            .card-text h5 {
+                margin: 0 0 0.5rem 0; /* Margine inferiore al titolo */
+                font-size: 1.2rem; /* Dimensione del titolo */
+                font-weight: bold; /* Grassetto */
+            }
+
+            .card-text p {
+                margin: 0; /* Rimuove margini aggiuntivi */
+            }
             /* Stile BANNER BLACK */
             #cookie-banner {
                 position: fixed;
@@ -253,19 +301,12 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
             
             text-decoration: underline; /
 
-
-
-        
-       
-   
-
-
+           
 
 
             </style>
         
         
-    
     </head>
 
     <body>
