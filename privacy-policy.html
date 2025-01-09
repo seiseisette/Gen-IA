@@ -14,8 +14,13 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
     <head>
         
         <!-- Meta-->
-        <link rel="icon" href="gen.fav-new.png" type="image/x-icon" />
-        <link rel="shortcut icon" href="gen.fav-new.png" type="image/x-icon" />
+        <link rel="icon" href="gen-favicon-rd.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="gen-favicon-rd.ico" type="image/x-icon" />
+
+
+        <!-- TITLE + More-->
+
+
         <title>GENiALABILE-privacy-policy</title>
 
           <!-- Google Analytics -->
@@ -333,36 +338,85 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
             <b>11. Contact</b>
             <br><br>
             If you have any questions or concerns, contact us at: 
-            <a href="mailto:info@genialabile.com?subject=Privacy%20Policy%20for%20" style="font-weight: normal;">info@genialabile.com</a>
+            <a href="mailto:info@genialabile.com?subject=Privacy%20Policy%20For" style="font-weight: normal;">info@genialabile.com</a>
         </p>
-    </main>
+   
 
 
 
 
-        <!-- Footer -->
-        <footer> <b></b>
-            ©2025 <a href=https://genialabile.com. style="font-weight: normal">GENiALABILE</a>.
-            All Rights Reserved.
-            A Bio-GPT Project—Designed by <a href= "https://x.com/seiseisette/"  style="font-weight: normal">seiseisette</a>.
-            Powered by <a href= "https://openai.com" style="font-weight: normal">OpenAI</a>.<br>
-            <!--
-                <i>If Gen—Links doesn’t work, remember it is an invite-only project. You can request access to the preview version.</i>
-                <a href= "mailto:info@genialabile.com?subject=Request%20for%20Beta%20Access&body=I%20would%20like%20to%20request%20beta%20access%20to%20your%20application." >[>]</a>
-            -->
-                    <!-- Musts Links -->
-                <p style="font-size: 0.6rem;"> <!--slap-->
-                    <br>
-                    <a href="https://genialabile.com/terms-and-conditions.html" style="font-weight: normal">TERMS</a> | 
-                    <a href="https://genialabile.com/privacy-policy.html" style="font-weight: normal">PRIVACY</a> | 
-                    <a href="/cookie-policy.html" style="font-weight: normal">COOKIES</a> | 
-                    <a href="/accessibility.html" style="font-weight: normal">ACCESS</a> | 
-                    <a href="/contact.html" style="font-weight: normal">CONTACT</a>
-                    <!-- | <a href="/faq.html" style="font-weight: normal">FAQ</a>  -->
-                </p>
-            <br><br><br><br><br><br><br>
-        </footer>
-    </body>
+        <!---/* DEFBOT */ ----> 
+
+
+
+<!-- Sezione BANNER COOKIES -->
+ 
+<div id="cookie-banner" class="cookie-popup">
+    <p>
+    This website uses cookies to enhance your experience and analyze performance. 
+    <br>
+    By continuing, you agree to our 
+    <a href="/cookie-policy.html" style="font-weight: normal;">Cookie Policy</a>. 
+    <br><br>
+    <button id="accept-cookies" class="cookie-btn"><b>ACCEPT</b></button>
+
+    </p>
+    
+    </div>
+
+
+</main>
+
+
+
+
+
+
+<!-- Footer -->
+<footer> <b></b>
+©2025 <a href=https://genialabile.com style="font-weight: normal">GENiALABILE</a>.
+All Rights Reserved.
+A Bio-GPT Project—Designed by <a href= "https://github.com/seiseisette"  style="font-weight: normal">seiseisette</a>.
+Powered by <a href= "https://openai.com" style="font-weight: normal">OpenAI</a>.<br>
+
+<!-- Musts Links -->
+    <p class="imp-p" style="font-size: 0.6rem;"> <!--slap-->
+        <br>
+        <a href="https://genialabile.com/terms-and-conditions.html" style="font-weight: normal">TERMS</a> | 
+        <a href="https://genialabile.com/privacy-policy.html" style="font-weight: normal">PRIVACY</a> | 
+        <a href="https://genialabile.com/cookie-policy.html" style="font-weight: normal">COOKIES</a> | 
+        <a href="https://genialabile.com/accessibility.html" style="font-weight: normal">ACCESS</a> | 
+        <a href="https://genialabile.com/contacts.html" style="font-weight: normal">CONTACT</a>
+        <!-- | <a href="/faq.html" style="font-weight: normal">FAQ</a>  -->
+    </p>
+<br><br><br><br><br><br><br>
+</footer>
+
+
+<!---JAVA BANNER COOKIES--->
+<script>
+document.getElementById('accept-cookies').addEventListener('click', function() {
+    // Nasconde il banner
+    document.getElementById('cookie-banner').style.display = 'none';
+    // Salva il consenso nei cookies del browser
+    document.cookie = "cookiesAccepted=true; path=/; max-age=" + 60 * 60 * 24 * 365;
+});
+
+
+    // Controlla se i cookies sono già stati accettati
+window.onload = function() {
+    if (document.cookie.includes("cookiesAccepted=true")) {
+        document.getElementById('cookie-banner').style.display = 'none';
+    }
+
+    
+};
+</script>
+
+
+
+
+</body>
 </html>
 <!---//
 //ENDLINE & BYE BYE
