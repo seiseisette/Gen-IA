@@ -26,30 +26,24 @@ cookie-banner.html
             This website uses cookies to enhance your experience and analyze performance.
             <a href="/cookie-policy.html" style="font-weight: normal;">Cookie Policy</a>.
         </p>
-        <button id="decline-cookies" class="cookie-btn" onclick="allConsentDenied()">DECLINE</button>
-        <button id="accept-cookies" class="cookie-btn" onclick="allConsentGranted()">ACCEPT</button>
+        <button id="decline-cookies" class="cookie-btn" onclick="allConsentDenied()" aria-label="Decline cookies">DECLINE</button>
+        <button id="accept-cookies" class="cookie-btn" onclick="allConsentGranted()" aria-label="Accept cookies">ACCEPT</button>
     </div>
 </div>
 
 <script>
+    const DEBUG = true;
+
     function hideBanner() {
         const banner = document.getElementById('cookie-banner');
         if (banner) {
             banner.style.display = 'none';
             try {
                 document.cookie = "cookiesAccepted=true; path=/; max-age=" + 60 * 60 * 24 * 365; // 1 anno
-                console.info("Banner nascosto e consenso salvato.");
+                if (DEBUG) console.info("Banner nascosto e consenso salvato.");
             } catch (error) {
                 console.error("Impossibile impostare il cookie:", error);
             }
-
-        }
-        if (!window.dataLayer) {
-            console.warn("Google Tag Manager non è disponibile. Modalità privata attiva o script bloccati.");
-        }
-        
-        if (!document.cookie) {
-            console.warn("I cookie non sono supportati in questa modalità.");
         }
     }
 
@@ -57,47 +51,58 @@ cookie-banner.html
         return document.cookie.includes("cookiesAccepted=true");
     }
 
+    function addEventListenerToButton(buttonId, callback, actionName) {
+        const button = document.getElementById(buttonId);
+        if (button) {
+            button.addEventListener('click', callback);
+            if (DEBUG) console.info(`Event listener aggiunto al pulsante ${actionName}.`);
+        } else {
+            if (DEBUG) console.warn(`Pulsante ${actionName} non trovato.`);
+        }
+    }
+
     function initializeCookieBanner() {
         const banner = document.getElementById('cookie-banner');
-        const acceptButton = document.getElementById('accept-cookies');
-        const declineButton = document.getElementById('decline-cookies');
+
+        if (!navigator.cookieEnabled) {
+            console.warn("I cookie sono disabilitati nel browser.");
+            if (banner) {
+                banner.innerHTML = "<p>I cookie sono disabilitati nel tuo browser. Alcune funzionalità potrebbero non funzionare.</p>";
+            }
+            return;
+        }
 
         if (checkCookies()) {
             if (banner) {
                 banner.style.display = 'none';
-                console.info("Cookie già accettati. Banner nascosto.");
+                if (DEBUG) console.info("Cookie già accettati. Banner nascosto.");
             }
         } else {
-            if (acceptButton) {
-                acceptButton.addEventListener('click', function () {
-                    hideBanner();
-                    if (typeof allConsentGranted === 'function') {
-                        allConsentGranted();
-                    } else {
-                        console.warn("Funzione allConsentGranted non trovata.");
-                    }
-                });
-                console.info("Event listener aggiunto al pulsante di accettazione.");
-            } else {
-                console.warn("Pulsante di accettazione non trovato.");
-            }
+            addEventListenerToButton('accept-cookies', () => {
+                hideBanner();
+                if (typeof allConsentGranted === 'function') {
+                    allConsentGranted();
+                } else {
+                    if (DEBUG) console.warn("Funzione allConsentGranted non trovata.");
+                }
+            }, "accettazione");
 
-            if (declineButton) {
-                declineButton.addEventListener('click', function () {
-                    hideBanner();
-                    if (typeof allConsentDenied === 'function') {
-                        allConsentDenied();
-                    } else {
-                        console.warn("Funzione allConsentDenied non trovata.");
-                    }
-                });
-                console.info("Event listener aggiunto al pulsante di declino.");
-            } else {
-                console.warn("Pulsante di declino non trovato.");
+            addEventListenerToButton('decline-cookies', () => {
+                hideBanner();
+                if (typeof allConsentDenied === 'function') {
+                    allConsentDenied();
+                } else {
+                    if (DEBUG) console.warn("Funzione allConsentDenied non trovata.");
+                }
+            }, "declino");
+
+            if (!checkCookies() && banner) {
+                banner.focus();
+                if (DEBUG) console.info("Focus impostato sul banner dei cookie.");
             }
         }
     }
 
     document.addEventListener('DOMContentLoaded', initializeCookieBanner);
 </script>
- <!-- Sezione BANNER COOKIES -->
+<!-- Sezione BANNER COOKIES -->
