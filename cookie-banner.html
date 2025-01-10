@@ -67,7 +67,9 @@ cookie-banner.html
         if (!navigator.cookieEnabled) {
             console.warn("I cookie sono disabilitati nel browser.");
             if (banner) {
-                banner.innerHTML = "<p>I cookie sono disabilitati nel tuo browser. Alcune funzionalità potrebbero non funzionare.</p>";
+                banner.innerHTML = `
+                    <p>I cookie sono disabilitati nel tuo browser. Alcune funzionalità potrebbero non funzionare.</p>
+                `;
             }
             return;
         }
@@ -97,7 +99,7 @@ cookie-banner.html
             }, "declino");
 
             if (!checkCookies() && banner) {
-                banner.focus();
+                setTimeout(() => banner.focus(), 100);
                 if (DEBUG) console.info("Focus impostato sul banner dei cookie.");
             }
         }
