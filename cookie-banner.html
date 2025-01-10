@@ -27,49 +27,61 @@ cookie-banner.html
             <a href="/cookie-policy.html" style="font-weight: normal;">Cookie Policy</a>.
         </p>
         <button id="decline-cookies" class="cookie-btn" onclick="allConsentDenied()" aria-label="Decline cookies">DECLINE</button>
-        <button id="accept-cookies" class="cookie-bty" onclick="allConsentGranted()" aria-label="Accept cookies">ACCEPT</button>
+        <button id="accept-cookies" class="cookie-btn" onclick="allConsentGranted()" aria-label="Accept cookies">ACCEPT</button>
     </div>
 </div>
 
 <script>
     const DEBUG = true;
 
+    // Definizione globale di allConsentGranted e allConsentDenied
+    window.allConsentGranted = function () {
+        console.info("Consenso concesso.");
+        gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'analytics_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted'
+        });
+        hideBanner();
+    };
+
+    window.allConsentDenied = function () {
+        console.info("Consenso negato.");
+        gtag('consent', 'update', {
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied'
+        });
+        hideBanner();
+    };
+
+    // Nascondi banner
     function hideBanner() {
         const banner = document.getElementById('cookie-banner');
         if (banner) {
             banner.style.display = 'none';
-            try {
-                document.cookie = "cookiesAccepted=true; path=/; max-age=" + 60 * 60 * 24 * 365; // 1 anno
-                if (DEBUG) console.info("Banner nascosto e consenso salvato.");
-            } catch (error) {
-                console.error("Impossibile impostare il cookie:", error);
-            }
+            document.cookie = "cookiesAccepted=true; path=/; max-age=" + 60 * 60 * 24 * 365; // 1 anno
+            if (DEBUG) console.info("Banner nascosto e cookie impostati.");
+        } else {
+            console.warn("Impossibile trovare il banner dei cookie.");
         }
     }
 
+    // Controllo dei cookie
     function checkCookies() {
         return document.cookie.includes("cookiesAccepted=true");
     }
 
-    function addEventListenerToButton(buttonId, callback, actionName) {
-        const button = document.getElementById(buttonId);
-        if (button) {
-            button.addEventListener('click', callback);
-            if (DEBUG) console.info(`Event listener aggiunto al pulsante ${actionName}.`);
-        } else {
-            if (DEBUG) console.warn(`Pulsante ${actionName} non trovato.`);
-        }
-    }
-
-    function initializeCookieBanner() {
+    // Inizializza il banner
+    document.addEventListener('DOMContentLoaded', function () {
         const banner = document.getElementById('cookie-banner');
 
         if (!navigator.cookieEnabled) {
             console.warn("I cookie sono disabilitati nel browser.");
             if (banner) {
-                banner.innerHTML = `
-                    <p>I cookie sono disabilitati nel tuo browser. Alcune funzionalità potrebbero non funzionare.</p>
-                `;
+                banner.innerHTML = "<p>I cookie sono disabilitati. Alcune funzionalità potrebbero non funzionare.</p>";
             }
             return;
         }
@@ -80,31 +92,9 @@ cookie-banner.html
                 if (DEBUG) console.info("Cookie già accettati. Banner nascosto.");
             }
         } else {
-            addEventListenerToButton('accept-cookies', () => {
-                hideBanner();
-                if (typeof allConsentGranted === 'function') {
-                    allConsentGranted();
-                } else {
-                    if (DEBUG) console.warn("Funzione allConsentGranted non trovata.");
-                }
-            }, "accettazione");
-
-            addEventListenerToButton('decline-cookies', () => {
-                hideBanner();
-                if (typeof allConsentDenied === 'function') {
-                    allConsentDenied();
-                } else {
-                    if (DEBUG) console.warn("Funzione allConsentDenied non trovata.");
-                }
-            }, "declino");
-
-            if (!checkCookies() && banner) {
-                setTimeout(() => banner.focus(), 100);
-                if (DEBUG) console.info("Focus impostato sul banner dei cookie.");
-            }
+            if (DEBUG) console.info("Mostra il banner dei cookie.");
+            if (banner) banner.style.display = 'block';
         }
-    }
-
-    document.addEventListener('DOMContentLoaded', initializeCookieBanner);
+    });
 </script>
 <!-- Sezione BANNER COOKIES -->
