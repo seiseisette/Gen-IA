@@ -336,5 +336,39 @@ header.html
             });
             console.info("Consenso aggiornato: negato per tutti i parametri.");
         }
+
+        // Funzione globale per accettare il consenso
+        window.allConsentGranted = function() {
+            console.info("Funzione allConsentGranted eseguita.");
+            gtag('consent', 'update', {
+                'ad_storage': 'granted',
+                'analytics_storage': 'granted',
+                'ad_user_data': 'granted',
+                'ad_personalization': 'granted'
+            });
+            hideBanner();
+        };
+
+        // Funzione globale per rifiutare il consenso
+        window.allConsentDenied = function() {
+            console.info("Funzione allConsentDenied eseguita.");
+            gtag('consent', 'update', {
+                'ad_storage': 'denied',
+                'analytics_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied'
+            });
+            hideBanner();
+        };
+
+        // Funzione per nascondere il banner
+        window.hideBanner = function() {
+            const banner = document.getElementById('cookie-banner');
+            if (banner) {
+                banner.style.display = 'none';
+                document.cookie = "cookiesAccepted=true; path=/; max-age=" + 60 * 60 * 24 * 365;
+            }
+            console.info("Banner nascosto.");
+        };
     </script>
     <!-- Fine Google Tag Manager -->

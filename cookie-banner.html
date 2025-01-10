@@ -18,13 +18,17 @@ cookie-banner.html
     <p id="cookie-banner-message">
         This website uses cookies to enhance your experience and analyze performance.
         <br>
-        [<a href="/cookie-policy.html"  style="font-weight: normal;">Cookie Policy</a>]
+        [<a href="/cookie-policy.html" style="font-weight: normal;">Cookie Policy</a>]
     </p>
 
-    <div>
-        <button id="decline-cookies" class="cookie-btn" onclick= "allConsentDenied(); hideBanner();" aria-label="Decline cookies">DECLINE</button> or
-        <button id="accept-cookies" class="cookie-bty" onclick= "allConsentGranted(); hideBanner();" aria-label="Accept cookies">ACCEPT</button>
-    </div><br>
+    <div id="cookie-banner-content" class="cookie-popup">
+        <p>
+            This website uses cookies to enhance your experience and analyze performance.
+            <a href="/cookie-policy.html" style="font-weight: normal;">Cookie Policy</a>.
+        </p>
+        <button id="decline-cookies" class="cookie-btn" onclick="allConsentDenied()">DECLINE</button>
+        <button id="accept-cookies" class="cookie-btn" onclick="allConsentGranted()">ACCEPT</button>
+    </div>
 </div>
 
 <script>
