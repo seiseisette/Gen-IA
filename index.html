@@ -5,343 +5,27 @@ A Bio-GPT Project—Designed by seiseisette.
  2025 Copyright @seiseisette | x.com/seiseisette
 ---
 Licensed under the Apache License, Version 2.0.
-You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0  
+You may obtain a copy of the License at https://www.apache.org/licenses/LICENSE-2.0  
 ---
-hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page  
+genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page  
 --->
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Meta -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-        <meta name="description" content="GENiALABILE - A Bio-GPT Project designed to inspire multidimensional solutions and unlock creativity.">
-
-        <!-- Titolo -->
-        <title>GENiALABILE - Welcome</title>
-
-        <!-- Icone e Font -->
-        <link rel="icon" href="gen-favicon-rd.ico" type="image/x-icon">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-        <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
-
-        <!-- Stili CSS -->
-        <style>
-            /* =============================
-               Variabili CSS§
-            ============================= */
-            :root {
-                --background-color: #000000;
-                --info-background: #000000;
-                --info-text: #f4f4f4;
-                --borders: #f4f4f4;
-                --posts: #f4f4f4;
-                --spacing: 3rem;
-                --accent: #f4f4f4;
-                --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            }
-
-            /* =============================
-               Reset Generale
-            ============================= */
-            * {
-                box-sizing: border-box;
-            }
-
-            body {
-                margin: 0;
-                background-color: var(--background-color);
-                font-family: 'Inconsolata', sans-serif;
-                font-size: 16px;
-            }
-
-            /* =============================
-               Layout e Contenitori
-            ============================= */
-            main {
-                width: 100%;
-                max-width: 100%;
-                color: #f4f4f4;
-                margin: 0 auto;
-                padding: var(--spacing);
-            }
-
-            /* Margini laterali per Desktop */
-            @media screen and (min-width: 1024px) {
-            main {
-                max-width: 1200px; /* Limita la larghezza del contenuto */
-                padding: 5rem;     /* Mantiene lo spazio interno */
-                margin: 0 auto;    /* Centra il contenuto */
-                }
-            }
-
-            /* Riquadro Informativo */
-            .info {
-                box-shadow: var(--box-shadow);
-                background: var(--info-background);
-                color: var(--info-text);
-                border-radius: 0px; /* Bordi squadrati */
-                padding: var(--spacing);
-                width: 100%; /* Pagina intera */
-            }
-
-            /* Sezione GENiALABILE */
-            section {
-                margin-top: 2rem;
-            }
-
-            h1, h2, h3 {
-                color: var(--accent);
-                margin-bottom: 0.5rem;
-            }
-
-            ul {
-                margin-left: 1rem;
-            }
-
-            p {
-                margin-bottom: 1rem;
-            }
-
-            /* =============================
-               Footer
-            ============================= */
-            footer {
-                width: 100%;
-                padding: var(--spacing);
-                text-align: left;
-                background-color: var(--info-background);
-                color: var(--info-text);
-                margin-top: 1rem;
-            }
-
-            @media screen and (min-width: 1024px) {
-                footer {
-                max-width: 1200px; 
-                padding: 5rem;   
-                margin: 0 auto;  
-                }
-            }
-            
-            /* Contenitore della Card */
-            .card {
-                display: flex; /* Disposizione flessibile per affiancare immagine e testo */
-                align-items: center; /* Allinea verticalmente immagine e testo */
-                background-color: #000000; /* Sfondo nero */
-                color: #ffffff; /* Testo bianco */
-                padding: 0rem; /* Spaziatura interna */
-                border-radius: 10px; /* Angoli arrotondati */
-                box-shadow: 0px 0px 0px #000000; /* Ombreggiatura */
-                width: fit-content; /* Adatta la dimensione al contenuto */
-                max-width: 100%; /* Evita di uscire dalla pagina */
-            }
-
-            /* Contenitore per l'immagine */
-            .card-image-container {
-                flex-shrink: 0; /* Impedisce che l'immagine venga ridotta */
-                margin-right: 1rem; /* Spazio tra immagine e testo */
-            }
-
-            /* Stile dell'immagine */
-            .card-image {
-                width: 70px; /* Larghezza immagine */
-                height: 70px; /* Altezza immagine */
-                border-radius: 50%; /* Rende l'immagine circolare */
-                object-fit: cover; /* Adatta l'immagine senza deformarla */
-            }
-
-            /* Stile del testo */
-            .card-text {
-                font-family: 'Inconsolata', monospace; /* Font minimalista */
-                font-size: 1rem; /* Dimensione del testo */
-                line-height: 1.5; /* Interlinea per leggibilità */
-            }
-
-            .card-text h5 {
-                margin: 0 0 0.5rem 0; /* Margine inferiore al titolo */
-                font-size: 1.2rem; /* Dimensione del titolo */
-                font-weight: bold; /* Grassetto */
-            }
-
-            .card-text p {
-                margin: 0; /* Rimuove margini aggiuntivi */
-            }
-            /* Stile BANNER BLACK */
-            #cookie-banner {
-                display: flex;
-                flex-direction: column; /* Posiziona testo e pulsanti in colonna */
-                align-items: center; /* Allinea tutto al centro orizzontalmente */
-                justify-content: center; /* Allinea verticalmente */
-
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                background-color: #000000; 
-                color: #f4f4f4; 
-                padding: 1rem;
-                text-align: center;
-                box-shadow: 0 -2px 10px #242424;
-                font-size: 0.9rem;
-                z-index: 9999; /
-            }
-            #cookie-banner p {
-                margin-bottom: 1rem; /* Spaziatura tra il testo e i pulsanti */
-                text-align: center; /* Allinea il testo al centro */
-            }
-
-
-            #cookie-banner a {
-                color: #00bbff; 
-                text-decoration: none; 
-            }
-
-            .cookie-btn {
-                background-color: #f4f4f4; 
-                color: #000000;
-                border: none;
-                padding: 0.3rem 0.6rem;
-                margin: 0.5rem; /* Spaziatura tra i pulsanti */
-                font-size: 1rem;
-                font-weight: bold;
-                cursor: pointer;
-                border-radius: 3px;
-                box-shadow: 0px 4px 8px #242424;
-                transition: background-color 0.3s ease;
-            }
-
-            .cookie-btn:hover {
-                background-color:#ff00ff;
-            }
-
-            .cookie-bty {
-                background-color: #f4f4f4; 
-                color: #000000;
-                border: none;
-                padding: 0.3rem 0.6rem;
-                margin: 0.5rem; /* Spaziatura tra i pulsanti */
-                font-size: 1rem;
-                font-weight: bold;
-                cursor: pointer;
-                border-radius: 3px;
-                box-shadow: 0px 4px 8px #242424;
-                transition: background-color 0.3s ease;
-            }
-            
-
-            .cookie-bty:hover {
-                background-color:#00ff00;
-            }
-
-           /* =============================
-               links
-            ============================= */
-
-            .important-p a {
-                color:  #00bbff; 
-                text-decoration: none;
-                font-weight: bold; 
-            }
-
-            .important-p a:hover {
-                color: #00ff00; 
-                text-decoration: underline; 
-            }
-
-            .imp-p a {
-                color:  #ffff; 
-                text-decoration: none;
-                font-weight: bold; 
-            }
-
-            .imp-p a:hover {
-                color: #00ff00; 
-                text-decoration: underline; 
-            }
-
-            .imp-p-n a:hover {
-                color: red; 
-                text-decoration: underline; 
-            }
-
-            .imp-p-y a:hover {
-                color: green; 
-                text-decoration: underline; 
-            }
-
-            a {
-                text-decoration: none; 
-                color: white;
-                font-weight: bold; 
-            }
-
-            a:hover {
-                color: #00ff00; 
-                text-decoration: none;
-            }
-
-           
-
-
-        </style>
-        
-            <!-- Google Tag Manager -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LDVYGZDJ0"></script>
-            <script>
-                // Definizione gtag fallback
-                function gtag() {
-                    if (!window.dataLayer) {
-                        console.warn("Google Tag Manager non è disponibile.");
-                        return;
-                    }
-                    dataLayer.push(arguments);
-                }
-
-                // Configurazione iniziale del consenso
-                gtag('consent', 'default', {
-                    'ad_storage': 'denied',
-                    'analytics_storage': 'denied',
-                    'ad_user_data': 'denied',
-                    'ad_personalization': 'denied',
-                    'wait_for_update': 500, // Aspetta aggiornamenti
-                    'region': ['ES', 'US-AK'] // Regioni specifiche
-                });
-
-                // Abilita funzionalità avanzate
-                gtag('set', 'url_passthrough', true); // Trasferimento URL
-                gtag('set', 'ads_data_redaction', true); // Oscuramento dati
-
-                // Configurazione Google Analytics
-                gtag('js', new Date());
-                gtag('config', 'G-7LDVYGZDJ0');
-
-                // Funzione per aggiornare il consenso
-                function allConsentGranted() {
-                    gtag('consent', 'update', {
-                        'ad_storage': 'granted',
-                        'analytics_storage': 'granted',
-                        'ad_user_data': 'granted',
-                        'ad_personalization': 'granted'
-                    });
-                    console.info("Consenso aggiornato: concesso per tutti i parametri.");
-                }
-
-                function allConsentDenied() {
-                    gtag('consent', 'update', {
-                        'ad_storage': 'denied',
-                        'analytics_storage': 'denied',
-                        'ad_user_data': 'denied',
-                        'ad_personalization': 'denied'
-                    });
-                    console.info("Consenso aggiornato: negato per tutti i parametri.");
-                }
-            </script>
-            <!-- Fine Google Tag Manager -->
-        
+        <!-- Header -->
+        <script>
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('head').innerHTML += data;
+                })
+                .catch(error => console.error('Errore nel caricamento dell\'header:', error));
+        </script> <!-- Header -->
         
     </head>
 
     <body>
+
         <!-- Contenuto Principale -->
         <main>
             <!-- Sezione Informazioni -->
@@ -395,128 +79,39 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
                 <br>
             </p>
 
-        
-
         </main>
 
         <!-- Sezione BANNER COOKIES -->
-        <div id="cookie-banner" class="cookie-popup cookie-container" aria-live="polite" role="alertdialog" aria-labelledby="cookie-banner-message" tabindex="0">
-            <p id="cookie-banner-message">
-                This website uses cookies to enhance your experience and analyze performance.
-                <br>
-                [<a href="/cookie-policy.html"  style="font-weight: normal;">Cookie Policy</a>]
-            </p>
-
-            <div>
-                <button id="decline-cookies" class="cookie-btn" onclick= "allConsentDenied(); hideBanner();" aria-label="Decline cookies">DECLINE</button> or
-                <button id="accept-cookies" class="cookie-bty" onclick= "allConsentGranted(); hideBanner();" aria-label="Accept cookies">ACCEPT</button>
-            </div><br>
-        </div>
-
         <script>
-            function hideBanner() {
-                const banner = document.getElementById('cookie-banner');
-                if (banner) {
-                    banner.style.display = 'none';
-                    try {
-                        document.cookie = "cookiesAccepted=true; path=/; max-age=" + 60 * 60 * 24 * 365; // 1 anno
-                        console.info("Banner nascosto e consenso salvato.");
-                    } catch (error) {
-                        console.error("Impossibile impostare il cookie:", error);
-                    }
-
-                }
-                if (!window.dataLayer) {
-                    console.warn("Google Tag Manager non è disponibile. Modalità privata attiva o script bloccati.");
-                }
-                
-                if (!document.cookie) {
-                    console.warn("I cookie non sono supportati in questa modalità.");
-                }
-            }
-
-            function checkCookies() {
-                return document.cookie.includes("cookiesAccepted=true");
-            }
-
-            function initializeCookieBanner() {
-                const banner = document.getElementById('cookie-banner');
-                const acceptButton = document.getElementById('accept-cookies');
-                const declineButton = document.getElementById('decline-cookies');
-
-                if (checkCookies()) {
-                    if (banner) {
-                        banner.style.display = 'none';
-                        console.info("Cookie già accettati. Banner nascosto.");
-                    }
-                } else {
-                    if (acceptButton) {
-                        acceptButton.addEventListener('click', function () {
-                            hideBanner();
-                            if (typeof allConsentGranted === 'function') {
-                                allConsentGranted();
-                            } else {
-                                console.warn("Funzione allConsentGranted non trovata.");
-                            }
-                        });
-                        console.info("Event listener aggiunto al pulsante di accettazione.");
-                    } else {
-                        console.warn("Pulsante di accettazione non trovato.");
-                    }
-
-                    if (declineButton) {
-                        declineButton.addEventListener('click', function () {
-                            hideBanner();
-                            if (typeof allConsentDenied === 'function') {
-                                allConsentDenied();
-                            } else {
-                                console.warn("Funzione allConsentDenied non trovata.");
-                            }
-                        });
-                        console.info("Event listener aggiunto al pulsante di declino.");
-                    } else {
-                        console.warn("Pulsante di declino non trovato.");
-                    }
-                }
-            }
-
-            document.addEventListener('DOMContentLoaded', initializeCookieBanner);
-        </script>
-         <!-- Sezione BANNER COOKIES -->
-
-
-
-
-
-
-
+            document.addEventListener('DOMContentLoaded', function() {
+                fetch('cookie-banner.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        const main = document.querySelector('main');
+                        const sectionContainer = document.createElement('div');
+                           sectionContainer.innerHTML = data;
+                        main.insertAdjacentElement('afterend', sectionContainer); // Inserisce la sezione dopo </main>
+                    })
+                    .catch(error => console.error('Errore nel caricamento della sezione:', error));
+            });
+        </script><!-- Sezione BANNER COOKIES -->
 
 
         <!-- Footer -->
-        <footer> <b></b>
-            ©2025 <a href=https://genialabile.com style="font-weight: normal">GENiALABILE</a>.
-            All Rights Reserved.
-            A Bio-GPT Project—Designed by <a href= "https://github.com/seiseisette"  style="font-weight: normal">seiseisette</a>.
-            Powered by <a href= "https://openai.com" style="font-weight: normal">OpenAI</a>.<br>
-          
-        <!-- Musts Links -->
-                <p class="imp-p" style="font-size: 0.6rem;"> <!--slap-->
-                    <br>
-                    <a href="https://genialabile.com/terms-and-conditions.html" style="font-weight: normal">TERMS</a> | 
-                    <a href="https://genialabile.com/privacy-policy.html" style="font-weight: normal">PRIVACY</a> | 
-                    <a href="https://genialabile.com/cookie-policy.html" style="font-weight: normal">COOKIES</a> | 
-                    <a href="https://genialabile.com/accessibility.html" style="font-weight: normal">ACCESS</a> | 
-                    <a href="https://genialabile.com/contacts.html" style="font-weight: normal">CONTACT</a>
-                    <!-- | <a href="/faq.html" style="font-weight: normal">FAQ</a>  -->
-                </p>
-            <br><br><br><br><br><br><br>
-        </footer>
-
-
-             
-
-
-
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                fetch('footer.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        const body = document.querySelector('body');
+                        const footerContainer = document.createElement('div');
+                        footerContainer.innerHTML = data;
+                        body.appendChild(footerContainer);
+                    })
+                    .catch(error => console.error('Errore nel caricamento del footer:', error));
+            });
+        </script> <!-- Footer -->
+      
     </body>
 </html>
 <!---//

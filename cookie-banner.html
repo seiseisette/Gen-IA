@@ -1,0 +1,99 @@
+<!---///  
+© 2025 GENiALABILE. All Rights Reserved.  
+A Bio-GPT Project—Designed by seiseisette.    
+---
+ 2025 Copyright @seiseisette | x.com/seiseisette
+---
+Licensed under the Apache License, Version 2.0.
+You may obtain a copy of the License at https://www.apache.org/licenses/LICENSE-2.0  
+---
+genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page   
+
+cookie-banner.html
+//-->
+
+
+<!-- Sezione BANNER COOKIES -->
+<div id="cookie-banner" class="cookie-popup cookie-container" aria-live="polite" role="alertdialog" aria-labelledby="cookie-banner-message" tabindex="0">
+    <p id="cookie-banner-message">
+        This website uses cookies to enhance your experience and analyze performance.
+        <br>
+        [<a href="/cookie-policy.html"  style="font-weight: normal;">Cookie Policy</a>]
+    </p>
+
+    <div>
+        <button id="decline-cookies" class="cookie-btn" onclick= "allConsentDenied(); hideBanner();" aria-label="Decline cookies">DECLINE</button> or
+        <button id="accept-cookies" class="cookie-bty" onclick= "allConsentGranted(); hideBanner();" aria-label="Accept cookies">ACCEPT</button>
+    </div><br>
+</div>
+
+<script>
+    function hideBanner() {
+        const banner = document.getElementById('cookie-banner');
+        if (banner) {
+            banner.style.display = 'none';
+            try {
+                document.cookie = "cookiesAccepted=true; path=/; max-age=" + 60 * 60 * 24 * 365; // 1 anno
+                console.info("Banner nascosto e consenso salvato.");
+            } catch (error) {
+                console.error("Impossibile impostare il cookie:", error);
+            }
+
+        }
+        if (!window.dataLayer) {
+            console.warn("Google Tag Manager non è disponibile. Modalità privata attiva o script bloccati.");
+        }
+        
+        if (!document.cookie) {
+            console.warn("I cookie non sono supportati in questa modalità.");
+        }
+    }
+
+    function checkCookies() {
+        return document.cookie.includes("cookiesAccepted=true");
+    }
+
+    function initializeCookieBanner() {
+        const banner = document.getElementById('cookie-banner');
+        const acceptButton = document.getElementById('accept-cookies');
+        const declineButton = document.getElementById('decline-cookies');
+
+        if (checkCookies()) {
+            if (banner) {
+                banner.style.display = 'none';
+                console.info("Cookie già accettati. Banner nascosto.");
+            }
+        } else {
+            if (acceptButton) {
+                acceptButton.addEventListener('click', function () {
+                    hideBanner();
+                    if (typeof allConsentGranted === 'function') {
+                        allConsentGranted();
+                    } else {
+                        console.warn("Funzione allConsentGranted non trovata.");
+                    }
+                });
+                console.info("Event listener aggiunto al pulsante di accettazione.");
+            } else {
+                console.warn("Pulsante di accettazione non trovato.");
+            }
+
+            if (declineButton) {
+                declineButton.addEventListener('click', function () {
+                    hideBanner();
+                    if (typeof allConsentDenied === 'function') {
+                        allConsentDenied();
+                    } else {
+                        console.warn("Funzione allConsentDenied non trovata.");
+                    }
+                });
+                console.info("Event listener aggiunto al pulsante di declino.");
+            } else {
+                console.warn("Pulsante di declino non trovato.");
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', initializeCookieBanner);
+</script>
+ <!-- Sezione BANNER COOKIES -->
