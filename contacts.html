@@ -404,24 +404,19 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
 
 
         <!-- Footer -->
-        <footer> <b></b>
-            ©2025 <a href= "https://genialabile.com" style="font-weight: normal">GENiALABILE</a>.
-            All Rights Reserved.
-            A Bio-GPT Project—Designed by <a href= "https://github.com/seiseisette"  style="font-weight: normal">seiseisette</a>.
-            Powered by <a href= "https://openai.com" style="font-weight: normal">OpenAI</a>.<br>
-          
-        <!-- Musts Links -->
-                <p class="imp-p" style="font-size: 0.6rem;"> <!--slap-->
-                    <br>
-                    <a href="https://genialabile.com/terms-and-conditions.html" style="font-weight: normal">TERMS</a> | 
-                    <a href="https://genialabile.com/privacy-policy.html" style="font-weight: normal">PRIVACY</a> | 
-                    <a href="https://genialabile.com/cookie-policy.html" style="font-weight: normal">COOKIES</a> | 
-                    <a href="https://genialabile.com/accessibility.html" style="font-weight: normal">ACCESS</a> | 
-                    <a href="https://genialabile.com/contacts.html" style="font-weight: normal">CONTACT</a>
-                    <!-- | <a href="/faq.html" style="font-weight: normal">FAQ</a>  -->
-                </p>
-            <br><br><br><br><br><br><br>
-        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                fetch('footer.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        const body = document.querySelector('body');
+                        const footerContainer = document.createElement('div');
+                        footerContainer.innerHTML = data;
+                        body.appendChild(footerContainer);
+                    })
+                    .catch(error => console.error('Errore nel caricamento del footer:', error));
+            });
+        </script> <!-- Footer -->
 
 
         <!---JAVA BANNER COOKIES--->
