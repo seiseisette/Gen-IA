@@ -12,17 +12,16 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
 <!DOCTYPE html>
 <html> 
     <head>
-
-        <!-- Header ------------------------------------------------------------------>
+        <!-- Header -->
         <script>
             fetch('header.html')
                 .then(response => response.text())
                 .then(data => {
                     document.querySelector('head').innerHTML += data;
                 })
-                .catch(error => console.error('Errore nel caricamento dell'header:', error));
-        </script> 
-        <!-- Header ------------------------------------------------------------------>
+                .catch(error => console.error('Errore nel caricamento header:', error));
+        </script> <!-- Header -->
+
     </head>
 
 
