@@ -14,18 +14,17 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
     <head>
         <!-- Header -->
         <script>
-            const pageTitle = "GENiALABILE | Contacts"; // Sostituisci con il titolo della pagina
+            const pageTitle = "GENiALABILE | Contacts"; 
         </script>
-
         <script>
             fetch('header.html')
                 .then(response => response.text())
                 .then(data => {
                     document.querySelector('head').innerHTML += data;
-                     // Modifica dinamicamente il titolo
+                 
                     const dynamicTitle = document.getElementById('dynamic-title');
                     if (dynamicTitle && typeof pageTitle !== 'undefined') {
-                        dynamicTitle.textContent = pageTitle; // Imposta il titolo dinamico
+                        dynamicTitle.textContent = pageTitle; 
                     }
                 })
                 .catch(error => console.error('Errore nel caricamento header:', error));
@@ -35,11 +34,12 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
 
 
     <body>
-
-
+        <!-- Contenuto Principale -->
         <main>
             <h1>Contact Us</h1>
-                <p style="font-size: 0.6rem;">{Last Updated: 09 January 2025}</p>
+                <p style="font-size: 0.6rem;">
+                    {Last Updated: 10 January 2025}
+                </p>
 
             <p class="imp-pless">
                 <br><br>

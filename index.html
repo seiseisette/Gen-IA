@@ -11,13 +11,6 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
 --->
 <!DOCTYPE html>
 <html lang="en">
-        <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <meta name="description" content="GENiALABILE - A Bio-GPT Project designed to inspire multidimensional solutions and unlock creativity.">
-
-    <!-- Titolo -->
-    <title id="dynamic-title">GENiALABILE</title>
     <head>
         <!-- Header -->
         <script>
@@ -28,7 +21,7 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
                 .then(response => response.text())
                 .then(data => {
                     document.querySelector('head').innerHTML += data;
-                     // Modifica dinamicamente il titolo
+                   
                     const dynamicTitle = document.getElementById('dynamic-title');
                     if (dynamicTitle && typeof pageTitle !== 'undefined') {
                         dynamicTitle.textContent = pageTitle; 
