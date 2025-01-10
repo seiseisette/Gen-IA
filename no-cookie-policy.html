@@ -12,24 +12,37 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Header -->
         <script>
-            const pageTitle = "GENiALABILE | No-Cookie Policy"; 
+            const pageTitle = "No-Cookie Policy | GENiALABILE";
         </script>
+    
         <script>
-            fetch('header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.querySelector('head').innerHTML += data;
-               
-                    const dynamicTitle = document.getElementById('dynamic-title');
-                    if (dynamicTitle && typeof pageTitle !== 'undefined') {
-                        dynamicTitle.textContent = pageTitle; // Imposta il titolo dinamico
-                    }
-                })
-                .catch(error => console.error('Errore nel caricamento header:', error));
-        </script> <!-- Header -->
-
+            document.addEventListener('DOMContentLoaded', function () {
+                // Carica il file header.html
+                fetch('header.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        // Aggiungi il contenuto del header.html al <head>
+                        document.head.innerHTML += data;
+    
+                        // Aggiorna il titolo dinamico
+                        if (typeof pageTitle !== 'undefined') {
+                            const titleElement = document.getElementById('dynamic-title');
+                            if (titleElement) {
+                                titleElement.textContent = pageTitle;
+                            }
+                        }
+    
+                        // Aggiungi la favicon
+                        const favicon = document.createElement('link');
+                        favicon.rel = 'icon';
+                        favicon.type = 'image/x-icon';
+                        favicon.href = 'gen-favicon-rd.ico'; // Percorso corretto
+                        document.head.appendChild(favicon);
+                    })
+                    .catch(error => console.error('Errore nel caricamento dell\'header:', error));
+            });
+        </script>
     </head>
 
 
