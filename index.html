@@ -7,7 +7,7 @@ A Bio-GPT Project—Designed by seiseisette.
 Licensed under the Apache License, Version 2.0.
 You may obtain a copy of the License at https://www.apache.org/licenses/LICENSE-2.0  
 ---
-genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page  
+https://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page  
 --->
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +19,7 @@ genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
                 .then(data => {
                     document.querySelector('head').innerHTML += data;
                 })
-                .catch(error => console.error('Errore nel caricamento dell\'header:', error));
+                .catch(error => console.error('Errore nel caricamento dell'header:', error));
         </script> <!-- Header -->
 
     </head>
@@ -29,7 +29,7 @@ genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
         <!-- Contenuto Principale -->
         <main>
             <!-- Sezione Informazioni -->
-            <h1><a href=https://genialabile.com onmouseover="this.style.color='#00ff00'; this.style.textDecoration='underline';" onmouseout="this.style.color='white'; this.style.textDecoration='none';">
+            <h1><a href="/" onmouseover="this.style.color='#00ff00'; this.style.textDecoration='underline';" onmouseout="this.style.color='white'; this.style.textDecoration='none';">
                 GENiALABILE</a></h1>
             <p>
                 running as a beta version in preview access.
@@ -96,22 +96,8 @@ genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
                     .catch(error => console.error('Errore nel caricamento del footer:', error));
             });
         </script> <!-- Footer -->
-
-        <!-- Java Banner -->
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                fetch('java-banner.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        const body = document.querySelector('body');
-                        const footerContainer = document.createElement('div');
-                        footerContainer.innerHTML = data;
-                        body.appendChild(footerContainer);
-                    })
-                    .catch(error => console.error('Errore nel caricamento del banner:', error));
-            });
-        </script> <!-- Java Banner -->
       
+        
     </body>
 </html>
 <!---//
