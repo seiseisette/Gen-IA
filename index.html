@@ -21,7 +21,7 @@ genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
                 })
                 .catch(error => console.error('Errore nel caricamento dell\'header:', error));
         </script> <!-- Header -->
-        
+
     </head>
 
     <body>
@@ -83,14 +83,32 @@ genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
 
         <!-- Sezione BANNER COOKIES -->
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('DOMContentLoaded', function () {
                 fetch('cookie-banner.html')
                     .then(response => response.text())
                     .then(data => {
                         const main = document.querySelector('main');
                         const sectionContainer = document.createElement('div');
-                           sectionContainer.innerHTML = data;
-                        main.insertAdjacentElement('afterend', sectionContainer); // Inserisce la sezione dopo </main>
+                        sectionContainer.innerHTML = data;
+                        main.insertAdjacentElement('afterend', sectionContainer);
+
+                        // Collega i pulsanti alle funzioni
+                        const acceptButton = document.getElementById('accept-cookies');
+                        const declineButton = document.getElementById('decline-cookies');
+
+                        if (acceptButton) {
+                            acceptButton.addEventListener('click', () => {
+                                allConsentGranted();
+                                hideBanner();
+                            });
+                        }
+
+                        if (declineButton) {
+                            declineButton.addEventListener('click', () => {
+                                allConsentDenied();
+                                hideBanner();
+                            });
+                        }
                     })
                     .catch(error => console.error('Errore nel caricamento della sezione:', error));
             });
