@@ -11,18 +11,47 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
 --->
 <!DOCTYPE html>
 <html> 
-     <head>
-        
-        <!-- Google tag (gtag.js) -->
+    <head>
+                
+        <!-- Google Tag Manager -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LDVYGZDJ0"></script>
         <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
 
-        gtag('config', 'G-7LDVYGZDJ0');
+            /* Configurazione iniziale del consenso */
+            gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied',
+                'wait_for_update': 500
+            });
+
+            // Funzioni per aggiornare il consenso
+            function allConsentGranted() {
+               gtag('consent', 'update', {
+                    'ad_user_data': 'granted',
+                    'ad_personalization': 'granted',
+                    'ad_storage': 'granted',
+                    'analytics_storage': 'granted'
+                });
+            }
+
+            function allConsentDenied() {
+                gtag('consent', 'update', {
+                    'ad_user_data': 'denied',
+                    'ad_personalization': 'denied',
+                    'ad_storage': 'denied',
+                    'analytics_storage': 'denied'
+                });
+            }
+
+            // Configurazione di Google Analytics
+                gtag('js', new Date());
+                gtag('config', 'G-7LDVYGZDJ0');
         </script>
-         <!-- Google tag (gtag.js) plus check -->
+         <!-- END // Google tag (gtag.js) plus check -->
 
         <!-- Meta-->
         <link rel="icon" href="gen-favicon-rd.ico" type="image/x-icon" />
@@ -39,9 +68,6 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
         <!-- Stili CSS -->
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
         
-        <!-- Font  -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-        <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
         
         <!-- Stili CSS -->
 
@@ -104,11 +130,11 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
             /* Margini laterali per Desktop */
             @media screen and (min-width: 1024px) {
             main {
-            max-width: 1200px; /* Limita la larghezza del contenuto */
-            padding: 5rem;     /* Mantiene lo spazio interno */
-        m   argin: 0 auto;    /* Centra il contenuto */
-    }
-}
+                max-width: 1200px; /* Limita la larghezza del contenuto */
+                padding: 5rem;     /* Mantiene lo spazio interno */
+                margin: 0 auto;    /* Centra il contenuto */
+            
+            }
 
             /* Riquadro Informativo */
             .info {
@@ -352,33 +378,75 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
                 <br>
             </p>
 
-           
-
-
-
-
-
-            <!---/* DEFBOT */ ----> 
-
-
-
-            <!-- Sezione BANNER COOKIES -->
-             
-            <div id="cookie-banner" class="cookie-popup">
-                <p>
-                This website uses cookies to enhance your experience and analyze performance. 
-                <br>
-                By continuing, you agree to our 
-                <a href="/cookie-policy.html" style="font-weight: normal;">Cookie Policy</a>. 
-                <br><br>
-                <button id="accept-cookies" class="cookie-btn"><b>ACCEPT</b></button>
-            
-                </p>
-                
-                </div>
         
 
         </main>
+
+        <!-- Sezione BANNER COOKIES -->
+        <div id="cookie-banner" class="cookie-popup">
+            <p>
+                This website uses cookies to enhance your experience and analyze performance.
+                <br>
+                By continuing, you agree to our 
+                <a href="/cookie-policy.html" style="font-weight: normal;">Cookie Policy</a>.
+                <br><br>
+                <button id="decline-cookies" class="cookie-btn" onclick="allConsentDenied(); hideBanner();">
+                    DECLINE
+                </button>
+                <button id="accept-cookies" class="cookie-btn" onclick="allConsentGranted(); hideBanner();">
+                    ACCEPT
+                </button>
+            </p>
+        </div>
+
+        <!-- Script per la gestione del banner -->
+        <script>
+            // Funzione per nascondere il banner e salvare il consenso nei cookie
+            function hideBanner() {
+                const banner = document.getElementById('cookie-banner');
+                if (banner) {
+                    banner.style.display = 'none'; // Nasconde il banner
+                    document.cookie = "cookiesAccepted=true; path=/; max-age=" + 60 * 60 * 24 * 365; // Salva consenso
+                } else {
+                    console.error("Banner dei cookie non trovato.");
+                }
+            }
+
+            // Funzione per controllare lo stato dei cookie
+            function checkCookies() {
+                return document.cookie.includes("cookiesAccepted=true");
+            }
+
+            // Inizializza il comportamento del banner
+            function initializeCookieBanner() {
+                const banner = document.getElementById('cookie-banner');
+                const acceptButton = document.getElementById('accept-cookies');
+                const declineButton = document.getElementById('decline-cookies');
+
+                if (checkCookies()) {
+                    if (banner) banner.style.display = 'none'; // Nasconde il banner se i cookie sono già accettati
+                } else {
+                    if (acceptButton) {
+                        acceptButton.addEventListener('click', function () {
+                            hideBanner();
+                            allConsentGranted();
+                        });
+                    }
+
+                    if (declineButton) {
+                        declineButton.addEventListener('click', function () {
+                            hideBanner();
+                            allConsentDenied();
+                        });
+                    }
+                }
+            }
+            
+
+            // Inizializza il banner al caricamento della pagina
+            window.onload = initializeCookieBanner;
+        </script>
+
 
 
 
@@ -406,26 +474,7 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
         </footer>
 
 
-        <!---JAVA BANNER COOKIES--->
-        <script>
-            document.getElementById('accept-cookies').addEventListener('click', function() {
-                // Nasconde il banner
-                document.getElementById('cookie-banner').style.display = 'none';
-                // Salva il consenso nei cookies del browser
-                document.cookie = "cookiesAccepted=true; path=/; max-age=" + 60 * 60 * 24 * 365;
-            });
-        
-            
-                // Controlla se i cookies sono già stati accettati
-            window.onload = function() {
-                if (document.cookie.includes("cookiesAccepted=true")) {
-                    document.getElementById('cookie-banner').style.display = 'none';
-                }
-
-                
-            };
-        </script>
-
+             
 
 
 
