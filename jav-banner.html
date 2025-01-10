@@ -1,0 +1,33 @@
+<!---///  
+© 2025 GENiALABILE. All Rights Reserved.  
+A Bio-GPT Project—Designed by seiseisette.    
+---
+ 2025 Copyright @seiseisette | x.com/seiseisette
+---
+Licensed under the Apache License, Version 2.0.
+You may obtain a copy of the License at https://www.apache.org/licenses/LICENSE-2.0  
+---
+genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page   
+
+java-banner.html
+//-->
+
+  <!---JAVA BANNER COOKIES--->
+  <script>
+    document.getElementById('accept-cookies').addEventListener('click', function() {
+        // Nasconde il banner
+        document.getElementById('cookie-banner').style.display = 'none';
+        // Salva il consenso nei cookies del browser
+        document.cookie = "cookiesAccepted=true; path=/; max-age=" + 60 * 60 * 24 * 365;
+    });
+
+    
+        // Controlla se i cookies sono già stati accettati
+    window.onload = function() {
+        if (document.cookie.includes("cookiesAccepted=true")) {
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+
+        
+    };
+</script>
