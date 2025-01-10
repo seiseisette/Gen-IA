@@ -12,7 +12,6 @@ genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
 cookie-banner.html
 //-->
 
-
 <!-- Sezione BANNER COOKIES -->
 <div id="cookie-banner" class="cookie-popup cookie-container" aria-live="polite" role="alertdialog" aria-labelledby="cookie-banner-message" tabindex="0">
     <p id="cookie-banner-message">
@@ -23,7 +22,7 @@ cookie-banner.html
 
     <div id="cookie-banner-content" class="cookie-popup">
         <button id="decline-cookies" class="cookie-btn" onclick="allConsentDenied()" aria-label="Decline cookies">DECLINE</button>
-        <button id="accept-cookies" class="cookie-bty" onclick="allConsentGranted()" aria-label="Accept cookies">ACCEPT</button>
+        <button id="accept-cookies" class="cookie-btn" onclick="allConsentGranted()" aria-label="Accept cookies">ACCEPT</button>
     </div>
 </div>
 
@@ -33,23 +32,31 @@ cookie-banner.html
     // Definizione globale di allConsentGranted e allConsentDenied
     window.allConsentGranted = function () {
         console.info("Consenso concesso.");
-        gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'analytics_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted'
-        });
+        if (typeof gtag === 'function') {
+            gtag('consent', 'update', {
+                'ad_storage': 'granted',
+                'analytics_storage': 'granted',
+                'ad_user_data': 'granted',
+                'ad_personalization': 'granted'
+            });
+        } else {
+            console.warn("gtag non è definito.");
+        }
         hideBanner();
     };
 
     window.allConsentDenied = function () {
         console.info("Consenso negato.");
-        gtag('consent', 'update', {
-            'ad_storage': 'denied',
-            'analytics_storage': 'denied',
-            'ad_user_data': 'denied',
-            'ad_personalization': 'denied'
-        });
+        if (typeof gtag === 'function') {
+            gtag('consent', 'update', {
+                'ad_storage': 'denied',
+                'analytics_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied'
+            });
+        } else {
+            console.warn("gtag non è definito.");
+        }
         hideBanner();
     };
 
@@ -89,8 +96,10 @@ cookie-banner.html
             }
         } else {
             if (DEBUG) console.info("Mostra il banner dei cookie.");
-            if (banner) banner.style.display = 'block';
+            if (banner) {
+                banner.style.display = 'block';
+                setTimeout(() => banner.focus(), 100); // Focus sul banner
+            }
         }
     });
 </script>
-<!-- Sezione BANNER COOKIES -->
