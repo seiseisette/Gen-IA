@@ -18,7 +18,7 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
         <meta name="description" content="GENiALABILE - A Bio-GPT Project designed to inspire multidimensional solutions and unlock creativity.">
 
         <!-- Titolo -->
-        <title>GENiALABILE - Welcome Page</title>
+        <title>GENiALABILE - Welcome</title>
 
         <!-- Icone e Font -->
         <link rel="icon" href="gen-favicon-rd.ico" type="image/x-icon">
@@ -172,10 +172,6 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
                 flex-direction: column; /* Posiziona testo e pulsanti in colonna */
                 align-items: center; /* Allinea tutto al centro orizzontalmente */
                 justify-content: center; /* Allinea verticalmente */
-                padding: 1rem; /* Spaziatura interna */
-                background-color: #000000;
-                color: #f4f4f4;
-                font-size: 0.9rem;
 
                 position: fixed;
                 bottom: 0;
@@ -183,12 +179,17 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
                 width: 100%;
                 background-color: #000000; 
                 color: #f4f4f4; 
-                padding: 0.3rem;
+                padding: 1rem;
                 text-align: center;
                 box-shadow: 0 -2px 10px #242424;
                 font-size: 0.9rem;
                 z-index: 9999; /
             }
+            #cookie-banner p {
+                margin-bottom: 1rem; /* Spaziatura tra il testo e i pulsanti */
+                text-align: center; /* Allinea il testo al centro */
+            }
+
 
             #cookie-banner a {
                 color: #00bbff; 
@@ -196,12 +197,13 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
             }
 
             .cookie-btn {
-                margin-left: 1rem;
                 background-color: #f4f4f4; 
                 color: #000000;
                 border: none;
                 padding: 0.3rem 0.6rem;
+                margin: 0.5rem; /* Spaziatura tra i pulsanti */
                 font-size: 1rem;
+                font-weight: bold;
                 cursor: pointer;
                 border-radius: 3px;
                 box-shadow: 0px 4px 8px #242424;
@@ -213,21 +215,19 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
             }
 
             .cookie-bty {
-                margin-left: 1rem;
                 background-color: #f4f4f4; 
                 color: #000000;
                 border: none;
                 padding: 0.3rem 0.6rem;
+                margin: 0.5rem; /* Spaziatura tra i pulsanti */
                 font-size: 1rem;
+                font-weight: bold;
                 cursor: pointer;
                 border-radius: 3px;
                 box-shadow: 0px 4px 8px #242424;
                 transition: background-color 0.3s ease;
             }
-            #cookie-banner p {
-             margin-bottom: 1rem; /* Spaziatura tra il testo e i pulsanti */
-            text-align: center; /* Allinea il testo al centro */
-            }
+            
 
             .cookie-bty:hover {
                 background-color:#00ff00;
@@ -295,42 +295,55 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
             <!-- Google Tag Manager -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LDVYGZDJ0"></script>
             <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag() { dataLayer.push(arguments); }
-        
+                // Definizione gtag fallback
+                function gtag() {
+                    if (!window.dataLayer) {
+                        console.warn("Google Tag Manager non è disponibile.");
+                        return;
+                    }
+                    dataLayer.push(arguments);
+                }
+
                 // Configurazione iniziale del consenso
                 gtag('consent', 'default', {
                     'ad_storage': 'denied',
+                    'analytics_storage': 'denied',
                     'ad_user_data': 'denied',
                     'ad_personalization': 'denied',
-                    'analytics_storage': 'denied',
-                    'wait_for_update': 500
+                    'wait_for_update': 500, // Aspetta aggiornamenti
+                    'region': ['ES', 'US-AK'] // Regioni specifiche
                 });
-        
-                // Funzioni per aggiornare il consenso
-                function allConsentGranted() {
-                    gtag('consent', 'update', {
-                        'ad_user_data': 'granted',
-                        'ad_personalization': 'granted',
-                        'ad_storage': 'granted',
-                        'analytics_storage': 'granted'
-                    });
-                }
-        
-                function allConsentDenied() {
-                    gtag('consent', 'update', {
-                        'ad_user_data': 'denied',
-                        'ad_personalization': 'denied',
-                        'ad_storage': 'denied',
-                        'analytics_storage': 'denied'
-                    });
-                }
-        
-                // Configurazione di Google Analytics
+
+                // Abilita funzionalità avanzate
+                gtag('set', 'url_passthrough', true); // Trasferimento URL
+                gtag('set', 'ads_data_redaction', true); // Oscuramento dati
+
+                // Configurazione Google Analytics
                 gtag('js', new Date());
                 gtag('config', 'G-7LDVYGZDJ0');
+
+                // Funzione per aggiornare il consenso
+                function allConsentGranted() {
+                    gtag('consent', 'update', {
+                        'ad_storage': 'granted',
+                        'analytics_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                    console.info("Consenso aggiornato: concesso per tutti i parametri.");
+                }
+
+                function allConsentDenied() {
+                    gtag('consent', 'update', {
+                        'ad_storage': 'denied',
+                        'analytics_storage': 'denied',
+                        'ad_user_data': 'denied',
+                        'ad_personalization': 'denied'
+                    });
+                    console.info("Consenso aggiornato: negato per tutti i parametri.");
+                }
             </script>
-        <!-- Google Tag Manager -->
+            <!-- Fine Google Tag Manager -->
         
         
     </head>
@@ -397,13 +410,13 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
             <p id="cookie-banner-message">
                 This website uses cookies to enhance your experience and analyze performance.
                 <br>
-                [ <a href="/cookie-policy.html" style="font-weight: normal;">Cookie Policy</a> ]
+                [<a href="/cookie-policy.html" style="font-weight: normal;">Cookie Policy</a>]
             </p>
 
             <div>
-                <button id="decline-cookies" class="cookie-btn" onclick= "allConsentDenied(); hideBanner();" aria-label="Decline cookies">NO</button>
-                <button id="accept-cookies" class="cookie-bty" onclick= "allConsentGranted(); hideBanner();" aria-label="Accept cookies">GO</button>
-            </div>
+                <button id="decline-cookies" class="cookie-btn" onclick= "allConsentDenied(); hideBanner();" aria-label="Decline cookies">DECLINE</button> or
+                <button id="accept-cookies" class="cookie-bty" onclick= "allConsentGranted(); hideBanner();" aria-label="Accept cookies">ACCEPT</button>
+            </div><br>
         </div>
 
         <script>
@@ -417,6 +430,14 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
                     } catch (error) {
                         console.error("Impossibile impostare il cookie:", error);
                     }
+
+                }
+                if (!window.dataLayer) {
+                    console.warn("Google Tag Manager non è disponibile. Modalità privata attiva o script bloccati.");
+                }
+                
+                if (!document.cookie) {
+                    console.warn("I cookie non sono supportati in questa modalità.");
                 }
             }
 
@@ -467,6 +488,7 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
 
             document.addEventListener('DOMContentLoaded', initializeCookieBanner);
         </script>
+         <!-- Sezione BANNER COOKIES -->
 
 
 
