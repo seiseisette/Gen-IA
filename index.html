@@ -14,9 +14,8 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
     <head>
         <!-- Header -->
         <script>
-            const pageTitle = "GENiALABILE"; // Sostituisci con il titolo della pagina
+            const pageTitle = "GENiALABILE"; 
         </script>
-
         <script>
             fetch('header.html')
                 .then(response => response.text())
@@ -25,7 +24,7 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
                      // Modifica dinamicamente il titolo
                     const dynamicTitle = document.getElementById('dynamic-title');
                     if (dynamicTitle && typeof pageTitle !== 'undefined') {
-                        dynamicTitle.textContent = pageTitle; // Imposta il titolo dinamico
+                        dynamicTitle.textContent = pageTitle; 
                     }
                 })
                 .catch(error => console.error('Errore nel caricamento header:', error));
