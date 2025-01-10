@@ -1,8 +1,8 @@
-<!---///  
+<<!---///  
 © 2025 GENiALABILE. All Rights Reserved.  
 A Bio-GPT Project—Designed by seiseisette.    
 ---
- 2025 Copyright @seiseisette | x.com/seiseisette
+ 2025 Copyright @seiseisette | https://x.com/seiseisette
 ---
 Licensed under the Apache License, Version 2.0.
 You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0  
@@ -10,281 +10,26 @@ You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2
 hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page  
 --->
 <!DOCTYPE html>
-<html> 
-     <head>
-        
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LDVYGZDJ0"></script>
+<html lang="en">
+    <head>
+        <!-- Header -->
         <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-7LDVYGZDJ0');
+            const pageTitle = "GENiALABILE | Terms & Conditions"; 
         </script>
-         <!-- Google tag (gtag.js) -->
+        <script>
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('head').innerHTML += data;
+                 
+                    const dynamicTitle = document.getElementById('dynamic-title');
+                    if (dynamicTitle && typeof pageTitle !== 'undefined') {
+                        dynamicTitle.textContent = pageTitle; 
+                    }
+                })
+                .catch(error => console.error('Errore nel caricamento header:', error));
+        </script> <!-- Header -->
 
-        <!-- Meta-->
-        <link rel="icon" href="gen-favicon-rd.ico" type="image/x-icon" />
-        <link rel="shortcut icon" href="gen-favicon-rd.ico" type="image/x-icon" />
-        <!-- TITLE + More-->
-        <title>GENiALABILE - Terms & Conditions</title>
-          <!-- Viewport Responsive -->
-          <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-          
-          <!-- Font  -->
-          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-          <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
-
-        <!-- Stili CSS -->
-
-
-        <style>
-            /* =============================
-               Variabili CSS§
-               
-               
-               BIANCO>>>>
-               :root {
-                --background-color: #f4f4f4;
-                --info-background: #f4f4f4;
-                --info-text: #242424;
-                --borders: #242424;
-                --posts: #f4f4f4;
-                --spacing: 3rem;
-                --accent: #000000;
-                --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            }
-
-            ============================= */
-            :root {
-                --background-color: #000000;
-                --info-background: #000000;
-                --info-text: #f4f4f4;
-                --borders: #f4f4f4;
-                --posts: #f4f4f4;
-                --spacing: 3rem;
-                --accent: #f4f4f4;
-                --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            }
-
-            /* =============================
-               Reset Generale
-            ============================= */
-            * {
-                box-sizing: border-box;
-            }
-
-            body {
-                margin: 0;
-                background-color: var(--background-color);
-                font-family: 'Inconsolata', sans-serif;
-                font-size: 16px;
-            }
-
-            /* =============================
-               Layout e Contenitori
-            ============================= */
-            main {
-                width: 100%;
-                max-width: 100%;
-                color: #f4f4f4;
-                margin: 0 auto;
-                padding: var(--spacing);
-            }
-
-            /* Margini laterali per Desktop */
-            @media screen and (min-width: 1024px) {
-            main {
-            max-width: 1200px; /* Limita la larghezza del contenuto */
-            padding: 5rem;     /* Mantiene lo spazio interno */
-        m   argin: 0 auto;    /* Centra il contenuto */
-    }
-}
-
-            /* Riquadro Informativo */
-            .info {
-                box-shadow: var(--box-shadow);
-                background: var(--info-background);
-                color: var(--info-text);
-                border-radius: 0px; /* Bordi squadrati */
-                padding: var(--spacing);
-                width: 100%; /* Pagina intera */
-            }
-
-            /* Sezione GENiALABILE */
-            section {
-                margin-top: 2rem;
-            }
-
-            h1, h2, h3 {
-                color: var(--accent);
-                margin-bottom: 0.5rem;
-            }
-
-            ul {
-                margin-left: 1rem;
-            }
-
-            p {
-                margin-bottom: 1rem;
-            }
-
-            /* =============================
-               Footer
-            ============================= */
-            footer {
-            width: 100%;
-            padding: var(--spacing);
-            text-align: left;
-            background-color: var(--info-background);
-            color: var(--info-text);
-            margin-top: 1rem;
-            }
-
-            
-            @media screen and (min-width: 1024px) {
-            footer {
-            max-width: 1200px; 
-            padding: 5rem;   
-            margin: 0 auto;  
-             }
-        }
-            
-
-
-
-    
-            /* Contenitore della Card */
-            .card {
-                display: flex; /* Disposizione flessibile per affiancare immagine e testo */
-                align-items: center; /* Allinea verticalmente immagine e testo */
-                background-color: #000000; /* Sfondo nero */
-                color: #ffffff; /* Testo bianco */
-                padding: 0rem; /* Spaziatura interna */
-                border-radius: 10px; /* Angoli arrotondati */
-                box-shadow: 0px 0px 0px #000000; /* Ombreggiatura */
-                width: fit-content; /* Adatta la dimensione al contenuto */
-                max-width: 100%; /* Evita di uscire dalla pagina */
-            }
-
-            /* Contenitore per l'immagine */
-            .card-image-container {
-                flex-shrink: 0; /* Impedisce che l'immagine venga ridotta */
-                margin-right: 1rem; /* Spazio tra immagine e testo */
-            }
-
-            /* Stile dell'immagine */
-            .card-image {
-                width: 70px; /* Larghezza immagine */
-                height: 70px; /* Altezza immagine */
-                border-radius: 50%; /* Rende l'immagine circolare */
-                object-fit: cover; /* Adatta l'immagine senza deformarla */
-            }
-
-            /* Stile del testo */
-            .card-text {
-                font-family: 'Inconsolata', monospace; /* Font minimalista */
-                font-size: 1rem; /* Dimensione del testo */
-                line-height: 1.5; /* Interlinea per leggibilità */
-            }
-
-            .card-text h5 {
-                margin: 0 0 0.5rem 0; /* Margine inferiore al titolo */
-                font-size: 1.2rem; /* Dimensione del titolo */
-                font-weight: bold; /* Grassetto */
-            }
-
-            .card-text p {
-                margin: 0; /* Rimuove margini aggiuntivi */
-            }
-            /* Stile BANNER BLACK */
-            #cookie-banner {
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                background-color: #000000; 
-                color: #f4f4f4; 
-                padding: 0.3rem;
-                text-align: center;
-                box-shadow: 0 -2px 10px #242424;
-                font-size: 0.9rem;
-                z-index: 9999; /
-            }
-
-            #cookie-banner a {
-                color: #00bbff; 
-                text-decoration: none; 
-            }
-
-            .cookie-btn {
-                margin-left: 1rem;
-                background-color: #f4f4f4; 
-                color: #000000;
-                border: none;
-                padding: 0.3rem 0.6rem;
-                font-size: 1rem;
-                cursor: pointer;
-                border-radius: 3px;
-                box-shadow: 0px 4px 8px #242424;
-                transition: background-color 0.3s ease;
-            }
-
-            .cookie-btn:hover {
-                background-color:#00ff00;
-            }
-
-           /* =============================
-               links
-            ============================= */
-
-        .important-p a {
-            color:  #00bbff; 
-            text-decoration: none;
-            font-weight: bold; 
-        }
-
-        .important-p a:hover {
-            color: #00ff00; 
-            text-decoration: underline; 
-        }
-
-       
-        
-        
-        
-        .imp-p a {
-            color:  #ffff; 
-            text-decoration: none;
-            font-weight: bold; 
-        }
-
-        .imp-p a:hover {
-            color: #00ff00; 
-            text-decoration: underline; 
-        }
-
-       
- 
- 
-        a {
-            text-decoration: none; 
-            color: white;
-            font-weight: bold; 
-        }
-
-        a:hover {
-            
-            text-decoration: underline; /
-
-           
-
-
-            </style>
-        
-        
-    
     </head>
 
     <body>
@@ -386,33 +131,6 @@ hptts://genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
                                 
                     
             </p>    
-                
-                
-               
-           
-
-
-
-                <!---/* DEFBOT */ ----> 
-
-
-
-        <!-- Sezione BANNER COOKIES -->
-        
-        <div id="cookie-banner" class="cookie-popup">
-            <p>
-            This website uses cookies to enhance your experience and analyze performance. 
-            <br>
-            By continuing, you agree to our 
-            <a href="/cookie-policy.html" style="font-weight: normal;">Cookie Policy</a>. 
-            <br><br>
-            <button id="accept-cookies" class="cookie-btn"><b>ACCEPT</b></button>
-
-            </p>
-            
-            </div>
-
-
         </main>
 
 
