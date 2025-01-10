@@ -82,39 +82,96 @@ genialabile.com | DARK MODE x Utra-Minimalist Visual Landing Page
         </main>
 
         <!-- Sezione BANNER COOKIES -->
+        <div id="cookie-banner" class="cookie-popup cookie-container" aria-live="polite" role="alertdialog" aria-labelledby="cookie-banner-message" tabindex="0">
+            <p id="cookie-banner-message">
+                This website uses cookies to enhance your experience and analyze performance.
+                <br>
+                [<a href="/cookie-policy.html" style="font-weight: normal;">Cookie Policy</a>]
+            </p>
+
+            <div id="cookie-banner-content" class="cookie-popup">
+                <button id="decline-cookies" class="cookie-btn" onclick="allConsentDenied()" aria-label="Decline cookies">DECLINE</button> or
+                <button id="accept-cookies" class="cookie-bty" onclick="allConsentGranted()" aria-label="Accept cookies">ACCEPT</button>
+            </div>
+        </div>
+
         <script>
+            const DEBUG = true;
+
+            // Definizione globale di allConsentGranted e allConsentDenied
+            window.allConsentGranted = function () {
+                console.info("Consenso concesso.");
+                if (typeof gtag === 'function') {
+                    gtag('consent', 'update', {
+                        'ad_storage': 'granted',
+                        'analytics_storage': 'granted',
+                        'ad_user_data': 'granted',
+                        'ad_personalization': 'granted'
+                    });
+                } else {
+                    console.warn("gtag non è definito.");
+                }
+                hideBanner();
+            };
+
+            window.allConsentDenied = function () {
+                console.info("Consenso negato.");
+                if (typeof gtag === 'function') {
+                    gtag('consent', 'update', {
+                        'ad_storage': 'denied',
+                        'analytics_storage': 'denied',
+                        'ad_user_data': 'denied',
+                        'ad_personalization': 'denied'
+                    });
+                } else {
+                    console.warn("gtag non è definito.");
+                }
+                hideBanner();
+            };
+
+            // Nascondi banner
+            function hideBanner() {
+                const banner = document.getElementById('cookie-banner');
+                if (banner) {
+                    banner.style.display = 'none';
+                    document.cookie = "cookiesAccepted=true; path=/; max-age=" + 60 * 60 * 24 * 365; // 1 anno
+                    if (DEBUG) console.info("Banner nascosto e cookie impostati.");
+                } else {
+                    console.warn("Impossibile trovare il banner dei cookie.");
+                }
+            }
+
+            // Controllo dei cookie
+            function checkCookies() {
+                return document.cookie.includes("cookiesAccepted=true");
+            }
+
+            // Inizializza il banner
             document.addEventListener('DOMContentLoaded', function () {
-                fetch('cookie-banner.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        const main = document.querySelector('main');
-                        const sectionContainer = document.createElement('div');
-                        sectionContainer.innerHTML = data;
-                        main.insertAdjacentElement('afterend', sectionContainer);
+                const banner = document.getElementById('cookie-banner');
 
-                        // Collega i pulsanti alle funzioni
-                        const acceptButton = document.getElementById('accept-cookies');
-                        const declineButton = document.getElementById('decline-cookies');
+                if (!navigator.cookieEnabled) {
+                    console.warn("I cookie sono disabilitati nel browser.");
+                    if (banner) {
+                        banner.innerHTML = "<p>I cookie sono disabilitati. Alcune funzionalità potrebbero non funzionare.</p>";
+                    }
+                    return;
+                }
 
-                        if (acceptButton) {
-                            acceptButton.addEventListener('click', () => {
-                                allConsentGranted();
-                                hideBanner();
-                            });
-                        }
-
-                        if (declineButton) {
-                            declineButton.addEventListener('click', () => {
-                                allConsentDenied();
-                                hideBanner();
-                            });
-                        }
-                    })
-                    .catch(error => console.error('Errore nel caricamento della sezione:', error));
+                if (checkCookies()) {
+                    if (banner) {
+                        banner.style.display = 'none';
+                        if (DEBUG) console.info("Cookie già accettati. Banner nascosto.");
+                    }
+                } else {
+                    if (DEBUG) console.info("Mostra il banner dei cookie.");
+                    if (banner) {
+                        banner.style.display = 'block';
+                        setTimeout(() => banner.focus(), 100); // Focus sul banner
+                    }
+                }
             });
-        </script><!-- Sezione BANNER COOKIES -->
-
-
+        </script> <!-- Sezione BANNER COOKIES -->
         <!-- Footer -->
         <script>
             document.addEventListener('DOMContentLoaded', function() {
