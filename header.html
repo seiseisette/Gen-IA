@@ -287,54 +287,54 @@ header.html
  </style>
  
      <!-- Google Tag Manager -->
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LDVYGZDJ0"></script>
-     <script>
-         // Definizione gtag fallback
-         function gtag() {
-             if (!window.dataLayer) {
-                 console.warn("Google Tag Manager non è disponibile.");
-                 return;
-             }
-             dataLayer.push(arguments);
-         }
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LDVYGZDJ0"></script>
+    <script>
+        // Definizione gtag fallback
+        function gtag() {
+            if (!window.dataLayer) {
+                console.warn("Google Tag Manager non è disponibile.");
+                return;
+            }
+            dataLayer.push(arguments);
+        }
 
-         // Configurazione iniziale del consenso
-         gtag('consent', 'default', {
-             'ad_storage': 'denied',
-             'analytics_storage': 'denied',
-             'ad_user_data': 'denied',
-             'ad_personalization': 'denied',
-             'wait_for_update': 500, // Aspetta aggiornamenti
-             'region': ['ES', 'US-AK'] // Regioni specifiche
-         });
+        // Configurazione iniziale del consenso
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'wait_for_update': 500, // Aspetta aggiornamenti
+            'region': ['ES', 'US-AK'] // Regioni specifiche
+        });
 
-         // Abilita funzionalità avanzate
-         gtag('set', 'url_passthrough', true); // Trasferimento URL
-         gtag('set', 'ads_data_redaction', true); // Oscuramento dati
+        // Abilita funzionalità avanzate
+        gtag('set', 'url_passthrough', true); // Trasferimento URL
+        gtag('set', 'ads_data_redaction', true); // Oscuramento dati
 
-         // Configurazione Google Analytics
-         gtag('js', new Date());
-         gtag('config', 'G-7LDVYGZDJ0');
+        // Configurazione Google Analytics
+        gtag('js', new Date());
+        gtag('config', 'G-7LDVYGZDJ0');
 
-         // Funzione per aggiornare il consenso
-         function allConsentGranted() {
-             gtag('consent', 'update', {
-                 'ad_storage': 'granted',
-                 'analytics_storage': 'granted',
-                 'ad_user_data': 'granted',
-                 'ad_personalization': 'granted'
-             });
-             console.info("Consenso aggiornato: concesso per tutti i parametri.");
-         }
+        // Funzione per aggiornare il consenso
+        function allConsentGranted() {
+            gtag('consent', 'update', {
+                'ad_storage': 'granted',
+                'analytics_storage': 'granted',
+                'ad_user_data': 'granted',
+                'ad_personalization': 'granted'
+            });
+            console.info("Consenso aggiornato: concesso per tutti i parametri.");
+        }
 
-         function allConsentDenied() {
-             gtag('consent', 'update', {
-                 'ad_storage': 'denied',
-                 'analytics_storage': 'denied',
-                 'ad_user_data': 'denied',
-                 'ad_personalization': 'denied'
-             });
-             console.info("Consenso aggiornato: negato per tutti i parametri.");
-         }
-     </script>
-     <!-- Fine Google Tag Manager -->
+        function allConsentDenied() {
+            gtag('consent', 'update', {
+                'ad_storage': 'denied',
+                'analytics_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied'
+            });
+            console.info("Consenso aggiornato: negato per tutti i parametri.");
+        }
+    </script>
+    <!-- Fine Google Tag Manager -->
