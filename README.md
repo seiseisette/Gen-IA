@@ -1,6 +1,8 @@
 # Gen-IA
-GENiALABILE-Bio-GPT-ultra-minimalist-welcome-page
+Advanced-GPT inspiring multidimensional solutions and unlocking creative potential.
 
-
-
-Just a kid landing page.
+## License
+© 2025 GENiALABILE. All Rights Reserved.
+A GPT Based Project—Designed by @seiseisette. 
+This project is no longer available as open-source. Updated to 10 Jan 2025.
+Use, distribution, or modification of this project is strictly prohibited without prior written authorization.
