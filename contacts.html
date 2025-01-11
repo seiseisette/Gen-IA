@@ -31,11 +31,62 @@ https://www.genialabile.com/contacts.html
                     })
                     .catch(error => console.error('Errore nel caricamento header:', error));
                     document.querySelector('head').innerHTML += '<!-- Static Header Fallback -->';
+                    document.addEventListener('DOMContentLoaded', function () {
+                        console.log('Card HTML:', document.querySelector('.card').outerHTML);
+                    });
             </script> 
         <!-- HEAD ------------------------------------------------------------------> 
         
         <!-- CSS CARD ------------------------------------------------------------------>
-            <link rel="stylesheet" href="https://www.genialabile.com/card.css">
+           <!--- <link rel="stylesheet" href="https://www.genialabile.com/card.css">
+            -->
+            <style>
+
+                .card {
+                    display: flex;
+                    align-items: center; 
+                    background-color: #00000000; 
+                    color: #ffffff; 
+                    padding: 0rem; 
+                    border-radius: 1px; 
+                    box-shadow: 0px 0px 0px #000000; 
+                    width: fit-content;
+                    max-width: 100%;
+                }
+        
+                .card-image-container {
+                    flex-shrink: 0;
+                    margin-right: 1rem; 
+                }
+        
+                .card-image {
+                    width: 50px; 
+                    height: 50px;
+                    max-width: 100%; 
+                    border-radius: 50%;
+                    object-fit: cover; 
+                }
+        
+                .card-text {
+                    font-family: 'Inconsolata', monospace;
+                    font-size: 1rem;
+                    line-height: 1.5;
+                }
+        
+                .card-text h5 {
+                    margin: 0 0 0.5rem 0;/
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                }
+        
+                .card-text p {
+                    margin: 0;
+                }
+        
+            </style>
+
+
+
         <!-- CSS CARD ------------------------------------------------------------------>
         
     </head>
@@ -123,23 +174,24 @@ https://www.genialabile.com/contacts.html
                 <br><br><br>
            
                 <b>5. Virtual Address</b>
-                    <div class="card">
+                <div class="card">
                         <div class="card-image-container">
                             <img src="https://www.genialabile.com/gen-favicon-rd.ico?v=2" alt="GENiALABILE Logo" class="card-image" loading="lazy">
                         </div>
-                        <div class="card-text">
-                            <p>
-                                <a href="https://www.genialabile.com/"  style="font-weight: normal;">GENiALABILE</a> 
-                                ✧⌝
-                                <br>
-                                Multidimensional Ave,
-                                <br>
-                                GPT's City, API, 2025
-                            </p>
-                        </div>
+                    <div class="card-text">
+                    
+                        <p>
+                            <a href="/"  style="font-weight: normal;">GENiALABILE</a> ✧⌝
+                            <br>
+                            Multidimensional Ave,
+                            <br>
+                            GPT's City, API, 2025
+                        </p>
                     </div>
-                <!---//--->
-            </p>
+                </div>
+            <!---//--->
+        </p>
+
 
         </main>
 
