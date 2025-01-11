@@ -13,7 +13,7 @@ https://www.genialabile.com/css.html
 
 <!---// STARTLINE & SAY HI //--->
     <style>
-    Informativo */
+    
         :root {
             --background-color: #000000;
             --info-background: #000000;
@@ -24,7 +24,7 @@ https://www.genialabile.com/css.html
             --accent: #f4f4f4;
             --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
-       
+       Informativo */
         html, body {
             background-color: black;
             margin: 0;
