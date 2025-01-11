@@ -1,4 +1,4 @@
-<!---//
+/* Pagina intera <!---//
 # Gen-IA
 Advanced-GPT inspiring multidimensional solutions and unlocking creative potential.
 ---
@@ -13,7 +13,8 @@ https://www.genialabile.com/css-card.html
 
 <!---// STARTLINE & SAY HI //--->
     <style>
-                 
+               /* Pagina intera 
+            Informativo */   
         .card {
             display: flex;
             align-items: center; 
@@ -53,6 +54,6 @@ https://www.genialabile.com/css-card.html
         .card-text p {
             margin: 0;
         }
-
+/* Pagina intera 
     </style>        
 <!---// ENDLINE & SAY BYE //--->
