@@ -10,6 +10,15 @@ You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2
 hptts://www.genialabile.com | DARK MODE x Ultra-Minimalist Visual Landing Page  
 ---
 header.html + CSS
+
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+                document.body.style.display = "block";
+            }, 2000); // 
+        });
+    
+
 //-->
 
 
@@ -20,18 +29,24 @@ header.html + CSS
     <meta name="theme-color" content="#000000">
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            setTimeout(function () {
-                document.body.style.display = "block";
-            }, 2000); // 
-        });
     
         document.body.style.display = "none";
     </script>
     
 <!-- Stili CSS -->
     <style>
+        /* Nasconde la pagina inizialmente */
+        body {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1s ease-in-out;
+        }
+
+        /* Rende la pagina visibile */
+        body.visible {
+            opacity: 1;
+            visibility: visible;
+        }
       
         :root {
             --background-color: #000000;
