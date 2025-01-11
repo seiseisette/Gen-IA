@@ -69,20 +69,6 @@ https://www.genialabile.com/main.css
         p {
             margin-bottom: 1rem;
         }
-
-        a {
-            text-decoration: none; 
-            color: white;
-            font-weight: bold; 
-        }
-
-        a:hover {
-            color: #00ff00; 
-            text-decoration: none;
-            /* 
-            text-decoration: underline; /
-            */
-        }
         
         .important-p a {
             color:  #00bbff; 
@@ -123,7 +109,11 @@ https://www.genialabile.com/main.css
         }
 
         a:hover {
+            color: #00ff00; 
+            text-decoration: none;
+            /* 
             text-decoration: underline; /
+            */
         }
 
         footer {
