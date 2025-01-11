@@ -33,6 +33,7 @@ https://www.genialabile.com/css.html
             padding: var(--spacing);
             width: 100%; /* Pagina intera 
             Informativo */
+        }
         html, body {
             background-color: black;
             margin: 0;
