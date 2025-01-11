@@ -22,15 +22,29 @@ hptts://www.genialabile.com/
         <link rel="icon" href="gen-favicon-rd.ico?v=2" type="image/x-icon">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+        
         <!-- Header -->
-        <script>
-            fetch('header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.querySelector('head').innerHTML += data;
-                })
-                .catch(error => console.error('Errore nel caricamento header:', error));
-        </script> <!-- Header -->
+            <script>
+                fetch('header.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.querySelector('head').innerHTML += data;
+                    })
+                    .catch(error => console.error('Errore nel caricamento header:', error));
+            </script> 
+        <!-- Header -->
+
+         <!-- CSS-Card ------------------------------------------------------------------>
+            <script>
+                fetch('css-card.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.querySelector('head').innerHTML += data;
+                    })
+                    .catch(error => console.error('Errore nel caricamento del CSS-Card dinamico:', error));
+            </script>
+        <!-- CSS-Card ------------------------------------------------------------------>
+
     </head>
 
 
