@@ -14,7 +14,7 @@ https://www.genialabile.com/css.html
 <!---// STARTLINE & SAY HI //--->
     <style>
     Informativo */
-        /* Riquadro:root {
+        :root {
             --background-color: #000000;
             --info-background: #000000;
             --info-text: #f4f4f4;
@@ -24,7 +24,7 @@ https://www.genialabile.com/css.html
             --accent: #f4f4f4;
             --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
-        /* Riquadro Informativo 
+        
         .info {
             box-shadow: var(--box-shadow);
             background: var(--info-background);
