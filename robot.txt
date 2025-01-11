@@ -9,7 +9,6 @@
     Use, distribution, or modification of this project is strictly prohibited without prior written authorization.
     
     https://www.genialabile.com/index.html
-
 #
 
 User-agent: *
