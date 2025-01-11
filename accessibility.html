@@ -33,7 +33,7 @@ hptts://www.genialabile.com | DARK MODE x Ultra-Minimalist Visual Landing Page
     </head>
 
 
-    <body>
+    <body style="background-color: #000000; color: #000000; link: #000000; visited: #000000;">
         <!-- Contenuto Principale -->
         <main>
             <h1>Accessibility Statement</h1>
@@ -91,7 +91,7 @@ hptts://www.genialabile.com | DARK MODE x Ultra-Minimalist Visual Landing Page
         </main>
 
 
-        <!-- Footer ------------------------------------------------------------------>
+       <!-- Footer ------------------------------------------------------------------>
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
                     fetch('footer.html')
@@ -106,8 +106,16 @@ hptts://www.genialabile.com | DARK MODE x Ultra-Minimalist Visual Landing Page
                 });
             </script> 
         <!-- Footer ------------------------------------------------------------------>
-    
-    
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                setTimeout(function () {
+                    document.body.classList.add("visible"); // Aggiunge la classe visibile
+                }, 2000); // Aspetta 2 secondi
+            });
+        </script>
+
+
     </body>
 </html>
 <!---//
