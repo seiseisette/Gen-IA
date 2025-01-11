@@ -79,6 +79,41 @@ https://www.genialabile.com/main.css
         a:hover {
             color: #00ff00; 
             text-decoration: none;
+            /* 
+            text-decoration: underline; /
+            */
+        }
+        
+        .important-p a {
+            color:  #00bbff; 
+            text-decoration: none;
+            font-weight: bold; 
+        }
+
+        .important-p a:hover {
+            color: #00ff00; 
+            text-decoration: underline; 
+        }
+
+        .imp-p a {
+            color:  #ffff; 
+            text-decoration: none;
+            font-weight: bold; 
+        }
+
+        .imp-p a:hover {
+            color: #00ff00; 
+            text-decoration: underline; 
+        }
+
+        a {
+            text-decoration: none; 
+            color: white;
+            font-weight: bold; 
+        }
+
+        a:hover {
+            text-decoration: underline; /
         }
 
         footer {
