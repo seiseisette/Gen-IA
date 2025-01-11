@@ -1,4 +1,4 @@
- /* Riquadro<!---//
+/*---//
 # Gen-IA
 Advanced-GPT inspiring multidimensional solutions and unlocking creative potential.
 ---
@@ -8,33 +8,12 @@ A GPT Based Project—Designed by @seiseisette.
 This project is no longer available as open-source. Updated to 10 Jan 2025.
 Use, distribution, or modification of this project is strictly prohibited without prior written authorization.
 ---
-https://www.genialabile.com/css.html
-//-->
+https://www.genialabile.com/main.css
+//--*/
 
-<!---// STARTLINE & SAY HI //--->
+ /*---// STARTLINE & SAY HI //--- */
     <style>
-    Informativo */
-        :root {
-            --background-color: #000000;
-            --info-background: #000000;
-            --info-text: #f4f4f4;
-            --borders: #f4f4f4;
-            --posts: #f4f4f4;
-            --spacing: 3rem;
-            --accent: #f4f4f4;
-            --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .info {
-            box-shadow: var(--box-shadow);
-            background: var(--info-background);
-            color: var(--info-text);
-            border-radius: 0px; 
-            padding: var(--spacing);
-            width: 100%;
-            
-        }
-        Informativo */
+    
         html, body {
             background-color: black;
             margin: 0;
@@ -114,6 +93,28 @@ https://www.genialabile.com/css.html
         * {
             box-sizing: border-box;
         }
-   /* Riquadro
+
+        :root {
+            --background-color: #000000;
+            --info-background: #000000;
+            --info-text: #f4f4f4;
+            --borders: #f4f4f4;
+            --posts: #f4f4f4;
+            --spacing: 3rem;
+            --accent: #f4f4f4;
+            --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .info {
+            box-shadow: var(--box-shadow);
+            background: var(--info-background);
+            color: var(--info-text);
+            border-radius: 0px; 
+            padding: var(--spacing);
+            width: 100%;
+            
+        }
+
+  
     </style>
-<!---// ENDLINE & SAY BYE //--->
+ /*---// ENDLINE & SAY BYE //--- */

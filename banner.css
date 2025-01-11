@@ -1,4 +1,4 @@
-   /* Riquadr<!---//
+/*---//
 # Gen-IA
 Advanced-GPT inspiring multidimensional solutions and unlocking creative potential.
 ---
@@ -8,13 +8,11 @@ A GPT Based Project—Designed by @seiseisette.
 This project is no longer available as open-source. Updated to 10 Jan 2025.
 Use, distribution, or modification of this project is strictly prohibited without prior written authorization.
 ---
-https://www.genialabile.com/css-banner.html
-//-->
+https://www.genialabile.com/banner.css
+//--*/
 
-<!---// STARTLINE & SAY HI //--->
-    <style>
-    Informativo */
-   Informativo */  
+ /*---// STARTLINE & SAY HI //--- */
+
         #cookie-banner {
             display: flex;
             flex-direction: column;
@@ -79,6 +77,6 @@ https://www.genialabile.com/css-banner.html
         .cookie-bty:hover {
             background-color:#00ff00;
         }
-   /* Riquadr
+
     </style>
-<!---// ENDLINE & SAY BYE //--->
+ /*---// ENDLINE & SAY BYE //--- */

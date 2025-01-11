@@ -1,4 +1,4 @@
-/* Pagina intera <!---//
+/*---//
 # Gen-IA
 Advanced-GPT inspiring multidimensional solutions and unlocking creative potential.
 ---
@@ -8,13 +8,12 @@ A GPT Based Project—Designed by @seiseisette.
 This project is no longer available as open-source. Updated to 10 Jan 2025.
 Use, distribution, or modification of this project is strictly prohibited without prior written authorization.
 ---
-https://www.genialabile.com/css-card.html
+https://www.genialabile.com/card.css
 //-->
 
-<!---// STARTLINE & SAY HI //--->
+ /*---// STARTLINE & SAY HI //--- */ 
     <style>
-               /* Pagina intera 
-            Informativo */   
+
         .card {
             display: flex;
             align-items: center; 
@@ -54,6 +53,6 @@ https://www.genialabile.com/css-card.html
         .card-text p {
             margin: 0;
         }
-/* Pagina intera 
+
     </style>        
-<!---// ENDLINE & SAY BYE //--->
+/*---// ENDLINE & SAY BYE //--- */
