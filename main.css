@@ -106,6 +106,16 @@ https://www.genialabile.com/main.css
             text-decoration: underline; 
         }
 
+        .imp-pless a {
+            color:  #00bbff; 
+            text-decoration: none;
+        }
+
+        .imp-pless a:hover {
+            color: #00ff00; 
+            text-decoration: underline; 
+        }
+
         a {
             text-decoration: none; 
             color: white;
