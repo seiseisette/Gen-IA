@@ -1,0 +1,44 @@
+ <!-- Footer -->
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                const body = document.querySelector('body');
+                const footerContainer = document.createElement('div');
+                footerContainer.innerHTML = data;
+                body.appendChild(footerContainer);
+            })
+            .catch(error => console.error('Errore nel caricamento del footer:', error));
+    });
+</script> <!-- Footer -->
+
+
+<!---JAVA BANNER COOKIES--->
+<script>
+    document.getElementById('accept-cookies').addEventListener('click', function() {
+        // Nasconde il banner
+        document.getElementById('cookie-banner').style.display = 'none';
+        // Salva il consenso nei cookies del browser
+        document.cookie = "cookiesAccepted=true; path=/; max-age=" + 60 * 60 * 24 * 365;
+    });
+
+    
+        // Controlla se i cookies sono già stati accettati
+    window.onload = function() {
+        if (document.cookie.includes("cookiesAccepted=true")) {
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+
+        
+    };
+</script>
+
+
+
+
+</body>
+</html>
+<!---//
+//ENDLINE & BYE BYE
+/--->
