@@ -29,10 +29,10 @@ https://www.genialabile.com/css.html
             box-shadow: var(--box-shadow);
             background: var(--info-background);
             color: var(--info-text);
-            border-radius: 0px; /* Bordi squadrati 
+            border-radius: 0px; 
             padding: var(--spacing);
-            width: 100%; /* Pagina intera 
-            Informativo */
+            width: 100%;
+            
         }
         html, body {
             background-color: black;
