@@ -20,7 +20,16 @@ header.html + CSS
     <meta name="theme-color" content="#000000">
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+                document.body.style.display = "block"; // Mostra il corpo della pagina
+            }, 2000); // Delay di 2000ms (2 secondi)
+        });
     
+        // Nascondi il corpo della pagina fino al caricamento
+        document.body.style.display = "none";
+    </script>
 <!-- Stili CSS -->
     <style>
        
