@@ -35,7 +35,7 @@ without prior written authorization.
             --info-text: #f4f4f4;
             --borders: #f4f4f4;
             --posts: #f4f4f4;
-            --spacing: 7rem;
+            --spacing: 2rem 5% /*7rem;*/
             --accent: #f4f4f4;
             --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -60,7 +60,7 @@ without prior written authorization.
             max-width: 1200px; /*100%;*/
             color: var(--info-text);
             margin: 0 auto;
-            padding: 2rem 5%;
+            padding: var(--spacing);
             text-align: left;
         }
 
