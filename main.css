@@ -25,10 +25,21 @@ without prior written authorization.
  /*---// STARTLINE & SAY HI //---*/
     /*< style> */
     
-        /*
-        NOTA: body + body.visible in-pages, fixed loading issue
-        */
-    
+     /*
+     NOTE: body + body.visible in-pages, fixed loading issue
+     */
+     
+    :root {
+            --background-color: #000000;
+            --info-background: #000000;
+            --info-text: #f4f4f4;
+            --borders: #f4f4f4;
+            --posts: #f4f4f4;
+            --spacing: 3rem;
+            --accent: #f4f4f4;
+            --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
         .info {
             box-shadow: var(--box-shadow);
             background: var(--info-background);
@@ -38,70 +49,38 @@ without prior written authorization.
             width: 100%;
             
         }
-
-        :root {
-            --background-color: #000000;
-            --info-background: #000000;
-            --info-text: #f4f4f4;
-            --borders: #f4f4f4;
-            --posts: #f4f4f4;
-            --spacing: 2rem 5% /*7rem;*/
-            --accent: #f4f4f4;
-            --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
         html, body {
-            background-color: var (var(--info-background));
+            background-color: black;
             margin: 0;
-            padding: var(--spacing);
+            padding: 0;
             height: 100%;
-        }
-
-        @media (max-width: 768px) {
-            body, main, footer {
-                padding: 3rem;
-            }
         }
 
         @media screen and (min-width: 1024px) {
         main {
-            max-width: 1200px;    
-            margin: 0 auto;
-            padding: 3rem; 
+            max-width: 1200px; 
+            padding: 5rem;     
+            margin: 0 auto;   
             }
         }
 
         main {
             width: 100%;
-            max-width: 1200px; /*100%;*/
-            color: var(--info-text);
+            max-width: 100%;
+            color: #f4f4f4;
             margin: 0 auto;
             padding: var(--spacing);
-            text-align: left;
-        }
-
-        @media (max-width: 768px) {
-            footer {
-                padding: var(--spacing);
-            }
-
-            .footer-container {
-                padding: var(--spacing);
-            }
         }
 
         footer {
             width: 100%;
-            max-width: 1200px; /*100%;*/
             padding: var(--spacing);
-            text-align: left; /*center*/
+            text-align: left;
             background-color: var(--info-background);
             color: var(--info-text);
-            margin-top: 3rem;
+            margin-top: 10rem;
+            margin-bottom: 3rem;
             margin: 0;
-            box-sizing: border-box;
-            margin-top: var(--spacing);
-            margin-bottom: var(--spacing);
         }
 
         * {
