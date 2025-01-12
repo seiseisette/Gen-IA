@@ -43,7 +43,7 @@ without prior written authorization.
         html, body {
             background-color: var (var(--info-background));
             margin: 0;
-            padding: 0;
+            padding: var(--spacing);
             height: 100%;
         }
 
