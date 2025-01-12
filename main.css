@@ -1,19 +1,50 @@
-/*---//
-# Gen-IA
+/*
+===============================================================================
+# Project: Gen-IA
+# Website: Minimal welcome website
+===============================================================================
+
+## GENiALABILE
 Advanced-GPT inspiring multidimensional solutions and unlocking creative potential.
----
+
+-------------------------------------------------------------------------------
 ## License
 © 2025 GENiALABILE. All Rights Reserved.
-A GPT Based Project—Designed by @seiseisette. 
-This project is no longer available as open-source. Updated to 10 Jan 2025.
-Use, distribution, or modification of this project is strictly prohibited without prior written authorization.
----
-https://www.genialabile.com/main.css
-//--*/
+A GPT-Based Project — Designed by seiseisette.
+Repository: https://github.com/seiseisette/
+This project is no longer available as open-source. Updated: 10 Jan 2025.
+Use, distribution, or modification of this project is strictly prohibited
+without prior written authorization.
+-------------------------------------------------------------------------------
 
- /*---// STARTLINE & SAY HI //--- */
-    <style>
-    
+# Version: v2.1
+# URL: https://www.genialabile.com/main.css
+===============================================================================
+*/
+
+ /*---// STARTLINE & SAY HI //---*/
+    /*< style> */
+
+        :root {
+            background-color: #000000;
+            --info-background: #000000;
+            --info-text: #f4f4f4;
+            --borders: #f4f4f4;
+            --posts: #f4f4f4;
+            --spacing: 3rem;
+            --accent: #f4f4f4;
+            --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .info {
+            box-shadow: var(--box-shadow);
+            background: var(--info-background);
+            color: var(--info-text);
+            border-radius: 0px; 
+            padding: var(--spacing);
+            width: 100%;
+            
+        }
         html, body {
             background-color: black;
             margin: 0;
@@ -53,6 +84,19 @@ https://www.genialabile.com/main.css
             padding: var(--spacing);
         }
 
+        footer {
+            width: 100%;
+            padding: var(--spacing);
+            text-align: left;
+            background-color: var(--info-background);
+            color: var(--info-text);
+            margin-top: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         section {
             margin-top: 2rem;
         }
@@ -70,51 +114,54 @@ https://www.genialabile.com/main.css
             margin-bottom: 1rem;
         }
 
+        p.txt-mini {
+            font-size: 0.7rem;
+        }
+
         a {
             text-decoration: none; 
-            color: white;
+            color: #ffffff;
             font-weight: bold; 
         }
 
         a:hover {
             color: #00ff00; 
             text-decoration: none;
+            text-decoration: underline;
         }
 
-        footer {
-            width: 100%;
-            padding: var(--spacing);
-            text-align: left;
-            background-color: var(--info-background);
-            color: var(--info-text);
-            margin-top: 1rem;
+        .important-p a {
+            color:  #00bbff; 
+            text-decoration: none;
+            font-weight: bold; 
         }
 
-        * {
-            box-sizing: border-box;
+        .important-p a:hover {
+            color: #00ff00; 
+            text-decoration: underline; 
         }
 
-        :root {
-            --background-color: #000000;
-            --info-background: #000000;
-            --info-text: #f4f4f4;
-            --borders: #f4f4f4;
-            --posts: #f4f4f4;
-            --spacing: 3rem;
-            --accent: #f4f4f4;
-            --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .info {
-            box-shadow: var(--box-shadow);
-            background: var(--info-background);
-            color: var(--info-text);
-            border-radius: 0px; 
-            padding: var(--spacing);
-            width: 100%;
-            
+        .imp-p a {
+            color:  #ffffff;
+            font-size: 0.7rem; 
+            text-decoration: none;
+            font-weight: normal; 
         }
 
-  
-    </style>
+        .imp-p a:hover {
+            color: #00ff00; 
+            text-decoration: underline; 
+        }
+
+        .imp-l a {
+            color:  #00bbff; 
+            text-decoration: none;
+        }
+
+        .imp-l a:hover {
+            color: #00ff00; 
+            text-decoration: underline; 
+        }
+
+    /* </style> */
  /*---// ENDLINE & SAY BYE //--- */
