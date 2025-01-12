@@ -24,16 +24,20 @@ without prior written authorization.
 
  /*---// STARTLINE & SAY HI //---*/
     /*< style> */
-
+    
+     /*
+     NOTE: body + body.visible in-pages, fixed loading issue
+     */
+     
         :root {
-            background-color: #000000;
+            --background-color: #000000;
             --info-background: #000000;
             --info-text: #f4f4f4;
             --borders: #f4f4f4;
             --posts: #f4f4f4;
             --spacing: 3rem;
             --accent: #f4f4f4;
-            --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            --box-shadow: 0px 4px 8px #00000000;
         }
         
         .info {
@@ -45,8 +49,8 @@ without prior written authorization.
             width: 100%;
             
         }
-        html, body {
-            background-color: black;
+        html, body  {  /* html, body {*/
+            background-color: var(--background-color);
             margin: 0;
             padding: 0;
             height: 100%;
@@ -55,7 +59,7 @@ without prior written authorization.
         @media screen and (min-width: 1024px) {
         main {
             max-width: 1200px; 
-            padding: 5rem;     
+            padding: 50rem;     
             margin: 0 auto;   
             }
         }
@@ -63,7 +67,7 @@ without prior written authorization.
         main {
             width: 100%;
             max-width: 100%;
-            color: #f4f4f4;
+            color: var(--info-text);
             margin: 0 auto;
             padding: var(--spacing);
         }
@@ -74,7 +78,9 @@ without prior written authorization.
             text-align: left;
             background-color: var(--info-background);
             color: var(--info-text);
-            margin-top: 1rem;
+            margin-top: 12rem;
+            margin-bottom: 3rem;
+            margin: 0 auto;
         }
 
         * {
@@ -138,7 +144,7 @@ without prior written authorization.
         }
 
         .imp-l a {
-            color:  #00bbff; 
+            color:  #00bbff;
             text-decoration: none;
             font-weight: normal;
         }
