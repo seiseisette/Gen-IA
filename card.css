@@ -11,8 +11,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
 https://www.genialabile.com/card.css
 //--*/
 
- /*---// STARTLINE & SAY HI //--- */ 
-    <style>
+ /*---// STARTLINE & SAY HI //--- 
+    <style> */ 
 
         .card {
             display: flex;
@@ -55,5 +55,5 @@ https://www.genialabile.com/card.css
             margin: 0;
         }
 
-    </style>        
+   /* </style>        
 /*---// ENDLINE & SAY BYE //--- */
