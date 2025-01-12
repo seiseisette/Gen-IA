@@ -73,6 +73,19 @@ https://www.genialabile.com/main.css
             margin: 0 auto;
             padding: var(--spacing);
         }
+        
+        footer {
+            width: 100%;
+            padding: var(--spacing);
+            text-align: left;
+            background-color: var(--info-background);
+            color: var(--info-text);
+            margin-top: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
 
         section {
             margin-top: 2rem;
@@ -90,7 +103,21 @@ https://www.genialabile.com/main.css
         p {
             margin-bottom: 1rem;
         }
-        
+
+        a {
+            text-decoration: none; 
+            color: white;
+            font-weight: bold; 
+        }
+
+        a:hover {
+            color: #00ff00; 
+            text-decoration: none;
+            /* 
+            text-decoration: underline; /
+            */
+        }
+
         .important-p a {
             color:  #00bbff; 
             text-decoration: none;
@@ -123,32 +150,6 @@ https://www.genialabile.com/main.css
             text-decoration: underline; 
         }
     
-        a {
-            text-decoration: none; 
-            color: white;
-            font-weight: bold; 
-        }
-
-        a:hover {
-            color: #00ff00; 
-            text-decoration: none;
-            /* 
-            text-decoration: underline; /
-            */
-        }
-
-        footer {
-            width: 100%;
-            padding: var(--spacing);
-            text-align: left;
-            background-color: var(--info-background);
-            color: var(--info-text);
-            margin-top: 1rem;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
 
 
   
