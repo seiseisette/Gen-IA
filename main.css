@@ -24,9 +24,13 @@ without prior written authorization.
 
  /*---// STARTLINE & SAY HI //---*/
     /*< style> */
-
-        :root {
-            background-color: #000000;
+    
+     /*
+     NOTE: body + body.visible in-pages, fixed loading issue
+     */
+     
+    :root {
+            --background-color: #000000;
             --info-background: #000000;
             --info-text: #f4f4f4;
             --borders: #f4f4f4;
@@ -50,22 +54,6 @@ without prior written authorization.
             margin: 0;
             padding: 0;
             height: 100%;
-        }
-
-        body {
-            margin: 0;
-            background-color: var(--background-color);
-            font-family: 'Inconsolata', sans-serif;
-            font-size: 16px;
-
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.7s ease-in-out;
-        }
-        
-        body.visible {
-            opacity: 1;
-            visibility: visible;
         }
 
         @media screen and (min-width: 1024px) {
@@ -154,7 +142,7 @@ without prior written authorization.
         }
 
         .imp-l a {
-            color:  #00bbff; 
+            color:  #00bbff;
             text-decoration: none;
             font-weight: normal;
         }
