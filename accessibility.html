@@ -1,15 +1,27 @@
-<!---//
-# Gen-IA
+<!-- 
+===============================================================================
+# Project: Gen-IA
+# Website: Minimal welcome website
+===============================================================================
+
+## GENiALABILE
 Advanced-GPT inspiring multidimensional solutions and unlocking creative potential.
 
+-------------------------------------------------------------------------------
 ## License
 © 2025 GENiALABILE. All Rights Reserved.
-A GPT Based Project—Designed by @seiseisette. 
-This project is no longer available as open-source. Updated to 10 Jan 2025.
-Use, distribution, or modification of this project is strictly prohibited without prior written authorization.
----
-hptts://www.genialabile.com/
-//--->
+A GPT-Based Project — Designed by seiseisette.
+Repository: https://github.com/seiseisette/
+This project is no longer available as open-source. Updated: 10 Jan 2025.
+Use, distribution, or modification of this project is strictly prohibited
+without prior written authorization.
+-------------------------------------------------------------------------------
+
+# Version: v2.1
+# URL: https://www.genialabile.com/accessibility.html
+===============================================================================
+-->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -94,11 +106,20 @@ hptts://www.genialabile.com/
 
         </main>
 
+        <!-- FADE --> 
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    setTimeout(function () {
+                        document.body.classList.add("visible");
+                    }, 2000);
+                });
+            </script>
+        <!-- FADE --> 
 
-       <!-- Footer ------------------------------------------------------------------>
+        <!-- FOOTER ------> 
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
-                    fetch('footer.html')
+                    fetch('https://www.genialabile.com/footer.html')
                         .then(response => response.text())
                         .then(data => {
                             const body = document.querySelector('body');
@@ -109,19 +130,8 @@ hptts://www.genialabile.com/
                     .catch(error => console.error('Errore nel caricamento del footer:', error));
                 });
             </script> 
-        <!-- Footer ------------------------------------------------------------------>
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                setTimeout(function () {
-                    document.body.classList.add("visible");
-                }, 2000);
-            });
-        </script>
-
+        <!-- FOOTER ------> 
 
     </body>
+
 </html>
-<!---//
-//ENDLINE & BYE BYE
-/--->
