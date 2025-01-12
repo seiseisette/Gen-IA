@@ -76,8 +76,9 @@ without prior written authorization.
 
         footer {
             width: 100%;
+            max-width: 1200px; /*100%;*/
             padding: var(--spacing);
-            text-align: left;
+            text-align: left; /*center*/
             background-color: var(--info-background);
             color: var(--info-text);
             margin-top: 1rem;
