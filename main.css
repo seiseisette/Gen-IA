@@ -64,6 +64,16 @@ without prior written authorization.
             text-align: left;
         }
 
+        @media (max-width: 768px) {
+            footer {
+                padding: var(--spacing);
+            }
+
+            .footer-container {
+                padding: var(--spacing);
+            }
+        }
+
         footer {
             width: 100%;
             padding: var(--spacing);
