@@ -29,7 +29,7 @@ without prior written authorization.
      NOTE: body + body.visible in-pages, fixed loading issue
      */
      
-    :root {
+        :root {
             --background-color: #000000;
             --info-background: #000000;
             --info-text: #f4f4f4;
@@ -66,7 +66,7 @@ without prior written authorization.
 
         main {
             width: 100%;
-            max-width: 100%;
+            max-width: 1024px /* 100%;*/
             color: #f4f4f4;
             margin: 0 auto;
             padding: var(--spacing);
