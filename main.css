@@ -113,8 +113,8 @@ without prior written authorization.
         p {
             margin-bottom: 1rem;
         }
-        
-        .txt-mini p {
+
+        p.txt-mini {
             font-size: 0.7rem;
         }
 
