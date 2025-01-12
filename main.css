@@ -11,11 +11,12 @@ Use, distribution, or modification of this project is strictly prohibited withou
 https://www.genialabile.com/main.css
 //--*/
 
- /*---// STARTLINE & SAY HI //--- */
-    <style>
+ /*---// STARTLINE & SAY HI //--- */ /**/
+ /* <style> */
     
+        
         :root {
-            background-color: #000000;
+            --background-color: #000000;
             --info-background: #000000;
             --info-text: #f4f4f4;
             --borders: #f4f4f4;
@@ -151,5 +152,5 @@ https://www.genialabile.com/main.css
 
 
   
-    </style>
+  /*  </style>
  /*---// ENDLINE & SAY BYE //--- */
