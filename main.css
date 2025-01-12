@@ -25,8 +25,12 @@ without prior written authorization.
  /*---// STARTLINE & SAY HI //---*/
     /*< style> */
     
+     /*
+     NOTE: body + body.visible in-pages, fixed loading issue
+     */
+     
     :root {
-            background-color: #000000;
+            --background-color: #000000;
             --info-background: #000000;
             --info-text: #f4f4f4;
             --borders: #f4f4f4;
