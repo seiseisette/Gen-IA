@@ -67,7 +67,7 @@ without prior written authorization.
         main {
             width: 100%;
             max-width: 1024px /* 100%;*/
-            color: var(var(--info-text);
+            color: var(--info-text);
             margin: 0 auto;
             padding: var(--spacing);
         }
