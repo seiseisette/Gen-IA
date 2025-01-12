@@ -113,6 +113,10 @@ without prior written authorization.
         p {
             margin-bottom: 1rem;
         }
+        
+        .txt-mini p {
+            font-size: 0.7rem;
+        }
 
         a {
             text-decoration: none; 
@@ -160,9 +164,5 @@ without prior written authorization.
             text-decoration: underline; 
         }
 
-        .txt-mini p {
-            font-size: 0.7rem;
-        }
-
-   /* </style> */
+    /* </style> */
  /*---// ENDLINE & SAY BYE //--- */
