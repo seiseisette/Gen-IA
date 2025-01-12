@@ -12,18 +12,19 @@ https://www.genialabile.com/main.css
 //--*/
 
  /*---// STARTLINE & SAY HI //--- */ /**/
- /* <style> */
+ 
+    <style>
     
         
         :root {
-            --background-color: #000000;
-            --info-background: #000000;
-            --info-text: #f4f4f4;
-            --borders: #f4f4f4;
-            --posts: #f4f4f4;
-            --spacing: 3rem;
-            --accent: #f4f4f4;
-            --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #000000;
+            info-background: #000000;
+            info-text: #f4f4f4;
+            borders: #f4f4f4;
+            posts: #f4f4f4;
+            spacing: 3rem;
+            accent: #f4f4f4;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
         
         .info {
@@ -73,7 +74,7 @@ https://www.genialabile.com/main.css
             margin: 0 auto;
             padding: var(--spacing);
         }
-        
+
         footer {
             width: 100%;
             padding: var(--spacing);
@@ -150,8 +151,6 @@ https://www.genialabile.com/main.css
             text-decoration: underline; 
         }
     
+    </style>
 
-
-  
-  /*  </style>
  /*---// ENDLINE & SAY BYE //--- */
