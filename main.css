@@ -35,7 +35,7 @@ without prior written authorization.
             --info-text: #f4f4f4;
             --borders: #f4f4f4;
             --posts: #f4f4f4;
-            --spacing: 30rem;
+            --spacing: 7rem;
             --accent: #f4f4f4;
             --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             --padding: 0;
@@ -69,7 +69,7 @@ without prior written authorization.
         main {
             width: 100%;
             max-width: 100%;
-            color: var (var(--info-text));
+            color: var (--info-text);
             margin: 0 auto;
             padding: var(--spacing);
             text-align: left;
