@@ -52,12 +52,3 @@ If you have any questions or feedback, feel free to reach out:
 **Designed by**: [@seiseisette](https://x.com/seiseisette)  
 **Hosted on**: [GitHub Pages](https://github.com/seiseisette/Gen-IA)
 
----
-
-## 🚀 Getting Started
-
-To deploy the project locally, follow these steps:
-
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/seiseisette/Gen-IA.git
