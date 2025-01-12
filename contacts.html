@@ -30,8 +30,8 @@ https://www.genialabile.com/contacts.html
                         document.querySelector('head').innerHTML += data;
                     })
                     .catch(error => console.error('Errore nel caricamento header:', error));
-                    document.querySelector('head').innerHTML += '<!-- Static Header Fallback -->';
-                    document.addEventListener('DOMContentLoaded', function () {
+                        document.querySelector('head').innerHTML += '<!-- Static Header Fallback -->';
+                        document.addEventListener('DOMContentLoaded', function () {
                         console.log('Card HTML:', document.querySelector('.card').outerHTML);
                     });
             </script> 
@@ -39,54 +39,6 @@ https://www.genialabile.com/contacts.html
         
         <!-- CSS CARD ------------------------------------------------------------------>
         <link rel="stylesheet" href="https://www.genialabile.com/card.css">
-            
-        <!-->  <style>
-
-                .card {
-                    display: flex;
-                    align-items: center; 
-                    background-color: #00000000; 
-                    color: #ffffff; 
-                    padding: 0rem; 
-                    border-radius: 1px; 
-                    box-shadow: 0px 0px 0px #000000; 
-                    width: fit-content;
-                    max-width: 100%;
-                }
-        
-                .card-image-container {
-                    flex-shrink: 0;
-                    margin-right: 1rem; 
-                }
-        
-                .card-image {
-                    width: 60px; 
-                    height: 60px;
-                    max-width: 100%; 
-                    border-radius: 50%;
-                    object-fit: cover; 
-                }
-        
-                .card-text {
-                    font-family: 'Inconsolata', monospace;
-                    font-size: 1rem;
-                    line-height: 1.5;
-                }
-        
-                .card-text h5 {
-                    margin: 0 0 0.5rem 0;/
-                    font-size: 1.2rem;
-                    font-weight: bold;
-                }
-        
-                .card-text p {
-                    margin: 0;
-                }
-        
-            </style>
-
-
-
         <!-- CSS CARD ------------------------------------------------------------------>
         
     </head>
