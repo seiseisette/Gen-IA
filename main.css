@@ -11,20 +11,19 @@ Use, distribution, or modification of this project is strictly prohibited withou
 https://www.genialabile.com/main.css
 //--*/
 
- /*---// STARTLINE & SAY HI //--- */ /**/
- 
-    <style>
+ /*---// STARTLINE & SAY HI //---  
+    <style>/**/
     
         
         :root {
             background-color: #000000;
-            info-background: #000000;
-            info-text: #f4f4f4;
-            borders: #f4f4f4;
-            posts: #f4f4f4;
-            spacing: 3rem;
-            accent: #f4f4f4;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            --info-background: #000000;
+            --info-text: #f4f4f4;
+            --borders: #f4f4f4;
+            --posts: #f4f4f4;
+            --spacing: 3rem;
+            --accent: #f4f4f4;
+            --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         }
         
         .info {
@@ -151,6 +150,5 @@ https://www.genialabile.com/main.css
             text-decoration: underline; 
         }
     
-    </style>
-
+   /*  </style>
  /*---// ENDLINE & SAY BYE //--- */
