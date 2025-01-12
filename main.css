@@ -114,9 +114,13 @@ without prior written authorization.
             margin-bottom: 1rem;
         }
 
+        p.txt-mini {
+            font-size: 0.7rem;
+        }
+
         a {
             text-decoration: none; 
-            color: #fffff;
+            color: #ffffff;
             font-weight: bold; 
         }
 
@@ -138,7 +142,7 @@ without prior written authorization.
         }
 
         .imp-p a {
-            color:  #fffff;
+            color:  #ffffff;
             font-size: 0.7rem; 
             text-decoration: none;
             font-weight: normal; 
