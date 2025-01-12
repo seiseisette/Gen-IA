@@ -38,17 +38,6 @@ without prior written authorization.
             --spacing: 7rem;
             --accent: #f4f4f4;
             --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            --padding: 0;
-        }
-        
-        .info {
-            box-shadow: var(--box-shadow);
-            background: var(--info-background);
-            color: var(--info-text);
-            border-radius: 0px; 
-            padding: var(--spacing);
-            width: 100%;
-            
         }
 
         html, body {
@@ -71,7 +60,7 @@ without prior written authorization.
             max-width: 1200px; /*100%;*/
             color: var(--info-text);
             margin: 0 auto;
-            padding: var(--spacing);
+            padding: 2rem 5%;
             text-align: left;
         }
 
@@ -82,6 +71,7 @@ without prior written authorization.
             background-color: var(--info-background);
             color: var(--info-text);
             margin-top: 1rem;
+            margin: 0;
         }
 
         * {
