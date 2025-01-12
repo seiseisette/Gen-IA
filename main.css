@@ -91,7 +91,7 @@ without prior written authorization.
             margin: 0;
             box-sizing: border-box;
             margin-top: var(--spacing);
-             margin-bottom: var(--spacing);
+            margin-bottom: var(--spacing);
         }
 
         * {
