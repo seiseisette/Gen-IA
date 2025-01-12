@@ -160,5 +160,9 @@ without prior written authorization.
             text-decoration: underline; 
         }
 
+        .txt-mini {
+            font-size: 0.7rem;
+        }
+
    /* </style> */
  /*---// ENDLINE & SAY BYE //--- */
