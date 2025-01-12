@@ -47,6 +47,12 @@ without prior written authorization.
             height: 100%;
         }
 
+        @media (max-width: 768px) {
+            body, main, footer {
+                padding: 3rem;
+            }
+        }
+
         @media screen and (min-width: 1024px) {
         main {
             max-width: 1200px;    
@@ -81,7 +87,7 @@ without prior written authorization.
             text-align: left; /*center*/
             background-color: var(--info-background);
             color: var(--info-text);
-            margin-top: 1rem;
+            margin-top: 3rem;
             margin: 0;
         }
 
