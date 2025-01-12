@@ -160,7 +160,7 @@ without prior written authorization.
             text-decoration: underline; 
         }
 
-        .txt-mini {
+        .txt-mini p {
             font-size: 0.7rem;
         }
 
