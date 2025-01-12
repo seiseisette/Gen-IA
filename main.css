@@ -50,7 +50,7 @@ without prior written authorization.
             
         }
         html, body {
-            background-color: black;
+            background-color: var(--background-color);
             margin: 0;
             padding: 0;
             height: 100%;
