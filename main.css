@@ -59,7 +59,7 @@ without prior written authorization.
         @media screen and (min-width: 1024px) {
         main {
             max-width: 1200px; 
-            padding: 5rem;     
+            padding: 50rem;     
             margin: 0 auto;   
             }
         }
@@ -78,7 +78,9 @@ without prior written authorization.
             text-align: left;
             background-color: var(--info-background);
             color: var(--info-text);
-            margin-top: 1rem;
+            margin-top: 12rem;
+            margin-bottom: 3rem;
+            margin: 0 auto;
         }
 
         * {
