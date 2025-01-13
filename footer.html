@@ -30,7 +30,7 @@ without prior written authorization.
             fetch('https://genialabile.com/wip-web.html')
                 .then(response => response.text())
                 .then(data => {
-                    document.querySelector('head').innerHTML += data;
+                    document.querySelector('body').innerHTML += data;
                 })
                 .catch(error => {
                     console.error('Errore nel caricamento alert-footer:', error);
@@ -44,13 +44,7 @@ without prior written authorization.
 
         © 2025 <a href="https://genialabile.com/" style="font-weight: normal">GENiALABILE</a>. All Rights Reserved.
         Advanced-GPT Project—Designed by <a href="https://github.com/seiseisette/" style="font-weight: normal">seiseisette</a>.
-        <br>
-        ORCID:
-        <a href="https://orcid.org/0009-0002-6309-2937" style="font-weight: normal">0009-0002-6309-2937</a>
-        
-        <!-- Powered by <a href="https://openai.com/" style="font-weight: normal">OpenAI</a>. -->
-        <br>
-        <!-- <br><br><br><br><br><br><br>  style="font-size: 0.7rem;-->
+            <br><br>
             <p class="imp-p txt-mini">
                 <br>
                 <a href="https://genialabile.com/" aria-label="Home">/<</a>
