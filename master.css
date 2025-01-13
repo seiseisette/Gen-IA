@@ -56,6 +56,24 @@ without prior written authorization.
             height: 100%;
         }
 
+        body {
+            background-color: #000000;
+            font-family: 'Inconsolata', sans-serif;
+            font-size: 16px;
+            margin: 0 auto;
+            padding: var(--spacing);
+            /* FANCY-FX */
+
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.7s ease-in-out;
+        }
+        
+        body.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
         @media screen and (min-width: 1024px) {
         main {
             max-width: 1200px; 
