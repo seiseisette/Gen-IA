@@ -91,8 +91,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
             background-color: var(--info-background);
             color: var(--info-text);
             margin: 0 auto;
-            margin-top: 9rem;
-            margin-bottom: 3rem;
+            margin-top: 7rem;
+            margin-bottom: 3.5rem;
         }
 
         * {
