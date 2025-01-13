@@ -53,10 +53,17 @@ without prior written authorization.
         <link rel="stylesheet" href="https://www.genialabile.com/main.css">
     <!-- CSS ------------------------------------------------------------------>
     
-    <!---//
+<!---//rediret to SSL //--->
+    <script>
+        if (location.protocol === 'http:') {
+            location.replace(`https://${location.hostname}${location.pathname}${location.search}`);
+        }
+    </script>
+
+    <!---// style effect //--->
     <script>
         document.body.style.display = "none";
     </script>
-    //--->
+    
 
 <!---// ENDLINE & SAY BYE //--->
