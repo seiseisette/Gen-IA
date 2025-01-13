@@ -13,8 +13,7 @@ Advanced-GPT inspiring multidimensional solutions and unlocking creative potenti
 A GPT-Based Project — Designed by seiseisette.
 Repository: https://github.com/seiseisette/
 This project is no longer available as open-source. Updated: 10 Jan 2025.
-Use, distribution, or modification of this project is strictly prohibited
-without prior written authorization.
+Use, distribution, or modification of this project is strictly prohibited without prior written authorization.
 -------------------------------------------------------------------------------
 
 # Version: v2.1
@@ -24,10 +23,6 @@ without prior written authorization.
 
  /*---// STARTLINE & SAY HI //---*/
     /*< style> */
-    
-     /*
-     NOTE: body + body.visible in-pages, fixed loading issue
-     */
      
         :root {
             --background-color: #000000;
@@ -76,7 +71,7 @@ without prior written authorization.
         @media screen and (min-width: 1024px) {
         main {
             max-width: 1200px; 
-            padding: 6rem;  /* Assicurati che questo valore sia corretto era 50 */   
+            padding: 6rem;  /* 50 */   
             margin: 0 auto;   
             }
         }

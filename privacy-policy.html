@@ -23,29 +23,29 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
 <!DOCTYPE html>
 <html lang="en">  
-<head>
-    <title>GENiALABILE | Privacy Policy</title>
-    <meta name="description" content="GENiALABILE - Privacy Policy Content.">
-    <link rel="canonical" href="https://genialabile.com/privacy-policy.html">
-        
-    <!-- header.html -->
-    <script>
-        fetch('https://genialabile.com/header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.querySelector('head').innerHTML += data;
-            })
-            .catch(error => {
-                console.error('Errore nel caricamento header:', error);
-                document.querySelector('head').innerHTML += `
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1">
-                `;
-            });
-    </script>
-    <!-- header.html -->
+    <head>
+        <title>GENiALABILE | Privacy Policy</title>
+        <meta name="description" content="GENiALABILE - Privacy Policy Content.">
+        <link rel="canonical" href="https://genialabile.com/privacy-policy.html">
+            
+        <!-- header.html -->
+            <script>
+                fetch('https://genialabile.com/header.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.querySelector('head').innerHTML += data;
+                    })
+                    .catch(error => {
+                        console.error('Errore nel caricamento header:', error);
+                        document.querySelector('head').innerHTML += `
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1">
+                        `;
+                    });
+            </script>
+        <!-- header.html -->
 
-</head>
+    </head>
 
     <body style="background-color: #000000; color: #000000; link: #000000; visited: #000000;">
         <!-- Contenuto Principale -->

@@ -13,8 +13,7 @@ Advanced-GPT inspiring multidimensional solutions and unlocking creative potenti
 A GPT-Based Project — Designed by seiseisette.
 Repository: https://github.com/seiseisette/
 This project is no longer available as open-source. Updated: 10 Jan 2025.
-Use, distribution, or modification of this project is strictly prohibited
-without prior written authorization.
+Use, distribution, or modification of this project is strictly prohibited without prior written authorization.
 -------------------------------------------------------------------------------
 
 # Version: v2.1 
@@ -28,25 +27,25 @@ without prior written authorization.
         <title>GENiALABILE | Accessibility</title>
         <meta name="description" content="GENiALABILE - Accessibility Front Statement.">
         <link rel="canonical" href="https://genialabile.com/accessibility.html">
-        
-   <!-- header.html -->
-    <script>
-        fetch('https://genialabile.com/header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.querySelector('head').innerHTML += data;
-            })
-            .catch(error => {
-                console.error('Errore nel caricamento header:', error);
-                document.querySelector('head').innerHTML += `
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1">
-                `;
-            });
-    </script>
+            
     <!-- header.html -->
-
-</head>
+            <script>
+                fetch('https://genialabile.com/header.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.querySelector('head').innerHTML += data;
+                    })
+                    .catch(error => {
+                        console.error('Errore nel caricamento header:', error);
+                        document.querySelector('head').innerHTML += `
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1">
+                        `;
+                    });
+            </script>
+        <!-- header.html -->
+         
+    </head>
 
     <body style="background-color: #000000; color: #000000; link: #000000; visited: #000000;">
         <!-- Contenuto Principale -->

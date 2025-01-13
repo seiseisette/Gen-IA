@@ -29,26 +29,26 @@ Use, distribution, or modification of this project is strictly prohibited withou
         <link rel="canonical" href="https://genialabile.com/contacts.html">
 
         <!-- HEADER -->
-        <script>
-            fetch('https://genialabile.com/header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.querySelector('head').innerHTML += data;
-                })
-                .catch(error => {
-                    console.error('Errore nel caricamento header:', error);
-                    document.querySelector('head').innerHTML += `
-                        <meta charset="UTF-8">
-                        <meta name="viewport" content="width=device-width, initial-scale=1">
-                    `;
-                });
-        </script>
+            <script>
+                fetch('https://genialabile.com/header.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.querySelector('head').innerHTML += data;
+                    })
+                    .catch(error => {
+                        console.error('Errore nel caricamento header:', error);
+                        document.querySelector('head').innerHTML += `
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1">
+                        `;
+                    });
+            </script>
         <!-- HEADER -->
 
         <!-- CSS CARD -->
-        <link rel="stylesheet" href="https://genialabile.com/card.css">
+            <link rel="stylesheet" href="https://genialabile.com/card.css">
         <!-- CSS CARD -->
-        
+         
     </head>
 
     <body style="background-color: #000000; color: #000000; link: #000000; visited: #000000;">
@@ -144,7 +144,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 <br><br>
                 <div class="card">
                     <div class="card-image-container">
-                        <img src="https://genialabile.com/gen-favicon-rd.ico?v=2" alt="GENiALABILE Logo" class="card-image" loading="lazy">
+                        <img src="https://genialabile.com/gen-fav-rd.png?v=2" alt="GENiALABILE Logo" class="card-image" loading="lazy">
                     </div>
                     <div class="card-text">
                         <p class="imp-p">
@@ -161,29 +161,29 @@ Use, distribution, or modification of this project is strictly prohibited withou
         </main>
 
         <!-- FADE --> 
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                setTimeout(function () {
-                    document.body.classList.add("visible");
-                }, 2000);
-            });
-        </script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    setTimeout(function () {
+                        document.body.classList.add("visible");
+                    }, 2000);
+                });
+            </script>
         <!-- FADE --> 
 
         <!-- FOOTER --> 
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                fetch('https://genialabile.com/footer.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        const body = document.querySelector('body');
-                        const footerContainer = document.createElement('div');
-                        footerContainer.innerHTML = data;
-                        body.appendChild(footerContainer);
-                    })
-                .catch(error => console.error('Errore nel caricamento del footer:', error));
-            });
-        </script> 
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    fetch('https://genialabile.com/footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                            const body = document.querySelector('body');
+                            const footerContainer = document.createElement('div');
+                            footerContainer.innerHTML = data;
+                            body.appendChild(footerContainer);
+                        })
+                    .catch(error => console.error('Errore nel caricamento del footer:', error));
+                });
+            </script> 
         <!-- FOOTER --> 
 
     </body>
