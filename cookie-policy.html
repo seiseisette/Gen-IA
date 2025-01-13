@@ -45,6 +45,47 @@ Use, distribution, or modification of this project is strictly prohibited withou
                         `;
                     });
             </script>
+
+            <!---// STARTLINE & SAY HI //--->
+
+
+            <style>
+                #typing-effect {
+                     /* font-family: 'Inconsolata', monospace;
+                    font-size: 20px;
+                    color: #00ff00; Verde */
+                    white-space: pre; /* Mantiene gli spazi vuoti */
+                }
+
+                /* Cursore lampeggiante */
+                #typing-effect::after {
+                    content: "*⌝"; /* Aggiunge un cursore */
+                    animation: blink 1s steps(1) infinite; /* Effetto di lampeggio */
+                }
+
+                @keyframes blink {
+                    50% {
+                        opacity: 0;
+                    }
+                }
+
+                /* Nasconde il cursore */
+                .no-cursor::after {
+                    content: ""; /* Nessun contenuto */
+                    animation: none; /* Rimuove l'animazione */
+                }
+            </style>
+
+            
+                
+
+            <!---// ENDLINE & SAY BYE //--->
+
+
+
+
+
+
         <!-- header.html -->
          
     </head>
@@ -58,88 +99,78 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 Last Updated: 10 January 2025
             </p>
 
+            
+
+
             <p class="imp-l">
-                <br><br>
-                <b>0. Welcome to GENiALABILE</b>
-                <br><br>
-                GENiALABILE does not uses cookies and similar for tracking users, analyze website performance, and deliver personalized content.
-                <br>
-                This Cookie Policy explains what cookies are, why we do not use them, and your options for managing cookies in other website.
-                <br>
-                We use only the minimium ones required to improve user experience, without data collecting.
+            <div id="typing-effect"></div>
 
-                <br><br><br>
-                <b>1. What Are Cookies?</b>
-                <br><br>
-                Cookies are small text files that are placed on your device by websites you visit.
-                <br>
-                They serve a variety of purposes, such as remembering your preferences, enabling functionality, and collecting data for analytics.
+    <script>
+        // Testo da digitare
+        const textArray = [
+            `<b>0. Welcome to GENiALABILE</b><br><br>
+            GENiALABILE does not use cookies for tracking users, analyzing performance, or delivering personalized content.<br>
+            This Cookie Policy explains what cookies are, why we do not use them, and your options for managing cookies elsewhere.<br>
+            We use only the minimum required to improve user experience, without data collecting.<br><br><br>`,
 
-                <br><br><br>
-                <b>2. Types of Cookies We Only Use</b>
-                <br><br>
-                Essential Cookies: Required for the operation of our website.
-                These cookies cannot be disabled. Such responsive design, for example.
-                
+            `<b>1. What Are Cookies?</b><br><br>
+            Cookies are small text files placed on your device by websites you visit.<br>
+            They serve purposes such as remembering your preferences, enabling functionality, and collecting data for analytics.<br><br><br>`,
 
-                <br><br><br>
-                <b>3. Why We Do Not Use Cookies</b>
-                <br><br>
-                [·] We do not need to enhance website functionality and provide a seamless user experience.<br>
-                [·] We do not need to analyze traffic and performance using tools like Google Analytics.<br>
-                [·] We do not need to display personalized content and targeted advertisements.
+            `<b>2. Types of Cookies We Only Use</b><br><br>
+            Essential Cookies: Required for the operation of our website.<br>
+            These cookies cannot be disabled.<br><br><br>`,
 
-                <br><br><br>
-                <b>4. Managing Your Cookies In Cookie's Website</b>
-                <br><br>
-                You have the right to manage your cookie preferences:
-                <br>
-                [·] Adjust your browser settings to block or delete cookies. Refer to your browser's help section for instructions.<br>
-                [·] Use platforms like 
-                <a href="https://www.youronlinechoices.com/" target="_blank" style="font-weight: normal;">Your Online Choices</a> (EU) or 
-                <a href="https://optout.aboutads.info/" target="_blank" style="font-weight: normal;">YourAdChoices</a> (US) to opt out of targeted advertising.<br>
-                [·] Disable Google Analytics tracking with the 
-                <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" style="font-weight: normal;">Google Analytics Opt-Out Browser Add-on</a>.
-                <br><br>
-                <i>
-                If you do not agree with the use of cookies, you may disable them using the dedicated options or exit cookie's website immediately.
-                <br>
-                Continuing to use this website implies consent to Cookie Policy.
-                </i>
+            `<b>3. Why We Do Not Use Cookies</b><br><br>
+            [·] We do not enhance functionality or provide personalized experiences.<br>
+            [·] We do not analyze traffic with tools like Google Analytics.<br>
+            [·] We do not display personalized ads or targeted content.<br><br><br>`,
 
+            `<b>4. Managing Your Cookies In Cookie's Website</b><br><br>
+            Adjust your browser settings to block or delete cookies.<br>
+            Use platforms like 
+            <a href="https://www.youronlinechoices.com/" target="_blank">Your Online Choices</a> (EU) or 
+            <a href="https://optout.aboutads.info/" target="_blank">YourAdChoices</a> (US).<br>
+            Disable Google Analytics tracking with the 
+            <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">Google Analytics Opt-Out Add-on</a>.<br><br><br>`
+        ];
 
-                <br><br><br>
-                <b>5. Cookies Do Not Used On This Website</b>
-                <br><br>
-                Below is a list of the cookies we do not use:
-                <br>
-                [·] Session Cookies: Temporary cookies that expire when you close your browser.<br>
-                [·] Persistent Cookies: Remain on your device until deleted manually or automatically after a defined period.<br>
-                [·] Third-Party Cookies: Set by external services like Google Analytics or social media platforms.
+        // Configurazione
+        const typingSpeed = 30; // Millisecondi tra ogni carattere
+        const startDelay = 2000; // Ritardo iniziale in millisecondi
+        const typingElement = document.getElementById("typing-effect");
 
-                <br><br><br>
-                <b>6. Data Protection</b>
-                <br><br>
-                All data collected via cookies is anonymized wherever possible.
-                <br>
-                Personal data processed through cookies complies with applicable laws, including GDPR (EU) and CCPA (US).
+        let textIndex = 0; // Indice del paragrafo corrente
+        let charIndex = 0; // Indice del carattere corrente
 
-                <br><br><br>
-                <b>7. Updates to This Policy</b>
-                <br><br>
-                We reserve the right to update this Cookie Policy.
-                <br>
-                Changes will be effective upon posting, and the "Last Updated" date will be revised accordingly.
+        function typeWriter() {
+            if (textIndex < textArray.length) {
+                const currentText = textArray[textIndex];
+                if (charIndex < currentText.length) {
+                    // Aggiungi il carattere al contenuto
+                    typingElement.innerHTML += currentText[charIndex];
+                    charIndex++;
+                    setTimeout(typeWriter, typingSpeed); // Aspetta e digita il prossimo carattere
+                } else {
+                    // Fine del paragrafo, vai al successivo
+                    charIndex = 0;
+                    textIndex++;
+                    typingElement.innerHTML += "<br><br>"; // Aggiungi spazio tra i paragrafi
+                    setTimeout(typeWriter, typingSpeed);
+                }
+            }
+        }
 
-                <br><br><br>
-                <b>8. Contact</b>
-                <br><br>
-                If you have any questions or concerns about our use of cookies, please contact us at: 
-                <a href="mailto:genialabile@gmail.com?subject=Privacy%20Policy%20For" style="font-weight: normal;">genialabile@gmail.com</a>
-            </p>
-
+        // Avvia la digitazione con ritardo
+        setTimeout(typeWriter, startDelay);
+    </script>
+</p>
+        
 
             
+
+
+
    
         </main>
 
