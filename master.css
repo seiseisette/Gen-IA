@@ -36,7 +36,7 @@ without prior written authorization.
             --borders: #f4f4f4;
             --posts: #f4f4f4;
             --spacing: 3rem 9%;
-            ---space-top: 3rem 3%;
+            ---space-top: 3rem %;
             --margin-top: 3rem;
             --accent: #f4f4f4;
             --box-shadow: 0px 4px 8px #00000000;
@@ -78,7 +78,7 @@ without prior written authorization.
         @media screen and (min-width: 1024px) {
         main {
             max-width: 1200px; 
-            padding: 66rem;  /* Assicurati che questo valore sia corretto era 50 poi 3 adesso 66 */   
+            padding: var(--spacing);  /* Assicurati che questo valore sia corretto era 50 poi 3 adesso 66 */   
             margin: 0 auto;   
             }
         }
@@ -89,7 +89,7 @@ without prior written authorization.
             color: var(--info-text);
             margin: 0 auto;
             padding: var(--spacing);
-            padding-top: var(---space-top;)
+            padding-top: var(---space-top;
             margin-top: var(--margin-top);
         }
 
