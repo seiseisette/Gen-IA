@@ -56,8 +56,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
             }
                         /* Cursore lampeggiante */
             #typing-effect::after {
-                content: "|"; /* Aggiunge un cursore */
-                animation: blink 0.7s steps(1) infinite; /* Effetto di lampeggio */
+                content: " *⌝"; /* Aggiunge un cursore */
+                animation: blink 1s steps(1) infinite; /* Effetto di lampeggio */
             }
 
             @keyframes blink {
@@ -66,8 +66,22 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 }
             }
 
+                /* 
+                <style>
+                .blinking-text {
+                    animation: blink-animation 1s steps(2, start) infinite;
+                    animation-duration: 60s; /* Ferma il lampeggio dopo 60 secondi 
+                    color: red;
+                }
 
-
+                @keyframes blink-animation {
+                    to {
+                        visibility: hidden;
+                    }
+                }
+                </style>
+                <div class="blinking-text">Questo testo lampeggia per 60 secondi</div>
+                Blinck Time Out */
 
 
         </style>
@@ -102,6 +116,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     
                     // Configurazione: intervallo tra i caratteri (ms)
                     const typingSpeed = 100; // Velocità di digitazione
+                    const startDelay = 4000; // Ritardo iniziale (in ms)
 
                     // Riferimento all'elemento HTML
                     const typingElement = document.getElementById("typing-effect");
@@ -123,7 +138,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
             <!-- Aggiungi un elemento SCRITTURA -->
             
             
-            <!-- Aggiungi un elemento SUPERWRITER -->
+            <!-- Aggiungi un elemento SUPERWRITER 
             <p>
             
                 <div id="typing-effect"></div>
@@ -160,7 +175,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 </script>
             
             </p>
-            <!-- Aggiungi un elemento SUPERWRITER -->
+             Aggiungi un elemento SUPERWRITER -->
 
 
 
