@@ -56,13 +56,13 @@ without prior written authorization.
             height: 100%;
         }
 
-        body {
+        /* body {
             background-color: #000000;
             font-family: 'Inconsolata', sans-serif;
             font-size: 16px;
             margin: 0 auto;
             padding: var(--spacing);
-            /* FANCY-FX */
+            /* FANCY-FX 
 
             opacity: 0;
             visibility: hidden;
@@ -72,7 +72,7 @@ without prior written authorization.
         body.visible {
             opacity: 1;
             visibility: visible;
-        }
+        } */
 
         @media screen and (min-width: 1024px) {
         main {
