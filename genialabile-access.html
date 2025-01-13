@@ -18,37 +18,35 @@ without prior written authorization.
 -------------------------------------------------------------------------------
 
 # Version: v2.1
-# URL: https://www.genialabile.com//genialabile-gpt-access.html
+# URL: https://genialabile.com/genialabile-gpt-access.html
 ===============================================================================
 --->
 
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <title>GENiALABILE | GPT Access</title>
+    <meta name="description" content="GENiALABILE - GPT Access designed for GENiALABILE.">
+    <link rel="canonical" href="https://genialabile.com/genialabile-gpt-access.html">
 
-    <head>
-        <title>GENiALABILE | GPT Access</title>
-        <meta name="description" content="GENiALABILE - GPT Access designed for GENiALABILE.">
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <!-- header.html -->
+    <script>
+        fetch('https://genialabile.com/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('head').innerHTML += data;
+            })
+            .catch(error => {
+                console.error('Errore nel caricamento header:', error);
+                document.querySelector('head').innerHTML += `
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                `;
+            });
+    </script>
+    <!-- header.html -->
 
-        <link rel="icon" href="https://www.genialabile.com/gen-favicon-rd.ico?v=2" type="image/x-icon">
-        <link rel="canonical" href="https://www.genialabile.com/contacts.html">
-
-        <!-- HEADER ------> 
-            <script>
-                fetch('https://www.genialabile.com/header.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        document.querySelector('head').innerHTML += data;
-                    })
-                    .catch(error => console.error('Errore nel caricamento header:', error));
-                        document.querySelector('head').innerHTML += '<!-- Static Header Fallback -->';
-                        document.addEventListener('DOMContentLoaded', function () {
-                        console.log('Card HTML:', document.querySelector('.card').outerHTML);
-                    });
-            </script> 
-        <!-- HEADER ------> 
-        
-    </head>
+</head>
 
     <body style="background-color: #000000; color: #000000; link: #000000; visited: #000000;">
         
@@ -106,7 +104,7 @@ without prior written authorization.
             </p>
 
         </main>
-        
+
         <!-- FADE --> 
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
@@ -120,7 +118,7 @@ without prior written authorization.
         <!-- FOOTER ------> 
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
-                    fetch('https://www.genialabile.com/footer.html')
+                    fetch('https://genialabile.com/footer.html')
                         .then(response => response.text())
                         .then(data => {
                             const body = document.querySelector('body');
@@ -134,5 +132,4 @@ without prior written authorization.
         <!-- FOOTER ------> 
 
     </body>
-
 </html>

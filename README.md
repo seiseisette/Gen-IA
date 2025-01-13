@@ -25,7 +25,7 @@ Designed by **[seiseisette](https://github.com/seiseisette)**.
 
 ## 🌐 Live Website
 
-Access the project here: **[GENiALABILE](https://www.genialabile.com/)**
+Access the project here: **[GENiALABILE](https://genialabile.com/)**
 
 ---
 
@@ -42,7 +42,7 @@ Access the project here: **[GENiALABILE](https://www.genialabile.com/)**
 
 If you have any questions or feedback, feel free to reach out:
 
-- **Website**: [https://www.genialabile.com](https://www.genialabile.com)  
+- **Website**: [https://genialabile.com](https://genialabile.com)  
 - **Email**: [genialabile@gmail.com](mailto:genialabile@gmail.com?subject=Contact%20Request%20For)  
 
 ---

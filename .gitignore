@@ -1,6 +1,5 @@
 .DS_Store
-<<<<<<< HEAD
-=======
+
 # Compiled source #
 ###################
 *.com
@@ -52,5 +51,4 @@ client/.DS_Store
 *.DS_Store
 .DS_Store
 .DS_Store
-////
->>>>>>> develop
+

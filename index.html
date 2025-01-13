@@ -27,12 +27,9 @@ without prior written authorization.
 <head>
     <title>GENiALABILE</title>
     <meta name="description" content="GENiALABILE - Advanced-GPT Project designed to inspire multidimensional solutions and unlock creativity.">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    
-    <link rel="icon" href="https://genialabile.com/gen-favicon-rd.ico?v=2" type="image/x-icon" alt="GENiALABILE Icon">
     <link rel="canonical" href="https://genialabile.com/index.html">
     
-    <!-- Carica dinamicamente header.html -->
+    <!-- header.html -->
     <script>
         fetch('https://genialabile.com/header.html')
             .then(response => response.text())
@@ -47,8 +44,11 @@ without prior written authorization.
                 `;
             });
     </script>
+    <!-- header.html -->
+
 </head>
-<body style="background-color: #000000; link: #000000; visited: #000000;">
+
+<body style="background-color: #000000; color: #000000; link: #000000; visited: #000000;">
     <main>
         <h1>
             <a href="https://genialabile.com/" onmouseover="this.style.color='#00ff00'; this.style.textDecoration='underline';" onmouseout="this.style.color='white'; this.style.textDecoration='none';">
@@ -107,33 +107,31 @@ without prior written authorization.
         </h1>
     </main>
 
-    <!-- FOOTER  ------------------------------------------------------------------>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('https://genialabile.com/footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    const body = document.querySelector('body');
-                    const footerContainer = document.createElement('div');
-                    footerContainer.innerHTML = data;
-                    body.appendChild(footerContainer);
-                })
-                .catch(error => {
-                    console.error('Errore nel caricamento footer:', error);
-                    document.querySelector('head').innerHTML += `
-                        <meta charset="UTF-8">
-                        <meta name="viewport" content="width=device-width, initial-scale=1">
-                    `;
-                });
-        });
-    </script>
+    <!-- FADE --> 
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                setTimeout(function () {
+                    document.body.classList.add("visible");
+                }, 2000);
+            });
+        </script>
+    <!-- FADE --> 
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            setTimeout(function () {
-                document.body.classList.add("visible");
-            }, 2000); 
-        });
-    </script>
+    <!-- FOOTER ------> 
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                fetch('https://genialabile.com/footer.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        const body = document.querySelector('body');
+                        const footerContainer = document.createElement('div');
+                        footerContainer.innerHTML = data;
+                        body.appendChild(footerContainer);
+                    })
+                .catch(error => console.error('Errore nel caricamento del footer:', error));
+            });
+        </script> 
+    <!-- FOOTER ------> 
+
 </body>
 </html>
