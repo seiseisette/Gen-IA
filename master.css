@@ -51,19 +51,18 @@ without prior written authorization.
         }
         html, body  {  /* html, body {*/
             background-color: var(--background-color);
-            margin: 0;
+            margin: 0 auto;
             padding: 0;
             height: 100%;
         }
 
-        /* body {
-            background-color: #000000;
+        body {
+            background-color: var(--background-color);
             font-family: 'Inconsolata', sans-serif;
             font-size: 16px;
             margin: 0 auto;
             padding: var(--spacing);
-            /* FANCY-FX 
-
+            /* FANCY-FX */
             opacity: 0;
             visibility: hidden;
             transition: opacity 0.7s ease-in-out;
@@ -72,12 +71,12 @@ without prior written authorization.
         body.visible {
             opacity: 1;
             visibility: visible;
-        } */
+        }
 
         @media screen and (min-width: 1024px) {
         main {
             max-width: 1200px; 
-            padding: 50rem;     
+            padding: 5rem;  /* Assicurati che questo valore sia corretto era 50 */   
             margin: 0 auto;   
             }
         }
@@ -96,9 +95,9 @@ without prior written authorization.
             text-align: left;
             background-color: var(--info-background);
             color: var(--info-text);
+            margin: 0 auto;
             margin-top: 12rem;
             margin-bottom: 3rem;
-            margin: 0 auto;
         }
 
         * {
