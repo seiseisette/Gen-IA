@@ -43,8 +43,8 @@ without prior written authorization.
         }
 
         .card-image {
-            width: 60px; 
-            height: 60px;
+            width: 66px; 
+            height: 66px;
             max-width: 100%; 
             border-radius: 50%;
             object-fit: cover; 
