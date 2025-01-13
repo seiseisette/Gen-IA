@@ -1,0 +1,198 @@
+<!-- 
+===============================================================================
+# Project: Gen-IA
+# Website: Minimal welcome website
+===============================================================================
+
+## GENiALABILE
+Advanced-GPT inspiring multidimensional solutions and unlocking creative potential.
+
+-------------------------------------------------------------------------------
+## License
+© 2025 GENiALABILE. All Rights Reserved.
+A GPT-Based Project — Designed by seiseisette.
+Repository: https://github.com/seiseisette/
+This project is no longer available as open-source. Updated: 10 Jan 2025.
+Use, distribution, or modification of this project is strictly prohibited without prior written authorization.
+-------------------------------------------------------------------------------
+
+# Version: v2.1
+# URL: https://genialabile.com/new-page.html
+===============================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>GENiALABILE | New Page</title>
+        <meta name="description" content="GENiALABILE - New Page Content.">
+        <link rel="canonical" href="https://genialabile.com/new-page.html">
+        <link rel="icon" href="https://genialabile.com/gen-favicon-rd.ico?v=2" type="image/x-icon">
+        <link rel="icon" href="https://genialabile.com/gen-favicon-rd.png?v=2" type="image/png">
+    
+        <!-- header.html -->
+            <script>
+                fetch('https://genialabile.com/header.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.querySelector('head').innerHTML += data;
+                    })
+                    .catch(error => {
+                        console.error('Errore nel caricamento header:', error);
+                        document.querySelector('head').innerHTML += `
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1">
+                        `;
+                    });
+            </script>
+        <!-- header.html -->
+
+        <style>
+            #typing-effect {
+                font-family: 'Inconsolata', monospace;
+                font-size: 20px;
+                color: #00ff00; /* Verde */
+                white-space: pre; /* Mantiene gli spazi vuoti */
+            }
+                        /* Cursore lampeggiante */
+            #typing-effect::after {
+                content: "|"; /* Aggiunge un cursore */
+                animation: blink 0.7s steps(1) infinite; /* Effetto di lampeggio */
+            }
+
+            @keyframes blink {
+                50% {
+                    opacity: 0;
+                }
+            }
+
+
+
+
+
+        </style>
+         
+
+
+
+
+
+
+    </head>
+
+    <body style="background-color: #000000; color: #000000; link: #000000; visited: #000000;">
+        <main>
+            <h1>
+                <a href="https://genialabile.com/" onmouseover="this.style.color='#00ff00'; this.style.textDecoration='underline';" onmouseout="this.style.color='white'; this.style.textDecoration='none';">
+                    GENiALABILE
+                </a>
+            </h1>
+            <p>
+                This is a new page.
+            </p>
+                
+            
+            <!-- Aggiungi un elemento SCRITTURA -->
+            <p>
+                <div id="typing-effect"></div>
+
+                <script>
+                    // Testo da digitare
+                    const text = "Benvenuto su GENiALABILE: Advanced-GPT inspiring multidimensional solutions.";
+                    
+                    // Configurazione: intervallo tra i caratteri (ms)
+                    const typingSpeed = 100; // Velocità di digitazione
+
+                    // Riferimento all'elemento HTML
+                    const typingElement = document.getElementById("typing-effect");
+
+                    // Funzione per simulare la digitazione
+                    let index = 0;
+                    function typeText() {
+                        if (index < text.length) {
+                            typingElement.innerHTML += text.charAt(index);
+                            index++;
+                            setTimeout(typeText, typingSpeed); // Aspetta e digita il prossimo carattere
+                        }
+                    }
+
+                    // Avvia l'effetto di digitazione
+                    window.onload = typeText; // Inizia quando la pagina è completamente caricata
+                </script>
+            </p>
+            <!-- Aggiungi un elemento SCRITTURA -->
+            
+            
+            <!-- Aggiungi un elemento SUPERWRITER -->
+            <p>
+            
+                <div id="typing-effect"></div>
+
+                <script>
+                    const texts = [
+                        "Benvenuto su GENiALABILE.",
+                        "Advanced-GPT inspiring multidimensional solutions.",
+                        "Unlocking creative potential, together."
+                    ];
+                    const typingSpeed = 100; // Velocità di digitazione
+                    const pauseBetweenTexts = 1500; // Pausa tra le frasi (ms)
+
+                    const typingElement = document.getElementById("typing-effect");
+                    let textIndex = 0;
+                    let charIndex = 0;
+
+                    function typeText() {
+                        if (charIndex < texts[textIndex].length) {
+                            typingElement.innerHTML += texts[textIndex].charAt(charIndex);
+                            charIndex++;
+                            setTimeout(typeText, typingSpeed);
+                        } else {
+                            setTimeout(() => {
+                                charIndex = 0;
+                                textIndex = (textIndex + 1) % texts.length;
+                                typingElement.innerHTML = ""; // Cancella il testo precedente
+                                typeText();
+                            }, pauseBetweenTexts);
+                        }
+                    }
+
+                    window.onload = typeText;
+                </script>
+            
+            </p>
+            <!-- Aggiungi un elemento SUPERWRITER -->
+
+
+
+
+
+        </main>
+
+        <!-- FADE --> 
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    setTimeout(function () {
+                        document.body.classList.add("visible");
+                    }, 2000);
+                });
+            </script>
+        <!-- FADE --> 
+
+        <!-- FOOTER ------> 
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    fetch('https://genialabile.com/footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                            const body = document.querySelector('body');
+                            const footerContainer = document.createElement('div');
+                            footerContainer.innerHTML = data;
+                            body.appendChild(footerContainer);
+                        })
+                    .catch(error => console.error('Errore nel caricamento del footer:', error));
+                });
+            </script> 
+        <!-- FOOTER ------> 
+
+    </body>
+</html>
