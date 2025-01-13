@@ -66,6 +66,39 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 }
             }
 
+
+
+            <style>
+                #typing-effect {
+                    font-family: 'Inconsolata', monospace;
+                    font-size: 20px;
+                    color: #00ff00; /* Verde */
+                    white-space: pre; /* Mantiene gli spazi vuoti */
+                }
+
+                /* Cursore lampeggiante */
+                #typing-effect::after {
+                    content: " *⌝"; /* Aggiunge un cursore */
+                    animation: blink 1s steps(1) infinite; /* Effetto di lampeggio */
+                }
+
+                @keyframes blink {
+                    50% {
+                        opacity: 0;
+                    }
+                }
+
+                /* Nasconde il cursore */
+                .no-cursor::after {
+                    content: ""; /* Nessun contenuto */
+                    animation: none; /* Rimuove l'animazione */
+                }
+            
+
+           
+
+            
+
                 /* 
                 <style>
                 .blinking-text {
@@ -134,8 +167,32 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     // Avvia l'effetto di digitazione
                     window.onload = typeText; // Inizia quando la pagina è completamente caricata
                 </script>
+
+
             </p>
             <!-- Aggiungi un elemento SCRITTURA -->
+
+
+          
+            
+            <script>
+                // Rimuove il cursore dopo 5 secondi
+                setTimeout(() => {
+                    const typingEffect = document.getElementById("typing-effect");
+                    typingEffect.classList.add("no-cursor"); // Aggiunge la classe che nasconde il cursore
+                }, 5000); // Cambia 5000 (5 secondi) con il tempo desiderato
+
+                                document.addEventListener('DOMContentLoaded', function () {
+                    const typingEffect = document.querySelector('#typing-effect');
+                    const shouldBlink = typingEffect.getAttribute('data-blink') === 'false';
+                    
+                    if (!shouldBlink) {
+                        setTimeout(() => {
+                            typingEffect.style.animation = 'none'; // Disabilita animazione
+                        }, 30000); // Dopo 30 secondi
+                    }
+                });
+            </script>
             
             
             <!-- Aggiungi un elemento SUPERWRITER 

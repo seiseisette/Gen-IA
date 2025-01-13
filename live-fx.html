@@ -1,0 +1,145 @@
+<!-- 
+===============================================================================
+# Project: Gen-IA
+# Website: Minimal welcome website
+===============================================================================
+
+## GENiALABILE
+Advanced-GPT inspiring multidimensional solutions and unlocking creative potential.
+
+-------------------------------------------------------------------------------
+## License
+© 2025 GENiALABILE. All Rights Reserved.
+A GPT-Based Project — Designed by seiseisette.
+Repository: https://github.com/seiseisette/
+This project is no longer available as open-source. Updated: 10 Jan 2025.
+Use, distribution, or modification of this project is strictly prohibited without prior written authorization.
+-------------------------------------------------------------------------------
+
+# Version: v2.1
+# URL: https://genialabile.com/live-fx.html
+===============================================================================
+-->
+
+<!---// STARTLINE & SAY HI //--->
+
+
+<style>
+    #typing-effect {
+        font-family: 'Inconsolata', monospace;
+        font-size: 20px;
+        color: #00ff00; /* Verde */
+        white-space: pre; /* Mantiene gli spazi vuoti */
+    }
+
+    /* Cursore lampeggiante */
+    #typing-effect::after {
+        content: "*⌝"; /* Aggiunge un cursore */
+        animation: blink 1s steps(1) infinite; /* Effetto di lampeggio */
+    }
+
+    @keyframes blink {
+        50% {
+            opacity: 0;
+        }
+    }
+
+    /* Nasconde il cursore */
+    .no-cursor::after {
+        content: ""; /* Nessun contenuto */
+        animation: none; /* Rimuove l'animazione */
+    }
+</style>
+
+  
+    
+
+<!---// ENDLINE & SAY BYE //--->
+
+
+
+
+
+<body style="background-color: #000000; color: #000000; link: #000000; visited: #000000;">
+    <main>
+        
+            
+        
+        <!-- Aggiungi un elemento SCRITTURA -->
+        <p>
+            <div id="typing-effect"></div>
+
+            <script>
+                // Testo da digitare
+                const text = "Benvenuto su GENiALABILE: Advanced-GPT inspiring multidimensional solutions."
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                ;
+                
+                // Configurazione: intervallo tra i caratteri (ms)
+                const typingSpeed = 100; // Velocità di digitazione
+                const startDelay = 4000; // Ritardo iniziale (in ms)
+
+                // Riferimento all'elemento HTML
+                const typingElement = document.getElementById("typing-effect");
+
+                // Funzione per simulare la digitazione
+                let index = 0;
+                function typeText() {
+                    if (index < text.length) {
+                        typingElement.innerHTML += text.charAt(index);
+                        index++;
+                        setTimeout(typeText, typingSpeed); // Aspetta e digita il prossimo carattere
+                    }
+                }
+
+                // Avvia l'effetto di digitazione
+                window.onload = typeText; // Inizia quando la pagina è completamente caricata
+            </script>
+
+
+        </p>
+        <!-- Aggiungi un elemento SCRITTURA -->
+
+
+      
+        
+        
+       
+
+
+
+
+    </main>
+
+    <!-- FADE --> 
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                setTimeout(function () {
+                    document.body.classList.add("visible");
+                }, 2000);
+            });
+        </script>
+    <!-- FADE --> 
+
+    
+
+</body>
+</html>
