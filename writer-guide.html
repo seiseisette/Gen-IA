@@ -77,10 +77,11 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     --info-text: #f4f4f4;
                     --borders: #f4f4f4;
                     --posts: #f4f4f4;
-                    --spacing: 2rem 2%;
+                    --spacing: 1rem 3%;
                     --accent: #f4f4f4;
                     --box-shadow: 0px 4px 8px #00000000;
-                    --testo-size: 16px;
+                    --font-size: 16px;
+                    --foot-margin: -0.3rem;
                 }
                 
                 .info {
@@ -102,7 +103,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 body {
                     background-color: var(--background-color);
                     font-family: 'Inconsolata', sans-serif;
-                    font-size: var(--testo-size);
+                    font-size: var(--font-size);
                     margin: 0 auto;
                     padding: var(--spacing);
                     /* FANCY-FX */
@@ -134,13 +135,16 @@ Use, distribution, or modification of this project is strictly prohibited withou
         
                 footer {
                     width: 100%;
-                    padding: var(--spacing);
+                    padding:  var(--spacing);               /* 0rem;            /*  OG */
                     text-align: left;
                     background-color: var(--info-background);
                     color: var(--info-text);
                     margin: 0 auto;
-                    margin-top: 6rem;
-                    margin-bottom: 3rem;
+
+
+
+                    margin-top: var(--foot-margin); /* -0.3rem;    /* 6 OG */
+                    margin-bottom: var(--foot-margin); /* -0.3rem;       /* 3 OG */
                 }
         
                 * {
@@ -277,6 +281,74 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 }
             }
         </style>
+
+
+
+        <style>
+            /*---// FOOTER BANNER //--- */
+
+            #footer-banner {
+                display: flex;
+                flex-direction: column;
+                align-items: left;
+                justify-content: center;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: var(--info-background); /* Usa il colore definito nel CSS master */
+                color: var(--info-text); /* Usa il colore del testo definito nel CSS master */
+
+                padding: var(--spacing);/* 0.3rem 0.3rem; /* Riduce lo spazio interno sopra e sotto */
+                margin: 0 auto;
+                text-align: center;
+                box-shadow: 0 -2px 10px #242422;
+                /* box-shadow: 0 -2px 10px var(--borders); /* Colore coerente con i bordi del CSS master */
+                z-index: 9999;
+            }
+
+            #footer-banner #footer-content {
+
+                margin-top: var(--foot-margin); /* 0rem; /* Riduce lo spazio superiore */
+                margin-bottom: var(--foot-margin); /*0rem; /* Riduce lo spazio inferiore */
+
+                text-align: center; 
+                font-size: var(--testo-size); /* Usa la dimensione del testo del CSS master */
+                line-height: 1.6; /* Altezza linea coerente */
+            }
+
+            /*--// FOOTER BUTTONS //---
+            .footer-btn {
+                background-color: var(--info-text); /* Usa il colore del testo per il background */
+                color: var(--info-background); /* Usa il colore di sfondo per il testo del pulsante 
+                border: none;
+                padding: 0.3rem 0.6rem;
+                margin: 0.5rem;
+                font-size: var(--testo-size); /* Usa la dimensione del testo del CSS master 
+                font-weight: bold;
+                cursor: pointer;
+                border-radius: 3px;
+                box-shadow: var(--box-shadow); /* Usa lo stesso box-shadow del CSS master 
+                transition: background-color 0.3s ease;
+            }
+
+            .footer-btn:hover {
+                background-color: var(--accent); /* Usa il colore di accento del CSS master 
+                color: var(--info-background); /* Mantieni il contrasto coerente 
+            }
+            ---// FOOTER BUTTONS //--- */
+
+
+
+
+            /*---// FOOTER BANNER //--- */
+
+        </style>
+
+
+
+
+
         <!-- CSS ANIMATO -->
             
 
@@ -302,11 +374,6 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 Blinck Time Out */
 
             -->
-
-
-       
-         
-
 
 
 
@@ -358,9 +425,11 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
                     ];
                 
+                    
                     const typingSpeed = 30; // Velocità di digitazione (ms)
                     const pauseBetweenParagraphs = 500; // Pausa tra un paragrafo e l'altro (ms)
                     const typingElement = document.getElementById("typing-effect");
+                    const startDelay = 9000; // Ritardo iniziale (ms)
                 
                     let textIndex = 0; // Indice del paragrafo corrente
                     let charIndex = 0; // Indice del carattere corrente
@@ -483,7 +552,51 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
         
 
-        <!-- FOOTER ------> 
+        <!-- FOOTER BANNER ------> 
+
+
+            <div id="footer-banner">
+                <div id="footer-content"></div>
+                <!--- <button class="footer-btn" id="close-footer-banner">Close</button> --->
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    fetch('https://genialabile.com/footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                            const footerContent = document.getElementById('footer-content');
+                            footerContent.innerHTML = data;
+                        })
+                        .catch(error => console.error('Errore nel caricamento del footer-banner:', error));
+                document.addEventListener("DOMContentLoaded", () => {
+                            console.log("Pagina caricata, ritardo di avvio in corso...");
+                            setTimeout(() => {
+                                console.log("Avvio dell'animazione dopo il ritardo.");
+                                typeWriter();
+                            }, startDelay);
+                        });
+                    });
+            </script>
+
+        <!-- FOOTER BANNER ------> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- FOOTER -
+
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
                     fetch('https://genialabile.com/footer.html')
@@ -497,7 +610,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     .catch(error => console.error('Errore nel caricamento del footer:', error));
                 });
             </script> 
-        <!-- FOOTER ------> 
+        FOOTER ------> 
 
 
 
