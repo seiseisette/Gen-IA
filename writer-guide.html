@@ -151,20 +151,13 @@ Use, distribution, or modification of this project is strictly prohibited withou
         
                
         
-                main {
+                                main {
                     width: 100%;
                     max-width: 100%;
                     color: var(--info-text);
-                    margin: 0;
+                    margin: 0 auto;
                     padding: var(--spacing);
-
-
-                    padding-bottom: 10rem; /* Spazio per il footer dinamico */
-
-                   
-
-                    
-
+                    padding-bottom: 5rem; /* Spazio riservato per il footer */
                 }
 
 
@@ -174,7 +167,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     /* max-width: 100%; */ 
                     padding: 3rem;  /* 50 */   
                     margin: 0; 
-                    padding-bottom: 20%
+                    padding-bottom: 10%
 
                     padding-left: 20%; /* Limita il contenuto ai lati */
                     padding-right: 20%;
@@ -192,7 +185,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     }
 
                     main {
-                        padding-bottom: 30%; /* Assicurati che ci sia spazio sufficiente per il footer */
+                        padding-bottom: 10%; /* Assicurati che ci sia spazio sufficiente per il footer */
                     }
                 }
         
@@ -362,19 +355,24 @@ Use, distribution, or modification of this project is strictly prohibited withou
         <style>
             /*---// FOOTER BANNER //--- */
 
-            #footer-banner {
-                position: fixed; /* Mantieni il footer sempre visibile */
+                        #footer-banner {
+                position: absolute; /* Mantiene il footer fisso */
                 bottom: 0;
                 left: 0;
-                width: 100vw; /* Assicura che il footer occupi tutta la larghezza della viewport */
+                width: 100%;
                 background-color: var(--info-background);
                 color: var(--info-text);
-                padding: var(--spacing);
                 text-align: center;
-                box-shadow: 0 -2px 10px #242424; /* Effetto ombra */
-                z-index: 9999;
-                margin: 0; /* Rimuove i margini */
-                margin-top: auto;
+                padding: 1rem;
+                box-shadow: 0 -2px 10px #24242450;
+                z-index: 1000;
+                transition: transform 0.3s ease-in-out;
+                transform: translateY(100%); /* Footer nascosto inizialmente */
+            }
+
+            #footer-banner.active {
+                transform: translateY(0); /* Mostra il footer */
+
             }
 
             #footer-banner #footer-content {
@@ -486,27 +484,23 @@ Use, distribution, or modification of this project is strictly prohibited withou
                         "<b>Primo testo</b><br>Bla bla bla bla bla bla bla bla bla a bla bla bla bla bla a bla bla bla bla bla a bla bla bla bla bla a bla bla———bla bla bla a bla bla bla bla bla a bla bla bla bla bla a bla bla bla bla bla bla bla bla.",
                         "<b>Secondo testo</b><br>Bla bla bla bla bla bla bla bla bla bla bla bla.",
                         "<b>Terzo LInK</b><br><a href='https://genialabile.com/'>GENiALABILE</a>.",
-                        
                         "<b>PRIMO TESTO:</b><br>Bla bla bla bla bla bla bla bla bla a bla bla bla bla bla a bla bla bla bla bla a bla bla bla bla bla a bla bla———bla bla bla a bla bla bla bla bla a bla bla bla bla bla a bla bla bla bla bla bla bla bla.",
                         "<b>Secondo testo</b><br>Bla bla bla bla bla bla bla bla bla bla bla bla.",
                         "<b>Terzo testo</b><br>Bla bla bla bla bla bla bla bla bla bla bla bla.",
-
                         "<i>Primo Corsivo</i><br>Bla bla bla bla bla bla bla bla bla a bla bla bla bla bla a bla bla bla bla bla a bla bla bla bla bla a bla bla———bla bla bla a bla bla bla bla bla a bla bla bla bla bla a bla bla bla bla bla bla bla bla.",
                         "<b>Secondo testo</b><br>Bla bla bla bla bla bla bla bla bla bla bla bla.",
                         "<b>Terzo testo</b><br>———————Bla bla bla bla bla bla bla bla bla bla bla bla."
-
                     ];
                 
-                    
                     const typingSpeed = 30; // Velocità di digitazione (ms)
                     const pauseBetweenParagraphs = 500; // Pausa tra un paragrafo e l'altro (ms)
                     const typingElement = document.getElementById("typing-effect");
-                    const startDelay = 9000; // Ritardo iniziale (ms)
+                    const startDelay = 1000; // Ritardo iniziale (ms)
                 
-                    let textIndex = 0; // Indice del paragrafo corrente
-                    let charIndex = 0; // Indice del carattere corrente
-                    let isTag = false; // Indica se si sta elaborando un tag HTML
-                    let tagBuffer = ""; // Buffer per i tag HTML
+                    let textIndex = 0;
+                    let charIndex = 0;
+                    let isTag = false;
+                    let tagBuffer = "";
                 
                     function typeWriter() {
                         if (textIndex < textArray.length) {
@@ -521,30 +515,57 @@ Use, distribution, or modification of this project is strictly prohibited withou
                                 } else if (currentChar === ">" && isTag) {
                                     isTag = false;
                                     tagBuffer += currentChar;
-                                    typingElement.innerHTML += tagBuffer; // Aggiunge il tag completo
+                                    typingElement.innerHTML += tagBuffer;
                                     tagBuffer = "";
                                 } else if (isTag) {
-                                    tagBuffer += currentChar; // Continua a costruire il tag
+                                    tagBuffer += currentChar;
                                 } else {
-                                    typingElement.innerHTML += currentChar; // Aggiunge un carattere normale
+                                    typingElement.innerHTML += currentChar;
                                 }
                 
                                 charIndex++;
-                                setTimeout(typeWriter, typingSpeed); // Aspetta per il prossimo carattere
+                                setTimeout(typeWriter, typingSpeed);
                             } else {
                                 // Fine del paragrafo corrente
                                 charIndex = 0;
                                 textIndex++;
-                                typingElement.innerHTML += "<br><br>"; // Aggiunge una nuova riga tra i paragrafi
-                                setTimeout(typeWriter, pauseBetweenParagraphs); // Aspetta prima di iniziare il prossimo paragrafo
+                                typingElement.innerHTML += "<br><br>";
+                                setTimeout(typeWriter, pauseBetweenParagraphs);
                             }
                         } else {
-                            // Rimuove il cursore lampeggiante alla fine
                             typingElement.classList.add("no-cursor");
+                            // Mostra il footer una volta completata l'animazione
+                            showFooter();
                         }
                     }
                 
-                    // Avvia l'animazione quando la pagina è pronta
+                    const footer = document.getElementById("footer-banner");
+                
+                    function showFooter() {
+                        footer.style.transform = "translateY(0)";
+                    }
+                
+                    function handleScroll() {
+                        const scrollY = window.scrollY;
+                        const viewportHeight = window.innerHeight;
+                        const documentHeight = document.body.offsetHeight;
+                        const footerHeight = footer.offsetHeight;
+                
+                        if (scrollY + viewportHeight >= documentHeight - footerHeight) {
+                            // Footer rimane visibile quando si raggiunge il fondo
+                            footer.style.position = "fixed";
+                            footer.style.bottom = "0";
+                        } else {
+                            // Footer si nasconde durante lo scroll verso l'alto
+                            footer.style.position = "absolute";
+                            footer.style.bottom = `-${footerHeight}px`;
+                        }
+                    }
+                
+                    // Assegna l'evento di scroll
+                    window.addEventListener("scroll", handleScroll);
+                
+                    // Avvia l'animazione del testo quando la pagina è pronta
                     document.addEventListener("DOMContentLoaded", () => {
                         typeWriter();
                     });
