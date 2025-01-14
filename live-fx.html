@@ -268,26 +268,18 @@ Use, distribution, or modification of this project is strictly prohibited withou
         
             <script>
                 const textArray = [
-                    `<b>0. Welcome to GENiALABILE</b>
+                    `<b>0. Welcome to GENiALABILE</b><br><br>
                     GENiALABILE does not use cookies for tracking users, analyzing performance, or delivering personalized content.<br>
-                    This Cookie Policy explains what cookies are, why we do not use them, and your options for managing cookies elsewhere.<br>
-                    We use only the minimum required to improve user experience, without data collecting.<br><br><br>`,
+                    Questo testo mostra il <b>grassetto</b> e un link: 
+                    <a href="https://example.com" target="_blank" style="color:#00bbff;">Example</a>.<br><br><br>`,
             
-                    `<b>1. What Are Cookies?</b>
-                    Cookies are small text files placed on your device by websites you visit.<br>
-                    They serve purposes such as remembering your preferences, enabling functionality, and collecting data for analytics.<br><br><br>`,
-            
-                    `<b>4. Managing Your Cookies</b><br><br>
-                    Adjust your browser settings to block or delete cookies.<br>
-                    Use platforms like 
-                    <a href='https://www.youronlinechoices.com/' target='_blank' style='color:#00bbff;'>Your Online Choices</a> (EU) or 
-                    <a href='https://optout.aboutads.info/' target='_blank' style='color:#00bbff;'>YourAdChoices</a> (US).<br>
-                    Disable Google Analytics tracking with the 
-                    <a href='https://tools.google.com/dlpage/gaoptout' target='_blank' style='color:#00bbff;'>Google Analytics Opt-Out Add-on</a>.<br><br><br>`
+                    `<b>1. Next Section</b><br><br>
+                    Ulteriore testo con <b>grassetto</b> e un altro link: 
+                    <a href="https://another-example.com" target="_blank" style="color:#00bbff;">Another Example</a>.<br><br><br>`
                 ];
             
                 const typingSpeed = 30; // Millisecondi tra ogni carattere
-                const startDelay = 1000; // Ritardo iniziale (ms)
+                const startDelay = 1000; // Ritardo iniziale in millisecondi
                 const typingElement = document.getElementById("typing-effect");
             
                 let textIndex = 0; // Indice del testo corrente
@@ -328,7 +320,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     }
                 }
             
-                // Avvia la digitazione con ritardo
+                // Avvia l'animazione con ritardo
                 setTimeout(typeWriter, startDelay);
             </script>
 
