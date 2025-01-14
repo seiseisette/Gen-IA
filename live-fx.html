@@ -65,160 +65,148 @@ Use, distribution, or modification of this project is strictly prohibited withou
             /*---// STARTLINE & SAY HI //---*/
             <style> 
             
-                :root {
-                    --background-color: #000000;
-                    --info-background: #000000;
-                    --info-text: #f4f4f4;
-                    --borders: #f4f4f4;
-                    --posts: #f4f4f4;
-                    --spacing: 2rem 2%;
-                    --accent: #f4f4f4;
-                    --box-shadow: 0px 4px 8px #00000000;
-                }
-                
-                .info {
-                    box-shadow: var(--box-shadow);
-                    background: var(--info-background);
-                    color: var(--info-text);
-                    border-radius: 0px; 
-                    padding: var(--spacing);
-                    width: 100%;
-                    
-                }
-                html, body  {  /* html, body {*/
-                    background-color: var(--background-color);
-                    margin: 0 auto;
-                    padding: 0;
-                    height: 100%;
-                }
-        
-                body {
-                    background-color: var(--background-color);
-                    font-family: 'Inconsolata', sans-serif;
-                    font-size: 16px;
-                    margin: 0 auto;
-                    padding: var(--spacing);
-                    /* FANCY-FX */
-                    opacity: 0;
-                    visibility: hidden;
-                    transition: opacity 0.7s ease-in-out;
-                }
-                
-                body.visible {
-                    opacity: 1;
-                    visibility: visible;
-                }
-        
-                @media screen and (min-width: 1024px) {
+               /*---// STARTLINE & SAY HI //---*/
+            :root {
+                --background-color: #000000;
+                --info-background: #000000;
+                --info-text: #f4f4f4;
+                --borders: #f4f4f4;
+                --posts: #f4f4f4;
+                --spacing: 2rem 2%;
+                --accent: #f4f4f4;
+                --box-shadow: 0px 4px 8px #00000000;
+            }
+
+            .info {
+                box-shadow: var(--box-shadow);
+                background: var(--info-background);
+                color: var(--info-text);
+                border-radius: 0px; 
+                padding: var(--spacing);
+                width: 100%;
+            }
+
+            html, body {
+                background-color: var(--background-color);
+                margin: 0 auto;
+                padding: 0;
+                height: 100%;
+            }
+
+            body {
+                background-color: var(--background-color);
+                font-family: 'Inconsolata', sans-serif;
+                font-size: 16px;
+                margin: 0 auto;
+                padding: var(--spacing);
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.7s ease-in-out;
+            }
+
+            body.visible {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            @media screen and (min-width: 1024px) {
                 main {
                     max-width: 1200px; 
-                    padding: 6rem;  /* 50 */   
+                    padding: 6rem;
                     margin: 0 auto;   
-                    }
                 }
-        
-                main {
-                    width: 100%;
-                    max-width: 100%;
-                    color: var(--info-text);
-                    margin: 0 auto;
-                    padding: var(--spacing);
-                }
-        
-                footer {
-                    width: 100%;
-                    padding: var(--spacing);
-                    text-align: left;
-                    background-color: var(--info-background);
-                    color: var(--info-text);
-                    margin: 0 auto;
-                    margin-top: 6rem;
-                    margin-bottom: 3rem;
-                }
-        
-                * {
-                    box-sizing: border-box;
-                }
-        
-                section {
-                    margin-top: 2rem;
-                }
-        
-                h1, h2, h3 {
-                    color: var(--accent);
-                    margin-bottom: 0.5rem;
-                }
-        
-                ul {
-                    margin-left: 1rem;
-                }
-        
-                p {
-                    margin-bottom: 1rem;
-                }
-        
-                p.txt-mini {
-                    font-size: 0.7rem;
-                }
-        
-                a {
-                    text-decoration: none; 
-                    color: #ffffff;
-                    font-weight: bold; 
-                }
-        
-                a:hover {
-                    color: #00ff00; 
-                    text-decoration: none;
-                    text-decoration: underline;
-                }
-        
-                .important-p a {
-                    color:  #00bbff; 
-                    text-decoration: none;
-                    font-weight: bold; 
-                }
-        
-                .important-p a:hover {
-                    color: #00ff00; 
-                    text-decoration: underline; 
-                }
-        
-                .imp-p a {
-                    color:  #ffffff; 
-                    text-decoration: none;
-                    font-weight: normal; 
-                }
-        
-                .imp-p a:hover {
-                    color: #00ff00; 
-                    text-decoration: underline; 
-                }
-        
-                .imp-l a {
-                    color:  #00bbff;
-                    text-decoration: none;
-                    font-weight: normal;
-                }
-        
-                .imp-l a:hover {
-                    color: #00ff00; 
-                    text-decoration: underline; 
-                }
-        
-            </style> 
-            <!---// ENDLINE & SAY BYE //-->
-        <!-- CSS MASTER NON MODIFICABILE // FINE -->
-    
-       
-        
-        
-     
+            }
 
-        <!-- CSS ANIMAZIONE SCRITTURA DA MODIFICARE -->
+            main {
+                width: 100%;
+                max-width: 100%;
+                color: var(--info-text);
+                margin: 0 auto;
+                padding: var(--spacing);
+            }
 
-        <style>
-            /* Animazione Scrittura */
+            footer {
+                width: 100%;
+                padding: var(--spacing);
+                text-align: left;
+                background-color: var(--info-background);
+                color: var(--info-text);
+                margin: 0 auto;
+                margin-top: 6rem;
+                margin-bottom: 3rem;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            section {
+                margin-top: 2rem;
+            }
+
+            h1, h2, h3 {
+                color: var(--accent);
+                margin-bottom: 0.5rem;
+            }
+
+            ul {
+                margin-left: 1rem;
+            }
+
+            p {
+                margin-bottom: 1rem;
+            }
+
+            p.txt-mini {
+                font-size: 0.7rem;
+            }
+
+            a {
+                text-decoration: none; 
+                color: #ffffff;
+                font-weight: bold; 
+            }
+
+            a:hover {
+                color: #00ff00; 
+                text-decoration: underline;
+            }
+
+            .important-p a {
+                color: #00bbff; 
+                text-decoration: none;
+                font-weight: bold; 
+            }
+
+            .important-p a:hover {
+                color: #00ff00; 
+                text-decoration: underline; 
+            }
+
+            .imp-p a {
+                color: #ffffff; 
+                text-decoration: none;
+                font-weight: normal; 
+            }
+
+            .imp-p a:hover {
+                color: #00ff00; 
+                text-decoration: underline; 
+            }
+
+            .imp-l a {
+                color: #00bbff;
+                text-decoration: none;
+                font-weight: normal;
+            }
+
+            .imp-l a:hover {
+                color: #00ff00; 
+                text-decoration: underline; 
+            }
+            /*---// ENDLINE & SAY BYE //---*/
+
+            /* CSS ANIMAZIONE SCRITTURA DA MODIFICARE */
             #typing-effect {
                 font-family: 'Inconsolata', monospace;
                 font-size: 20px;
@@ -227,24 +215,25 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 word-wrap: break-word;
                 overflow-wrap: break-word;
             }
-    
+
             /* Cursore lampeggiante */
             #typing-effect::after {
                 content: "*⌝";
                 animation: blink 1s steps(1) infinite;
             }
-    
+
             @keyframes blink {
                 50% {
                     opacity: 0;
                 }
             }
-    
+
             /* Nasconde il cursore */
             .no-cursor::after {
                 content: "";
                 animation: none;
             }
+            /* CSS ANIMAZIONE SCRITTURA DA MODIFICARE */
         </style>
              
         <!-- CSS ANIMAZIONE SCRITTURA DA MODIFICARE -->
@@ -268,24 +257,24 @@ Use, distribution, or modification of this project is strictly prohibited withou
         
             <script>
                 const textArray = [
-                    `<b>0. Welcome to GENiALABILE</b><br><br>
+                    `<b>0. Welcome to GENiALABILE</b><br>
                     GENiALABILE does not use cookies for tracking users, analyzing performance, or delivering personalized content.<br>
                     Questo testo mostra il <b>grassetto</b> e un link: 
-                    <a href="https://google.com/" target="_blank" style="color:#00bbff;">Example</a>.<br><br><br>`,
+                    <a href="https://example.com" target="_blank" style="color:#00bbff;">Example</a>.<br><br>`,
             
-                    `<b>1. Next Section</b><br><br>
+                    `<b>1. Next Section</b><br>
                     Ulteriore testo con <b>grassetto</b> e un altro link: 
-                    <a href="https://google.com/" target="_blank" style="color:#00bbff;">Another Example</a>.<br><br><br>`
+                    <a href="https://another-example.com" target="_blank" style="color:#00bbff;">Another Example</a>.<br><br>`
                 ];
             
                 const typingSpeed = 30; // Millisecondi tra ogni carattere
-                const startDelay = 1000; // Ritardo iniziale in millisecondi
+                const startDelay = 1000; // Ritardo iniziale
                 const typingElement = document.getElementById("typing-effect");
             
-                let textIndex = 0; // Indice del testo corrente
-                let charIndex = 0; // Indice del carattere corrente
-                let isTag = false; // Determina se si è in un tag HTML
-                let tagBuffer = ""; // Per memorizzare temporaneamente i tag HTML
+                let textIndex = 0;
+                let charIndex = 0;
+                let isTag = false;
+                let tagBuffer = "";
             
                 function typeWriter() {
                     if (textIndex < textArray.length) {
@@ -295,35 +284,35 @@ Use, distribution, or modification of this project is strictly prohibited withou
             
                             if (currentChar === "<") {
                                 isTag = true;
-                                tagBuffer = currentChar; // Inizia a memorizzare il tag
+                                tagBuffer = currentChar;
                             } else if (currentChar === ">" && isTag) {
                                 isTag = false;
-                                tagBuffer += currentChar; // Completa il tag
-                                typingElement.innerHTML += tagBuffer; // Aggiungi il tag completo
-                                tagBuffer = ""; // Resetta il buffer
+                                tagBuffer += currentChar;
+                                typingElement.innerHTML += tagBuffer; 
+                                tagBuffer = "";
                             } else if (isTag) {
-                                tagBuffer += currentChar; // Continua a costruire il tag
+                                tagBuffer += currentChar;
                             } else {
-                                typingElement.innerHTML += currentChar; // Aggiungi il carattere normale
+                                typingElement.innerHTML += currentChar;
                             }
             
                             charIndex++;
-                            setTimeout(typeWriter, typingSpeed); // Prossimo carattere
+                            setTimeout(typeWriter, typingSpeed);
                         } else {
-                            charIndex = 0; // Ripristina l'indice per il carattere
-                            textIndex++; // Passa al prossimo testo
-                            typingElement.innerHTML += "<br><br>"; // Aggiungi spazio tra i paragrafi
+                            // Fine del testo corrente, passiamo al successivo
+                            charIndex = 0;
+                            textIndex++;
+                            typingElement.innerHTML += "<br><br>";
                             setTimeout(typeWriter, typingSpeed);
                         }
                     } else {
-                        typingElement.classList.add("no-cursor"); // Rimuove il cursore lampeggiante
+                        // Rimuove il cursore lampeggiante alla fine
+                        typingElement.classList.add("no-cursor");
                     }
                 }
             
-                // Avvia l'animazione con ritardo
                 setTimeout(typeWriter, startDelay);
             </script>
-
 
 
 
