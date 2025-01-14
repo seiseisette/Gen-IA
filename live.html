@@ -16,17 +16,19 @@ This project is no longer available as open-source. Updated: 10 Jan 2025.
 Use, distribution, or modification of this project is strictly prohibited without prior written authorization.
 -------------------------------------------------------------------------------
 
-# Version: v2.1
-# URL: https://genialabile.com/index.html
+# Version: v3.0
+# URL: https://genialabile.com/live.html
 ===============================================================================
 -->
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>GENiALABILE | Home</title>
-        <meta name="description" content="GENiALABILE - Advanced-GPT Project designed to inspire multidimensional solutions and unlock creativity. Static version.">
-        <link rel="canonical" href="https://genialabile.com/index.html">
+        <title>GENiALABILE | Live</title>
+        <meta name="description" content="GENiALABILE - Advanced-GPT Project designed to inspire multidimensional solutions and unlock creativity. Live version.">
+        <link rel="canonical" href="https://genialabile.com/live-index.html">
+        <link rel="icon" href="https://genialabile.com/gen-favicon-rd.ico?v=2" " type="image/x-icon">
+        <link rel="icon" href="https://genialabile.com/gen-favicon-rd.png?v=2" " type="image/png">
     
         <!-- header.html -->
             <script>
@@ -47,7 +49,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
          
     </head>
 
-    <body class="static-page" style="background-color: #000000; color: #000000; link: #000000; visited: #000000;">
+    <body style="background-color: #000000; color: #000000; link: #000000; visited: #000000;">
         <main>
             <h1>
                 <a href="https://genialabile.com/" onmouseover="this.style.color='#00ff00'; this.style.textDecoration='underline';" onmouseout="this.style.color='white'; this.style.textDecoration='none';">
@@ -123,9 +125,9 @@ Use, distribution, or modification of this project is strictly prohibited withou
             </p>
         </main>
 
-        <!-- FOOTER ------>
+        <!-- FOOTER -->
         <footer>
-            
+
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
                     fetch('https://genialabile.com/footer.html')
@@ -141,18 +143,31 @@ Use, distribution, or modification of this project is strictly prohibited withou
             </script>
 
         </footer> 
-        <!-- FOOTER ------> 
+        <!-- FOOTER --> 
 
+        <!-- GO LIVE --> 
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const currentPage = window.location.pathname;
+        
+                if (currentPage.includes('static-site')) {
+                    document.body.classList.add('static-page');
+                } else if (currentPage.includes('live-site')) {
+                    document.body.classList.add('live-page');
+                }
+            });
+        </script>
+        <!-- GO LIVE --> 
 
-         <!-- FADE --> 
-         <script>
+        <!-- FADE --> 
+        <script>
             document.addEventListener("DOMContentLoaded", function () {
                 setTimeout(function () {
                     document.body.classList.add("visible");
                 }, 2000);
             });
         </script>
-    <!-- FADE --> 
+        <!-- FADE --> 
 
     </body>
 </html>

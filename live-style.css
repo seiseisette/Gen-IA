@@ -188,11 +188,11 @@ Use, distribution, or modification of this project is strictly prohibited withou
         .card {
             display: flex;
             align-items: center; 
-            background-color: #00000000; 
-            color: #ffffff; 
+            background-color: var(--background-color); 
+            color: var(--info-text); 
             padding: 0rem; 
             border-radius: 1px; 
-            box-shadow: 0px 0px 0px #000000; 
+            box-shadow: 0px 0px 0px #00000000; 
             width: fit-content;
             max-width: 100%;
         }
@@ -283,6 +283,20 @@ Use, distribution, or modification of this project is strictly prohibited withou
             display: inline-block;
             color: ;
             font-weight: normal;
+        }
+
+        body.static-page .link-live {
+            display: inline-block; /* BLINK */
+        }
+        body.static-page .link-static {
+            display: none;
+        }
+
+        body.live-page .link-live {
+            display: none;
+        }
+        body.live-page .link-static {
+            display: inline-block;
         }
     /*---// FOOTER+LINKS //--- */
 
