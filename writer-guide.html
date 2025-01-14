@@ -100,6 +100,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     width: 100%;
                     overflow-x: hidden; /* Impedisce lo scorrimento laterale */
                     min-height: 100%;
+                    align-items: center;
                 }
         
                 body {
@@ -118,42 +119,12 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     
                 }
 
-                /* Media query per schermi più larghi */
-                @media screen and (min-width: 1024px) {
-                    body {
-                        font-size: 18px; /* Incrementa la dimensione per schermi larghi */
-                    }
-                }
-
-                /* Media query per schermi molto larghi */
-                @media screen and (min-width: 1440px) {
-                    body {
-                        font-size: 20px; /* Testo ancora più grande */
-                    }
-                }
-
-                /* Media query per schermi più stretti */
-                @media screen and (max-width: 768px) {
-                    body {
-                        font-size: 14px; /* Diminuisci la dimensione per schermi piccoli */
-                    }
-                }
-
-                /* Media query per schermi ultra-stretti */
-                @media screen and (max-width: 480px) {
-                    body {
-                        font-size: 12px; /* Ancora più piccolo per schermi mobili */
-                    }
-                }
-                
                 body.visible {
                     opacity: 1;
                     visibility: visible;
                 }
-        
-               
-        
-                                main {
+
+                main {
                     width: 100%;
                     max-width: 100%;
                     color: var(--info-text);
@@ -165,67 +136,77 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
 
 
-                @media screen and (min-width: 1024px) {
-                main {
-                    /* max-width: 100%; */ 
-                    padding: 3rem;  /* 50 */   
-                    margin: 0; 
-                    padding-bottom: 10%
 
-                    padding-left: 20%; /* Limita il contenuto ai lati */
-                    padding-right: 20%;
+
+
+
+                /* Media query per schermi più larghi */
+                @media screen and (min-width: 1024px) {
+                    body {
+                        font-size: 18px; 
                     }
+                }
+
+                /* Media query per schermi molto larghi */
+                @media screen and (min-width: 1440px) {
+                    body {
+                        font-size: 20px; 
+                    }
+                }
+
+                /* Media query per schermi più stretti */
+                @media screen and (max-width: 768px) {
+                    body {
+                        font-size: 14px; 
+                    }
+                }
+
+                /* Media query per schermi ultra-stretti */
+                @media screen and (max-width: 480px) {
+                    body {
+                        font-size: 12px;
+                    }
+                }
                 
-                    
-                    
-                    
+                @media screen and (min-width: 1024px) {
+                    main {
+                       
+                        padding: 3rem;  
+                        margin: 0; 
+                        padding-bottom: 10%;
+                        /* padding-left: 20%; */
+                        padding-right: 20%;
+                        }
                 }
 
                 @media screen and (max-width: 768px) {
                     #footer-banner {
-                        padding: var(--spacing); /* Riduci il padding per dispositivi mobili */
+                        padding: var(--spacing);
                         padding-right: 0%;
-
-                    
-
-                        font-size: var(--testo-size);  /*Regola la dimensione del testo */
-
-                            
-                        /* ==== ultima modifica prima del push 16:16 NMS factor
-                        ================================ */
+                        font-size: var(--testo-size);
                     }
 
                     main {
-                        padding-bottom: 10%; /* Assicurati che ci sia spazio sufficiente per il footer */
+                        padding-bottom: 10%;
                     }
                 }
         
                 footer {
                     width: 100%;
-                    padding:  var(--spacing); 
-                    overflow-x: hidden; /* Impedisce lo scorrimento laterale */
-
-
-
+                    padding:  var(--spacing);  
                     padding-bottom: 0rem;  
-                    padding-top: 0rem; /* 0rem;            /*  OG */
-
+                    padding-top: 0rem; 
+                    /* padding-left: 20%; */
+                    padding-right: 1%;
                     align-items: center;
-                    
                     text-align: left;
                     background-color: var(--info-background);
                     color: var(--info-text);
                     margin: 0;
-                   
-        
-
-
-
-                    margin-top: var(--foot-margin); /* -0.3rem;    /* 6 OG */
-                    margin-bottom: var(--foot-margin); /* -0.3rem;       /* 3 OG */
-
-
-
+                    margin-top: var(--foot-margin); 
+                    margin-bottom: var(--foot-margin);
+                    /* Bha... */
+                    overflow-x: hidden; 
                 }
         
                 * {
