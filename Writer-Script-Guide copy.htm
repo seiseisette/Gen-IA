@@ -17,14 +17,14 @@ Use, distribution, or modification of this project is strictly prohibited withou
 -------------------------------------------------------------------------------
 
 # Version: v2.1
-# URL: https://genialabile.com/Writer-Script-Guide.html
+# URL: https://genialabile.com/Writer-Script-Guide copy.html
 ===============================================================================
 -->
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>GENiALABILE | Guide Page</title>
+        <title>GENiALABILE | Guide Page copy</title>
         <meta name="description" content="GENiALABILE - Writer Fx Guide.">
         <link rel="canonical" href="https://genialabile.com/new-page.html">
         <link rel="icon" href="https://genialabile.com/gen-favicon-rd.ico?v=2" type="image/x-icon">
@@ -220,58 +220,34 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
         <!-- CSS ANIMATO -->
         <style>
-            /* CSS ANIMATO */
-        
-            #typing-container {
-                width: 100%;
-                margin: 0 auto;
-                padding: var(--spacing); /* Usa la stessa spaziatura del CSS master */
+
+            /* Live Fx */
+           #typing-effect {
+                /* font-family: 'Inconsolata', monospace;*/
+                /* font-size: 20px; */
+                /* color: #00ff00;  Verde */
+                white-space: pre; /* Mantiene gli spazi vuoti */
             }
-        
-            #typing-effect {
-                font-family: 'Inconsolata', monospace;
-                font-size: 1.5rem; /* Dimensione base */
-                color: var(--info-text); /* Colore dal CSS master */
-                white-space: pre-wrap; /* Mantiene gli spazi vuoti e le linee */
-                word-wrap: break-word; /* Permette il wrapping del testo */
-                line-height: 1.6; /* Altezza della linea */
-            }
-        
+            /* Cursore lampeggiante */
             #typing-effect::after {
-                content: "*⌝";
-                animation: blink 1s steps(1) infinite;
-                font-size: 1.5rem;
+                content: "*⌝"; /* Aggiunge un cursore */
+                animation: blink 1s steps(1) infinite; /* Effetto di lampeggio */
+                         
+                font-weight: normal;
             }
-        
             /* Nasconde il cursore */
             .no-cursor::after {
-                content: "";
-                animation: none;
+                content: ""; /* Nessun contenuto */
+                animation: none; /* Rimuove l'animazione */
+                 /*  animation-duration: 10s; Ferma il lampeggio dopo n secondi */   
             }
-        
+
             @keyframes blink {
                 50% {
                     opacity: 0;
                 }
             }
-        
-            /* Responsive Design */
-            @media screen and (max-width: 768px) {
-                #typing-effect {
-                    font-size: 1.2rem; /* Riduce la dimensione del testo per schermi più piccoli */
-                    line-height: 1.4; /* Regola l'altezza della linea */
-                }
-                #typing-container {
-                    padding: 1rem; /* Riduce il padding per schermi piccoli */
-                }
-            }
-        
-            @media screen and (max-width: 480px) {
-                #typing-effect {
-                    font-size: 1rem; /* Testo ancora più piccolo per dispositivi molto piccoli */
-                    line-height: 1.3;
-                }
-            }
+            /* Live Fx */
         </style>
         <!-- CSS ANIMATO -->
             
@@ -328,74 +304,59 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
 
             <h1>
-                <a href="https://genialabile.com/">
+                <a href="https://genialabile.com/" onmouseover="this.style.color='#00ff00'; this.style.textDecoration='underline';" onmouseout="this.style.color='white'; this.style.textDecoration='none';">
                     01. GENiALABILE
                 </a>
             </h1>
             <!-- Aggiungi un elemento SCRITTURA -->
             <p>
-                <div id="typing-container">
-                    <div id="typing-effect"></div>
-                </div>
-
-
+                <div id="typing-effect"></div>
                 <script>
-                    // Testi da digitare
-                    const textArray = [
-                        "<b>Primo testo</b><br>Bla bla bla bla bla bla bla bla bla bla bla bla.",
-                        "<b>Secondo testo</b><br>Bla bla bla bla bla bla bla bla bla bla bla bla.",
-                        "<b>Terzo testo</b><br>Bla bla bla bla bla bla bla bla bla bla bla bla."
-                    ];
-                
-                    const typingSpeed = 30; // Velocità di digitazione (ms)
-                    const pauseBetweenParagraphs = 500; // Pausa tra un paragrafo e l'altro (ms)
+                    // Testo da digitare
+                    const text =
+                    "PRIMO TESTO Benvenuto su GENiALABILE: Advanced-GPT inspiring multidimensional solutions."
+                   
+                    "SEC TESTO Benvenuto su GENiALABILE: Advanced-GPT inspiring multidimensional solutions."
+
+                    ;
+
+
+
+                    // Configurazione: intervallo tra i caratteri (ms)
+                    const typingSpeed = 100; // Velocità di digitazione
+                    const startDelay = 6000; // Ritardo iniziale (in ms)
+
+                    // Riferimento all'elemento HTML
                     const typingElement = document.getElementById("typing-effect");
-                
-                    let textIndex = 0; // Indice del paragrafo corrente
-                    let charIndex = 0; // Indice del carattere corrente
-                    let isTag = false; // Indica se si sta elaborando un tag HTML
-                    let tagBuffer = ""; // Buffer per i tag HTML
-                
-                    function typeWriter() {
-                        if (textIndex < textArray.length) {
-                            const currentText = textArray[textIndex];
-                            if (charIndex < currentText.length) {
-                                const currentChar = currentText[charIndex];
-                
-                                // Gestione dei tag HTML
-                                if (currentChar === "<") {
-                                    isTag = true;
-                                    tagBuffer = currentChar;
-                                } else if (currentChar === ">" && isTag) {
-                                    isTag = false;
-                                    tagBuffer += currentChar;
-                                    typingElement.innerHTML += tagBuffer; // Aggiunge il tag completo
-                                    tagBuffer = "";
-                                } else if (isTag) {
-                                    tagBuffer += currentChar; // Continua a costruire il tag
-                                } else {
-                                    typingElement.innerHTML += currentChar; // Aggiunge un carattere normale
-                                }
-                
-                                charIndex++;
-                                setTimeout(typeWriter, typingSpeed); // Aspetta per il prossimo carattere
-                            } else {
-                                // Fine del paragrafo corrente
-                                charIndex = 0;
-                                textIndex++;
-                                typingElement.innerHTML += "<br><br>"; // Aggiunge una nuova riga tra i paragrafi
-                                setTimeout(typeWriter, pauseBetweenParagraphs); // Aspetta prima di iniziare il prossimo paragrafo
-                            }
-                        } else {
-                            // Rimuove il cursore lampeggiante alla fine
-                            typingElement.classList.add("no-cursor");
+
+                    // Funzione per simulare la digitazione
+                    let index = 0;
+                    function typeText() {
+                        if (index < text.length) {
+                            typingElement.innerHTML += text.charAt(index);
+                            index++;
+                            setTimeout(typeText, typingSpeed); // Aspetta e digita il prossimo carattere
                         }
                     }
-                
-                    // Avvia l'animazione quando la pagina è pronta
-                    document.addEventListener("DOMContentLoaded", () => {
-                        typeWriter();
-                    });
+                    // Rimuove il cursore dopo 5 secondi
+                    setTimeout(() => {
+                        const typingEffect = document.getElementById("typing-effect");
+                        typingEffect.classList.add("no-cursor"); // Aggiunge la classe che nasconde il cursore
+                    }, 5000); // Cambia 5000 (5 secondi) con il tempo desiderato
+
+                                    document.addEventListener('DOMContentLoaded', function () {
+                        const typingEffect = document.querySelector('#typing-effect');
+                        const shouldBlink = typingEffect.getAttribute('data-blink') === 'false';
+                        
+                        if (!shouldBlink) {
+                            setTimeout(() => {
+                                typingEffect.style.animation = 'none'; // Disabilita animazione
+                            }, 30000); // Dopo 30 secondi
+                        }
+                     });
+
+                    // Avvia l'effetto di digitazione
+                    window.onload = typeText; // Inizia quando la pagina è completamente caricata
                 </script>
 
 
