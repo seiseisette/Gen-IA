@@ -270,58 +270,65 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 const textArray = [
                     `<b>0. Welcome to GENiALABILE</b>
                     GENiALABILE does not use cookies for tracking users, analyzing performance, or delivering personalized content.<br>
-                    Questo testo mostra il <b>grassetto</b> e un link: 
-                    <a href="https://example.com" target="_blank" style="color:#00bbff;">Example</a>.<br><br><br>`,
-
-                    `<b>1. Next Section</b>
-                    Ulteriore testo con <b>grassetto</b> e un altro link: 
-                    <a href="https://another-example.com" target="_blank" style="color:#00bbff;">Another Example</a>.<br><br><br>`
+                    This Cookie Policy explains what cookies are, why we do not use them, and your options for managing cookies elsewhere.<br>
+                    We use only the minimum required to improve user experience, without data collecting.<br><br><br>`,
+            
+                    `<b>1. What Are Cookies?</b>
+                    Cookies are small text files placed on your device by websites you visit.<br>
+                    They serve purposes such as remembering your preferences, enabling functionality, and collecting data for analytics.<br><br><br>`,
+            
+                    `<b>4. Managing Your Cookies</b><br><br>
+                    Adjust your browser settings to block or delete cookies.<br>
+                    Use platforms like 
+                    <a href='https://www.youronlinechoices.com/' target='_blank' style='color:#00bbff;'>Your Online Choices</a> (EU) or 
+                    <a href='https://optout.aboutads.info/' target='_blank' style='color:#00bbff;'>YourAdChoices</a> (US).<br>
+                    Disable Google Analytics tracking with the 
+                    <a href='https://tools.google.com/dlpage/gaoptout' target='_blank' style='color:#00bbff;'>Google Analytics Opt-Out Add-on</a>.<br><br><br>`
                 ];
-
-                const typingSpeed = 30;
-                const startDelay = 1000;
+            
+                const typingSpeed = 30; // Millisecondi tra ogni carattere
+                const startDelay = 1000; // Ritardo iniziale (ms)
                 const typingElement = document.getElementById("typing-effect");
-
-                let textIndex = 0;
-                let charIndex = 0;
-                let isTag = false;
-                let tagBuffer = "";
-
+            
+                let textIndex = 0; // Indice del testo corrente
+                let charIndex = 0; // Indice del carattere corrente
+                let isTag = false; // Determina se si è in un tag HTML
+                let tagBuffer = ""; // Per memorizzare temporaneamente i tag HTML
+            
                 function typeWriter() {
                     if (textIndex < textArray.length) {
                         const currentText = textArray[textIndex];
                         if (charIndex < currentText.length) {
                             const currentChar = currentText[charIndex];
-
+            
                             if (currentChar === "<") {
                                 isTag = true;
-                                tagBuffer = currentChar;
+                                tagBuffer = currentChar; // Inizia a memorizzare il tag
                             } else if (currentChar === ">" && isTag) {
                                 isTag = false;
-                                tagBuffer += currentChar;
-                                typingElement.innerHTML += tagBuffer; 
-                                tagBuffer = "";
+                                tagBuffer += currentChar; // Completa il tag
+                                typingElement.innerHTML += tagBuffer; // Aggiungi il tag completo
+                                tagBuffer = ""; // Resetta il buffer
                             } else if (isTag) {
-                                tagBuffer += currentChar;
+                                tagBuffer += currentChar; // Continua a costruire il tag
                             } else {
-                                typingElement.innerHTML += currentChar;
+                                typingElement.innerHTML += currentChar; // Aggiungi il carattere normale
                             }
-
+            
                             charIndex++;
-                            setTimeout(typeWriter, typingSpeed);
+                            setTimeout(typeWriter, typingSpeed); // Prossimo carattere
                         } else {
-                            // Fine del testo corrente, passiamo al successivo
-                            charIndex = 0;
-                            textIndex++;
-                            typingElement.innerHTML += "<br><br>";
+                            charIndex = 0; // Ripristina l'indice per il carattere
+                            textIndex++; // Passa al prossimo testo
+                            typingElement.innerHTML += "<br><br>"; // Aggiungi spazio tra i paragrafi
                             setTimeout(typeWriter, typingSpeed);
                         }
                     } else {
-                        // Rimuove il cursore lampeggiante alla fine
-                        typingElement.classList.add("no-cursor");
+                        typingElement.classList.add("no-cursor"); // Rimuove il cursore lampeggiante
                     }
                 }
-
+            
+                // Avvia la digitazione con ritardo
                 setTimeout(typeWriter, startDelay);
             </script>
 
