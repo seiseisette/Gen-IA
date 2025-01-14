@@ -93,11 +93,12 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     width: 100%;
                     
                 }
+
                 html, body {
                     margin: 0;
                     padding: 0;
                     width: 100%;
-                    overflow-x: hidden; /* Impedisce lo scorrimento orizzontale */
+                    overflow-x: hidden; /* Impedisce lo scorrimento laterale */
                     min-height: 100%;
                 }
         
@@ -357,16 +358,17 @@ Use, distribution, or modification of this project is strictly prohibited withou
         <style>
             /*---// FOOTER BANNER //--- */
 
-                        #footer-banner {
-                position: fixed; /* Mantiene il footer fisso */
+            #footer-banner {
+                position: absolute; /* Mantiene il footer in posizione */
                 bottom: 0;
-                left: 0;
-                width: 100%;
+                left: 0; /* Assicura che il footer parta da sinistra */
+                right: 0; /* Assicura che il footer termini a destra */
+                width: 100%; /* Garantisce che il footer occupi l'intera larghezza */
                 background-color: var(--info-background);
                 color: var(--info-text);
                 text-align: center;
                 padding: 1rem;
-                box-shadow: 0 -2px 10px #24242450;
+                box-shadow: 0 -2px 10px rgba(36, 36, 36, 0.3);
                 z-index: 1000;
                 transition: transform 0.3s ease-in-out;
                 transform: translateY(100%); /* Footer nascosto inizialmente */
@@ -374,8 +376,9 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
             #footer-banner.active {
                 transform: translateY(0); /* Mostra il footer */
-
             }
+
+            
 
             #footer-banner #footer-content {
 
