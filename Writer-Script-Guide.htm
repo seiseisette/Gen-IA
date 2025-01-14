@@ -80,6 +80,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     --spacing: 2rem 2%;
                     --accent: #f4f4f4;
                     --box-shadow: 0px 4px 8px #00000000;
+                    --testo-size: 16px;
                 }
                 
                 .info {
@@ -101,13 +102,13 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 body {
                     background-color: var(--background-color);
                     font-family: 'Inconsolata', sans-serif;
-                    font-size: 16px;
+                    font-size: var(--testo-size);
                     margin: 0 auto;
                     padding: var(--spacing);
                     /* FANCY-FX */
                     opacity: 0;
                     visibility: hidden;
-                    transition: opacity 0.7s ease-in-out;
+                    transition: opacity 1.3s ease-in-out;
                 }
                 
                 body.visible {
@@ -230,17 +231,19 @@ Use, distribution, or modification of this project is strictly prohibited withou
         
             #typing-effect {
                 font-family: 'Inconsolata', monospace;
-                font-size: 1.5rem; /* Dimensione base */
+                font-size: var(--testo-size); /* Dimensione base */
                 color: var(--info-text); /* Colore dal CSS master */
                 white-space: pre-wrap; /* Mantiene gli spazi vuoti e le linee */
                 word-wrap: break-word; /* Permette il wrapping del testo */
                 line-height: 1.6; /* Altezza della linea */
+                display: inline; /* Assicura che il cursore resti accanto al testo */
             }
-        
+
             #typing-effect::after {
                 content: "*⌝";
                 animation: blink 1s steps(1) infinite;
                 font-size: 1.5rem;
+                display: inline; /* Evita che il cursore vada a capo */
             }
         
             /* Nasconde il cursore */
@@ -337,12 +340,10 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 <div id="typing-container">
                     <div id="typing-effect"></div>
                 </div>
-
-
+                
                 <script>
-                    // Testi da digitare
                     const textArray = [
-                        "<b>Primo testo</b><br>Bla bla bla bla bla bla bla bla bla bla bla bla.",
+                        "<b>Primo testo</b><br>Bla bla bla bla bla bla bla bla bla a bla bla bla bla bla a bla bla bla bla bla a bla bla bla bla bla a bla bla———bla bla bla a bla bla bla bla bla a bla bla bla bla bla a bla bla bla bla bla bla bla bla.",
                         "<b>Secondo testo</b><br>Bla bla bla bla bla bla bla bla bla bla bla bla.",
                         "<b>Terzo testo</b><br>Bla bla bla bla bla bla bla bla bla bla bla bla."
                     ];
