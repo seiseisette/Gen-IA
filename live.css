@@ -32,10 +32,14 @@ Use, distribution, or modification of this project is strictly prohibited withou
             --posts: #f4f4f4;
             --spacing: 1rem 2%;
             --accent: #f4f4f4;
+            --link-accent: #ffffff;
+            --link-power: #00ff00;
+            --link-must: #00bbff;
             --accent-font:system-ui,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             --box-shadow: 0px 4px 8px #00000000;
             --font-size: 16px;
             --foot-margin: -0.3rem;
+           
         }
         
         .info {
@@ -133,48 +137,50 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
         a {
             text-decoration: none; 
-            color: #ffffff;
+            color: var(--link-accent);
             font-weight: bold; 
         }
 
         a:hover {
-            color: #00ff00; 
+            color: var(--link-power); 
             text-decoration: none;
             text-decoration: underline;
         }
 
         .important-p a {
-            color:  #00bbff; 
+            color:  var(--link-must); 
             text-decoration: none;
             font-weight: bold; 
         }
 
-        .important-p a:hover {
-            color: #00ff00; 
-            text-decoration: underline; 
-        }
-
-        .imp-p a {
-            color:  #ffffff; 
-            text-decoration: none;
-            font-weight: normal; 
-        }
-
-        .imp-p a:hover {
-            color: #00ff00; 
-            text-decoration: underline; 
-        }
-
         .imp-l a {
-            color:  #00bbff;
+            color: var(--link-must);
             text-decoration: none;
             font-weight: normal;
         }
 
         .imp-l a:hover {
-            color: #00ff00; 
+            color: var(--link-power); 
             text-decoration: underline; 
         }
+
+        .important-p a:hover {
+            color: var(--link-power); 
+            text-decoration: underline; 
+        }
+
+        .imp-p a {
+            color:  var(--link-accent); 
+            text-decoration: none;
+            font-weight: normal; 
+        }
+
+        .imp-p a:hover {
+            color: var(--link-power); 
+            text-decoration: underline; 
+        }
+
+        
     /* CSS MASTER */ 
 
 
@@ -208,6 +214,34 @@ Use, distribution, or modification of this project is strictly prohibited withou
             line-height: 1.6;
         }
     /*---// FOOTER+BANNER //--- */
+
+    /*---// FOOTER+LINKS //--- */
+    
+        footer .link-live,
+        footer .link-static {
+            display: none;
+        }
+
+        .link-live {
+            display: inline-block;
+            color: #00ff00;
+            font-weight: bold;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* Stile per il link "Statico" */
+        .link-static {
+            display: inline-block;
+            color: ;
+            font-weight: normal;
+        }
+    /*---// FOOTER+LINKS //--- */
 
 
     /* CSS TYPING */
