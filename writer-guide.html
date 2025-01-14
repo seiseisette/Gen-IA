@@ -79,6 +79,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     --posts: #f4f4f4;
                     --spacing: 1rem 2%;
                     --accent: #f4f4f4;
+                    --accent-font:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                     --box-shadow: 0px 4px 8px #00000000;
                     --font-size: 16px;
                     --foot-margin: -0.3rem;
@@ -196,10 +197,11 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     padding:  var(--spacing);  
                     padding-bottom: 0rem;  
                     padding-top: 0rem; 
-                    /* padding-left: 20%; */
+                    /* padding-left: 2%; */
                     padding-right: 1%;
                     align-items: center;
                     text-align: left;
+                    font-family: var(--accent-font)
                     background-color: var(--info-background);
                     color: var(--info-text);
                     margin: 0;
@@ -220,6 +222,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 h1, h2, h3 {
                     color: var(--accent);
                     margin-bottom: 0.5rem;
+                    font-family: var(--accent-font)
                 }
         
                 ul {
