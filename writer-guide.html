@@ -183,7 +183,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 @media screen and (max-width: 768px) {
                     #footer-banner {
                         padding: var(--spacing);
-                        padding-right: 0%;
+                        /* padding-right: 0%; */
                         font-size: var(--testo-size);
                     }
 
@@ -193,10 +193,12 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 }
         
                 footer {
-                    width: 100%;
+                    width: 100vw;
                     padding:  var(--spacing);  
                     padding-bottom: 0rem;  
-                    padding-top: 0rem; 
+                    padding-top: 0rem;
+                    left: 0; /* Assicura che il footer parta da sinistra */
+                    right: 0; 
                     /* padding-left: 2%; */
                     /* padding-right: 1%; */
                     align-items: center;
@@ -386,7 +388,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 margin-top: var(--foot-margin); /* 0rem; /* Riduce lo spazio superiore */
                 margin-bottom: var(--foot-margin); /*0rem; /* Riduce lo spazio inferiore */
 
-                text-align: center; 
+                text-align: left; 
                 font-size: var(--testo-size); /* Usa la dimensione del testo del CSS master */
                 line-height: 1.6; /* Altezza linea coerente */
             }
