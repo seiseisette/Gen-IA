@@ -30,12 +30,15 @@ Use, distribution, or modification of this project is strictly prohibited withou
             --info-text: #f4f4f4;
             --borders: #000000;
             --posts: #f4f4f4;
-            --spacing: 1rem 2%;
+            --pad-spacing: 1rem 2%;
             --accent: #f4f4f4;
             --link-accent: #ffffff;
             --link-power: #00ff00;
             --link-must: #00bbff;
-            --accent-font:system-ui,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            
+            --font-roboto: 'Roboto', sans-serif;
+            --font-inconsolata: 'Inconsolata', monospace;
+            --std-l-height: 1.6;
             --box-shadow: 0px 4px 8px #00000000;
             --font-size: 16px;
             --foot-margin: -0.3rem;
@@ -47,9 +50,52 @@ Use, distribution, or modification of this project is strictly prohibited withou
             background: var(--info-background);
             color: var(--info-text);
             border-radius: 0px; 
-            padding: var(--spacing);
+            padding: var(--pad-spacing);
             width: 100%;
             
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+        
+        .roboto-100 {
+            font-family: var(--font-roboto);
+            font-weight: 100;
+        }
+        
+        .roboto-400 {
+            font-family: var(--font-roboto);
+            font-weight: 400;
+        }
+        
+        .roboto-700 {
+            font-family: var(--font-roboto);
+            font-weight: 700;
+        }
+        
+        .roboto-900 {
+            font-family: var(--font-roboto);
+            font-weight: 900;
+        }
+        
+        .inconsolata-200 {
+            font-family: var(--font-inconsolata);
+            font-weight: 200;
+        }
+        
+        .inconsolata-400 {
+            font-family: var(--font-inconsolata);
+            font-weight: 400;
+        }
+        
+        .inconsolata-700 {
+            font-family: var(--font-inconsolata);
+            font-weight: 700;
+        }
+        
+        .inconsolata-900 {
+            font-family: var(--font-inconsolata);
+            font-weight: 900;
         }
 
         html, body {
@@ -63,10 +109,12 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
         body {
             background-color: var(--background-color);
-            font-family: 'Inconsolata', sans-serif;
+            font-family: var(--font-roboto);            /* 'Inconsolata', sans-serif;*/
+            font-weight: 400; 
             font-size: var(--font-size);
+            line-height: var(--std-l-height);
             margin: 0;
-            padding: var(--spacing);
+            padding: var(--pad-spacing);
             overflow-x: hidden;
                 /* FANCY-FX */
             opacity: 0;
@@ -85,14 +133,14 @@ Use, distribution, or modification of this project is strictly prohibited withou
             max-width: 100%;
             color: var(--info-text);
             margin: 0 auto;
-            padding: var(--spacing);
+            padding: var(--pad-spacing);
             padding-bottom: 5rem; /* Spazio riservato per il footer */
             overflow-x: hidden;
         }
 
         footer {
             width: 100%;
-            padding:  var(--spacing);  
+            padding:  var(--pad-spacing);  
             padding-bottom: 0rem;  
             padding-top: 0rem; 
             /* padding-left: 2%; */
@@ -120,7 +168,9 @@ Use, distribution, or modification of this project is strictly prohibited withou
         h1, h2, h3 {
             color: var(--accent);
             margin-bottom: 0.5rem;
-            font-family: var(--accent-font)
+            font-family: var(--font-roboto);
+            font-weight: 900; /* Black */
+            margin-bottom: 0.5rem;
         }
 
         h1 a.heading-link,
@@ -194,6 +244,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
             color: var(--link-power); 
             text-decoration: underline; 
         }
+        
 
         
     /* CSS MASTER */
@@ -245,15 +296,15 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
     /*---// FOOTER+BANNER //--- */
         #footer-banner {
-            position: absolute; /* Mantiene il footer in posizione */
+            position: absolute;
             bottom: 0;
-            left: 0; /* Assicura che il footer parta da sinistra */
-            right: 0; /* Assicura che il footer termini a destra */
-            width: 100%; /* Garantisce che il footer occupi l'intera larghezza */
+            left: 0;
+            right: 0; 
+            width: 100%;
             background-color: var(--info-background);
             color: var(--info-text);
             text-align: center;
-            padding: var(--spacing);
+            padding: var(--pad-spacing);
             box-shadow: 0 -2px 10px rgba(36, 36, 36, 0.3);
             z-index: 1000;
             transition: transform 0.3s ease-in-out;
@@ -270,7 +321,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
             margin-bottom: var(--foot-margin);
             text-align: center; 
             font-size: var(--testo-size);
-            line-height: 1.6;
+            line-height: var(--std-l-height);
         }
     /*---// FOOTER+BANNER //--- */
 
@@ -320,7 +371,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
             #typing-container {
             width: 100%;
             margin: 0 auto;
-            padding: var(--spacing);
+            padding: var(--pad-spacing);
         }
     
         #typing-effect {
@@ -403,7 +454,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
             }
             
             #footer-banner {
-                padding: var(--spacing);
+                padding: var(--pad-spacing);
                 padding-right: 0%;
                 font-size: var(--testo-size);
             }
