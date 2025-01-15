@@ -79,10 +79,10 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     --posts: #f4f4f4;
                     --spacing: 1rem 2%;
                     --accent: #f4f4f4;
-                    --accent-font:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    --accent-font:'Roboto', sans-serif;
                     --box-shadow: 0px 4px 8px #00000000;
                     --font-size: 16px;
-                    --foot-margin: -3%;
+                    --foot-margin: -1.5rem;
                 }
                 
                 .info {
@@ -140,26 +140,38 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
 
 
+                 /* Media query per schermi molto larghi */
+                 @media screen and (min-width: 1440px) {
+                    body {
+                        font-size: 20px; 
+                    }
+                }
 
                 /* Media query per schermi più larghi */
                 @media screen and (min-width: 1024px) {
                     body {
                         font-size: 18px; 
                     }
+                    main {
+                       
+                       padding: 3rem;  
+                       margin: 0; 
+                       padding-bottom: 10%;
+                       /* padding-left: 20%; */
+                       padding-right: 20%;
+                       }
                 }
 
-                /* Media query per schermi molto larghi */
-                @media screen and (min-width: 1440px) {
-                    body {
-                        font-size: 20px; 
-                    }
-                }
 
                 /* Media query per schermi più stretti */
                 @media screen and (max-width: 768px) {
                     body {
                         font-size: 14px; 
                     }
+                    #footer-banner {
+                        padding: var(--spacing);
+                        /* padding-right: 0%; */
+                        font-size: 0.7rem;
                 }
 
                 /* Media query per schermi ultra-stretti */
@@ -169,27 +181,28 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     }
                 }
                 
-                @media screen and (min-width: 1024px) {
+                /* @media screen and (min-width: 1024px) {
                     main {
                        
                         padding: 3rem;  
                         margin: 0; 
                         padding-bottom: 10%;
-                        /* padding-left: 20%; */
+                        /* padding-left: 20%; //
                         padding-right: 20%;
                         }
                 }
+              
 
                 @media screen and (max-width: 768px) {
                     #footer-banner {
                         padding: var(--spacing);
-                        /* padding-right: 0%; */
-                        font-size: var(--testo-size);
+                        /* padding-right: 0%; //
+                        font-size: 0.7rem;
                     }
 
                     main {
                         padding-bottom: 10%;
-                    }
+                    }   */
                 }
         
                 footer {
@@ -208,7 +221,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     color: var(--info-text);
                     margin: 0;
                     margin-top: var(--foot-margin); 
-                    margin-bottom: var(--foot-margin);
+                    margin-bottom: 0rem; /*var(--foot-margin);*/
                     /* Bha... */
                     overflow-x: hidden; 
                 }
@@ -373,9 +386,9 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 outline: 1px solid rgb(0, 0, 0); /* Per verificare se le ombre nere sono visibili */
                 
                 box-shadow: 0 -2px 10px #242424, /* Parte superiore */
-                           -5px 0 20px 10px #000000,  /* Ombra sinistra (blu) */
-                            5px 0 20px 10px #000000,   /* Ombra destra (blu) */
-                            0 5px 25px 15px #000000;   /* Ombra inferiore (rossa) */ /* Ombra inferiore (rossa) */       /* Elimina tutte le altre parti */
+                           -10px 0 300px 50px #000000,  /* Ombra sinistra (blu) */
+                            10px 0 30px 50px #000000,   /* Ombra destra (blu) */
+                            0 10px 60px 50px #000000;   /* Ombra inferiore (rossa) */ /* Ombra inferiore (rossa) */       /* Elimina tutte le altre parti */
                 /* box-shadow: 0 -2px 10px -2px #00ff00;/* rgba(36, 36, 36, 0.3);*/
                 z-index: 1000;
                 transition: transform 0.3s ease-in-out;
@@ -391,11 +404,11 @@ Use, distribution, or modification of this project is strictly prohibited withou
             #footer-banner #footer-content {
 
                 width: 100%;
-
+        
                 padding: var(--spacing); /* Usa la stessa spaziatura del CSS maste*/
-
+            padding-bottom:var(--foot-margin);
                 margin-top: var(--foot-margin); /* 0rem; /* Riduce lo spazio superiore */
-                margin-bottom: var(--foot-margin);
+                margin-bottom: 0rem; /*var(--foot-margin);*/
                 padding: var(--spacing); /* Usa la stessa spaziatura del CSS master */
                 /*  /*0rem; /* Riduce lo spazio inferiore */
 
@@ -453,6 +466,55 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     display: inline-block;
                 }
                 /*---// FOOTER+LINKS //--- */
+
+
+                @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+                
+                .roboto-100 {
+                    font-family: var(--font-roboto);
+                    font-weight: 100;
+                }
+                
+                .roboto-400 {
+                    font-family: var(--font-roboto);
+                    font-weight: 400;
+                }
+                
+                .roboto-700 {
+                    font-family: var(--font-roboto);
+                    font-weight: 700;
+                }
+                
+                .roboto-900 {
+                    font-family: var(--font-roboto);
+                    font-weight: 900;
+                }
+
+                @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+                
+                .inconsolata-200 {
+                    font-family: var(--font-inconsolata);
+                    font-weight: 200;
+                }
+                
+                .inconsolata-400 {
+                    font-family: var(--font-inconsolata);
+                    font-weight: 400;
+                }
+                
+                .inconsolata-700 {
+                    font-family: var(--font-inconsolata);
+                    font-weight: 700;
+                }
+                
+                .inconsolata-900 {
+                    font-family: var(--font-inconsolata);
+                    font-weight: 900;
+                }
+
+
+
+
 
         </style>
 
