@@ -145,19 +145,22 @@ Use, distribution, or modification of this project is strictly prohibited withou
         </footer> 
         <!-- FOOTER --> 
 
-        <!-- GO LIVE --> 
-          <!-- GO LIVE OR STATIC -->
+          <!-- GO LIVE -->
           <script>
             document.addEventListener('DOMContentLoaded', function () {
-                const currentPage = window.location.pathname.toLowerCase();
-                if (currentPage.includes('live')) {
-                    document.body.classList.add('live-page');
+                const currentURLPage = window.location.pathname.toLowerCase(); // Ottieni il percorso dell'URL in minuscolo
+
+                // Verifica se l'URL contiene "live"
+                if (currentURLPage.includes('live')) {
+                    document.body.classList.add('live-page'); // Assegna la classe "live-page" al body
+                    document.body.classList.remove('static-page'); // Rimuovi la classe "static-page" (se presente)
                 } else {
-                    document.body.classList.add('static-page');
+                    document.body.classList.add('static-page'); // Assegna la classe "static-page" al body
+                    document.body.classList.remove('live-page'); // Rimuovi la classe "live-page" (se presente)
                 }
             });
         </script>
-        <!-- GO LIVE --> 
+        <!-- GO LIVE -->
 
         <!-- FADE --> 
         <script>
