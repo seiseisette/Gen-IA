@@ -123,6 +123,21 @@ Use, distribution, or modification of this project is strictly prohibited withou
             font-family: var(--accent-font)
         }
 
+        h1 a.heading-link,
+        h2 a.heading-link,
+        h3 a.heading-link {
+            color: var(--link-accent);
+            font-weight: normal;
+            text-decoration: none;
+        }
+
+        h1 a.heading-link:hover,
+        h2 a.heading-link:hover,
+        h3 a.heading-link:hover {
+            color: var(--link-accent);
+            text-decoration: none;
+        }
+
         ul {
             margin-left: 1rem;
         }
