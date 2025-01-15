@@ -267,7 +267,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     #footer-banner {
-        position: absolute;
+        position: bottom;
         bottom: 0;
         left: 0;
         right: 0;
@@ -292,8 +292,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
         padding: var(--spacing);
         margin-top: var(--foot-margin);
         margin-bottom: 0rem;
-        padding-bottom: -10%;
-        text-align: left;
+        padding-bottom: -10rem;
+        text-align: center;
         font-size: var(--testo-size);
         line-height: 1;
     }
