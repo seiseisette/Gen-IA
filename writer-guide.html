@@ -17,14 +17,14 @@ Use, distribution, or modification of this project is strictly prohibited withou
 -------------------------------------------------------------------------------
 
 # Version: v2.1
-# URL: https://genialabile.com/Writer-Script-Guide.html
+# URL: https://genialabile.com/Writer-Script-Guide.html LIVe
 ===============================================================================
 -->
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>GENiALABILE | Guide Page</title>
+        <title>GENiALABILE | Guide Page Live</title>
         <meta name="description" content="GENiALABILE - Writer Fx Guide.">
         <link rel="canonical" href="https://genialabile.com/new-page.html">
         <link rel="icon" href="https://genialabile.com/gen-favicon-rd.ico?v=2" type="image/x-icon">
@@ -638,7 +638,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         </main>
 
         
-
+        <footer>
         <!-- FOOTER BANNER ------> 
 
 
@@ -666,12 +666,25 @@ Use, distribution, or modification of this project is strictly prohibited withou
             </script>
 
         <!-- FOOTER BANNER ------> 
+        </footer>
 
 
 
 
 
-
+        <!-- GO LIVE --> 
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const currentPage = window.location.pathname;
+        
+                if (currentPage.includes('static-site')) {
+                    document.body.classList.add('static-page');
+                } else if (currentPage.includes('live-site')) {
+                    document.body.classList.add('live-page');
+                }
+            });
+        </script>
+        <!-- GO LIVE --> 
 
 
 
