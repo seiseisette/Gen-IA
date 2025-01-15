@@ -146,14 +146,14 @@ Use, distribution, or modification of this project is strictly prohibited withou
         <!-- FOOTER --> 
 
         <!-- GO LIVE --> 
-        <script>
+          <!-- GO LIVE OR STATIC -->
+          <script>
             document.addEventListener('DOMContentLoaded', function () {
-                const currentPage = window.location.pathname;
-        
-                if (currentPage.includes('static-site')) {
-                    document.body.classList.add('static-page');
-                } else if (currentPage.includes('live-site')) {
+                const currentPage = window.location.pathname.toLowerCase();
+                if (currentPage.includes('live')) {
                     document.body.classList.add('live-page');
+                } else {
+                    document.body.classList.add('static-page');
                 }
             });
         </script>

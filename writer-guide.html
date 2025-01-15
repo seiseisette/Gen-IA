@@ -82,7 +82,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     --accent-font:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                     --box-shadow: 0px 4px 8px #00000000;
                     --font-size: 16px;
-                    --foot-margin: -1.5%;
+                    --foot-margin: -3%;
                 }
                 
                 .info {
@@ -208,7 +208,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     color: var(--info-text);
                     margin: 0;
                     margin-top: var(--foot-margin); 
-                    margin-bottom: auto;  /* var(--foot-margin);*/
+                    margin-bottom: var(--foot-margin);
                     /* Bha... */
                     overflow-x: hidden; 
                 }
@@ -392,14 +392,16 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
                 width: 100%;
 
+                padding: var(--spacing); /* Usa la stessa spaziatura del CSS maste*/
+
                 margin-top: var(--foot-margin); /* 0rem; /* Riduce lo spazio superiore */
-                margin-bottom: auto; /*var(--foot-margin);
+                margin-bottom: var(--foot-margin);
                 padding: var(--spacing); /* Usa la stessa spaziatura del CSS master */
                 /*  /*0rem; /* Riduce lo spazio inferiore */
 
                 text-align: left; 
                 font-size: var(--testo-size); /* Usa la dimensione del testo del CSS master */
-                line-height: 1.6; /* Altezza linea coerente */
+                line-height: 1; /* Altezza linea coerente */
             }
 
           
@@ -409,9 +411,50 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
         </style>
 
+        <style>
 
+                /*---// FOOTER+LINKS //--- */
+                    
+                footer .link-live,
+                footer .link-static {
+                    display: none;
+                }
 
+                .link-live {
+                    display: inline-block;
+                    color: var(--link-power);
+                    font-weight: bold;
+                    animation: blink 1s infinite;
+                }
 
+                @keyframes blink {
+                    50% {
+                        opacity: 0;
+                    }
+                }
+
+                .link-static {
+                    display: inline-block;
+                    color: var(--link-accent);
+                    font-weight: normal;
+                }
+
+                body.static-page .link-live {
+                    display: inline-block; /* BLINK */
+                }
+                body.static-page .link-static {
+                    display: none;
+                }
+
+                body.live-page .link-live {
+                    display: none;
+                }
+                body.live-page .link-static {
+                    display: inline-block;
+                }
+                /*---// FOOTER+LINKS //--- */
+
+        </style>
 
         <!-- CSS ANIMATO -->
             
@@ -592,7 +635,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
             </script>
             
             
-            <!-- Aggiungi un elemento SUPERWRITER 
+             Aggiungi un elemento SUPERWRITER 
             <p>
             
                 <div id="typing-effect"></div>
@@ -675,12 +718,15 @@ Use, distribution, or modification of this project is strictly prohibited withou
         <!-- GO LIVE --> 
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                const currentPage = window.location.pathname;
-        
-                if (currentPage.includes('static-site')) {
-                    document.body.classList.add('static-page');
-                } else if (currentPage.includes('live-site')) {
-                    document.body.classList.add('live-page');
+                const currentPage = window.location.href; // Prendi l'intero URL
+
+                // Verifica se "live" è contenuto nell'URL
+                if (currentPage.includes('live')) {
+                    document.body.classList.add('live-page'); // Mostra il sito live
+                    document.body.classList.remove('static-page'); // Rimuovi static-page se presente
+                } else {
+                    document.body.classList.add('static-page'); // Mostra il sito statico
+                    document.body.classList.remove('live-page'); // Rimuovi live-page se presente
                 }
             });
         </script>
