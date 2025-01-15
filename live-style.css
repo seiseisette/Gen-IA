@@ -334,7 +334,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
         .link-live {
             display: inline-block;
-            color: #00ff00;
+            color: var(--link-power);
             font-weight: bold;
             animation: blink 1s infinite;
         }
@@ -347,7 +347,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
         .link-static {
             display: inline-block;
-            color: ;
+            color: var(--link-accent);
             font-weight: normal;
         }
 
