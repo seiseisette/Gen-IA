@@ -43,8 +43,14 @@ Use, distribution, or modification of this project is strictly prohibited withou
                         `;
                     });
             </script>
-        <!-- header.html -->
-         
+       <!-- header.html -->
+
+ <!-- CSS -->
+ <link rel="preload" href="https://genialabile.com/uni-style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+ <noscript><link rel="stylesheet" href="https://genialabile.com/uni-style.css"></noscript>
+
+
+      
     </head>
 
     <body style="background-color: #000000; color: #000000; link: #000000; visited: #000000;">
@@ -200,37 +206,58 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 GENiALABILE will utilize its full potential while adhering to security protocols.
                 (It is designed for beta testers, and standard users have limited interactions.)
 
----
+                    ---
 
 
             </p>
             ---------->
 
+                
+
+
+
+
+
+
+
+
         </main>
 
-        <!-- FOOTER ------>
+        
+        
         <footer>
-            
+        <!-- FOOTER BANNER ------> 
+
+
+            <div id="footer-banner">
+                <div id="footer-content"></div>
+                <!--- <button class="footer-btn" id="close-footer-banner">Close</button> --->
+            </div>
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
                     fetch('https://genialabile.com/footer.html')
                         .then(response => response.text())
                         .then(data => {
-                            const body = document.querySelector('body');
-                            const footerContainer = document.createElement('div');
-                            footerContainer.innerHTML = data;
-                            body.appendChild(footerContainer);
+                            const footerContent = document.getElementById('footer-content');
+                            footerContent.innerHTML = data;
                         })
-                    .catch(error => console.error('Errore nel caricamento del footer:', error));
-                });
+                        .catch(error => console.error('Errore nel caricamento del footer-banner:', error));
+                document.addEventListener("DOMContentLoaded", () => {
+                            console.log("Pagina caricata, ritardo di avvio in corso...");
+                            setTimeout(() => {
+                                console.log("Avvio dell'animazione dopo il ritardo.");
+                                typeWriter();
+                            }, startDelay);
+                        });
+                    });
             </script>
 
-        </footer> 
-        <!-- FOOTER ------> 
+        <!-- FOOTER BANNER ------> 
+        </footer>
 
 
 
-        <!-- GO LIVE -->
+        <!-- GO LIVE --
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 const currentURLPage = window.location.pathname.toLowerCase(); // Ottieni il percorso dell'URL in minuscolo
@@ -245,13 +272,11 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 }
             });
         </script>
-        <!-- GO LIVE -->
+        -- GO LIVE -->
+         
 
 
-
-
-
-         <!-- FADE --> 
+        <!-- FADE --> 
          <script>
             document.addEventListener("DOMContentLoaded", function () {
                 setTimeout(function () {
@@ -259,7 +284,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 }, 2000);
             });
         </script>
-    <!-- FADE --> 
+        <!-- FADE --> 
 
     </body>
 </html>
