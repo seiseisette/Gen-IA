@@ -715,22 +715,22 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
 
 
-        <!-- GO LIVE --> 
+        <!-- GO LIVE -->
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                const currentPage = window.location.href; // Prendi l'intero URL
+                const currentURLPage = window.location.pathname.toLowerCase(); // Ottieni il percorso dell'URL in minuscolo
 
-                // Verifica se "live" è contenuto nell'URL
-                if (currentPage.includes('live')) {
-                    document.body.classList.add('live-page'); // Mostra il sito live
-                    document.body.classList.remove('static-page'); // Rimuovi static-page se presente
+                // Verifica se l'URL contiene "live"
+                if (currentURLPage.includes('live')) {
+                    document.body.classList.add('live-page'); // Assegna la classe "live-page" al body
+                    document.body.classList.remove('static-page'); // Rimuovi la classe "static-page" (se presente)
                 } else {
-                    document.body.classList.add('static-page'); // Mostra il sito statico
-                    document.body.classList.remove('live-page'); // Rimuovi live-page se presente
+                    document.body.classList.add('static-page'); // Assegna la classe "static-page" al body
+                    document.body.classList.remove('live-page'); // Rimuovi la classe "live-page" (se presente)
                 }
             });
         </script>
-        <!-- GO LIVE --> 
+        <!-- GO LIVE -->
 
 
 
