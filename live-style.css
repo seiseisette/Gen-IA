@@ -35,7 +35,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
             --link-accent: #ffffff;
             --link-power: #00ff00;
             --link-must: #00bbff;
-            --accent-font:system-ui,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            --accent-font: Roboto, sans-serif;
             --box-shadow: 0px 4px 8px #00000000;
             --font-size: 16px;
             --foot-margin: -0.3rem;
@@ -50,6 +50,50 @@ Use, distribution, or modification of this project is strictly prohibited withou
             padding: var(--spacing);
             width: 100%;
             
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+       
+        .roboto-100 {
+            font-family: var(--font-roboto);
+            font-weight: 100;
+        }
+        
+        .roboto-400 {
+            font-family: var(--font-roboto);
+            font-weight: 400;
+        }
+        
+        .roboto-700 {
+            font-family: var(--font-roboto);
+            font-weight: 700;
+        }
+        
+        .roboto-900 {
+            font-family: var(--font-roboto);
+            font-weight: 900;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+        
+        .inconsolata-200 {
+            font-family: var(--font-inconsolata);
+            font-weight: 200;
+        }
+        
+        .inconsolata-400 {
+            font-family: var(--font-inconsolata);
+            font-weight: 400;
+        }
+        
+        .inconsolata-700 {
+            font-family: var(--font-inconsolata);
+            font-weight: 700;
+        }
+        
+        .inconsolata-900 {
+            font-family: var(--font-inconsolata);
+            font-weight: 900;
         }
 
         html, body {
