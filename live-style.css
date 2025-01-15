@@ -35,7 +35,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
             --link-accent: #ffffff;
             --link-power: #00ff00;
             --link-must: #00bbff;
-            --accent-font: Roboto, sans-serif;
+            --accent-font:'Roboto', sans-serif;
             --box-shadow: 0px 4px 8px #00000000;
             --font-size: 16px;
             --foot-margin: -0.3rem;
@@ -51,7 +51,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
             width: 100%;
             
         }
-        
+
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
        
         .roboto-100 {
