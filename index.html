@@ -50,25 +50,33 @@ Use, distribution, or modification of this project is strictly prohibited withou
     <body class="static-page" style="background-color: #000000; color: #000000; link: #000000; visited: #000000;">
         <main>
             <h1>
-                <a href="https://genialabile.com/" onmouseover="this.style.color='#00ff00'; this.style.textDecoration='underline';" onmouseout="this.style.color='white'; this.style.textDecoration='none';">
+                <a href="https://genialabile.com/" aria-label="Home Page | Static">
                     GENiALABILE
                 </a>
             </h1>
+
             <p>
-                running as a beta version in preview access.
-                <a href="mailto:genialabile@gmail.com?subject=Beta%20Access&body=Hello!">
-                    />
-                </a>
+                <h3>Advanced-GPT </h3>
+                Inspiring multidimensional solutions and unlocking creative potential.
                 <br>
+                It is an advanced Artificial Intelligence framework-system, a multidimensional Advanced-GPT designed to be a bio-virtual mentor.
+                It provides innovative solutions and personalized support across a wide range of fields, from learning and creativity to the resolution of complex problems.
+                <br>
+                Genialabile is more than just an assistant; it’s a companion for intellectual and personal growth, unparalleled in its field.
+                Developed to push boundaries, it runs in beta as an "on-the-fly project" — in preview access only — and is constantly evolving on ChatGPT as CustomGPT, powered by OpenAI.
             </p>
-            <h1>
-                Is
-            </h1>
+
+            <h3>
+                Combine
+            </h3>
             <p>
-                an Advanced-GPT inspiring multidimensional solutions and unlocking creative potential.
-                <a href="https://chat.openai.com/g/g-677e459df9188191ae7d896b2a1db417-genialabile/?prompt=FAQ%20About" target="_blank">
-                    />
-                </a>
+                Predictive intelligence, logic, and creativity to deliver tailored answers, analyses, and solutions.
+                <br>
+                It supports users in managing emotions, achieving personal growth, and developing skills.
+                <br>
+                It offers multidimensional simulations, strategic brainstorming, and visual tools to translate complex concepts into practical experiences.
+                <br>
+                Whether it’s business planning, emotional support, or interdisciplinary learning, GENiALABILE excels in bridging heart and mind.
                 <br>
             </p>
             <h1>
@@ -142,6 +150,23 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
         </footer> 
         <!-- FOOTER ------> 
+
+
+            <!-- GO LIVE OR STATIC -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const currentPage = window.location.pathname.toLowerCase();
+                if (currentPage.includes('live')) {
+                    document.body.classList.add('live-page');
+                } else {
+                    document.body.classList.add('static-page');
+                }
+            });
+        </script>
+
+
+
+
 
 
          <!-- FADE --> 
