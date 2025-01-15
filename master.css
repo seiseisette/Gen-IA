@@ -22,7 +22,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 */
 
  /*---// STARTLINE & SAY HI //---*/
-    /*< style> */
+    /*< 
      
         :root {
             --background-color: #000000;
@@ -44,13 +44,13 @@ Use, distribution, or modification of this project is strictly prohibited withou
             width: 100%;
             
         }
-        html, body  {  /* html, body {*/
+        html, body  { 
             background-color: var(--background-color);
             margin: 0 auto;
             padding: 0;
             height: 100%;
         }
-
+        style> */
         body {
             background-color: var(--background-color);
             font-family: 'Inconsolata', sans-serif;
