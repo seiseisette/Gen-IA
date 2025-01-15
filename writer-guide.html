@@ -369,9 +369,9 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 /* ==== ultima modifica prima del push 16:16 NMS factor
                         ================================ */
                 box-shadow: 0 -2px 10px #00ff00, /* Parte superiore */
-                            2px 0 10px #000000, /* Ombra sinistra (blu) */
-                            2px 0 10px #000000,  /* Ombra destra (blu) */
-                            0 2px 10px #000000;  /* Ombra inferiore (rossa) */       /* Elimina tutte le altre parti */
+                           -2px 0 10px #0000ff,  /* Ombra sinistra (blu) */
+                            2px 0 10px #ccff00,   /* Ombra destra (blu) */
+                            0 2px 10px #ff0000;   /* Ombra inferiore (rossa) */ /* Ombra inferiore (rossa) */       /* Elimina tutte le altre parti */
                 /* box-shadow: 0 -2px 10px -2px #00ff00;/* rgba(36, 36, 36, 0.3);*/
                 z-index: 1000;
                 transition: transform 0.3s ease-in-out;
@@ -389,7 +389,9 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 width: 100%;
 
                 margin-top: var(--foot-margin); /* 0rem; /* Riduce lo spazio superiore */
-                margin-bottom: var(--foot-margin); /*0rem; /* Riduce lo spazio inferiore */
+                margin-bottom: var(--foot-margin);
+                padding: var(--spacing); /* Usa la stessa spaziatura del CSS master */
+                /*  /*0rem; /* Riduce lo spazio inferiore */
 
                 text-align: left; 
                 font-size: var(--testo-size); /* Usa la dimensione del testo del CSS master */
