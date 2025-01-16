@@ -87,24 +87,28 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     @media screen and (min-width: 1440px) {
-        body {
+        body, #typing-effect, #typing-container {
             font-size: 20px;
         }
     }
 
     @media screen and (min-width: 1024px) {
-        body {
-            font-size: 18px; 
+        body, #typing-effect, #typing-container  {
+            font-size: 18px;
+            padding: var(--spacing); 
+            margin: 0; 
+            padding-bottom: 5rem; 
         }
-        main {
+      /*  main, #typing-effect, #typing-container  {
             padding: var(--spacing); 
             margin: 0; 
             padding-bottom: 5rem;
         }
+        */
     }
 
     @media screen and (max-width: 768px) {
-        body {   
+        body, #typing-effect, #typing-container  {   
             font-size: 14px; 
         }
         #footer-banner {
@@ -114,7 +118,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     @media screen and (max-width: 480px) {
-        body {
+        body, #typing-effect, #typing-container  {
             font-size: 12px;
         }
         #footer-banner {
@@ -318,7 +322,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     .hidden-text #footer-text {
         visibility: hidden;
         opacity: 0;
-        transition: opacity 7s ease-in-out;
+        transition: opacity 3s ease-in-out;
     }
 
     /* Mostra il testo quando la classe è attivata */
@@ -334,12 +338,13 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     #typing-effect {
-        font-family: 'Inconsolata', monospace;
-        font-size: var(--testo-size); /* Dimensione base */
-        color: var(--info-text); /* Colore dal CSS master */
+         /* font-family: 'Inconsolata', monospace; */
+       
+         /* font-size: var(--testo-size); Dimensione base */
+        /* color: var(--info-text);  Colore dal CSS master */
         white-space: pre-wrap; /* Mantiene gli spazi vuoti e le linee */
         word-wrap: break-word; /* Permette il wrapping del testo */
-        line-height: 1.6; /* Altezza della linea */
+         /*  line-height: 1.6;Altezza della linea */
         display: inline; /* Assicura che il cursore resti accanto al testo */
     }
 
@@ -363,24 +368,24 @@ Use, distribution, or modification of this project is strictly prohibited withou
         }
     }
 
-    /* Responsive Design */
+    /* Responsive Design 
     @media screen and (max-width: 768px) {
         #typing-effect {
-            font-size: 1.2rem; /* Riduce la dimensione del testo per schermi più piccoli */
-            line-height: 1.4; /* Regola l'altezza della linea */
+            font-size: 1.2rem; /* Riduce la dimensione del testo per schermi più piccoli 
+            line-height: 1.4; /* Regola l'altezza della linea 
         }
         #typing-container {
-            padding: 1rem; /* Riduce il padding per schermi piccoli */
+            padding: 1rem; /* Riduce il padding per schermi piccoli 
         }
     }
 
     @media screen and (max-width: 480px) {
         #typing-effect {
-            font-size: 1rem; /* Testo ancora più piccolo per dispositivi molto piccoli */
+            font-size: 1rem; /* Testo ancora più piccolo per dispositivi molto piccoli
             line-height: 1.3;
         }
     }
-
+    */
 
 
 
