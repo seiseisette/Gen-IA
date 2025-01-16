@@ -547,7 +547,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
     .thin-line {
         border: none;
-        border-top: 1px solid #f4f4f4; /* Cambia colore a piacere */
+        border-top: 1px solid #f4f4f480; /* Cambia colore a piacere */
         margin: 0.5rem 0; /* Spaziatura sopra e sotto */
         width: 100%; /* Larghezza personalizzata */
     }
