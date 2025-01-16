@@ -223,7 +223,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         margin-left: 1rem;
     }
 
-    p {
+    p, #typing-effect, #typing-container {
         margin-bottom: 1rem;
     }
 
@@ -317,12 +317,16 @@ Use, distribution, or modification of this project is strictly prohibited withou
     */
 
     /* --- Typing Animation Effect --- */
+    #live-title {
+        margin-bottom: -3rem; /* Spaziatura specifica solo per questo titolo */
+    }
+
 
     /* Nascondi inizialmente il testo del footer */
     .hidden-text #footer-text {
         visibility: hidden;
         opacity: 0;
-        transition: opacity 3s ease-in-out;
+        transition: opacity 1s ease-in-out;
     }
 
     /* Mostra il testo quando la classe è attivata */
@@ -351,7 +355,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     #typing-effect::after {
         content: "█"; /* *⌝ */
         animation: blink 1s steps(1) infinite;
-        font-size: 1.3rem;
+        font-size: 1rem;
         font-weight: normal;
         display: inline; /* Evita che il cursore vada a capo */
     }
