@@ -185,7 +185,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     #footer-banner {
-        position: fixed;
+        position: absolute;
         bottom: 0;
 
             
@@ -364,7 +364,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     #typing-container {
         width: 100%;
         margin: 0 auto;
-        padding: var(--spacing); /* Usa la stessa spaziatura del CSS master
+        padding:-3rem ; 
         align-content: center;  */
     }
 
