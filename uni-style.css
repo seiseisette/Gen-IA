@@ -412,8 +412,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
         font-family: var(--accent-font);
         color: var(--info-text);
         padding-top: -3rem;
-        font-size: 0.95rem;
-        line-height: 1.05rem;
+        font-size: 0.9rem;
+        line-height: 1.1rem;
         text-align: left; /* Uniforma l'allineamento */
          /* font-family: 'Inconsolata', monospace; */
        
