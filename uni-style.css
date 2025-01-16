@@ -221,7 +221,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 /* font-size: var(--font-size); */
 
         font-size: 0.7rem;
-        font-family: 'Inconsolata', monospace;
+        font-family: 'Inconsolata', sans-serif;
         line-height: 1;
     }
 
@@ -427,8 +427,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
         padding: var(--spacing);
         font-family: var(--accent-font);
         color: var(--info-text);
-        font-size: 0.8rem;
-        padding-top: 0rem;
+        font-size: 0.9rem;
+        padding-top: -3rem;
 
         /* line-height: 1; */
         text-align: left; /* Uniforma l'allineamento */
