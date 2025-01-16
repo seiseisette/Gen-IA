@@ -52,7 +52,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
     html, body {
         margin: 0;
-        padding:  var(--spacing);
+        padding:  0;
         width: 100%;
         overflow-x: hidden;
         min-height: 100%;
@@ -64,7 +64,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         font-family: 'Inconsolata', sans-serif;
         font-size: var(--font-size);
         margin: 0;
-        padding: var(--spacing);
+        padding: 0;
         overflow-x: hidden;
         opacity: 0;
         visibility: hidden;
