@@ -1,0 +1,448 @@
+/*
+===============================================================================
+# Project: Gen-IA
+# Website: Minimal welcome website
+===============================================================================
+
+## GENiALABILE
+Advanced-GPT inspiring multidimensional solutions and unlocking creative potential.
+
+-------------------------------------------------------------------------------
+## License
+© 2025 GENiALABILE. All Rights Reserved.
+A GPT-Based Project — Designed by seiseisette.
+Repository: https://github.com/seiseisette/
+This project is no longer available as open-source. Updated: 10 Jan 2025.
+Use, distribution, or modification of this project is strictly prohibited without prior written authorization.
+-------------------------------------------------------------------------------
+
+# Version: v3.0
+# URL: https://genialabile.com/live.css
+===============================================================================
+*/
+
+/*---// STARTLINE & SAY HI //---*/
+
+    /* CSS MASTER */ 
+        :root {
+            --background-color: #000000;
+            --info-background: #000000;
+            --info-text: #f4f4f4;
+            --borders: #000000;
+            --posts: #f4f4f4;
+            --spacing: 1rem 2%;
+            --accent: #f4f4f4;
+            --link-accent: #ffffff;
+            --link-power: #00ff00;
+            --link-must: #00bbff;
+            --accent-font:'Roboto', sans-serif;
+            --box-shadow: 0px 4px 8px #00000000;
+            --font-size: 16px;
+            --foot-margin: -0.3rem;
+           
+        }
+        
+        .info {
+            box-shadow: var(--box-shadow);
+            background: var(--info-background);
+            color: var(--info-text);
+            border-radius: 0px; 
+            padding: var(--spacing);
+            width: 100%;
+            
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+       
+        .roboto-100 {
+            font-family: var(--font-roboto);
+            font-weight: 100;
+        }
+        
+        .roboto-400 {
+            font-family: var(--font-roboto);
+            font-weight: 400;
+        }
+        
+        .roboto-700 {
+            font-family: var(--font-roboto);
+            font-weight: 700;
+        }
+        
+        .roboto-900 {
+            font-family: var(--font-roboto);
+            font-weight: 900;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+        
+        .inconsolata-200 {
+            font-family: var(--font-inconsolata);
+            font-weight: 200;
+        }
+        
+        .inconsolata-400 {
+            font-family: var(--font-inconsolata);
+            font-weight: 400;
+        }
+        
+        .inconsolata-700 {
+            font-family: var(--font-inconsolata);
+            font-weight: 700;
+        }
+        
+        .inconsolata-900 {
+            font-family: var(--font-inconsolata);
+            font-weight: 900;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+            min-height: 100%;
+            align-items: center;
+        }
+
+        body {
+            background-color: var(--background-color);
+            font-family: 'Inconsolata', sans-serif;
+            font-size: var(--font-size);
+            margin: 0;
+            padding: var(--spacing);
+            overflow-x: hidden;
+                /* FANCY-FX */
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1.3s ease-in-out;
+            
+        }
+
+        body.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        main {
+            width: 100%;
+            max-width: 100%;
+            color: var(--info-text);
+            margin: 0 auto;
+            padding: var(--spacing);
+            padding-bottom: 5rem; /* Spazio riservato per il footer */
+            overflow-x: hidden;
+        }
+
+        footer {
+            width: 100%;
+            padding:  var(--spacing);  
+            padding-bottom: 0rem;  
+            padding-top: 0rem; 
+            /* padding-left: 2%; */
+            padding-right: 1%;
+            align-items: center;
+            text-align: left;
+            font-family: var(--accent-font);
+            background-color: var(--info-background);
+            color: var(--info-text);
+            margin: 0;
+            margin-top: var(--foot-margin); 
+            margin-bottom: var(--foot-margin);
+            /* Bha... */
+            overflow-x: hidden; 
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        section {
+            margin-top: 2rem;
+        }
+
+        h1, h2, h3 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-family: var(--accent-font)
+        }
+
+        ul {
+            margin-left: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        p.txt-mini {
+            font-size: 0.7rem;
+        }
+
+        a {
+            text-decoration: none; 
+            color: var(--link-accent);
+            font-weight: bold; 
+        }
+
+        a:hover {
+            color: var(--link-power); 
+            text-decoration: none;
+            text-decoration: underline;
+        }
+
+        .important-p a {
+            color:  var(--link-must); 
+            text-decoration: none;
+            font-weight: bold; 
+        }
+
+        .imp-l a {
+            color: var(--link-must);
+            text-decoration: none;
+            font-weight: normal;
+        }
+
+        .imp-l a:hover {
+            color: var(--link-power); 
+            text-decoration: underline; 
+        }
+
+        .important-p a:hover {
+            color: var(--link-power); 
+            text-decoration: underline; 
+        }
+
+        .imp-p a {
+            color:  var(--link-accent); 
+            text-decoration: none;
+            font-weight: normal; 
+        }
+
+        .imp-p a:hover {
+            color: var(--link-power); 
+            text-decoration: underline; 
+        }
+
+        
+    /* CSS MASTER */
+
+    /* CSS CARD */ 
+
+        .card {
+            display: flex;
+            align-items: center; 
+            background-color: var(--background-color); 
+            color: var(--info-text); 
+            padding: 0rem; 
+            border-radius: 1px; 
+            box-shadow: 0px 0px 0px #00000000; 
+            width: fit-content;
+            max-width: 100%;
+        }
+
+        .card-image-container {
+            flex-shrink: 0;
+            margin-right: 1rem; 
+        }
+
+        .card-image {
+            width: 66px; 
+            height: 66px;
+            max-width: 100%; 
+            border-radius: 50%;
+            object-fit: cover; 
+        }
+
+        .card-text {
+            font-family: 'Inconsolata', monospace;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .card-text h5 {
+            margin: 0 0 0.5rem 0;/
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .card-text p {
+            margin: 0;
+        }
+
+    /* CSS CARD */  
+
+    /*---// FOOTER+BANNER //--- */
+        #footer-banner {
+            position: absolute; /* Mantiene il footer in posizione */
+            bottom: 0;
+            left: 0; /* Assicura che il footer parta da sinistra */
+            right: 0; /* Assicura che il footer termini a destra */
+            width: 100%; /* Garantisce che il footer occupi l'intera larghezza */
+            background-color: var(--info-background);
+            color: var(--info-text);
+            text-align: center;
+            padding: var(--spacing);
+            box-shadow: 0 -2px 10px rgba(36, 36, 36, 0.3);
+            z-index: 1000;
+            transition: transform 0.3s ease-in-out;
+            transform: translateY(100%);
+        }
+
+        #footer-banner.active {
+            transform: translateY(0);
+        }
+
+        #footer-banner #footer-content {
+            width: 100vw;
+            margin-top: var(--foot-margin);
+            margin-bottom: var(--foot-margin);
+            text-align: center; 
+            font-size: var(--testo-size);
+            line-height: 1.6;
+        }
+    /*---// FOOTER+BANNER //--- */
+
+    /*---// FOOTER+LINKS //--- */
+    
+        footer .link-live,
+        footer .link-static {
+            display: none;
+        }
+
+        .link-live {
+            display: inline-block;
+            color: #00ff00;
+            font-weight: bold;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .link-static {
+            display: inline-block;
+            color: ;
+            font-weight: normal;
+        }
+
+        body.static-page .link-live {
+            display: inline-block; /* BLINK */
+        }
+        body.static-page .link-static {
+            display: none;
+        }
+
+        body.live-page .link-live {
+            display: none;
+        }
+        body.live-page .link-static {
+            display: inline-block;
+        }
+    /*---// FOOTER+LINKS //--- */
+
+
+    /* CSS TYPING */
+            #typing-container {
+            width: 100%;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+    
+        #typing-effect {
+            font-family: 'Inconsolata', monospace;
+            font-size: var(--testo-size);
+            color: var(--info-text);
+            white-space: pre-wrap; 
+            word-wrap: break-word; 
+            line-height: 1.6;
+            display: inline; 
+        }
+
+        #typing-effect::after {
+            content: "*⌝";
+            animation: blink 1s steps(1) infinite;
+            font-size: 1.3rem;
+            font-weight: normal;
+            display: inline;
+        }
+
+        .no-cursor::after {
+            content: "";
+            animation: none;
+        }
+    
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+    
+        @media screen and (max-width: 768px) {
+            #typing-effect {
+                font-size: 1.2rem;
+                line-height: 1.4;
+            }
+            #typing-container {
+                padding: 1rem; 
+            }
+        }
+    
+        @media screen and (max-width: 480px) {
+            #typing-effect {
+                font-size: 1rem;
+                line-height: 1.3;
+            }
+        }
+    /* CSS TYPING */
+
+
+    /* Media query */
+        @media screen and (min-width: 1440px) {
+            body {
+                font-size: 20px; 
+            }
+        }
+        
+        @media screen and (min-width: 1024px) {
+            body {
+                font-size: 18px; 
+            }
+            main {
+                
+                padding: 3rem;  
+                margin: 0; 
+                padding-bottom: 10%;
+                /* padding-left: 20%; */
+                padding-right: 20%;
+                }
+        }
+        
+        @media screen and (max-width: 768px) {
+            
+            body {
+                font-size: 14px; 
+            }
+
+            main {
+                padding-bottom: 10%;
+            }
+            
+            #footer-banner {
+                padding: var(--spacing);
+                padding-right: 0%;
+                font-size: var(--testo-size);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                font-size: 12px;
+            }
+        }
+    /* Media query */
+
+/*---// ENDLINE & SAY BYE //---*/

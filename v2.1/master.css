@@ -1,0 +1,169 @@
+/*
+===============================================================================
+# Project: Gen-IA
+# Website: Minimal welcome website
+===============================================================================
+
+## GENiALABILE
+Advanced-GPT inspiring multidimensional solutions and unlocking creative potential.
+
+-------------------------------------------------------------------------------
+## License
+© 2025 GENiALABILE. All Rights Reserved.
+A GPT-Based Project — Designed by seiseisette.
+Repository: https://github.com/seiseisette/
+This project is no longer available as open-source. Updated: 10 Jan 2025.
+Use, distribution, or modification of this project is strictly prohibited without prior written authorization.
+-------------------------------------------------------------------------------
+
+# Version: v2.1
+# URL: https://genialabile.com/main.css
+===============================================================================
+*/
+
+ /*---// STARTLINE & SAY HI //---*/
+    /*< 
+     
+        :root {
+            --background-color: #000000;
+            --info-background: #000000;
+            --info-text: #f4f4f4;
+            --borders: #f4f4f4;
+            --posts: #f4f4f4;
+            --spacing: 2rem 2%;
+            --accent: #f4f4f4;
+            --box-shadow: 0px 4px 8px #00000000;
+        }
+        
+        .info {
+            box-shadow: var(--box-shadow);
+            background: var(--info-background);
+            color: var(--info-text);
+            border-radius: 0px; 
+            padding: var(--spacing);
+            width: 100%;
+            
+        }
+        html, body  { 
+            background-color: var(--background-color);
+            margin: 0 auto;
+            padding: 0;
+            height: 100%;
+        }
+        style> */
+        body {
+            background-color: var(--background-color);
+            font-family: 'Inconsolata', sans-serif;
+            font-size: 16px;
+            margin: 0 auto;
+            padding: var(--spacing);
+            /* FANCY-FX */
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.7s ease-in-out;
+        }
+        
+        body.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @media screen and (min-width: 1024px) {
+        main {
+            max-width: 1200px; 
+            padding: 6rem;  /* 50 */   
+            margin: 0 auto;   
+            }
+        }
+
+        main {
+            width: 100%;
+            max-width: 100%;
+            color: var(--info-text);
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        footer {
+            width: 100%;
+            padding: var(--spacing);
+            text-align: left;
+            background-color: var(--info-background);
+            color: var(--info-text);
+            margin: 0 auto;
+            margin-top: 6rem;
+            margin-bottom: 3rem;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        section {
+            margin-top: 2rem;
+        }
+
+        h1, h2, h3 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            margin-left: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        p.txt-mini {
+            font-size: 0.7rem;
+        }
+
+        a {
+            text-decoration: none; 
+            color: #ffffff;
+            font-weight: bold; 
+        }
+
+        a:hover {
+            color: #00ff00; 
+            text-decoration: none;
+            text-decoration: underline;
+        }
+
+        .important-p a {
+            color:  #00bbff; 
+            text-decoration: none;
+            font-weight: bold; 
+        }
+
+        .important-p a:hover {
+            color: #00ff00; 
+            text-decoration: underline; 
+        }
+
+        .imp-p a {
+            color:  #ffffff; 
+            text-decoration: none;
+            font-weight: normal; 
+        }
+
+        .imp-p a:hover {
+            color: #00ff00; 
+            text-decoration: underline; 
+        }
+
+        .imp-l a {
+            color:  #00bbff;
+            text-decoration: none;
+            font-weight: normal;
+        }
+
+        .imp-l a:hover {
+            color: #00ff00; 
+            text-decoration: underline; 
+        }
+
+    /* </style> */
+ /*---// ENDLINE & SAY BYE //--- */

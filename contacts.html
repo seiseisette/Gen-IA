@@ -16,153 +16,167 @@ This project is no longer available as open-source. Updated: 10 Jan 2025.
 Use, distribution, or modification of this project is strictly prohibited without prior written authorization.
 -------------------------------------------------------------------------------
 
-# Version: v2.1
+# Version: v3.0 (160125)
 # URL: https://genialabile.com/contacts.html
 ===============================================================================
 -->
-
+<!-- START -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>GENiALABILE | Contacts</title>
-        <meta name="description" content="GENiALABILE - Contacts & Social Media and Credits.">
+        <title>Genialabile | Contacts</title>
+        <meta name="description" content="Genialabile - Contacts & Social Media and Credits">
         <link rel="canonical" href="https://genialabile.com/contacts.html">
-        <link rel="icon" href="https://genialabile.com/gen-favicon-rd.ico?v=2" " type="image/x-icon">
-        <link rel="icon" href="https://genialabile.com/gen-favicon-rd.png?v=2" " type="image/png">
-    
-        <!-- HEADER -->
+        <link rel="icon" href="https://genialabile.com/gen-favicon-rd.ico?v=2" type="image/x-icon">
+        <link rel="icon" href="https://genialabile.com/gen-favicon-rd.png?v=2" type="image/png">
+        <!-- header.html -->
+        <script>
+            fetch('https://genialabile.com/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('head').innerHTML += data;
+                })
+                .catch(error => console.error('Error fetching header:', error));
+        </script>
+        <!-- header.html --> 
+    </head>
+    <!-- SHIFT -->
+    <body style="background-color: #000000; color: #000000; link: #000000; visited: #000000;">
+        <main>
+            <h1>
+                CONTACTS & CREDITS
+            </h1>
+            <div class="imp-l">
+                <p>
+                    <h3><br>
+                        🎗️ Welcome
+                    </h3>
+                    <hr class="thin-line">
+                        If you have any questions, feedback, or inquiries about Genialabile, feel free to reach out to us using the information below.
+                        We are always looking for new ways to improve our mission and would love to hear about your experience.
+                        Continuing to evolve and improve our Gen-IA Operative Framework and knowledge is our primary goal.
+                        <br><br>
+                        <a href="mailto:genialabile@gmail.com?subject=Beta%20Access&body=Hello!" aria-label="Join Genialabile Beta Access">Join</a>
+                        our preview access for beta testers or early adopters to explore the efficiency of our Models.
+                        The applications extend across various fields, from creative writing, art, and philosophy to complex business models and strategic marketing.
+                        <br><br>
+                        It is a pleasure to have you here, as explorers of the future we are building together.
+                </p>
+                <p>
+                    <h3><br>
+                        🌐 Website
+                    </h3>
+                    <hr class="thin-line">
+                        Live: 
+                        <a href="https://genialabile.com/gpt" aria-label="Visit Genialabile Live Homepage">genialabile.com/gpt</a>
+                        <a href="https://genialabile.com/gpt" class="link-live" style="color: #00bbff;" aria-label="Visit Genialabile Live Homepage"><b>·</b></a>
+                        <br><br>
+                        Static: 
+                        <a href="https://genialabile.com/" aria-label="Visit Genialabile Static Homepage">genialabile.com</a>
+                        <div class="link-static">
+                            <a href="https://genialabile.com/" class="link-static" style="color: #ffbbff;" aria-label="Visit Genialabile Static Homepage"><b>·</b></a>
+                        </div>
+                </p>
+                <p>
+                    <h3><br>
+                        ✉️ Email
+                    </h3> 
+                    <hr class="thin-line">
+                        Gen:
+                        <a href="mailto:info@genialabile.com?subject=Contact%20Request" aria-label="Email Genialabile at info@genialabile.com">info@genialabile.com</a>
+                        <i>(limited uptime)</i>
+                    <br><br>
+                        Gmail:
+                        <a href="mailto:genialabile@gmail.com?subject=Contact%20Request" aria-label="Email Genialabile at genialabile@gmail.com">genialabile@gmail.com</a>
+                </p>
+                <p>
+                    <h3><br>
+                        👻 Social
+                    </h3>
+                    <hr class="thin-line">
+                        Twitter—X.com/<a href="https://x.com/genialabile/" aria-label="Visit Genialabile on Twitter">genialabile</a>
+                        <br><br>
+                        YouTube.com/<a href="https://youtube.com/@genialabile/" aria-label="Visit Genialabile on YouTube">@genialabile</a>
+                        <br><br>
+                        Instagram.com/<a href="https://instagram.com/genialabile/" aria-label="Visit Genialabile on Instagram">genialabile</a>
+                        <br><br>
+                        Threads.net/<a href="https://threads.net/@genialabile/" aria-label="Visit Genialabile on Threads">@genialabile</a>
+                        <!--<br><br>
+                        LinkedIn.com/
+                        <a href="https://linkedin.com/company/genialabile" aria-label="Visit Genialabile on LinkedIn">genialabile</a>-->
+                </p>
+                <p>
+                    <h3><br>
+                        👾 Credits
+                    </h3>
+                    <hr class="thin-line">
+                        Develop & Designed by
+                        <a href="https://x.com/seiseisette/" aria-label="Visit seiseisette on X (Twitter)">seiseisette</a>.
+                        <br><br>
+                        Website & Repository Hosted by GitHub:
+                        <a href="https://github.com/seiseisette/Gen-IA/" aria-label="Visit Gen-IA repository on GitHub">Gen-IA</a>.
+                        <br><br>
+                        Genialabile is evolving and running on ChatGPT.
+                        <br>
+                        Powered by <a href="https://openai.com/" aria-label="Visit OpenAI website">OpenAI</a>.
+                        <br><br>
+                        Concept & Gen-IA OFM Designed by seiseisette.
+                        <br>
+                        © 2025 Genialabile. All Rights Reserved.
+                        <br>
+                        ORCID:
+                        <a href="https://orcid.org/0009-0002-6309-2937" target="_blank" rel="noopener noreferrer" style="width: normal; color: #f4f4f4;" aria-label="Visit seiseisette's ORCID profile 0009-0002-6309-2937">0009-0002-6309-2937</a>
+                </p>
+                <p>
+                    <h3><br>
+                        ❤️ Thanks
+                    </h3>
+                    <hr class="thin-line">
+                        <div class="card">
+                            <div class="card-image-container">
+                                <img src="https://genialabile.com/gen-fav-rd.png?v=2" alt="Genialabile Logo" class="card-image" loading="lazy">
+                            </div>
+                            <div class="card-text">
+                                <p class="imp-p">
+                                    GENiALABILE <span style="font-family:'Inconsolata', monospace;"> *⌝</span>
+                                    <br>
+                                    Multidimensional Ave,
+                                    <br>
+                                    GPT's</a> City, AI, 2025
+                                </p>
+                            </div>
+                        </div>
+                </p>
+            </div>
+        </main>
+        <!-- TRICK -->
+            <div id="footer-banner">
+                <div id="footer-content"></div>
+            </div>
+        <!-- TRICK -->
+        <footer>
+            <!-- footer.html --> 
             <script>
-                fetch('https://genialabile.com/header.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        document.querySelector('head').innerHTML += data;
-                    })
-                    .catch(error => {
-                        console.error('Errore nel caricamento header:', error);
-                        document.querySelector('head').innerHTML += `
-                            <meta charset="UTF-8">
-                            <meta name="viewport" content="width=device-width, initial-scale=1">
-                        `;
+                document.addEventListener('DOMContentLoaded', function() {
+                    fetch('https://genialabile.com/footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                            const footerContent = document.getElementById('footer-content');
+                            footerContent.innerHTML = data;
+                        })
+                        .catch(error => console.error('Errore nel caricamento del footer-banner:', error));
+                document.addEventListener("DOMContentLoaded", () => {
+                            console.log("Pagina caricata, ritardo di avvio in corso...");
+                            setTimeout(() => {
+                                console.log("Avvio dell'animazione dopo il ritardo.");
+                                typeWriter();
+                            }, startDelay);
+                        });
                     });
             </script>
-        <!-- HEADER -->
-
-        <!-- CSS CARD -->
-            <link rel="stylesheet" href="https://genialabile.com/card.css">
-        <!-- CSS CARD -->
-         
-    </head>
-
-    <body style="background-color: #000000; color: #000000; link: #000000; visited: #000000;">
-        
-        <main>
-            
-            <h1>Contact Us</h1>
-            <p class="txt-mini">
-                Last Updated: 10 January 2025
-            </p>
-
-            <p class="imp-l">
-                <br><br>
-                
-                <b>0. Welcome to GENiALABILE</b>
-                <br><br>
-                If you have any questions, feedback, or inquiries about GENiALABILE, feel free to reach out to us using the information below.
-                <br>
-                <a href="mailto:genialabile@gmail.com?subject=Beta%20Access&body=Hello!"">
-                    Join
-                </a>
-                in our preview access for beta tester.
-                <br><br><br>
-
-                <b>1. Website</b>
-                <br><br>
-                On: 
-                <a href="https://genialabile.com/">
-                    genialabile.com
-                </a>
-                <br><br><br>
-
-                <b>2. Email</b>
-                <br><br>
-                At: 
-                <a href="mailto:genialabile@gmail.com?subject=Contact%20Request%20For">
-                    genialabile@gmail.com
-                </a>
-                <br><br><br>
-
-                <b>3. Social Media</b>
-                <br><br>
-                X: 
-                <a href="https://x.com/genialabile/">
-                    @genialabile
-                </a>
-                <br><br>
-                Instagram: 
-                <a href="https://instagram.com/genialabile/">
-                    @genialabile
-                </a>
-                <br><br>
-                Threads:
-                <a href="https://threads.net/@genialabile/">
-                    @genialabile
-                </a>
-                <br><br>
-                YouTube:
-                <a href="https://youtube.com/@genialabile/">
-                    @genialabile
-                </a>
-                <!--
-                LinkedIn: 
-                <a href="https://linkedin.com/company/genialabile">
-                    GENiALABILE
-                </a>
-                -->
-                <br><br><br>
-            
-                <b>4. Website Credits</b>
-                <br><br>
-
-                Hosted by GitHub Pages:
-                <a href="https://github.com/seiseisette/Gen-IA/">
-                    Gen-IA
-                </a>
-                <br><br>
-
-                Designed by: 
-                <a href="https://x.com/seiseisette/">
-                    seiseisette
-                </a>
-                <p class="imp-p">
-                    ORCID:
-                    <a href="https://orcid.org/0009-0002-6309-2937"
-                    target="_blank" rel="noopener noreferrer" style="width: normal;"> 
-                        0009-0002-6309-2937
-                    </a>
-                </p>
-                <br><br><br>
-           
-                <b>5. Business  Card</b>
-                <br><br>
-                <div class="card">
-                    <div class="card-image-container">
-                        <img src="https://genialabile.com/gen-fav-rd.png?v=2" alt="GENiALABILE Logo" class="card-image" loading="lazy">
-                    </div>
-                    <div class="card-text">
-                        <p class="imp-p">
-                            <a href="https://genialabile.com/">GENiALABILE</a> *⌝
-                            <br>
-                            Multidimensional Ave,
-                            <br>
-                            <a href="https://openai.com/">OpenAI</a> City, API, 2025
-                        </p>
-                    </div>
-                </div>
-            </p>
-
-        </main>
-
-        <!-- FADE --> 
+            <!-- footer.html --> 
+        </footer>
+            <!-- FADE --> 
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
                     setTimeout(function () {
@@ -170,23 +184,15 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     }, 2000);
                 });
             </script>
-        <!-- FADE --> 
-
-        <!-- FOOTER --> 
+            <!-- FADE -->
+            <!-- HACK-BUGS --> 
             <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    fetch('https://genialabile.com/footer.html')
-                        .then(response => response.text())
-                        .then(data => {
-                            const body = document.querySelector('body');
-                            const footerContainer = document.createElement('div');
-                            footerContainer.innerHTML = data;
-                            body.appendChild(footerContainer);
-                        })
-                    .catch(error => console.error('Errore nel caricamento del footer:', error));
+                document.addEventListener("DOMContentLoaded", function () {
+                    setTimeout(function () {
+                        document.body.classList.add("visible");
+                    }, 2000);
                 });
-            </script> 
-        <!-- FOOTER --> 
-
+            </script>
+            <!-- FADE -->  
     </body>
 </html>

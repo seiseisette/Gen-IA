@@ -1,0 +1,390 @@
+<!-- 
+===============================================================================
+# Project: Gen-IA
+# Website: Minimal welcome website
+===============================================================================
+
+## GENiALABILE
+Advanced-GPT inspiring multidimensional solutions and unlocking creative potential.
+
+-------------------------------------------------------------------------------
+## License
+© 2025 GENiALABILE. All Rights Reserved.
+A GPT-Based Project — Designed by seiseisette.
+Repository: https://github.com/seiseisette/
+This project is no longer available as open-source. Updated: 10 Jan 2025.
+Use, distribution, or modification of this project is strictly prohibited without prior written authorization.
+-------------------------------------------------------------------------------
+
+# Version: v2.1
+# URL: https://genialabile.com/live-fx.html
+===============================================================================
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <title>GENiALABILE | Test Page</title>
+        <meta name="description" content="GENiALABILE - TEST PAGE.">
+        <link rel="canonical" href="https://genialabile.com/live-fx.html">
+        <link rel="icon" href="https://genialabile.com/gen-favicon-rd.ico?v=2" type="image/x-icon">
+        <link rel="icon" href="https://genialabile.com/gen-favicon-rd.png?v=2" type="image/png">
+
+
+         <!-- Meta -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+        <!-- Access to GENiALABILE-GPT -->
+        <meta name="GENiALABILE-access" content="true">
+
+        <!-- Themes -->
+        <meta name="color-scheme" content="dark">
+        <meta name="theme-color" content="#000000" media="(prefers-color-scheme: light)">
+        <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+
+        <!-- Icons and Fonts 
+        <link rel="icon" href="https://genialabile.com/gen-favicon-rd.ico?v=2" " type="image/x-icon">
+        <link rel="icon" href="https://genialabile.com/gen-favicon-rd.png?v=2" " type="image/png">
+        -- Fonts -->
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap"></noscript>
+        <link rel="preload" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"></noscript>
+
+
+
+
+        <!-- CSS MASTER NON MODIFICABILE PREDEFINITO PER PAGINE WEB-->
+
+
+            /*---// STARTLINE & SAY HI //---*/
+            <style> 
+            
+               /*---// STARTLINE & SAY HI //---*/
+            :root {
+                --background-color: #000000;
+                --info-background: #000000;
+                --info-text: #f4f4f4;
+                --borders: #f4f4f4;
+                --posts: #f4f4f4;
+                --spacing: 2rem 2%;
+                --accent: #f4f4f4;
+                --box-shadow: 0px 4px 8px #00000000;
+            }
+
+            .info {
+                box-shadow: var(--box-shadow);
+                background: var(--info-background);
+                color: var(--info-text);
+                border-radius: 0px; 
+                padding: var(--spacing);
+                width: 100%;
+            }
+
+            html, body {
+                background-color: var(--background-color);
+                margin: 0 auto;
+                padding: 0;
+                height: 100%;
+            }
+
+            body {
+                background-color: var(--background-color);
+                font-family: 'Inconsolata', sans-serif;
+                font-size: 16px;
+                margin: 0 auto;
+                padding: var(--spacing);
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.7s ease-in-out;
+            }
+
+            body.visible {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            @media screen and (min-width: 1024px) {
+                main {
+                    max-width: 1200px; 
+                    padding: 6rem;
+                    margin: 0 auto;   
+                }
+            }
+
+            main {
+                width: 100%;
+                max-width: 100%;
+                color: var(--info-text);
+                margin: 0 auto;
+                padding: var(--spacing);
+            }
+
+            footer {
+                width: 100%;
+                padding: var(--spacing);
+                text-align: left;
+                background-color: var(--info-background);
+                color: var(--info-text);
+                margin: 0 auto;
+                margin-top: 6rem;
+                margin-bottom: 3rem;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            section {
+                margin-top: 2rem;
+            }
+
+            h1, h2, h3 {
+                color: var(--accent);
+                margin-bottom: 0.5rem;
+            }
+
+            ul {
+                margin-left: 1rem;
+            }
+
+            p {
+                margin-bottom: 1rem;
+            }
+
+            p.txt-mini {
+                font-size: 0.7rem;
+            }
+
+            a {
+                text-decoration: none; 
+                color: #ffffff;
+                font-weight: bold; 
+            }
+
+            a:hover {
+                color: #00ff00; 
+                text-decoration: underline;
+            }
+
+            .important-p a {
+                color: #00bbff; 
+                text-decoration: none;
+                font-weight: bold; 
+            }
+
+            .important-p a:hover {
+                color: #00ff00; 
+                text-decoration: underline; 
+            }
+
+            .imp-p a {
+                color: #ffffff; 
+                text-decoration: none;
+                font-weight: normal; 
+            }
+
+            .imp-p a:hover {
+                color: #00ff00; 
+                text-decoration: underline; 
+            }
+
+            .imp-l a {
+                color: #00bbff;
+                text-decoration: none;
+                font-weight: normal;
+            }
+
+            .imp-l a:hover {
+                color: #00ff00; 
+                text-decoration: underline; 
+            }
+            /*---// ENDLINE & SAY BYE //---*/
+
+            /* CSS ANIMAZIONE SCRITTURA DA MODIFICARE */
+
+
+
+
+
+
+
+            h1, h2, h3, .section-title {
+                color: var(--accent);
+                margin-bottom: 0.5rem;
+                text-align: left; /* Allinea a sinistra */
+                padding-left: 0; /* Nessun padding a sinistra */
+            }
+
+            p, ul, div {
+                margin: 0 auto;
+                padding: 0;
+                text-align: left; /* Allinea il testo */
+                line-height: 1.5; /* Migliora la leggibilità */
+                padding-left: 2rem; /* Aggiungi spazio coerente per il testo sotto i titoli */
+            }
+
+            .section {
+                margin-top: 2rem; /* Spazio tra le sezioni */
+                text-align: left;
+            }
+
+            #typing-effect {
+                font-family: 'Inconsolata', monospace;
+                font-size: 20px;
+                color: #00ff00;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                text-align: left; /* Allinea tutto il contenuto a sinistra */
+                line-height: 1.5; /* Spaziatura del testo */
+            }
+            
+            
+
+            /* Cursore lampeggiante */
+            #typing-effect::after {
+                content: "*⌝";
+                animation: blink 1s steps(1) infinite;
+            }
+
+            @keyframes blink {
+                50% {
+                    opacity: 0;
+                }
+            }
+
+            /* Nasconde il cursore */
+            .no-cursor::after {
+                content: "";
+                animation: none;
+            }
+
+            #typing-container {
+                width: 100%;
+                text-align: left; 
+                padding-left: 2rem; /* se desideri lo stesso indent dei paragrafi */
+            }
+
+            /* CSS ANIMAZIONE SCRITTURA DA MODIFICARE */
+        </style>
+             
+        <!-- CSS ANIMAZIONE SCRITTURA DA MODIFICARE -->
+
+
+
+    </head>
+
+
+
+    <body style="background-color: #000000; color: #000000; link: #000000; visited: #000000;">
+        
+        <main>
+
+
+
+
+            <div id="typing-container">
+                <div id="typing-effect"></div>
+            </div>
+        
+            <script>
+                const textArray = [
+                
+                    `<b>0. Welcome to GENiALABILE TEST———</b>
+
+                    GENiALABILE does not use cookies for tracking users, analyzing performance, or delivering personalized content.<br>
+                    Questo testo mostra il <b>grassetto</b> e un link: 
+                    <a href="https://google.com" target="_blank" style="color:#00bbff;">Example</a>.<br><br>`,
+            
+                    `<b>1. Next Section</b>
+                    Ulteriore testo con <b>grassetto</b> e un altro link: 
+                    <a href="https://google.com" target="_blank" style="color:#00bbff;">Another Example</a>.<br><br>`
+                
+            ];
+            
+                const typingSpeed = 30; // Millisecondi tra ogni carattere
+                const startDelay = 1000; // Ritardo iniziale
+                const typingElement = document.getElementById("typing-effect");
+            
+                let textIndex = 0;
+                let charIndex = 0;
+                let isTag = false;
+                let tagBuffer = "";
+            
+                function typeWriter() {
+                    if (textIndex < textArray.length) {
+                        const currentText = textArray[textIndex];
+                        if (charIndex < currentText.length) {
+                            const currentChar = currentText[charIndex];
+            
+                            if (currentChar === "<") {
+                                isTag = true;
+                                tagBuffer = currentChar;
+                            } else if (currentChar === ">" && isTag) {
+                                isTag = false;
+                                tagBuffer += currentChar;
+                                typingElement.innerHTML += tagBuffer; 
+                                tagBuffer = "";
+                            } else if (isTag) {
+                                tagBuffer += currentChar;
+                            } else {
+                                typingElement.innerHTML += currentChar;
+                            }
+            
+                            charIndex++;
+                            setTimeout(typeWriter, typingSpeed);
+                        } else {
+                            // Fine del testo corrente, passiamo al successivo
+                            charIndex = 0;
+                            textIndex++;
+                            typingElement.innerHTML += "<br><br>";
+                            setTimeout(typeWriter, typingSpeed);
+                        }
+                    } else {
+                        // Rimuove il cursore lampeggiante alla fine
+                        typingElement.classList.add("no-cursor");
+                    }
+                }
+            
+                setTimeout(typeWriter, startDelay);
+            </script>
+
+
+
+
+    </main>
+
+            <!-- FADE --> 
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        setTimeout(function () {
+                            document.body.classList.add("visible");
+                        }, 2000);
+                    });
+                </script>
+            <!-- FADE --> 
+    
+            <!-- FOOTER --> 
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        fetch('https://genialabile.com/footer.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                const body = document.querySelector('body');
+                                const footerContainer = document.createElement('div');
+                                footerContainer.innerHTML = data;
+                                body.appendChild(footerContainer);
+                            })
+                        .catch(error => console.error('Errore nel caricamento del footer:', error));
+                    });
+                </script> 
+            <!-- FOOTER --> 
+    
+    </body>
+</html>
