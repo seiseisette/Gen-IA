@@ -503,7 +503,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         display: inline-block;
         color: var(--live-color);
         font-weight: bold;
-        content: "◉"; /* *⌝ █ */
+        
         animation: blink 3s infinite;
     }
 
@@ -511,8 +511,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
         display: inline-block;
         color: var(--static-color);
         font-weight: bold;
-        content: "◎"; /* *⌝ █ */
-        animation: blink 9s infinite;
+        
+        /* animation: blink 9s infinite; */
     }
 
     body.static-page .link-live {
