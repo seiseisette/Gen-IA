@@ -232,7 +232,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         margin-bottom: 0.3rem;
         font-family: var(--accent-font);
         font-weight: normal;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
 
     ul {
@@ -412,8 +412,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
         font-family: var(--accent-font);
         color: var(--info-text);
         padding-top: -3rem;
-        font-size: 1rem;
-        line-height: 1rem;
+        font-size: 0.95rem;
+        line-height: 1.05rem;
         text-align: left; /* Uniforma l'allineamento */
          /* font-family: 'Inconsolata', monospace; */
        
