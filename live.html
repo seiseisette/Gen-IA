@@ -108,6 +108,43 @@ Use, distribution, or modification of this project is strictly prohibited withou
                                 const currentText = textArray[textIndex];
                                 if (charIndex < currentText.length) {
                                     const currentChar = currentText[charIndex];
+
+                                    // Gestione dei tag HTML
+                                    if (currentChar === "<") {
+                                        isTag = true;
+                                        tagBuffer = currentChar;
+                                    } else if (currentChar === ">" && isTag) {
+                                        isTag = false;
+                                        tagBuffer += currentChar;
+                                        typingElement.innerHTML += tagBuffer;
+                                        tagBuffer = "";
+                                    } else if (isTag) {
+                                        tagBuffer += currentChar;
+                                    } else {
+                                        typingElement.innerHTML += currentChar;
+                                    }
+
+                                    charIndex++;
+                                    setTimeout(typeWriter, typingSpeed);
+                                } else {
+                                    // Fine del paragrafo corrente
+                                    charIndex = 0;
+                                    textIndex++;
+                                    typingElement.innerHTML += "<br><br>";
+                                    setTimeout(typeWriter, pauseBetweenParagraphs);
+                                }
+                            } else {
+                                typingElement.classList.add("no-cursor");
+                                showFooter(); // Mostra il footer una volta terminata l'animazione
+                            }
+                        }
+                        /*
+                        <!-- Funzione per la scrittura del testo MIA --
+                        function typeWriter() {
+                            if (textIndex < textArray.length) {
+                                const currentText = textArray[textIndex];
+                                if (charIndex < currentText.length) {
+                                    const currentChar = currentText[charIndex];
                     
                                     // Gestione dei tag HTML
                                     if (currentChar === "<") {
@@ -139,6 +176,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
                                 showFooter();
                             }
                         }
+                        -- Funzione per la scrittura del testo MIA -->
+                         */
                     
                         const footer = document.getElementById("footer-banner");
                     

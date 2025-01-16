@@ -108,7 +108,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     @media screen and (max-width: 768px) {
-        body  {   
+        body, #typing-effect, #typing-container  {   
             font-size: 14px; 
         }
         #footer-banner {
@@ -118,7 +118,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     @media screen and (max-width: 480px) {
-        body {
+        bod, #typing-effect, #typing-containery {
             font-size: 12px;
         }
         #footer-banner {
@@ -128,7 +128,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
 
-    /* Effetto ADD */
+    /* Effetto ADD 
     @media screen and (max-width: 768px) {
         #typing-effect, #typing-container {
             font-size: 1.2rem;
@@ -142,7 +142,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
             line-height: 1.3;
         }
     }
-     /* Effetto ADD */
+      Effetto ADD */
 
     /*
     @media screen and (max-width: 768px) {
@@ -396,8 +396,9 @@ Use, distribution, or modification of this project is strictly prohibited withou
     #typing-effect::after {
         content: "*⌝"; /* *⌝ █ */
         animation: blink 1s steps(1) infinite;
-        font-size: 1rem;
-        font-weight: bold;
+        font-family: 'Inconsolata', monospace;
+        font-size: 1.3rem;
+        font-weight: normal;
         display: inline; /* Evita che il cursore vada a capo */
     }
 
