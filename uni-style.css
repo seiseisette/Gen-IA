@@ -185,7 +185,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     #footer-banner {
-        position: absolute;
+        position: bottom;
         bottom: 0;
 
             
@@ -217,7 +217,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         margin-bottom: 0;
         padding-bottom: 0;
         text-align: center;
-        font-size: var(--testo-size);
+        font-size: var(--font-size);
         line-height: 1;
     }
 
@@ -300,6 +300,52 @@ Use, distribution, or modification of this project is strictly prohibited withou
         color: #00ff00; 
         text-decoration: underline; 
     }
+
+     /*---// card //---*/ 
+
+    .card {
+        display: flex;
+        align-items: center; 
+        background-color: #00000000; 
+        color: var(--info-text); 
+        padding: 0rem; 
+        border-radius: 1px; 
+        box-shadow: 0px 0px 0px #000000; 
+        width: fit-content;
+        max-width: 100%;
+    }
+
+    .card-image-container {
+        flex-shrink: 0;
+        margin-right: 1rem; 
+    }
+
+    .card-image {
+        width: 66px; 
+        height: 66px;
+        max-width: 100%; 
+        border-radius: 50%;
+        object-fit: cover; 
+    }
+
+    .card-text {
+        font-family: 'Inconsolata', monospace;
+        font-size: var(--font-size);
+        line-height: 1.5;
+    }
+
+    .card-text h5 {
+        margin: 0 0 0.5rem 0;/
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .card-text p {
+        margin: 0;
+    }
+
+        
+    /*---// CARD //--- */
 
 
 
