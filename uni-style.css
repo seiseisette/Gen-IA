@@ -427,8 +427,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         color: var(--info-text);
         font-size: 0.9rem;
         padding-top: -3rem;
-
-        /* line-height: 1; */
+        line-height: 0.9rem;
         text-align: left; /* Uniforma l'allineamento */
          /* font-family: 'Inconsolata', monospace; */
        
