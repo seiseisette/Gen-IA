@@ -512,7 +512,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         color: var(--static-color);
         font-weight: bold;
         content: "◎"; /* *⌝ █ */
-        animation: blink 12s infinite;
+        animation: blink 9s infinite;
     }
 
     body.static-page .link-live {
