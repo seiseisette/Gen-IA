@@ -38,7 +38,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         --accent-font:'Roboto', sans-serif;
         --box-shadow: 0px 4px 8px #00000000;
         --font-size: 16px;
-        --foot-margin: 2rem;
+        --foot-margin: 1rem;
     }
 
     .info {
@@ -165,9 +165,12 @@ Use, distribution, or modification of this project is strictly prohibited withou
     */
    
     footer, #footer-banner {
-        padding:  var(--spacing); 
-        padding-bottom: var(--foot-margin);  
-        padding-top: var(--foot-margin);
+        padding: 10px 20px; 
+
+        /* padding-bottom: var(--foot-margin);  
+        padding-top: var(--foot-margin);*/
+
+        z-index: 1000;
         left: 0;
         right: 0;
         top: 0;
@@ -213,7 +216,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         margin: 0 auto;
         margin-top: 0;
         margin-bottom: 0;
-        padding-bottom: var(--spacing);
+        padding-bottom: 0;
         text-align: center;
                 /* font-size: var(--font-size); */
 
