@@ -165,66 +165,48 @@ Use, distribution, or modification of this project is strictly prohibited withou
     */
    
     footer, #footer-banner {
-        padding: 10px; 
-
-        /* padding-bottom: var(--foot-margin);  
-        padding-top: var(--foot-margin);*/
-
-        z-index: 1000;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-        align-items: center;
-        text-align: center;
-        font-family: var(--accent-font);
-        background-color: var(--info-background);
-        color: var(--info-text);
-        font-size: 0.7rem;
-        margin: 0;
-        margin-top: 0;
-        margin-bottom: 0;
-        overflow-x: hidden;
-    }
-
-    #footer-banner {
         position: bottom;
         bottom: 0;
-
-            width: 100%;
-    
-
+        left: 0;
+        right: 0;
+        width: 100%;
         background-color: var(--info-background);
         color: var(--info-text);
-        
-        outline: 1px solid #ff0000;
+        text-align: center;
+        font-family: var(--accent-font);
+        font-size: 0.7rem;
+        padding: 10px;
+        margin: 0;
+        align-items: center;
+        z-index: 1000;
+        overflow-x: hidden;
         box-shadow: 0 -2px 10px #24242420,
                     -10px 0 300px 50px #000000,
                     10px 0 30px 50px #000000,
                     0 10px 60px 50px #000000;
-        z-index: 1000;
-        transition: transform 7s ease-in-out;
+
+       
+    }
+
+    #footer-banner {
+        transition: transform 0.5s ease-in-out;
         transform: translateY(100%);
+
+        outline: 1px solid #aa00ff;
+       
+        
+       
         
     }
 
 
     #footer-banner #footer-content {
-        width: 100%;
         padding: 10px;
         margin: 0;
-        margin-top: 0;
-        margin-bottom: 0;
-
-        /* padding-bottom: 0; */
         text-align: center;
                 /* font-size: var(--font-size); */
-
-    
         line-height: 1;
-        transition: transform 5s ease-in-out;
-        transform: translateY(100%);
+        transition: none;
     }
 
     #footer-banner.active {
@@ -429,9 +411,9 @@ Use, distribution, or modification of this project is strictly prohibited withou
         padding: var(--spacing);
         font-family: var(--accent-font);
         color: var(--info-text);
-        font-size: 0.9rem;
+        font-size: 0.89rem;
         padding-top: -3rem;
-        line-height: 1.2rem;
+        line-height: 1.19rem;
         text-align: left; /* Uniforma l'allineamento */
          /* font-family: 'Inconsolata', monospace; */
        
