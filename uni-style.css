@@ -435,9 +435,6 @@ Use, distribution, or modification of this project is strictly prohibited withou
          /*  line-height: 1.6;Altezza della linea */
         display: inline; /* Assicura che il cursore resti accanto al testo */
 
-      
-
-
 
     }
 
@@ -542,8 +539,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
     .thin-line {
         border: none;
-        border-top: 1px solid #f4f4f450; /* Cambia colore a piacere */
-        margin: 1rem 0; /* Spaziatura sopra e sotto */
+        border-top: 1px solid #f4f4f4; /* Cambia colore a piacere */
+        margin: 0.5rem 0; /* Spaziatura sopra e sotto */
         width: 100%; /* Larghezza personalizzata */
     }
     .thin-line-super {
