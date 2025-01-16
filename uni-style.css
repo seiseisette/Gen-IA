@@ -76,7 +76,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         visibility: visible;
     }
 
-    main {
+    main, #typing-container {
         width: 100%;
         max-width: 100%;
         color: var(--info-text);
@@ -97,7 +97,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         body {
             font-size: 18px; 
         }
-        main {
+        main, #typing-effect, #typing-container {
             padding: var(--spacing); 
             margin: 0; 
             padding-bottom: 10%;
@@ -270,12 +270,13 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
 
 
-
+    /*
     #typing-container {
         width: 100%;
         margin: 0 auto;
         padding: var(--spacing);
     }
+    */
 
     #typing-effect {
         font-family: 'Inconsolata', monospace;
@@ -289,7 +290,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
     #typing-effect::after {
         content: "*⌝";
-        animation: blink 0.9s steps(1) infinite;
+        animation: blink 1s steps(1) infinite;
         font-size: 1.3rem;
         font-weight: normal;
         display: inline;
