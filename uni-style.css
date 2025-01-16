@@ -106,7 +106,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     @media screen and (max-width: 768px) {
-        body {
+        body, #typing-effect, #typing-container {   
             font-size: 14px; 
         }
         #footer-banner {
@@ -116,7 +116,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     @media screen and (max-width: 480px) {
-        body {
+        body, #typing-effect, #typing-container {
             font-size: 12px;
         }
         #footer-banner {
@@ -125,6 +125,26 @@ Use, distribution, or modification of this project is strictly prohibited withou
         }
     }
 
+    /*
+    @media screen and (max-width: 768px) {
+        #typing-effect {
+            font-size: 1.2rem;
+            line-height: 1.4;
+        }
+        #typing-container {
+            padding: var(--spacing);
+        }
+    }
+    
+
+    @media screen and (max-width: 480px) {
+        #typing-effect {
+            font-size: 1rem;
+            line-height: 1.3;
+        }
+    }
+    */
+   
     footer, #footer-banner {
         padding:  var(--spacing); 
         padding-bottom: var(--foot-margin);  
@@ -148,8 +168,6 @@ Use, distribution, or modification of this project is strictly prohibited withou
     #footer-banner {
         position: 0;
        
-        
-       
         background-color: var(--info-background);
         color: var(--info-text);
         
@@ -172,7 +190,11 @@ Use, distribution, or modification of this project is strictly prohibited withou
         padding-bottom: 0;
         text-align: center;
         font-size: var(--testo-size);
-        line-height: 1.5;
+        line-height: 1;
+    }
+
+    #footer-banner.active {
+        transform: translateY(0);
     }
 
     * {
@@ -245,6 +267,10 @@ Use, distribution, or modification of this project is strictly prohibited withou
         text-decoration: underline; 
     }
 
+
+
+
+
     #typing-container {
         width: 100%;
         margin: 0 auto;
@@ -263,7 +289,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
     #typing-effect::after {
         content: "*⌝";
-        animation: blink 1s steps(1) infinite;
+        animation: blink 0.9s steps(1) infinite;
         font-size: 1.3rem;
         font-weight: normal;
         display: inline;
@@ -280,29 +306,10 @@ Use, distribution, or modification of this project is strictly prohibited withou
         }
     }
 
-    @media screen and (max-width: 768px) {
-        #typing-effect {
-            font-size: 1.2rem;
-            line-height: 1.4;
-        }
-        #typing-container {
-            padding: var(--spacing);
-        }
-    }
-
-    @media screen and (max-width: 480px) {
-        #typing-effect {
-            font-size: 1rem;
-            line-height: 1.3;
-        }
-    }
-   
+  
 
 
 
-    #footer-banner.active {
-        transform: translateY(0);
-    }
 
     footer .link-live,
     footer .link-static {

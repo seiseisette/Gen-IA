@@ -27,7 +27,12 @@ Use, distribution, or modification of this project is strictly prohibited withou
         <title>GENiALABILE | Home</title>
         <meta name="description" content="GENiALABILE - Advanced-GPT Project designed to inspire multidimensional solutions and unlock creativity. Static version.">
         <link rel="canonical" href="https://genialabile.com/index.html">
+        
+        <link rel="icon" href="https://genialabile.com/gen-favicon-rd.ico?v=2" type="image/x-icon">
+        <link rel="icon" href="https://genialabile.com/gen-favicon-rd.png?v=2" type="image/png">
     
+
+
         <!-- header.html -->
         <!-- header.html -->
           <script>
@@ -36,7 +41,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 .then(data => {
                     document.querySelector('head').innerHTML += data;
                 })
-                
+                .catch(error => console.error('Error fetching header:', error));
             </script>
         <!-- header.html -->
         <!-- header.html -->
