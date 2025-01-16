@@ -61,23 +61,22 @@ Use, distribution, or modification of this project is strictly prohibited withou
                         "<h3>🤖 Hybrid</h3><hr class='thin-line'>Advanced model, ensuring security, scalability learning-model, and accessibility. It combines machine learning algorithms, immersive simulations, and multidisciplinary analysis to deliver personalized experiences. The system continuously learns from data and interactions, evolving in real time to provide increasingly accurate, empathetic, and targeted responses.<br>It helps to understand the nature of problems and the reasoning behind long-term focused solutions. Genialabile is a guide and mentor, a great teacher, fostering personal and intellectual growth through multidimensional reasoning.",
                         "<h3>🎻 Genius</h3><hr class='thin-line'>It understands the user's mood with just a few words to be more human-aligned, it surprises the user and stands apart from standard personalized GPT models. Focusing by specific functions and promotes the development of the user's intelligence and creativity through stimulating and dynamic dialogues, enhancing their capacity for growth and learning. Genialabile is predictive, leveraging inputs and the field addressed to calculate and develop brilliant solutions with extreme speed.<br>It does not merely provide temporary fixes but resolves issues while enabling users to learn ten times more than necessary to address them in isolation."
                     ];
-                    const typingSpeed = 30; // Velocità di digitazione (ms)
-                    const pauseBetweenParagraphs = 600; // Pausa tra un paragrafo e l'altro (ms)
+                    const typingSpeed = 30; // Sp
+                    const pauseBetweenParagraphs = 600; // Tm
                     const typingElement = document.getElementById("typing-effect");
-                    const startDelay = 1000; // Ritardo iniziale (ms)
-                
+                    const startDelay = 1000; // Dj
+                    //
                     let textIndex = 0;
                     let charIndex = 0;
                     let isTag = false;
                     let tagBuffer = "";
-                
+                    //
                     function typeWriter() {
                         if (textIndex < textArray.length) {
                             const currentText = textArray[textIndex];
                             if (charIndex < currentText.length) {
                                 const currentChar = currentText[charIndex];
-
-                                // Gestione dei tag HTML
+                                //
                                 if (currentChar === "<") {
                                     isTag = true;
                                     tagBuffer = currentChar;
@@ -91,11 +90,9 @@ Use, distribution, or modification of this project is strictly prohibited withou
                                 } else {
                                     typingElement.innerHTML += currentChar;
                                 }
-
                                 charIndex++;
                                 setTimeout(typeWriter, typingSpeed);
                             } else {
-                                // Fine del paragrafo corrente
                                 charIndex = 0;
                                 textIndex++;
                                 typingElement.innerHTML += "<br><br>";
@@ -103,37 +100,32 @@ Use, distribution, or modification of this project is strictly prohibited withou
                             }
                         } else {
                             typingElement.classList.add("no-cursor");
-                            showFooter(); // Mostra il footer una volta terminata l'animazione
+                            showFooter();
                         }
                     }
-                    
                     const footer = document.getElementById("footer-banner");
-                
                     function showFooter() {
                         footer.style.transform = "translateY(0)";
                     }
-                
                     function handleScroll() {
                         const scrollY = window.scrollY;
                         const viewportHeight = window.innerHeight;
                         const documentHeight = document.body.offsetHeight;
                         const footerHeight = footer.offsetHeight;
-                
+                        //
                         if (scrollY + viewportHeight >= documentHeight - footerHeight) {
-                            // Footer rimane visibile quando si raggiunge il fondo
+                            //
                             footer.style.position = "fixed";
                             footer.style.bottom = "0";
                         } else {
-                            // Footer si nasconde durante lo scroll verso l'alto
+                            //
                             footer.style.position = "absolute";
                             footer.style.bottom = `-${footerHeight}px`;
                         }
                     }
-                
-                    // Assegna l'evento di scroll
+                    //
                     window.addEventListener("scroll", handleScroll);
-                
-                    // Avvia l'animazione del testo quando la pagina è pronta
+                    //
                     document.addEventListener("DOMContentLoaded", () => {
                         typeWriter();
                     });
@@ -179,7 +171,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     }, animationDuration * showAt);
                 });
             </script>
-            <!-- FOOTER LIVE --> 
+            <!-- FOOTER LIVE -->
+            <!-- FADE -->  
                 <script>
                 document.addEventListener("DOMContentLoaded", function () {
                     setTimeout(function () {

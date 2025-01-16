@@ -179,6 +179,15 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     }, 2000);
                 });
             </script>
-            <!-- FADE --> 
+            <!-- FADE -->
+            <!-- HACK-BUGS --> 
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    setTimeout(function () {
+                        document.body.classList.add("visible");
+                    }, 2000);
+                });
+            </script>
+            <!-- FADE -->  
     </body>
 </html>
