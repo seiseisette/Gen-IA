@@ -195,7 +195,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         background-color: var(--info-background);
         color: var(--info-text);
         
-        outline: 1px solid #f2ff00;
+        outline: 1px solid #00f7ff;
         box-shadow: 0 -2px 10px #24242420,
                     -10px 0 300px 50px #000000,
                     10px 0 30px 50px #000000,
@@ -211,7 +211,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         width: 100%;
         padding: 0;
         margin: 0 auto;
-        margin-top: -1rem;
+        margin-top: 0;
         margin-bottom: 0;
         padding-bottom: 1rem;
         text-align: center;
@@ -333,7 +333,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     .card-text {
-        font-family: var(--accent-font);
+        font-family: var(--info-text);
         font-size: var(--font-size);
         /* line-height: 1.5; */
     }
@@ -425,9 +425,9 @@ Use, distribution, or modification of this project is strictly prohibited withou
         padding: var(--spacing);
         font-family: var(--accent-font);
         color: var(--info-text);
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         padding-top: -3rem;
-        line-height: 1rem;
+        line-height: 1.1rem;
         text-align: left; /* Uniforma l'allineamento */
          /* font-family: 'Inconsolata', monospace; */
        
