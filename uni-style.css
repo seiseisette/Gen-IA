@@ -201,7 +201,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     10px 0 30px 50px #000000,
                     0 10px 60px 50px #000000;
         z-index: 1000;
-        transition: transform 3s ease-in-out;
+        transition: transform 5s ease-in-out;
         transform: translateY(100%);
         
     }
@@ -223,6 +223,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
         font-size: 0.7rem;
         font-family: 'Inconsolata', sans-serif;
         line-height: 1;
+        transition: transform 5s ease-in-out;
+        transform: translateY(100%);
     }
 
     #footer-banner.active {
