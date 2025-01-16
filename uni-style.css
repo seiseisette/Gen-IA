@@ -418,7 +418,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         margin: 0 auto;
         padding:-3rem ; 
         align-content: center;
-        padding-top: 0rem;  */
+        padding-top: -3rem;  */
     }
 
     #typing-effect {
@@ -427,7 +427,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         padding: var(--spacing);
         font-family: var(--accent-font);
         color: var(--info-text);
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         padding-top: 0rem;
 
         /* line-height: 1; */
