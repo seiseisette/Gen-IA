@@ -37,6 +37,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
         --foot-margin: 1rem;
         --live-color: #00bbff;
         --static-color: #ffbbff;
+        --power-color: #00ff00;
+        --hard-color: #ff00ff;
     }
 
     .info {
@@ -200,7 +202,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     a:hover {
-        color: #00ff00; 
+        color: var(--power-color); 
         text-decoration: underline;
     }
 
@@ -211,7 +213,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     .important-p a:hover {
-        color: #00ff00; 
+        color: var(--power-color); 
         text-decoration: underline; 
     }
 
@@ -222,7 +224,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     .imp-p a:hover {
-        color: #00ff00; 
+        color: var(--power-color); 
         text-decoration: underline; 
     }
 
@@ -233,7 +235,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     .imp-l a:hover {
-        color: #00ff00; 
+        color: var(--power-color); 
         text-decoration: underline; 
     }
 
