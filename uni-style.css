@@ -218,7 +218,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     section {
-        margin-top: 2rem;
+        margin-top: 3rem;
     }
 
     h1, h2{
@@ -411,7 +411,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         padding: var(--spacing);
         font-family: var(--accent-font);
         color: var(--info-text);
-        font-size: 0.85rem;
+        font-size: 0.9rem;
         padding-top: -3rem;
         line-height: 1.15rem;
         text-align: left; /* Uniforma l'allineamento */
