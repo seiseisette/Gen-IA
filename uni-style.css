@@ -503,13 +503,14 @@ Use, distribution, or modification of this project is strictly prohibited withou
         display: inline-block;
         color: var(--live-color);
         font-weight: bold;
-        animation: blink 1s infinite;
+        animation: blink 3s infinite;
     }
 
     .link-static {
         display: inline-block;
         color: var(--static-color);
-        font-weight: normal;
+        font-weight: bold;
+        animation: blink 6s infinite;
     }
 
     body.static-page .link-live {
