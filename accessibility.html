@@ -16,105 +16,137 @@ This project is no longer available as open-source. Updated: 10 Jan 2025.
 Use, distribution, or modification of this project is strictly prohibited without prior written authorization.
 -------------------------------------------------------------------------------
 
-# Version: v2.1 
+# Version: v3.0 (160125)
 # URL: https://genialabile.com/accessibility.html
 ===============================================================================
 -->
-
+<!-- START -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>GENiALABILE | Accessibility</title>
-        <meta name="description" content="GENiALABILE - Accessibility Front Statement.">
+        <title>Genialabile | Accessibility</title>
+        <meta name="description" content="Genialabile - Accessibility Front Statement.">
         <link rel="canonical" href="https://genialabile.com/accessibility.html">
-        <link rel="icon" href="https://genialabile.com/gen-favicon-rd.ico?v=2" " type="image/x-icon">
-        <link rel="icon" href="https://genialabile.com/gen-favicon-rd.png?v=2" " type="image/png">
-      
-    <!-- header.html -->
+        <link rel="icon" href="https://genialabile.com/gen-favicon-rd.ico?v=2" type="image/x-icon">
+        <link rel="icon" href="https://genialabile.com/gen-favicon-rd.png?v=2" type="image/png">
+        <!-- header.html -->
+        <script>
+            fetch('https://genialabile.com/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('head').innerHTML += data;
+                })
+                .catch(error => console.error('Error fetching header:', error));
+        </script>
+        <!-- header.html --> 
+    </head>
+    <!-- SHIFT -->
+    <body style="background-color: #000000; color: #000000; link: #000000; visited: #000000;">
+        <main>
+            <h1>
+                ACCESSIBILITY STATEMENT
+            </h1>
+            <div class="imp-l">
+                <p>
+                    <h3><br>
+                        🎗️ Welcome
+                    </h3>
+                    <hr class="thin-line">
+                        Genialabile is committed to providing a website that is accessible to all users, including individuals with disabilities.
+                        We strive to ensure our platform meets or exceeds the requirements of applicable laws.
+                        Including the California Consumer Privacy Act (CCPA) and the Americans with Disabilities Act (ADA).
+                </p>
+                <p>
+                    <h3><br>
+                        🔬 Features supporting accessibility
+                    </h3>
+                    <hr class="thin-line">
+                    We have implemented the following features to enhance accessibility:
+                    <br><br>
+                    # High contrast design for better readability.
+                    <br><br>
+                    # Color contrast adjustments for better readability.
+                    <br><br>
+                    # Screen reader compatibility for visually impaired users.
+                    <!--
+                    <br><br>
+                    [·] Screen reader compatibility for visually impaired users.
+                    [·] Keyboard navigation for users without a mouse.
+                    <br><br>
+                    [·] Text scaling support for users with visual difficulties.
+                    <br><br>
+                    [·] Screen reader compatibility for visually impaired users.
+                     [·] Keyboard navigation for users without a mouse.
+                    <br><br>
+                    [·] Text scaling support for users with visual difficulties.
+                    <br>-->
+                </p>
+                <p>
+                    <h3><br>
+                        🚜 Tools and limitations
+                    </h3>
+                    <hr class="thin-line">
+                        We are working to ensure these services are accessible but cannot guarantee full compliance, with the best efforts as possible.
+                        Taking care for every user, we are committed to providing a platform that is accessible to all.
+                </p>
+                <p>
+                    <h3><br>
+                        🎙️ Continuous improvements
+                    </h3>
+                    <hr class="thin-line">
+                    Genialabile continuously monitors accessibility standards and makes updates where necessary.
+                    Your feedback is invaluable to us. If you have suggestions or notice issues, feel free to contact us.
+                </p>
+                <p>
+                    <h3><br>
+                        📮 How to request assistance
+                    </h3> 
+                    <hr class="thin-line">
+                        Gen:
+                        <a href="mailto:info@genialabile.com?subject=Contact%20Request">info@genialabile.com</a>
+                        <i>(limited uptime)</i>
+                        <br><br>
+                        Gmail:
+                        <a href="mailto:genialabile@gmail.com?subject=Contact%20Request">
+                            genialabile@gmail.com
+                        </a>
+                </p>
+            </div>
+            <br>
+            <p class="txt-mini">
+                * * *
+                <br>
+                Last Updated: 16 January 2025
+            </p>
+        </main>
+        <!-- TRICK -->
+            <div id="footer-banner">
+                <div id="footer-content"></div>
+            </div>
+        <!-- TRICK -->
+        <footer>
+            <!-- footer.html --> 
             <script>
-                fetch('https://genialabile.com/header.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        document.querySelector('head').innerHTML += data;
-                    })
-                    .catch(error => {
-                        console.error('Errore nel caricamento header:', error);
-                        document.querySelector('head').innerHTML += `
-                            <meta charset="UTF-8">
-                            <meta name="viewport" content="width=device-width, initial-scale=1">
-                        `;
+                document.addEventListener('DOMContentLoaded', function() {
+                    fetch('https://genialabile.com/footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                            const footerContent = document.getElementById('footer-content');
+                            footerContent.innerHTML = data;
+                        })
+                        .catch(error => console.error('Errore nel caricamento del footer-banner:', error));
+                document.addEventListener("DOMContentLoaded", () => {
+                            console.log("Pagina caricata, ritardo di avvio in corso...");
+                            setTimeout(() => {
+                                console.log("Avvio dell'animazione dopo il ritardo.");
+                                typeWriter();
+                            }, startDelay);
+                        });
                     });
             </script>
-        <!-- header.html -->
-         
-    </head>
-
-    <body style="background-color: #000000; color: #000000; link: #000000; visited: #000000;">
-        <!-- Contenuto Principale -->
-        <main>
-            <h1>Accessibility Statement</h1>
-            <p class="txt-mini">
-                Last Updated: 10 January 2025
-            </p>
-
-            <p class="imp-l">
-
-                <br><br>
-                <b>0. Welcome to GENiALABILE</b>
-                
-                <br><br>
-                    GENiALABILE is committed to providing a website that is accessible to all users, including individuals with disabilities. 
-                    <br>
-                    We strive to ensure our platform meets or exceeds the requirements of applicable laws.
-                    <br>
-                    Including the California Consumer Privacy Act (CCPA) and the Americans with Disabilities Act (ADA).
-        
-            
-                <br><br><br>
-                <b>1. Features Supporting Accessibility</b>
-                    <br><br> 
-                    We have implemented the following features to enhance accessibility:
-                    <br>
-                    [·] High contrast design for better readability.
-                    <br>
-                    [·] Screen reader compatibility for visually impaired users.
-                    <!-- [·] Keyboard navigation for users without a mouse.
-                    <br>
-                    [·] Text scaling support for users with visual difficulties.
-                    <br>
-                    [·] Color contrast adjustments for better readability.-->
-                    
-                <br><br><br>
-
-                <b>2. Tools and Limitations</b>
-                    <br><br>
-                    We are working to ensure these services are accessible but cannot guarantee full compliance.
-                    <!-- Some content on this site may rely on third-party integrations, such as Google Analytics. -->
-                    
-                <br><br><br>
-
-                <b>3. Continuous Improvements</b>
-                    <br><br>
-                    GENiALABILE continuously monitors accessibility standards and makes updates where necessary. 
-                    <br>
-                    Your feedback is invaluable to us. If you have suggestions or notice issues, feel free to contact us.
-                    
-                <br><br><br>
-
-                <b>4. How to Request Assistance</b>
-                    <br><br>
-                    
-                    If you encounter any barriers to accessing our content or functionality, please contact us at:
-                    <a href="mailto:genialabile@gmail.com?subject=Accessibility%20Policy%20For" style="font-weight: normal;">
-                        genialabile@gmail.com
-                    </a>
-                <!---//--->
-            </p>
-
-
-        </main>
-
-        <!-- FADE --> 
+            <!-- footer.html --> 
+        </footer>
+            <!-- FADE --> 
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
                     setTimeout(function () {
@@ -122,23 +154,15 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     }, 2000);
                 });
             </script>
-        <!-- FADE --> 
-
-        <!-- FOOTER ------> 
+            <!-- FADE -->
+            <!-- HACK-BUGS --> 
             <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    fetch('https://genialabile.com/footer.html')
-                        .then(response => response.text())
-                        .then(data => {
-                            const body = document.querySelector('body');
-                            const footerContainer = document.createElement('div');
-                            footerContainer.innerHTML = data;
-                            body.appendChild(footerContainer);
-                        })
-                    .catch(error => console.error('Errore nel caricamento del footer:', error));
+                document.addEventListener("DOMContentLoaded", function () {
+                    setTimeout(function () {
+                        document.body.classList.add("visible");
+                    }, 2000);
                 });
-            </script> 
-        <!-- FOOTER ------> 
-
+            </script>
+            <!-- FADE -->  
     </body>
 </html>
