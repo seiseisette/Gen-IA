@@ -180,8 +180,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
         color: var(--info-text);
         font-size: 0.7rem;
         margin: 0;
-        margin-top: var(--foot-margin); 
-        margin-bottom: var(--foot-margin);
+        margin-top: 0;
+        margin-bottom: 0;
         overflow-x: hidden;
     }
 
@@ -213,7 +213,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         margin: 0 auto;
         margin-top: 0;
         margin-bottom: 0;
-        padding-bottom: 1rem;
+        padding-bottom: var(--spacing);
         text-align: center;
                 /* font-size: var(--font-size); */
 
