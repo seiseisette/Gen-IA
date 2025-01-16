@@ -27,7 +27,7 @@ Designed by **[seiseisette](https://github.com/seiseisette)**.
 
 Access the project here: **[GENiALABILE | Home](https://genialabile.com/)**
 
-And "Go Live" from here: **[GENiALABILE| Live](https://genialabile.com/live)**
+And "Go Live" from here: **[GENiALABILE| Live](https://genialabile.com/gpt)**
 
 ---
 
@@ -42,11 +42,11 @@ And "Go Live" from here: **[GENiALABILE| Live](https://genialabile.com/live)**
 
 ## 🔄 Version Log
 
-### **Version 3.0** (January 2025)
+### **Version 3.0** (17 January 2025)
 - **Responsive Design Improvements**: Enhanced scaling parameters for better adaptation to various devices and screen sizes.  
 - **Accessibility Updates**: Improved keyboard navigation, support for screen readers, and added high-contrast modes for visually impaired users.  
 - **Dynamic Content Animation**: Introduced new animations in the live website's content, including an interactive copying effect to simulate GPT-style responsiveness.  
-- **New Copywriting**: Implemented updated copy throughout the live website, improving clarity and user engagement.  
+- **New Copywriting**: Implemented updated copy throughout the live welcome page, improving clarity and user engagement.  
 - **Bug Fixes**: Resolved minor issues affecting responsiveness and content alignment.
 
 ---
@@ -65,4 +65,5 @@ If you have any questions or feedback, feel free to reach out:
 
 **Designed by**: [@seiseisette](https://x.com/seiseisette)  
 **Hosted on**: [GitHub Pages](https://github.com/seiseisette/Gen-IA)
+
 
