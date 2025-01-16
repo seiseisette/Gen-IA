@@ -209,6 +209,11 @@ Use, distribution, or modification of this project is strictly prohibited withou
         transform: translateY(100%);
     }
 
+    #footer-text {
+        font-size: 0.7rem;
+        font-family: 'Inconsolata', monospace;
+    }
+
     #footer-banner #footer-content {
         width: 100%;
         padding: 0;
@@ -442,7 +447,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         content: "*⌝"; /* *⌝ █ */
         animation: blink 1s steps(1) infinite;
         font-family: 'Inconsolata', monospace;
-        font-size: 1.3rem;
+        font-size: 1rem;
         font-weight: normal;
         display: inline; /* Evita che il cursore vada a capo */
     }
