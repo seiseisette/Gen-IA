@@ -168,8 +168,17 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     #footer-banner {
-        position: 0;
-       
+        position: fixed;
+        bottom: 0;
+
+            
+            width: 100%;
+            background-color: var(--info-background);
+            color: var(--info-text);
+        z-index: 1000;
+     }
+
+
         background-color: var(--info-background);
         color: var(--info-text);
         
@@ -318,7 +327,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
     /* --- Typing Animation Effect --- */
     #live-title {
-        margin-bottom: -3rem; /* Spaziatura specifica solo per questo titolo */
+        margin-bottom: 1rem; /* Spaziatura specifica solo per questo titolo */
     }
 
 
@@ -338,10 +347,20 @@ Use, distribution, or modification of this project is strictly prohibited withou
     #typing-container {
         width: 100%;
         margin: 0 auto;
-        padding: var(--spacing); /* Usa la stessa spaziatura del CSS master */
+        padding: var(--spacing); /* Usa la stessa spaziatura del CSS master
+        align-content: center;  */
     }
 
     #typing-effect {
+
+        margin: 0 auto;
+        padding: var(--spacing);
+        font-family: var(--accent-font);
+        color: var(--info-text);
+        font-size: var(--font-size);
+
+        line-height: 1.6;
+        text-align: left; /* Uniforma l'allineamento */
          /* font-family: 'Inconsolata', monospace; */
        
          /* font-size: var(--testo-size); Dimensione base */
@@ -350,13 +369,18 @@ Use, distribution, or modification of this project is strictly prohibited withou
         word-wrap: break-word; /* Permette il wrapping del testo */
          /*  line-height: 1.6;Altezza della linea */
         display: inline; /* Assicura che il cursore resti accanto al testo */
+
+      
+
+
+
     }
 
     #typing-effect::after {
         content: "*⌝"; /* *⌝ █ */
         animation: blink 1s steps(1) infinite;
-        font-size: 1.3rem;
-        font-weight: normal;
+        font-size: 1rem;
+        font-weight: bold;
         display: inline; /* Evita che il cursore vada a capo */
     }
 
