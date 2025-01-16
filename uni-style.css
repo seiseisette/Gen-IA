@@ -207,8 +207,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     #footer-text {
-        font-size: 0.7rem;
-        font-family: 'Inconsolata', monospace;
+       
     }
 
     #footer-banner #footer-content {
@@ -219,7 +218,10 @@ Use, distribution, or modification of this project is strictly prohibited withou
         margin-bottom: 0;
         padding-bottom: 0;
         text-align: center;
-        font-size: var(--font-size);
+                /* font-size: var(--font-size); */
+
+        font-size: 0.7rem;
+        font-family: 'Inconsolata', monospace;
         line-height: 1;
     }
 
@@ -415,7 +417,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
         width: 100%;
         margin: 0 auto;
         padding:-3rem ; 
-        align-content: center;  */
+        align-content: center;
+        padding-top: 0rem;  */
     }
 
     #typing-effect {
@@ -424,7 +427,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
         padding: var(--spacing);
         font-family: var(--accent-font);
         color: var(--info-text);
-        font-size: var(--font-size);
+        font-size: 0.9rem;
+        padding-top: 0rem;
 
         /* line-height: 1; */
         text-align: left; /* Uniforma l'allineamento */
