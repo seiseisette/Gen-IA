@@ -378,14 +378,14 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
     .thin-line {
         border: none;
-        border-top: 1px solid #var(--line-color);
+        border-top: 1px solid var(--line-color);
         margin: 0.5rem 0;
         width: 100%;
     }
 
     .thin-line-super {
         border: none;
-        border-top: 1px solid #var(--line-color);
+        border-top: 1px solid var(--line-color);
         margin: -3rem -3rem;
         width: 100%;
     }
