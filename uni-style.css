@@ -28,17 +28,19 @@ Use, distribution, or modification of this project is strictly prohibited withou
         --info-background: #000000;
         --info-text: #f4f4f4;
         --borders: #000000;
-        --posts: #f4f4f4;
+        --posts: #ffffff;
         --spacing: 2rem;
         --accent: #f4f4f4;
-        --accent-font:'Roboto', sans-serif;
+        --std-font:'Roboto', sans-serif;
+        --mtx-font: 'Inconsolata', monospace;
         --box-shadow: 0px 4px 8px #00000000;
         --font-size: 16px;
         --foot-margin: 1rem;
         --live-color: #00bbff;
         --static-color: #ffbbff;
-        --power-color: #00ff00;
+        --power-color: #b0ff0b;
         --hard-color: #ff00ff;
+        --line-color: #f4f4f480;
     }
 
     .info {
@@ -61,7 +63,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
     body {
         background-color: var(--background-color);
-        font-family: 'Inconsolata', sans-serif;
+        font-family: var(--std-font); /*incosolata-400*/
         font-size: var(--font-size);
         margin: 0;
         padding: 0;
@@ -130,7 +132,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         background-color: var(--info-background);
         color: var(--info-text);
         text-align: center;
-        font-family: var(--accent-font);
+        font-family: var(--std-font);
         font-size: 0.7rem;
         padding: 10px;
         margin: 0;
@@ -172,13 +174,13 @@ Use, distribution, or modification of this project is strictly prohibited withou
     h1, h2 {
         color: var(--accent);
         margin-bottom: 0.5rem;
-        font-family: var(--accent-font);
+        font-family: var(--std-font);
     }
 
     h3 {
         color: var(--accent);
         margin-bottom: 0.3rem;
-        font-family: var(--accent-font);
+        font-family: var(--std-font);
         font-weight: normal;
         font-size: 0.95rem;
     }
@@ -197,7 +199,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
     a {
         text-decoration: none; 
-        color: #ffffff;
+        color: var(--posts);
         font-weight: bold; 
     }
 
@@ -207,7 +209,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     .important-p a {
-        color: #00bbff; 
+        color: var(--live-color); 
         text-decoration: none;
         font-weight: bold; 
     }
@@ -218,7 +220,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     .imp-p a {
-        color: #ffffff; 
+        color: var(--posts); 
         text-decoration: none;
         font-weight: normal; 
     }
@@ -229,7 +231,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     .imp-l a {
-        color: #00bbff;
+        color: var(--live-color);
         text-decoration: none;
         font-weight: normal;
     }
@@ -258,8 +260,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     .card-image {
-        width: 63px; 
-        height: 63px;
+        width: 60px; 
+        height: 60px;
         max-width: 100%; 
         border-radius: 50%;
         object-fit: cover; 
@@ -322,7 +324,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     #typing-effect::after {
         content: "*⌝"; /* █ */
         animation: blink 1s steps(1) infinite;
-        font-family: 'Inconsolata', monospace;
+        font-family: var(--mtx-font)
         font-size: 1rem;
         font-weight: normal;
         display: inline;
@@ -376,14 +378,14 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
     .thin-line {
         border: none;
-        border-top: 1px solid #f4f4f480;
+        border-top: 1px solid #var(--line-color);
         margin: 0.5rem 0;
         width: 100%;
     }
 
     .thin-line-super {
         border: none;
-        border-top: 1px solid #f4f4f450;
+        border-top: 1px solid #var(--line-color);
         margin: -3rem -3rem;
         width: 100%;
     }
