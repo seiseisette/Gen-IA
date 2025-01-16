@@ -87,50 +87,38 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     @media screen and (min-width: 1440px) {
-        body,
-        #typing-container,
-        #typing-effect {
+        body {
             font-size: 20px;
-            padding-right: 20%; 
         }
     }
 
     @media screen and (min-width: 1024px) {
-        body,
-        #typing-container,
-        #typing-effect {
+        body {
             font-size: 18px; 
         }
-        main,
-        #typing-container,
-        #typing-effect {
+        main {
             padding: var(--spacing); 
             margin: 0; 
-            padding-bottom: 10%;
-            padding-right: 20%;
+            padding-bottom: 5rem;
         }
     }
 
     @media screen and (max-width: 768px) {
-        body,
-        #typing-container,
-        #typing-effect {   
+        body {   
             font-size: 14px; 
         }
         #footer-banner {
-            padding: var(--spacing);
+            padding: 0rem;
             font-size: 0.9rem;
         }
     }
 
     @media screen and (max-width: 480px) {
-        body,
-        #typing-container,
-        #typing-effect {
+        body {
             font-size: 12px;
         }
         #footer-banner {
-            padding: var(--spacing);
+            padding: 0rem;
             font-size: 0.7rem;
         }
     }
@@ -336,46 +324,57 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
     #typing-container {
         width: 100%;
-        max-width: 100%;
         margin: 0 auto;
-        padding: var(--spacing);
-        color: var(--info-text); /* Colore coerente con il tema */
-        font-family: 'Inconsolata', monospace; /* Mantieni il font dedicato */
-        font-size: var(--font-size); /* Usa la dimensione generale del font */
-        line-height: 1.6; /* Coerenza con altre sezioni */
+        padding: var(--spacing); /* Usa la stessa spaziatura del CSS master */
     }
 
     #typing-effect {
-        font-family: 'Inconsolata', monospace; /* Font specifico per l'animazione */
-        font-size: var(--font-size); /* Dimensione del font uniforme */
-        color: var(--info-text); /* Colore coerente con il tema */
-        white-space: pre-wrap; /* Mantieni la spaziatura come richiesto */
-        word-wrap: break-word; /* Line breaking per contenuti lunghi */
-        line-height: 1.6; /* Line height uniforme */
-        display: inline;
-        text-align: left; /* Allineamento coerente con il resto del contenuto */
+        font-family: 'Inconsolata', monospace;
+        font-size: var(--testo-size); /* Dimensione base */
+        color: var(--info-text); /* Colore dal CSS master */
+        white-space: pre-wrap; /* Mantiene gli spazi vuoti e le linee */
+        word-wrap: break-word; /* Permette il wrapping del testo */
+        line-height: 1.6; /* Altezza della linea */
+        display: inline; /* Assicura che il cursore resti accanto al testo */
     }
 
     #typing-effect::after {
-        content: "*⌝"; /* Indicatore di cursore */
+        content: "*⌝";
         animation: blink 1s steps(1) infinite;
-        font-size: 1rem; /* Dimensione coerente ma con evidenza */
-        font-weight: normal; /* Peso normale per non creare contrasto */
-        color: var(--accent); /* Usa il colore accentato del tema */
-        display: inline;
+        font-size: 1.3rem;
+        font-weight: normal;
+        display: inline; /* Evita che il cursore vada a capo */
     }
 
+    /* Nasconde il cursore */
     .no-cursor::after {
         content: "";
-        animation: none; /* Rimuove l'animazione del cursore */
+        animation: none;
     }
 
     @keyframes blink {
         50% {
-            opacity: 0; /* Effetto blink */
+            opacity: 0;
         }
     }
 
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+        #typing-effect {
+            font-size: 1.2rem; /* Riduce la dimensione del testo per schermi più piccoli */
+            line-height: 1.4; /* Regola l'altezza della linea */
+        }
+        #typing-container {
+            padding: 1rem; /* Riduce il padding per schermi piccoli */
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        #typing-effect {
+            font-size: 1rem; /* Testo ancora più piccolo per dispositivi molto piccoli */
+            line-height: 1.3;
+        }
+    }
 
 
 
