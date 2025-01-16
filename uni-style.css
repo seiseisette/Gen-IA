@@ -165,7 +165,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     */
    
     footer, #footer-banner {
-        padding: 10px 20px; 
+        padding: 10px; 
 
         /* padding-bottom: var(--foot-margin);  
         padding-top: var(--foot-margin);*/
@@ -212,11 +212,12 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
     #footer-banner #footer-content {
         width: 100%;
-        padding: 0;
-        margin: 0 auto;
+        padding: 10px;
+        margin: 0;
         margin-top: 0;
         margin-bottom: 0;
-        padding-bottom: 0;
+
+        /* padding-bottom: 0; */
         text-align: center;
                 /* font-size: var(--font-size); */
 
