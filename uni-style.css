@@ -108,7 +108,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     @media screen and (max-width: 768px) {
-        body, #typing-effect, #typing-container  {   
+        body  {   
             font-size: 14px; 
         }
         #footer-banner {
@@ -118,7 +118,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     @media screen and (max-width: 480px) {
-        body, #typing-effect, #typing-container  {
+        body {
             font-size: 12px;
         }
         #footer-banner {
@@ -126,6 +126,23 @@ Use, distribution, or modification of this project is strictly prohibited withou
             font-size: 0.7rem;
         }
     }
+
+
+    /* Effetto ADD */
+    @media screen and (max-width: 768px) {
+        #typing-effect, #typing-container {
+            font-size: 1.2rem;
+            line-height: 1.4;
+        }
+    }
+    
+    @media screen and (max-width: 480px) {
+        #typing-effect, #typing-container {
+            font-size: 1rem;
+            line-height: 1.3;
+        }
+    }
+     /* Effetto ADD */
 
     /*
     @media screen and (max-width: 768px) {
