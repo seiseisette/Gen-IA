@@ -422,7 +422,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         color: var(--info-text);
         font-size: var(--font-size);
 
-        line-height: 1.6;
+        /* line-height: 1; */
         text-align: left; /* Uniforma l'allineamento */
          /* font-family: 'Inconsolata', monospace; */
        
@@ -536,6 +536,19 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
     body.live-page .link-static {
         display: inline-block;
+    }
+
+    .thin-line {
+        border: none;
+        border-top: 1px solid #f4f4f450; /* Cambia colore a piacere */
+        margin: 1rem 0; /* Spaziatura sopra e sotto */
+        width: 100%; /* Larghezza personalizzata */
+    }
+    .thin-line-super {
+        border: none;
+        border-top: 1px solid #f4f4f450; /* Cambia colore a piacere */
+        margin: -3rem -3rem; /* Spaziatura sopra e sotto */
+        width: 100%; /* Larghezza personalizzata */
     }
 
     @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
