@@ -188,13 +188,9 @@ Use, distribution, or modification of this project is strictly prohibited withou
         position: bottom;
         bottom: 0;
 
-            
             width: 100%;
             background-color: var(--info-background);
             color: var(--info-text);
-       
-     
-
 
         background-color: var(--info-background);
         color: var(--info-text);
@@ -207,6 +203,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         z-index: 1000;
         transition: transform 3s ease-in-out;
         transform: translateY(100%);
+        
     }
 
     #footer-text {
