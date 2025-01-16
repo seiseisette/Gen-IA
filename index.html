@@ -29,68 +29,69 @@ Use, distribution, or modification of this project is strictly prohibited withou
         <link rel="canonical" href="https://genialabile.com/index.html">
     
        <!-- header.html -->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const loadHeader = async () => {
-            const MAX_RETRIES = 3; // Numero massimo di tentativi
-            let attempt = 0;
-            let success = false;
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const loadHeader = async () => {
+                    const MAX_RETRIES = 3; // Numero massimo di tentativi
+                    let attempt = 0;
+                    let success = false;
 
-            while (attempt < MAX_RETRIES && !success) {
-                try {
-                    console.log(`Tentativo ${attempt + 1} di caricamento dell'header`);
-                    const response = await fetch('https://genialabile.com/header.html', { cache: 'no-store' });
+                    while (attempt < MAX_RETRIES && !success) {
+                        try {
+                            console.log(`Tentativo ${attempt + 1} di caricamento dell'header`);
+                            const response = await fetch('https://genialabile.com/header.html', { cache: 'no-store' });
 
-                    if (!response.ok) {
-                        throw new Error(`Errore HTTP: ${response.status}`);
+                            if (!response.ok) {
+                                throw new Error(`Errore HTTP: ${response.status}`);
+                            }
+
+                            const headerContent = await response.text();
+                            document.querySelector('head').innerHTML += headerContent;
+                            success = true;
+                            console.log('Header caricato correttamente.');
+                        } catch (error) {
+                            console.error(`Errore durante il caricamento dell'header: ${error.message}`);
+                            attempt++;
+                        }
                     }
 
-                    const headerContent = await response.text();
-                    document.querySelector('head').innerHTML += headerContent;
-                    success = true;
-                    console.log('Header caricato correttamente.');
-                } catch (error) {
-                    console.error(`Errore durante il caricamento dell'header: ${error.message}`);
-                    attempt++;
-                }
-            }
+                    if (!success) {
+                        console.error('Impossibile caricare l\'header dopo diversi tentativi.');
+                        document.querySelector('head').innerHTML += `
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1">
+                            <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+                            <meta name="color-scheme" content="dark">
+                            <meta name="theme-color" content="#000000" media="(prefers-color-scheme: light)">
+                            <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+                            <link rel="icon" href="https://genialabile.com/gen-favicon-rd.ico?v=2" type="image/x-icon">
+                            <link rel="icon" href="https://genialabile.com/gen-favicon-rd.png?v=2" type="image/png">
+                        `;
+                        console.log('Fallback del contenuto dell\'header applicato.');
+                    }
 
-            if (!success) {
-                console.error('Impossibile caricare l\'header dopo diversi tentativi.');
-                document.querySelector('head').innerHTML += `
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1">
-                    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-                    <meta name="color-scheme" content="dark">
-                    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: light)">
-                    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
-                    <link rel="icon" href="https://genialabile.com/gen-favicon-rd.ico?v=2" type="image/x-icon">
-                    <link rel="icon" href="https://genialabile.com/gen-favicon-rd.png?v=2" type="image/png">
-                `;
-                console.log('Fallback del contenuto dell\'header applicato.');
-            }
+                    // Rendi visibile il contenuto del corpo
+                    document.body.style.visibility = "visible";
+                    document.body.style.opacity = "1";
+                };
 
-            // Rendi visibile il contenuto del corpo
-            document.body.style.visibility = "visible";
-            document.body.style.opacity = "1";
-        };
+                // Nascondi temporaneamente il corpo per evitare flash di contenuto
+                document.body.style.visibility = "hidden";
+                document.body.style.opacity = "0";
+                document.body.style.transition = "opacity 0.5s ease-in-out";
 
-        // Nascondi temporaneamente il corpo per evitare flash di contenuto
-        document.body.style.visibility = "hidden";
-        document.body.style.opacity = "0";
-        document.body.style.transition = "opacity 0.5s ease-in-out";
-
-        // Avvia il caricamento
-        loadHeader();
-    });
-</script>
-<!-- header.html -->
+                // Avvia il caricamento
+                loadHeader();
+            });
+        </script>
+        <!-- header.html -->
      
 
       
     </head>
 
-    <body style="background-color: #000000; color: #000000; link: #000000; visited: #000000;">
+    <body class="static-page live-page" 
+    style="background-color: #000000; color: #000000; link: #000000; visited: #000000;">
         <main>
             <h1>
                 <a href="https://genialabile.com/" aria-label="Home Page | Static">
@@ -177,6 +178,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 It does not merely provide temporary fixes but resolves issues while enabling users to learn ten times more than necessary to address them in isolation.
             </p>
 
+            <!--
             <h3>
                 Performance
             </h3>
@@ -198,11 +200,19 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 <br>
                 The "Gen-Code" to unlock the number of interactions still limited by OpenAI user plan.
             </p>
+            -->
 
         </main>
+
+
+        <div id="footer-banner">
+            <div id="footer-content"></div>
+        </div>
         
         <footer>
+           
         <!-- FOOTER BANNER ------> 
+
 
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
@@ -223,17 +233,18 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     });
             </script>
 
+                <!--- <button class="footer-btn" id="close-footer-banner">Close</button> --->
+        
+
         <!-- FOOTER BANNER ------> 
         </footer>
 
-        <div id="footer-banner">
-            <div id="footer-content"></div>
-            <!--- <button class="footer-btn" id="close-footer-banner">Close</button> --->
-        </div>
+        
+        
 
 
 
-        <!-- GO LIVE --
+        <!-- GO LIVE 
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 const currentURLPage = window.location.pathname.toLowerCase(); // Ottieni il percorso dell'URL in minuscolo
@@ -248,7 +259,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 }
             });
         </script>
-        -- GO LIVE -->
+        GO LIVE -->
          
 
 
