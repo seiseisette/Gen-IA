@@ -245,8 +245,9 @@ Use, distribution, or modification of this project is strictly prohibited withou
         </main>
 
 
-            <div id="footer-banner">
+            <div id="footer-banner" class="hidden-text">
                 <div id="footer-content"></div>
+                <!---- footer contenuto -->
             </div>
             
         <footer>
@@ -270,6 +271,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                                     typeWriter();
                                 }, startDelay);
                             });
+                            
                         });
                 </script>
     
@@ -279,7 +281,19 @@ Use, distribution, or modification of this project is strictly prohibited withou
             <!-- FOOTER BANNER ------> 
         </footer>
     
-            
+        
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const footer = document.getElementById("footer-banner");
+                const animationDuration = 3000; // Durata dell'animazione in millisecondi
+                const showAt = 0.5; // Mostra il testo al 50% dell'animazione
+        
+                setTimeout(() => {
+                    footer.classList.add("show-text");
+                }, animationDuration * showAt); // Calcola il momento in cui mostrare il testo
+            });
+        </script>
             
     
     

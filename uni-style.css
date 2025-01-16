@@ -76,7 +76,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         visibility: visible;
     }
 
-    main, #typing-container {
+    main {
         width: 100%;
         max-width: 100%;
         color: var(--info-text);
@@ -97,7 +97,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         body {
             font-size: 18px; 
         }
-        main, #typing-effect, #typing-container {
+        main {
             padding: var(--spacing); 
             margin: 0; 
             padding-bottom: 10%;
@@ -106,7 +106,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     @media screen and (max-width: 768px) {
-        body, #typing-effect, #typing-container {   
+        body {   
             font-size: 14px; 
         }
         #footer-banner {
@@ -116,7 +116,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     @media screen and (max-width: 480px) {
-        body, #typing-effect, #typing-container {
+        body {
             font-size: 12px;
         }
         #footer-banner {
@@ -276,7 +276,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         margin: 0 auto;
         padding: var(--spacing);
     }
-    */
+   
 
     #typing-effect {
         font-family: 'Inconsolata', monospace;
@@ -304,6 +304,81 @@ Use, distribution, or modification of this project is strictly prohibited withou
     @keyframes blink {
         50% {
             opacity: 0;
+        }
+    }
+    */
+
+    /* --- Typing Animation Effect --- */
+
+    /* Nascondi inizialmente il testo del footer */
+    .hidden-text #footer-text {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    /* Mostra il testo quando la classe è attivata */
+    .show-text #footer-text {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    #typing-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: var(--spacing);
+        color: var(--info-text); /* Colore coerente con il tema */
+        font-family: 'Inconsolata', monospace; /* Mantieni il font dedicato */
+        font-size: var(--font-size); /* Usa la dimensione generale del font */
+        line-height: 1.6; /* Coerenza con altre sezioni */
+    }
+
+    #typing-effect {
+        font-family: 'Inconsolata', monospace; /* Font specifico per l'animazione */
+        font-size: var(--font-size); /* Dimensione del font uniforme */
+        color: var(--info-text); /* Colore coerente con il tema */
+        white-space: pre-wrap; /* Mantieni la spaziatura come richiesto */
+        word-wrap: break-word; /* Line breaking per contenuti lunghi */
+        line-height: 1.6; /* Line height uniforme */
+        display: inline;
+        text-align: left; /* Allineamento coerente con il resto del contenuto */
+    }
+
+    #typing-effect::after {
+        content: "*⌝"; /* Indicatore di cursore */
+        animation: blink 1s steps(1) infinite;
+        font-size: 1rem; /* Dimensione coerente ma con evidenza */
+        font-weight: normal; /* Peso normale per non creare contrasto */
+        color: var(--accent); /* Usa il colore accentato del tema */
+        display: inline;
+    }
+
+    .no-cursor::after {
+        content: "";
+        animation: none; /* Rimuove l'animazione del cursore */
+    }
+
+    @keyframes blink {
+        50% {
+            opacity: 0; /* Effetto blink */
+        }
+    }
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 768px) {
+        #typing-container,
+        #typing-effect {
+            font-size: 14px; /* Adatta la dimensione del font per dispositivi piccoli */
+            line-height: 1.4; /* Leggibilità migliorata */
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        #typing-container,
+        #typing-effect {
+            font-size: 12px; /* Adatta ulteriormente per schermi molto piccoli */
+            line-height: 1.3;
         }
     }
 
