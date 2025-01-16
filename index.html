@@ -36,13 +36,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 .then(data => {
                     document.querySelector('head').innerHTML += data;
                 })
-                .catch(error => {
-                    console.error('Errore nel caricamento header:', error);
-                    document.querySelector('head').innerHTML += `
-                        <meta charset="UTF-8">
-                        <meta name="viewport" content="width=device-width, initial-scale=1">
-                    `;
-                });
+                
             </script>
         <!-- header.html -->
         <!-- header.html -->

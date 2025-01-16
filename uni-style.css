@@ -125,9 +125,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         }
     }
 
-    footer,
-    #footer-banner,
-    #footer-content {
+    footer, #footer-banner {
         padding:  var(--spacing); 
         padding-bottom: var(--foot-margin);  
         padding-top: var(--foot-margin);
@@ -136,8 +134,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
         top: 0;
         bottom: 0;
         width: 100%;
-        align-items: left;
-        text-align: left;
+        align-items: center;
+        text-align: center;
         font-family: var(--accent-font);
         background-color: var(--info-background);
         color: var(--info-text);
@@ -148,7 +146,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     #footer-banner {
-        position: bottom;
+        position: 0;
        
         
        
@@ -167,13 +165,14 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
     #footer-banner #footer-content {
         width: 100%;
-        padding: var(--spacing);
-        margin-top: var(--foot-margin);
-        margin-bottom: var(--foot-margin);
-        padding-bottom: var(--foot-margin);
-        text-align: left;
+        padding: 0;
+        margin: 0 auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        text-align: center;
         font-size: var(--testo-size);
-        line-height: 0.7;
+        line-height: 1.5;
     }
 
     * {
