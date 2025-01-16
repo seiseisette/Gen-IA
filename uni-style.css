@@ -510,7 +510,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         display: inline-block;
         color: var(--static-color);
         font-weight: bold;
-        animation: blink 6s infinite;
+        animation: blink 12s infinite;
     }
 
     body.static-page .link-live {
