@@ -87,17 +87,23 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     @media screen and (min-width: 1440px) {
-        body {
+        body,
+        #typing-container,
+        #typing-effect {
             font-size: 20px;
             padding-right: 20%; 
         }
     }
 
     @media screen and (min-width: 1024px) {
-        body {
+        body,
+        #typing-container,
+        #typing-effect {
             font-size: 18px; 
         }
-        main {
+        main,
+        #typing-container,
+        #typing-effect {
             padding: var(--spacing); 
             margin: 0; 
             padding-bottom: 10%;
@@ -106,7 +112,9 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     @media screen and (max-width: 768px) {
-        body {   
+        body,
+        #typing-container,
+        #typing-effect {   
             font-size: 14px; 
         }
         #footer-banner {
@@ -116,7 +124,9 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     @media screen and (max-width: 480px) {
-        body {
+        body,
+        #typing-container,
+        #typing-effect {
             font-size: 12px;
         }
         #footer-banner {
@@ -320,7 +330,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     .hidden-text #footer-text {
         visibility: hidden;
         opacity: 0;
-        transition: opacity 0.5s ease-in-out;
+        transition: opacity 7s ease-in-out;
     }
 
     /* Mostra il testo quando la classe è attivata */
@@ -371,22 +381,27 @@ Use, distribution, or modification of this project is strictly prohibited withou
         }
     }
 
-    /* Responsive adjustments */
+
+
+
+
+    /* Responsive adjustments 
     @media screen and (max-width: 768px) {
         #typing-container,
         #typing-effect {
-            font-size: 14px; /* Adatta la dimensione del font per dispositivi piccoli */
-            line-height: 1.4; /* Leggibilità migliorata */
+            font-size: 14px; /* Adatta la dimensione del font per dispositivi piccoli 
+            line-height: 1.4; /* Leggibilità migliorata 
         }
     }
 
     @media screen and (max-width: 480px) {
         #typing-container,
         #typing-effect {
-            font-size: 12px; /* Adatta ulteriormente per schermi molto piccoli */
+            font-size: 12px; /* Adatta ulteriormente per schermi molto piccoli *
             line-height: 1.3;
         }
     }
+    */
 
   
 
