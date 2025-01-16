@@ -390,7 +390,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
     /* --- Typing Animation Effect --- */
     #live-title {
-        margin-bottom: 1rem; /* Spaziatura specifica solo per questo titolo */
+        margin-bottom: 0.5rem; /* Spaziatura specifica solo per questo titolo */
     }
 
 
