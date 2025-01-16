@@ -243,6 +243,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
         color: var(--accent);
         margin-bottom: 0.3rem;
         font-family: var(--accent-font);
+        font-weight: normal;
+        font-size: 0.9rem;
     }
 
     ul {
