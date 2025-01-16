@@ -201,7 +201,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     10px 0 30px 50px #000000,
                     0 10px 60px 50px #000000;
         z-index: 1000;
-        transition: transform 5s ease-in-out;
+        transition: transform 7s ease-in-out;
         transform: translateY(100%);
         
     }
@@ -211,9 +211,9 @@ Use, distribution, or modification of this project is strictly prohibited withou
         width: 100%;
         padding: 0;
         margin: 0 auto;
-        margin-top: 0;
+        margin-top: -1rem;
         margin-bottom: 0;
-        padding-bottom: 0;
+        padding-bottom: 1rem;
         text-align: center;
                 /* font-size: var(--font-size); */
 
@@ -402,7 +402,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     .hidden-text #footer-text {
         visibility: hidden;
         opacity: 0;
-        transition: opacity 1s ease-in-out;
+        transition: opacity 3s ease-in-out;
     }
 
     /* Mostra il testo quando la classe è attivata */
@@ -416,7 +416,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         margin: 0 auto;
         padding:-3rem ; 
         align-content: center;
-        padding-top: -3rem;  */
+        padding-top: -3rem;  
     }
 
     #typing-effect {
@@ -427,7 +427,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         color: var(--info-text);
         font-size: 0.9rem;
         padding-top: -3rem;
-        line-height: 0.9rem;
+        line-height: 1rem;
         text-align: left; /* Uniforma l'allineamento */
          /* font-family: 'Inconsolata', monospace; */
        
