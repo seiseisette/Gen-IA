@@ -313,8 +313,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     .card-image {
-        width: 66px; 
-        height: 66px;
+        width: 63px; 
+        height: 63px;
         max-width: 100%; 
         border-radius: 50%;
         object-fit: cover; 
@@ -328,8 +328,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
     .card-text h5 {
         margin: 0 0 0.5rem 0;/
-        font-size: 1.2rem;
-        font-weight: bold;
+        font-size: 1rem;
+        font-weight: normal;
     }
 
     .card-text p {
