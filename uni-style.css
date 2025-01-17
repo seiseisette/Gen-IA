@@ -278,7 +278,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     .card-text {
-        font-family: var(--info-text);
+        font-family: var(--mtx-font);
         font-size: var(--font-size);
     }
 
