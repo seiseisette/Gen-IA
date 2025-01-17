@@ -27,7 +27,7 @@ Designed by **[seiseisette](https://github.com/seiseisette)**.
 
 Access the project here: **[GENiALABILE | Home](https://genialabile.com/)**
 
-And "Go Live" from here: **[GENiALABILE| Live](https://genialabile.com/gpt)**
+And "Go Live" from here: **[GENiALABILE | Live](https://genialabile.com/gpt)**
 
 ---
 
