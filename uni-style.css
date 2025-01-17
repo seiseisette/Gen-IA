@@ -350,7 +350,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         animation: blink 1s steps(1) infinite;
         font-family: var(--std-font);
 
-        font-size: 0.5rem;
+        font-size: 0.9rem;
         font-weight: normal;
         display: inline;
 
