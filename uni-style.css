@@ -24,8 +24,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
 /*---// STARTLINE & SAY HI //---*/
 
     :root {
-        --background-color: #000000;
-        --info-background: #000000;
+        --bg-color: #000000;
+        --info-bg: #000000;
         --info-text: #f4f4f4;
         --borders: #000000;
         --posts: #ffffff;
@@ -45,7 +45,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
     .info {
         box-shadow: var(--box-shadow);
-        background: var(--info-background);
+        background: var(--info-bg);
         color: var(--info-text);
         border-radius: 0px; 
         padding: var(--spacing);
@@ -62,7 +62,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     body {
-        background-color: var(--background-color);
+        background-color: var(--bg-color);
         font-family: var(--std-font); /*incosolata-400*/
         font-size: var(--font-size);
         margin: 0;
@@ -143,7 +143,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         left: 0;
         right: 0;
         width: 100%;
-        background-color: var(--info-background);
+        background-color: var(--info-bg);
         color: var(--info-text);
         text-align: center;
         font-family: var(--std-font);
@@ -262,7 +262,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
         visibility: hidden;
         height: 0;
         overflow: hidden;
-        color: var(--info-background);
+        color: var(--info-bg);
     }
 
     /*---// CARD //---*/ 
@@ -346,12 +346,13 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     #typing-effect::after {
-        content: "*⌝"; /* █ */
+        content: "█"; /* *⌝ █ */
         animation: blink 1s steps(1) infinite;
-        font-family: var(--mtx-font);
-        font-size: 1rem;
+        font-family: var(--std-font);
+        font-size: 1.3rem;
         font-weight: normal;
         display: inline;
+        color: var(--bg-color);
     }
     
     .no-cursor::after {
