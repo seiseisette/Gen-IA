@@ -353,8 +353,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
         font-size: 1rem;
         font-weight: normal;
         display: inline;
-        
-        padding-bottom: 1rem;
+
+        padding-top: 1rem;
         color: var(--bg-color);
     }
     
