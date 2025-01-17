@@ -348,9 +348,9 @@ Use, distribution, or modification of this project is strictly prohibited withou
     #typing-effect::after {
         content: "█"; /* *⌝ █ */
         animation: blink 1s steps(1) infinite;
-        font-family: var(--std-font);
+        font-family: var(--mtx-font);
 
-        font-size: 1rem;
+        font-size: 2rem;
         font-weight: normal;
         display: inline;
 
