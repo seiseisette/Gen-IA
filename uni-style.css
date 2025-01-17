@@ -90,13 +90,13 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
     @media screen and (min-width: 1440px) {
         body, #typing-effect, #typing-container {
-            font-size: 1.8px;
+            font-size: 1.8rem;
         }
     }
 
     @media screen and (min-width: 1024px) {
         body, #typing-effect, #typing-container  {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             padding: var(--spacing); 
             margin: 0; 
             padding-bottom: 5rem; 
@@ -105,7 +105,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
     @media screen and (max-width: 768px) {
         body, #typing-effect, #typing-container  {   
-            font-size: 0.9px; 
+            font-size: 0.9rem; 
         }
         #footer-banner {
             padding: 0rem;
@@ -115,7 +115,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
     @media screen and (max-width: 480px) {
         bod, #typing-effect, #typing-container {
-            font-size: 0.7px;
+            font-size: 0.7rem;
         }
         #footer-banner {
             padding: 0rem;
