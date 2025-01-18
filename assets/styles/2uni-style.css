@@ -166,12 +166,25 @@ footer {
 }
 
 /* --- Typing Effect --- */
+
+/*BACKUP START 
 #typing-container {
     width: 100%;
     margin: 0 auto;
-    padding: var(--spacing); /* Mantiene il padding coerente */
-    box-sizing: border-box; /* Garantisce che il padding non venga ignorato */
+    padding: var(--spacing); /* Mantiene il padding coerente *
+    box-sizing: border-box; /* Garantisce che il padding non venga ignorato *
 }
+-- BACKUP END */
+
+
+#typing-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing); /* Stesso spacing del layout globale */
+    box-sizing: border-box;
+}
+
 
 #typing-effect {
     font-family: var(--mtx-font);
@@ -248,6 +261,7 @@ footer {
     height: 0;
     overflow: hidden; */
     color: var(--info-bg);
+    background-color: var(--bg-color);
 }
 
 /* --- Responsive Design --- */
