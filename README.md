@@ -1,4 +1,4 @@
-# 📚 genialabile.com (Gen-ia)
+# 📚 genialabile.com
 
 **Minimal Welcome Website**  
 GENiaLABILE - Advanced-GPT inspiring multidimensional solutions and unlocking creative potential.
