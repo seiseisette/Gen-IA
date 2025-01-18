@@ -25,11 +25,11 @@ Use, distribution, or modification of this project is strictly prohibited withou
 :root {
     --bg-color: #000000;
     --info-bg: #000000;
-    --info-text: #f4f4f4;
+    --info-text: #f4f4f4; /* Base text color */
     --borders: #000000;
     --posts: #ffffff;
     --spacing: 2rem;
-    --accent: #f4f4f4;
+    --accent: #ff0000; /* Temporary debug color for titles */
     --std-font: 'Roboto', sans-serif;
     --mtx-font: 'Inconsolata', monospace;
     --font-size: 16px;
@@ -59,7 +59,7 @@ html, body {
 
 body {
     background-color: var(--bg-color);
-    color: var(--info-text);
+    color: var(--info-text); /* Ensure readability */
     font-family: var(--std-font);
     font-size: var(--font-size);
     visibility: hidden;
@@ -84,7 +84,7 @@ main {
 /* --- Headers --- */
 h1, h2, h3 {
     font-family: var(--std-font);
-    color: var(--accent);
+    color: var(--accent); /* Debugging color */
     margin-bottom: 1rem;
 }
 
@@ -106,10 +106,12 @@ p {
     margin-bottom: 1.5rem;
     font-size: 1rem;
     line-height: 1.5;
+    color: var(--info-text); /* Explicitly set for readability */
 }
 
 p.txt-mini {
     font-size: 0.8rem;
+    color: var(--info-text); /* Ensure small text is also readable */
 }
 
 /* --- Links --- */
@@ -142,7 +144,7 @@ footer {
     left: 0;
     right: 0;
     background-color: var(--info-bg);
-    color: var(--info-text);
+    color: var(--info-text); /* Consistency in text color */
     text-align: center;
     padding: var(--foot-margin);
     font-size: 0.8rem;
@@ -172,7 +174,7 @@ footer {
 
 #typing-effect {
     font-family: var(--mtx-font);
-    color: var(--info-text);
+    color: var(--info-text); /* Explicit for readability */
     font-size: 1rem;
     line-height: 1.5rem;
     white-space: pre-wrap;
@@ -201,7 +203,7 @@ footer {
     align-items: center;
     padding: 1rem;
     background-color: rgba(0, 0, 0, 0.7);
-    color: var(--info-text);
+    color: var(--info-text); /* Ensure readability in cards */
     box-shadow: var(--box-shadow);
 }
 
