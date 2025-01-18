@@ -1,0 +1,171 @@
+# genialabile.com (Gen-ia) Project
+
+## Overview
+This project, **Gen-IA**, is a minimal and professional website designed to inspire multidimensional solutions and unlock creative potential.
+
+### Key Features
+- **Responsive Design**: Fully responsive across all devices.
+- **Progressive Web App (PWA)**: Integrated with `site.webmanifest` for modern web app capabilities.
+- **Security**: Configured with essential headers and HTTP-to-HTTPS redirection.
+- **Static Resources**: Well-organized assets directory for icons, styles, and other resources.
+
+---
+
+## Directory Structure
+Below is the directory layout and its description:
+
+```
+genialabile.com/
+|
+├── assets/                  # Static assets
+│   ├── icons/               # Icons and manifest-related files
+│   │   ├── apple-touch-icon.png
+│   │   ├── favicon-96x96.png
+│   │   ├── favicon.ico
+│   │   ├── favicon.svg
+│   │   ├── web-app-manifest-192x192.png
+│   │   └── web-app-manifest-512x512.png
+│   └── styles/              # CSS files
+│       └── uni-style.css
+├── nginx/                   # Nginx server configurations
+│   └── genialabile.com.conf # Main configuration file for the website
+├── accessibility.html       # Accessibility statement
+├── contacts.html            # Contact page
+├── cookie-policy.html       # Cookie policy page
+├── footer.html              # Footer template
+├── gpt.html                 # GPT-related content
+├── header.html              # Header template
+├── index.html               # Main entry point for the website
+├── LICENSE                  # Licensing information
+├── privacy-policy.html      # Privacy policy page
+├── README.md                # This documentation file
+├── robots.txt               # Robots.txt for search engine crawlers
+├── site.webmanifest         # Web app manifest for PWA
+├── sitemap.xml              # Sitemap for SEO
+└── terms-and-conditions.html # Terms and conditions page
+```
+
+---
+
+## Nginx Configuration
+The server is configured to handle HTTP-to-HTTPS redirection and manage static files efficiently.
+
+### Key Highlights
+1. **Redirect HTTP to HTTPS**:
+   ```nginx
+   server {
+       listen 80;
+       server_name genialabile.com www.genialabile.com;
+       return 301 https://$host$request_uri;
+   }
+   ```
+
+2. **HTTPS Server**:
+   ```nginx
+   server {
+       listen 443 http2;
+       server_name genialabile.com www.genialabile.com;
+
+       root /nginx/GEN-IA;
+       index index.html;
+
+       add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+       add_header X-Content-Type-Options nosniff;
+       add_header X-Frame-Options DENY;
+       add_header X-XSS-Protection "1; mode=block";
+       add_header Referrer-Policy no-referrer-when-downgrade;
+
+       location / {
+           try_files $uri $uri/ =404;
+       }
+
+       location /assets/icons/ {
+           autoindex off;
+       }
+
+       ssl_session_cache shared:SSL:10m;
+       ssl_session_timeout 1d;
+       ssl_session_tickets off;
+   }
+   ```
+
+3. **MIME Type Support**:
+   ```nginx
+   types {
+       application/manifest+json webmanifest;
+       image/x-icon ico;
+       image/png png;
+       image/svg+xml svg;
+   }
+   ```
+
+---
+
+## Key Files
+
+### `site.webmanifest`
+This file enables the Progressive Web App functionality. Example:
+```json
+{
+  "name": "Genialabile",
+  "short_name": "Gen-ia",
+  "icons": [
+    {
+      "src": "/assets/icons/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/icons/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
+}
+```
+
+### `robots.txt`
+Defines the search engine crawling rules:
+```
+User-agent: *
+Disallow:
+```
+
+### `sitemap.xml`
+Provides the structure for search engines to index the site effectively.
+
+---
+
+## Setup Instructions
+1. Place the project files in the root directory specified in the Nginx configuration.
+2. Test the Nginx configuration:
+   ```bash
+   sudo nginx -t
+   ```
+3. Reload Nginx to apply changes:
+   ```bash
+   sudo systemctl reload nginx
+   ```
+4. Verify the website by visiting:
+   - `http://genialabile.com` (should redirect to HTTPS)
+   - `https://genialabile.com`
+
+---
+
+## Notes
+- Ensure all static files are accessible under `/assets/`.
+- Verify the web app manifest via Chrome DevTools under `Application > Manifest`.
+- Customize the `Strict-Transport-Security` header based on your requirements.
