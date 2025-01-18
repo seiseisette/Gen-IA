@@ -29,7 +29,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     --borders: #000000;
     --posts: #ffffff;
     --spacing: 2rem;
-    --accent: #ff0000; /* Temporary debug color for titles */
+    --accent: #ff00ff; /* Temporary debug color for titles */
     --std-font: 'Roboto', sans-serif;
     --mtx-font: 'Inconsolata', monospace;
     --font-size: 16px;
