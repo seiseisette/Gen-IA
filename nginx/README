@@ -1,7 +1,7 @@
-# genialabile.com (Gen-ia) Project
+# genialabile.com Project
 
 ## Overview
-This project, **Gen-IA**, is a minimal and professional website designed to inspire multidimensional solutions and unlock creative potential.
+This project, **genialabile.com**, is a minimal and professional website.
 
 ### Key Features
 - **Responsive Design**: Fully responsive across all devices.
@@ -66,7 +66,7 @@ The server is configured to handle HTTP-to-HTTPS redirection and manage static f
        listen 443 http2;
        server_name genialabile.com www.genialabile.com;
 
-       root /nginx/GEN-IA;
+       root /nginx/genialabile.com;
        index index.html;
 
        add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
