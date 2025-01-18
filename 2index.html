@@ -29,18 +29,18 @@ Use, distribution, or modification of this project is strictly prohibited withou
         <link rel="canonical" href="https://genialabile.com/2index.html">
       
         <!-- header.html -->
-          <script>
+        <script>
             fetch('https://genialabile.com/2header.html')
                 .then(response => response.text())
                 .then(data => {
                     document.querySelector('head').innerHTML += data;
                 })
                 .catch(error => console.error('Error fetching header:', error));
-            </script>
+        </script>
         <!-- header.html --> 
     </head>
     <!-- SHIFT -->
-    <body style="background-color: #000000; color: #000000; link: #000000; visited: #000000;">
+    <body style="background-color: var(--bg-color); color: var(--info-text);">
         <main>
             <h1>
                 <a href="https://genialabile.com/"
@@ -100,7 +100,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                         🚀 Revolutionary
                     </h3>
                     <hr class="thin-line">
-                        The artificial intelligencec creativity, transforming it into a trusted-virtual mentor that doesn’t just provide answers but inspires, guides, and stimulates human creativity.
+                        The artificial intelligence creativity, transforming it into a trusted-virtual mentor that doesn’t just provide answers but inspires, guides, and stimulates human creativity.
                         Its purpose is to break down cultural, linguistic, and cognitive barriers, fostering learning, innovation, and introspection.
                         <br>
                         Genialabile is designed to develop genius in minds, helping those facing difficulties in their lives or lacking the means to resolve them.
@@ -148,34 +148,25 @@ Use, distribution, or modification of this project is strictly prohibited withou
                             footerContent.innerHTML = data;
                         })
                         .catch(error => console.error('Errore nel caricamento del footer-banner:', error));
-                document.addEventListener("DOMContentLoaded", () => {
-                            console.log("Pagina caricata, ritardo di avvio in corso...");
-                            setTimeout(() => {
-                                console.log("Avvio dell'animazione dopo il ritardo.");
-                                typeWriter();
-                            }, startDelay);
-                        });
+                    document.addEventListener("DOMContentLoaded", () => {
+                        console.log("Pagina caricata, ritardo di avvio in corso...");
+                        setTimeout(() => {
+                            console.log("Avvio dell'animazione dopo il ritardo.");
+                            typeWriter();
+                        }, startDelay);
                     });
+                });
             </script>
             <!-- footer.html -->  
         </footer>
-            <!-- FADE --> 
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    setTimeout(function () {
-                        document.body.classList.add("visible");
-                    }, 2000);
-                });
-            </script>
-            <!-- FADE -->
-            <!-- HACK-BUGS --> 
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    setTimeout(function () {
-                        document.body.classList.add("visible");
-                    }, 2000);
-                });
-            </script>
-            <!-- FADE -->  
+        <!-- FADE --> 
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                setTimeout(function () {
+                    document.body.classList.add("visible");
+                }, 2000);
+            });
+        </script>
+        <!-- FADE -->
     </body>
 </html>
