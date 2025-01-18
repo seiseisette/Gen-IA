@@ -20,8 +20,6 @@ Use, distribution, or modification of this project is strictly prohibited withou
 # URL: https://genialabile.com/header.html
 ===============================================================================
 -->
-<!-- START -->
-
 
   <!-- Meta Tags -->
 <meta charset="UTF-8">
@@ -66,4 +64,22 @@ Use, distribution, or modification of this project is strictly prohibited withou
     if (location.protocol === 'http:') {
         location.replace(`https://${location.hostname}${location.pathname}${location.search}`);
     }
+</script>
+
+<!--Style Fallback -->
+<style>
+    body {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+    body.loaded {
+        visibility: visible;
+        opacity: 1;
+    }
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        document.body.classList.add("loaded");
+    });
 </script>
