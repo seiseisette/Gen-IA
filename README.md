@@ -41,7 +41,7 @@ Live Pitch (beta): **[genialabile.com/gpt](https://genialabile.com/gpt)**
 
 ---
 
-## 🔄 Version Log
+## 🪵 Version Log
 
 ### **Version 3.1** (18 January 2025)
 - **Enhanced Manifest File**: Improved support for multi-device PWA compatibility, ensuring proper favicon and icon rendering across platforms.
