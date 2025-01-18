@@ -278,6 +278,14 @@ Use, distribution, or modification of this project is strictly prohibited withou
                         document.body.classList.add("visible");
                     }, 2000);
                 });
+
+                // Inserisci qui il codice per il padding coerente
+                document.addEventListener("DOMContentLoaded", function () {
+                    const typingContainer = document.getElementById("typing-container");
+                    if (typingContainer) {
+                        typingContainer.style.padding = "2rem"; // Applica padding coerente
+                    }
+                });
             </script>
             <!-- FADE --> 
     </body>

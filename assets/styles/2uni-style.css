@@ -169,7 +169,8 @@ footer {
 #typing-container {
     width: 100%;
     margin: 0 auto;
-    padding: var(--spacing);
+    padding: var(--spacing); /* Mantiene il padding coerente */
+    box-sizing: border-box; /* Garantisce che il padding non venga ignorato */
 }
 
 #typing-effect {
@@ -237,6 +238,16 @@ footer {
     border-top: 1px solid var(--line-color);
     margin: 0.5rem 0;
     width: 100%;
+}
+
+/*--- robo-hiden-text ---*/ 
+.hidden-text {
+    /* position: absolute;
+    left: -9999px;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden; */
+    color: var(--info-bg);
 }
 
 /* --- Responsive Design --- */
