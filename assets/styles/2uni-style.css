@@ -249,14 +249,14 @@ footer {
     margin: 0 auto;
     padding: 150%;
     box-sizing: border-box;
-    
+
     align-content: center;
     
 }
 
 #typing-effect {
     font-family: var(--mtx-font);
-    color: var(--info-text); /* Explicit for readability */
+    color: var(--power-color); /* Explicit for readability */
     font-size: 1.5rem;
     line-height: 2rem;
     white-space: pre-wrap;
@@ -274,7 +274,7 @@ footer {
 #typing-effect::after {
     content: "█";
     font-family: var(--mtx-font);
-    color: var(--info-text); /* Explicit for readability */
+     /* color: var(--info-text); Explicit for readability */
     font-size: 3rem;
     animation: blink 1s steps(1) infinite;
 }
