@@ -16,82 +16,86 @@ This project is no longer available as open-source. Updated: 10 Jan 2025.
 Use, distribution, or modification of this project is strictly prohibited without prior written authorization.
 -------------------------------------------------------------------------------
 
-# Version: v3.2 (190125)  ! No changeLog for it !
+# Version: v3.2 (190125)
 # URL: https://genialabile.com/assets/styles/animations/compiler.css
 ===============================================================================
-*\
+*/
 
 /* --- Typing Effect --- */
 
 #typing-container {
-width: 100%;
-max-width: 1200px; /* Limits the container width */
-height: 100vh; /* Makes the container fill the full viewport height */
-display: flex; /* Enables flexbox for alignment */
-justify-content: center; /* Centers horizontally */
-align-items: center; /* Centers vertically */
-margin: 0 auto;
-padding: var(--spacing); /* Keeps the padding for spacing consistency */
-box-sizing: border-box;
-text-align: left; /* Ensures text alignment is always to the left */
-transform: translateY(-30%); /* Moves the content 30% upwards */
-/* Change added for vertical adjustment */
+    width: 100%;
+    max-width: 1200px; /* Limits the container width */
+    height: 100vh; /* Makes the container fill the full viewport height */
+    display: flex; /* Enables flexbox for alignment */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    margin: 0 auto;
+    padding: var(--spacing); /* Keeps the padding for spacing consistency */
+    box-sizing: border-box;
+    text-align: left; /* Ensures text alignment is always to the left */
+    transform: translateY(-30%); /* Moves the content 30% upwards */
+    /* Change added for vertical adjustment */
 }
 
 /* Style1 Default Effect */
 #typing-effect {
-font-family: var(--mtx-font);
-color: var(--compiler1-color);
-font-size: 1.5rem;
-line-height: 2rem;
-white-space: pre-wrap;
-overflow: hidden;
+    font-family: var(--mtx-font);
+    color: var(--compiler1-color);
+    font-size: 1.5rem;
+    line-height: 2rem;
+    white-space: pre-wrap;
+    overflow: hidden;
+    min-height: 2rem; /* Prevents height from collapsing */
+    transition: height 0.2s ease-out; /* Smooth transition for height changes */
 }
 
 #typing-effect::after {
-content: "█";
-font-family: var(--mtx-font);
-color: var(--compiler1-color);
-text-align: left; /* Ensures text alignment is always to the left */
-animation: blink 1s steps(1) infinite;
-line-height: 2rem;
+    content: "█";
+    font-family: var(--mtx-font);
+    color: var(--compiler1-color);
+    text-align: left; /* Ensures text alignment is always to the left */
+    animation: blink 1s steps(1) infinite;
+    line-height: 2rem; /* Matches line height for alignment */
+    vertical-align: middle; /* Centers the cursor */
 }
 
 /* Style2 Alternate Effect */
 #typing-effect.alternate-style {
-font-family: var(--std-font); /* Override */
-color: var(--compiler2-color); /* White text color */
+    font-family: var(--std-font); /* Override */
+    color: var(--compiler2-color); /* White text color */
+    min-height: 2rem; /* Prevents height from collapsing */
 }
 
 .alternate-style {
-font-family: var(--std-font) !important; 
-color: var(--compiler2-color) !important; 
-line-height: 2rem !important;
+    font-family: var(--std-font) !important; 
+    color: var(--compiler2-color) !important; 
+    line-height: 2rem !important;
+    min-height: 2rem !important; /* Fixes height inconsistencies */
 }
 
 .alternate-style::after {
-content: "" !important;
-font-family: var(--std-font) !important;
-color: var(--bg-color) !important; 
-animation: blink-fast 0.5s steps(1) infinite !important;
-line-height: 2rem !important;
+    content: "|" !important;
+    font-family: var(--std-font) !important;
+    color: var(--bg-color) !important; 
+    animation: blink-fast 0.5s steps(1) infinite !important;
+    line-height: 2rem !important;
 }
 
 .no-cursor::after {
-content: "";
-animation: none;
+    content: "";
+    animation: none;
 }
 
 /* Keyframes for blinking effects */
 @keyframes blink {
-50% {
-    opacity: 0;
-}
+    50% {
+        opacity: 0;
+    }
 }
 
 @keyframes blink-fast {
-50% {
-    opacity: 0;
+    50% {
+        opacity: 0;
+    }
 }
-}
-
