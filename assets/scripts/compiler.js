@@ -26,7 +26,6 @@ const textArray = [
     "style1::",
 
     "", "",
-    "",
 
     "Initializing systems...",
     "", "", "",
@@ -54,7 +53,7 @@ const textArray = [
 
     "Loading interface...",
 
-    "", "", "", "",
+    "", "", "",
 
     "style2::<h2>🌈 Welcome!</h2>",
     "", "",
@@ -93,7 +92,7 @@ const textArray = [
     "<h2>🌍 Global</h2>",
     "",
     "Accessible worldwide, I’m here for you through platforms like ChatGPT.",
-    "Soon, I’ll expand into immersive environments like Sora for 3D simulations.",
+    "Soon, I’ll expand into immersive environments with the help of 3D simulations.",
     "My goal?",
     "",
     "To help tackle focus issues, procrastination, and modern challenges while fostering your growth—mind and soul, step by step.\u00A0🍄",
@@ -129,13 +128,10 @@ const textArray = [
     "",
     "Together, we can make it extraordinary.\u00A0🦄",
     
-    "",
     "", "",
-    "",
 
     "style1::",
     "", "",
-    "",
    
     "<h3>Presentation complete</h3>",
     " ",
@@ -144,15 +140,14 @@ const textArray = [
     "Or so it believes. They love emoticons. ;)",
 
     "", "",
-    "",
     
     "Preparing to redirect...",
     "Establishing connection with the URL...",
     "",
     "Loading core assets...",
-    "Complete",
+    "",
     "Synchronizing interactive modules...",
-    "Complete",
+    "",
     "Finalizing redirection protocols...",
     "Complete",
     "Redirecting in",
@@ -160,12 +155,12 @@ const textArray = [
     "3...",
     "2...",
     "1...",
-    "0"
+    ""
 
     ];
 
     const typingSpeed = 20; 
-    const pauseBetweenParagraphs = 1600;
+    const pauseBetweenParagraphs = 1800;
     const fadeOutDuration = 500; 
     const redirectDelay = 500; 
     const redirectUrl = "https://genialabile.com/";
