@@ -215,6 +215,19 @@ footer {
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
 }
 
+
+/* bg shadow notes
+
+ box-shadow: 0 -2px 10px #00000024,
+                    -10px 0 300px 50px #000000,
+                    10px 0 300px 50px #000000,
+                    0 10px 100px 70px #000000; 
+
+
+*/
+
+
+
 /* --- Footer Styles --- */
 #footer-banner {
     position: fixed;
