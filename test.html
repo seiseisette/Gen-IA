@@ -54,9 +54,11 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     <script>
                     const textArray = [
 
-                        " ", " ", " ", " ",
-
+                        " ", " ", " ",
+                        
                         " ", " ",
+
+                        " ",
 
                         "Initializing systems...",
                         " ", " ", " ",
@@ -155,17 +157,21 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
                         ];
 
-                        const typingSpeed = 20; // Sp
-                        const pauseBetweenParagraphs = 1100; // Tm
-                        const fadeOutDuration = 500; // Durata dissolvenza a scomparsa
+                        const typingSpeed = 20; // Velocità di scrittura
+                        const pauseBetweenParagraphs = 1100; // Pausa tra paragrafi
+                        const fadeOutDuration = 500; // Durata dissolvenza
+                        const redirectDelay = 3000; // Ritardo per reindirizzamento finale
+                        const redirectUrl = "https://genialabile.com/"; // URL della pagina di destinazione
                         const typingElement = document.getElementById("typing-effect");
-                        const startDelay = 5000; // Dj
+                        const footer = document.getElementById("footer-banner");
+                        const startDelay = 5000; // Ritardo iniziale
 
                         let textIndex = 0;
                         let charIndex = 0;
                         let isTag = false;
                         let tagBuffer = "";
 
+                        // Funzione principale per scrivere il testo
                         function typeWriter() {
                             if (textIndex < textArray.length) {
                                 const currentText = textArray[textIndex];
@@ -190,27 +196,32 @@ Use, distribution, or modification of this project is strictly prohibited withou
                                     setTimeout(() => fadeOutParagraph(), pauseBetweenParagraphs); // Inizio dissolvenza
                                 }
                             } else {
+                                // Rimuove il cursore e reindirizza
                                 typingElement.classList.add("no-cursor");
-                                showFooter();
+                                setTimeout(() => {
+                                    window.location.href = redirectUrl; // Reindirizzamento alla pagina specificata
+                                }, redirectDelay);
                             }
                         }
 
+                        // Funzione per gestire la dissolvenza del paragrafo
                         function fadeOutParagraph() {
                             typingElement.classList.add("hidden-paragraph"); // Aggiunge la classe per la dissolvenza
                             setTimeout(() => {
-                                typingElement.innerHTML = ""; // Cancella il paragrafo dopo la dissolvenza
-                                typingElement.classList.remove("hidden-paragraph"); // Rimuove la classe per il prossimo paragrafo
+                                typingElement.innerHTML = ""; // Cancella il paragrafo
+                                typingElement.classList.remove("hidden-paragraph"); // Rimuove la classe
                                 textIndex++;
                                 charIndex = 0;
                                 typeWriter();
                             }, fadeOutDuration);
                         }
 
-                        const footer = document.getElementById("footer-banner");
+                        // Mostra il footer
                         function showFooter() {
                             footer.style.transform = "translateY(0)";
                         }
 
+                        // Gestisce il comportamento dello scroll
                         function handleScroll() {
                             const scrollY = window.scrollY;
                             const viewportHeight = window.innerHeight;
@@ -225,9 +236,12 @@ Use, distribution, or modification of this project is strictly prohibited withou
                             }
                         }
 
+                        // Avvia l'animazione
                         window.addEventListener("scroll", handleScroll);
                         document.addEventListener("DOMContentLoaded", () => {
-                            typeWriter();
+                            setTimeout(() => {
+                                typeWriter();
+                            }, startDelay);
                         });
                         </script>
                         </div>
