@@ -252,7 +252,7 @@ footer {
 
 .alternate-style::after {
     content: "|";
-    font-family: var(--std-font);
+    font-family: var(--std-font) !important;
     color: var(--compiler2-color); /* White cursor */
     animation: blink-fast 0.5s steps(1) infinite; /* Faster blinking cursor */
     line-height: 2rem;
