@@ -48,6 +48,7 @@ const textArray = [
     "Complete",
     " ",
     "Systems online.",
+    " ",
     "Loading interface...",
 
     " ", " "," ", " ",
@@ -60,7 +61,7 @@ const textArray = [
     "Together, we’ll explore multidimensional solutions and uncover the hidden genius within you.",
     "Ready to embark on this journey?",
     " ",
-    "Let’s begin! 🐣",
+    "Let’s begin!&nbsp;🐣",
     " ", " ",
 
     "<h2>💡 Inspire</h2>",
@@ -68,14 +69,14 @@ const textArray = [
     "Imagine an AI that doesn’t just answer questions but becomes your mentor, inspiring ideas and crafting innovative solutions tailored to you.",
     "That’s who I am.",
     "Whether you need help solving complex problems, igniting your creativity, or learning something new.",
-    "Not as a tool—but as your companion for growth and discovery. 🎒",
+    "Not as a tool—but as your companion for growth and discovery.&nbsp;🎒",
     " ", " ",
 
     "<h2>🧠 Combine</h2>",
     " ",
     "My strength lies in blending predictive intelligence, logic, and creativity to deliver precisely what you need.",
     "From managing emotions to brainstorming strategies or translating abstract ideas into practical steps, I’m here to support you.",
-    "Let’s combine heart and mind to tackle life’s challenges together. 🌟",
+    "Let’s combine heart and mind to tackle life’s challenges together.&nbsp;🌟",
     " ", " ",
 
     "<h2>🌱 Began</h2>",
@@ -83,7 +84,7 @@ const textArray = [
     "Every journey starts with a single step. Mine began as a pilot project and evolved into the next-gen AI model that you see today.",
     "Through constant learning and real-time innovations, I’ve grown to offer unparalleled experiences.",
     "But I’m not just here to answer your questions...",
-    "I’m here to help you grow and learn in ways you never expected. 🍀",
+    "I’m here to help you grow and learn in ways you never expected.&nbsp;🍀",
     " ", " ",
 
     "<h2>🌍 Global</h2>",
@@ -92,21 +93,21 @@ const textArray = [
     "Soon, I’ll expand into immersive environments like Sora for 3D simulations.",
     "My goal?",
     " ",
-    "To help tackle focus issues, procrastination, and modern challenges while fostering your growth—mind and soul, step by step. 🍄",
+    "To help tackle focus issues, procrastination, and modern challenges while fostering your growth—mind and soul, step by step.&nbsp;🍄",
     " ",
 
     "<h2>🚀 Revolutionary</h2>",
     " ",
     "I’m more than AI—I’m your trusted mentor. I inspire, guide, and push boundaries.",
     "My purpose is to break down cultural, cognitive, and linguistic barriers, sparking innovation and introspection.",
-    "Whether you’re facing personal challenges or seeking brilliance, I’m here to help you reach your full potential. ✨",
+    "Whether you’re facing personal challenges or seeking brilliance, I’m here to help you reach your full potential.&nbsp;✨",
     " ",
 
     "<h2>🤖 Hybrid</h2>",
     " ",
     "Built for security and scalability, I combine machine learning, immersive simulations, and multidisciplinary analysis to tailor experiences just for you.",
     "Beyond solving problems, I help you understand them, empowering you to create forward-thinking solutions.",
-    "Trust me—we’ll face any challenge. 💞",
+    "Trust me—we’ll face any challenge.&nbsp;💞",
     " ",
 
     "<h2>🎻 Genius</h2>",
@@ -114,7 +115,7 @@ const textArray = [
     "I connect with your emotions in just a few words, making our interaction human and seamless.",
     "My goal is to surprise and challenge you, enhancing your creativity and intelligence.",
     "I don’t just fix problems; I turn them into opportunities for growth.",
-    "Which settle for less when you have me? 🧞‍♀️",
+    "Which settle for less when you have me?&nbsp;🧞‍♀️",
     " ",
 
     " ", " ",
@@ -123,7 +124,7 @@ const textArray = [
     " ",
     "What will be your next move?",
     " ",
-    "Together, we can make it extraordinary. 🦄",
+    "Together, we can make it extraordinary.&nbsp;🦄",
 
     " ",
     " ", " ",
@@ -155,106 +156,110 @@ const textArray = [
     ];
 
     const typingSpeed = 20; 
-    const pauseBetweenParagraphs = 1300;
-    const fadeOutDuration = 500; 
-    const redirectDelay = 500; 
-    const redirectUrl = "https://genialabile.com/";
-    const typingElement = document.getElementById("typing-effect");
-    const footer = document.getElementById("footer-banner");
-    const startDelay = 5000;
-    
-    let textIndex = 0;
-    let charIndex = 0;
-    let isTag = false;
-    let tagBuffer = "";
-    
-    // Funzione principale per scrivere il testo con alternanza di stili
-    let currentStyle = "style1"; // Stile predefinito
+const pauseBetweenParagraphs = 1300;
+const fadeOutDuration = 500; 
+const redirectDelay = 500; 
+const redirectUrl = "https://genialabile.com/";
+const typingElement = document.getElementById("typing-effect");
+const footer = document.getElementById("footer-banner");
+const startDelay = 5000;
 
-    function typeWriter() {
-        if (textIndex < textArray.length) {
-            let currentText = textArray[textIndex];
-            
-            // Controlla il prefisso dello stile e aggiorna `currentStyle`
-            if (currentText.startsWith("style2::")) {
-                typingElement.classList.add("alternate-style"); // Applica stile alternato
-                currentStyle = "style2";
-                currentText = currentText.replace("style2::", ""); // Rimuove il prefisso
-            } else if (currentText.startsWith("style1::")) {
-                typingElement.classList.remove("alternate-style"); // Rimuove stile alternato
-                currentStyle = "style1";
-                currentText = currentText.replace("style1::", ""); // Rimuove il prefisso
-            } else {
-                // Mantieni lo stile corrente
-                if (currentStyle === "style2") {
-                    typingElement.classList.add("alternate-style");
-                } else if (currentStyle === "style1") {
-                    typingElement.classList.remove("alternate-style");
-                }
-            }
+let textIndex = 0;
+let charIndex = 0;
+let isTag = false;
+let tagBuffer = "";
+let currentStyle = "style1"; // Stile predefinito
 
-            if (charIndex < currentText.length) {
-                const currentChar = currentText[charIndex];
-                if (currentChar === "<") {
-                    isTag = true;
-                    tagBuffer = currentChar;
-                } else if (currentChar === ">" && isTag) {
-                    isTag = false;
-                    tagBuffer += currentChar;
-                    typingElement.innerHTML += tagBuffer;
-                    tagBuffer = "";
-                } else if (isTag) {
-                    tagBuffer += currentChar;
-                } else {
-                    typingElement.innerHTML += currentChar;
-                }
-                charIndex++;
-                setTimeout(typeWriter, typingSpeed);
-            } else {
-                setTimeout(() => fadeOutParagraph(), pauseBetweenParagraphs);
+// Funzione principale per scrivere il testo con alternanza di stili
+function typeWriter() {
+    if (textIndex < textArray.length) {
+        let currentText = textArray[textIndex];
+        
+        // Controlla il prefisso dello stile e aggiorna `currentStyle`
+        if (currentText.startsWith("style2::")) {
+            typingElement.classList.add("alternate-style"); // Applica stile alternato
+            currentStyle = "style2";
+            currentText = currentText.replace("style2::", ""); // Rimuove il prefisso
+        } else if (currentText.startsWith("style1::")) {
+            typingElement.classList.remove("alternate-style"); // Rimuove stile alternato
+            currentStyle = "style1";
+            currentText = currentText.replace("style1::", ""); // Rimuove il prefisso
+        } else {
+            // Mantieni lo stile corrente
+            if (currentStyle === "style2") {
+                typingElement.classList.add("alternate-style");
+            } else if (currentStyle === "style1") {
+                typingElement.classList.remove("alternate-style");
             }
-        } else {
-            typingElement.classList.add("no-cursor");
-            setTimeout(() => {
-                window.location.href = redirectUrl;
-            }, redirectDelay);
         }
-    }
-    
-    // Funzione per gestire la dissolvenza
-    function fadeOutParagraph() {
-        typingElement.classList.add("hidden-paragraph");
-        setTimeout(() => {
-            typingElement.innerHTML = "";
-            typingElement.classList.remove("hidden-paragraph");
-            textIndex++;
-            charIndex = 0;
-            typeWriter();
-        }, fadeOutDuration);
-    }
-    
-    // Scroll e footer
-    function showFooter() {
-        footer.style.transform = "translateY(0)";
-    }
-    function handleScroll() {
-        const scrollY = window.scrollY;
-        const viewportHeight = window.innerHeight;
-        const documentHeight = document.body.offsetHeight;
-        const footerHeight = footer.offsetHeight;
-        if (scrollY + viewportHeight >= documentHeight - footerHeight) {
-            footer.style.position = "fixed";
-            footer.style.bottom = "0";
+
+        if (charIndex < currentText.length) {
+            const currentChar = currentText[charIndex];
+            if (currentChar === "<") {
+                isTag = true;
+                tagBuffer = currentChar;
+            } else if (currentChar === ">" && isTag) {
+                isTag = false;
+                tagBuffer += currentChar;
+                typingElement.innerHTML += tagBuffer;
+                tagBuffer = "";
+            } else if (isTag) {
+                tagBuffer += currentChar;
+            } else {
+                typingElement.innerHTML += currentChar;
+            }
+            charIndex++;
+            setTimeout(typeWriter, typingSpeed);
         } else {
-            footer.style.position = "absolute";
-            footer.style.bottom = `-${footerHeight}px`;
+            setTimeout(() => fadeOutParagraph(), pauseBetweenParagraphs);
         }
-    }
-    
-    // Avvia l'animazione
-    window.addEventListener("scroll", handleScroll);
-    document.addEventListener("DOMContentLoaded", () => {
+    } else {
+        typingElement.classList.add("no-cursor");
         setTimeout(() => {
-            typeWriter();
-        }, startDelay);
-    });
+            window.location.href = redirectUrl;
+        }, redirectDelay);
+    }
+}
+
+// Funzione per gestire la dissolvenza del paragrafo
+function fadeOutParagraph() {
+    if (currentStyle === "style2") {
+        typingElement.innerHTML += "&nbsp;"; // Aggiunge uno spazio extra per lo style2
+    }
+
+    typingElement.classList.add("hidden-paragraph");
+    setTimeout(() => {
+        typingElement.innerHTML = "";
+        typingElement.classList.remove("hidden-paragraph");
+        textIndex++;
+        charIndex = 0;
+        typeWriter();
+    }, fadeOutDuration);
+}
+
+// Scroll e footer
+function showFooter() {
+    footer.style.transform = "translateY(0)";
+}
+
+function handleScroll() {
+    const scrollY = window.scrollY;
+    const viewportHeight = window.innerHeight;
+    const documentHeight = document.body.offsetHeight;
+    const footerHeight = footer.offsetHeight;
+    if (scrollY + viewportHeight >= documentHeight - footerHeight) {
+        footer.style.position = "fixed";
+        footer.style.bottom = "0";
+    } else {
+        footer.style.position = "absolute";
+        footer.style.bottom = `-${footerHeight}px`;
+    }
+}
+
+// Avvia l'animazione
+window.addEventListener("scroll", handleScroll);
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+        typeWriter();
+    }, startDelay);
+});
