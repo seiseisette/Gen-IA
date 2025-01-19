@@ -225,7 +225,7 @@ footer {
 #typing-effect::after {
     content: "█";
     animation: blink 1s steps(1) infinite;
-    font-size: 2rem;
+    line-height: 2rem;
 }
 
 .no-cursor::after {
