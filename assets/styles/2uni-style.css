@@ -225,7 +225,7 @@ footer {
     font-family: var(--mtx-font);
     color: var(--compiler1-color);
     font-size: 1.5rem;
-    line-height: 1.5rem;
+    line-height: 1.6rem;
     white-space: pre-wrap;
     overflow: hidden;
 }
@@ -253,8 +253,9 @@ footer {
 .alternate-style::after {
     content: "◉" !important; /* White cursor */
     font-family: var(--std-font) !important;
-    color: var(--info-text) !important; /* White cursor */
-    animation: blink-fast 0.5s steps(1) infinite; /* Faster blinking cursor */
+    color: var(--compiler2-color) !important; /* White cursor */
+    font-size: 0.9rem;
+    animation: blink-fast 3s steps(1) infinite; /* Faster blinking cursor */
     line-height: 2rem;
 }
 
