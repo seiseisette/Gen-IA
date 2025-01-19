@@ -245,6 +245,8 @@ footer {
     padding: var(--foot-margin);
     font-size: 0.8rem;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    font-family: var(--std-font);
+    line-height: 1.4; /* Assottiglia la linea del testo */
 }
 
 /* --- Footer Banner --- */
@@ -258,6 +260,10 @@ footer {
     transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
     z-index: 999;
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem; /* Margine uniforme per il contenuto */
 }
 
 #footer-banner.active {
@@ -269,8 +275,12 @@ footer {
 #footer-links {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
+    max-width: 80%; /* Limita la larghezza per centratura migliorata */
+    margin: 0 auto;
+    text-align: center;
 }
 
 #footer-links a {
@@ -278,6 +288,7 @@ footer {
     color: var(--info-text);
     font-size: 0.9rem;
     transition: color 0.3s ease;
+    font-weight: 400; /* Evita pesantezza visiva */
 }
 
 #footer-links a:hover {
