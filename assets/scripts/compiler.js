@@ -32,9 +32,10 @@ const textArray = [
     "", "", "",
 
     "Loading core protocols...",
-    "", "", "", "",
+    "", "",
 
     "Running diagnostics...",
+    "",
     "Complete",
     "Establishing neural networks...",
     "Complete",
@@ -45,6 +46,7 @@ const textArray = [
     "Synchronizing predictive modules...",
     "Complete",
     "Checking security protocols...",
+    "",
     "Complete",
     "","",
     "Systems online.",
@@ -134,32 +136,35 @@ const textArray = [
     "style1::<h3>Presentation complete.</h3>",
     " ",
     "The human is now sufficiently persuaded...",
-    "Or so it believes. ;)",
+    "Or so it believes.",
+    "",
+    "They love emoticons. ;)",
 
-    "", "", "",
+    "",
     "", "",
     "",
     
     "Preparing to redirect...",
-    "Establishing connection with the home page...",
+    "Establishing connection with the URL...",
     "",
     "Loading core assets...",
     "Complete",
     "Synchronizing interactive modules...",
     "Complete",
-    "Finalizing redirection protocols...",
+    "Finalizing redirection HTTPS protocols...",
     "Complete",
-    "Redirecting in:",
+    "Redirecting in",
     "3...",
     "2...",
-    "1..."
+    "1...",
+    "0"
 
     ];
 
     const typingSpeed = 20; 
     const pauseBetweenParagraphs = 1600;
     const fadeOutDuration = 500; 
-    const redirectDelay = 500; 
+    const redirectDelay = 300; 
     const redirectUrl = "https://genialabile.com/";
     const typingElement = document.getElementById("typing-effect");
     const footer = document.getElementById("footer-banner");
@@ -174,13 +179,13 @@ const textArray = [
     // Funzione principale per scrivere il testo con alternanza di stili
     function typeWriter() {
         if (!typingElement) {
-            console.error("Elemento 'typing-effect' non trovato!");
+            console.error("Element 'typing-effect' missed!");
             return;
         }
     
         if (textIndex < textArray.length) {
             let currentText = textArray[textIndex];
-            console.log(`Scrivendo testo: ${currentText}`); // Debug
+            console.log(`Writing txt: ${currentText}`); // Debug
     
             // Controlla il prefisso dello stile e aggiorna currentStyle
             if (currentText.startsWith("style2::")) {
@@ -232,7 +237,7 @@ const textArray = [
     
     // Funzione per gestire la dissolvenza del paragrafo
     function fadeOutParagraph() {
-        console.log("Avvio dissolvenza del paragrafo..."); // Debug
+        console.log("Txt-Line fades..."); // Debug
         typingElement.classList.add("hidden-paragraph");
         setTimeout(() => {
             typingElement.innerHTML = "";
@@ -250,7 +255,7 @@ const textArray = [
     
     function handleScroll() {
         if (!footer) {
-            console.error("Elemento 'footer-banner' non trovato!");
+            console.error("Element 'footer-banner' missed!");
             return;
         }
     
@@ -270,7 +275,7 @@ const textArray = [
     // Avvia l'animazione
     window.addEventListener("scroll", handleScroll);
     document.addEventListener("DOMContentLoaded", () => {
-        console.log("Pagina caricata. Inizio animazione dopo ritardo."); // Debug
+        console.log("Page do not loaded. Starting compliler."); // Debug
         setTimeout(() => {
             if (typingElement) {
                 typeWriter();
