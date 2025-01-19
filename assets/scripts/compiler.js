@@ -49,7 +49,7 @@ const textArray = [
     "",
     "Complete",
     "","",
-    "Systems online.",
+    "Systems online",
     "",
 
     "Loading interface...",
@@ -128,19 +128,21 @@ const textArray = [
     "What will be your next move?",
     "",
     "Together, we can make it extraordinary.\u00A0🦄",
-
+    
     "",
     "", "",
     "",
 
-    "style1::<h3>Presentation complete.</h3>",
+    "style1::",
+    "", "",
+    "",
+   
+    "<h3>Presentation complete</h3>",
     " ",
     "The human is now sufficiently persuaded...",
-    "Or so it believes.",
     "",
-    "They love emoticons. ;)",
+    "Or so it believes. They love emoticons. ;)",
 
-    "",
     "", "",
     "",
     
@@ -151,9 +153,10 @@ const textArray = [
     "Complete",
     "Synchronizing interactive modules...",
     "Complete",
-    "Finalizing redirection HTTPS protocols...",
+    "Finalizing redirection protocols...",
     "Complete",
     "Redirecting in",
+    "",
     "3...",
     "2...",
     "1...",
