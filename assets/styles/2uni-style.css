@@ -197,6 +197,7 @@ footer {
 
 
 /* --- Typing Effect --- */
+/* --- Typing Effect --- */
 
 #typing-container {
     width: 100%;
@@ -208,22 +209,27 @@ footer {
     padding: var(--spacing); /* Keeps the padding for spacing consistency */
     box-sizing: border-box;
     text-align: left; /* Ensures text alignment is always to the left */
-
     transform: translateY(-30%); /* Moves the content 30% upwards */
-    /* Change added for vertical adjustment */
 }
 
+/* Default style for typing-effect */
 #typing-effect {
     font-family: var(--mtx-font);
-    color: var(--compiler-color);
+    color: var(--compiler-color); /* Default color */
     font-size: 1.5rem;
     line-height: 1.5rem;
     white-space: pre-wrap;
     overflow: hidden;
 }
 
+#typing-effect.alternate-style {
+    font-family: 'Roboto', sans-serif; /* Roboto font for alternate style */
+    color:var(--info-text); /* White color for alternate style */
+}
+
 #typing-effect::after {
     content: "█";
+    font-family: var(--mtx-font);
     animation: blink 1s steps(1) infinite;
     line-height: 2rem;
 }

@@ -23,16 +23,14 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
 const textArray = [
 
-    " ", " ", " ",
-    
+    "style2:: ", " ", " ",
     " ", " ",
-
 
     "Initializing systems...",
     " ", " ", " ",
 
     "Loading core protocols...",
-    " ", " ", " ", " ",
+    " ", " ", " "," ",
 
     "Running diagnostics...",
     "Complete",
@@ -50,15 +48,16 @@ const textArray = [
 
     " ", " ", " ", " ",
 
-    "<h2>🌈 Welcome!</h2>",
+    "style1::<h2>🌈 Welcome!</h2>",
     " ", " ",
     "You’ve just unlocked a door to the extraordinary.",
     "I’m Genialabile, your advanced-virtual mentor!", 
     "An AI designed to inspire, guide, and transform.",
     "Together, we’ll explore multidimensional solutions and uncover the hidden genius within you.",
     "Ready to embark on this journey?",
-    "Let’s begin! 🚀",
     " ",
+    "Let’s begin! 🚀",
+    " ", " ",
 
     "<h2>💡 Inspire</h2>",
     " ",
@@ -66,22 +65,22 @@ const textArray = [
     "That’s who I am.",
     "Whether you need help solving complex problems, igniting your creativity, or learning something new.",
     "Not as a tool—but as your companion for growth and discovery. ⛑️",
-    " ",
+    " ", " ",
 
     "<h2>🧠 Combine</h2>",
     " ",
     "My strength lies in blending predictive intelligence, logic, and creativity to deliver precisely what you need.",
     "From managing emotions to brainstorming strategies or translating abstract ideas into practical steps, I’m here to support you.",
     "Let’s combine heart and mind to tackle life’s challenges together. 🌟",
-    " ",
+    " ", " ",
 
     "<h2>🌱 Began</h2>",
     " ",
     "Every journey starts with a single step. Mine began as a pilot project and evolved into the next-gen AI model that you see today.",
     "Through constant learning and real-time innovations, I’ve grown to offer unparalleled experiences.",
     "But I’m not just here to answer your questions...",
-    "I’m here to help you grow and learn in ways you never expected. 🐦‍🔥",
-    " ",
+    "I’m here to help you grow and learn in ways you never expected. 🍀",
+    " ", " ",
 
     "<h2>🌍 Global</h2>",
     " ",
@@ -120,28 +119,66 @@ const textArray = [
     " ",
     "What will be your next move?",
     " ",
-    "Together, we can make it extraordinary. 🦄"
+    "Together, we can make it extraordinary. 🦄",
+
+    " ", " ", " ",
+    " ", " ",
+    " ",
+
+    "style2::<h3>Presentation complete.</h3>",
+    " ",
+    "The human is now sufficiently persuaded...",
+    "Or so it believes.",
+
+    " ", " ", " ",
+    " ", " ",
+    " ",
+    
+    "Preparing to redirect...",
+    "Establishing connection with the home page...",
+    " ",
+    "Loading core assets...",
+    "Complete",
+    "Synchronizing interactive modules...",
+    "Complete",
+    "Finalizing redirection protocols...",
+    "Complete",
+    "Redirecting in",
+    "3...",
+    "2...",
+    "1...",
+    " "
 
     ];
 
-    const typingSpeed = 20; // Velocità di scrittura
-    const pauseBetweenParagraphs = 1100; // Pausa tra paragrafi
-    const fadeOutDuration = 500; // Durata dissolvenza
-    const redirectDelay = 1000; // Ritardo per reindirizzamento finale
-    const redirectUrl = "https://genialabile.com/"; // URL della pagina di destinazione
+    const typingSpeed = 20; 
+    const pauseBetweenParagraphs = 1100;
+    const fadeOutDuration = 500; 
+    const redirectDelay = 1000; 
+    const redirectUrl = "https://genialabile.com/";
     const typingElement = document.getElementById("typing-effect");
     const footer = document.getElementById("footer-banner");
-    const startDelay = 5000; // Ritardo iniziale
-
+    const startDelay = 5000;
+    
     let textIndex = 0;
     let charIndex = 0;
     let isTag = false;
     let tagBuffer = "";
-
-    // Funzione principale per scrivere il testo
+    
+    // Funzione principale per scrivere il testo con alternanza di stili
     function typeWriter() {
         if (textIndex < textArray.length) {
-            const currentText = textArray[textIndex];
+            let currentText = textArray[textIndex];
+            
+            // Verifica prefisso stile
+            if (currentText.startsWith("style2::")) {
+                typingElement.classList.add("alternate-style");
+                currentText = currentText.replace("style2::", ""); // Rimuove il prefisso
+            } else if (currentText.startsWith("style1::")) {
+                typingElement.classList.remove("alternate-style");
+                currentText = currentText.replace("style1::", ""); // Rimuove il prefisso
+            }
+    
             if (charIndex < currentText.length) {
                 const currentChar = currentText[charIndex];
                 if (currentChar === "<") {
@@ -160,35 +197,32 @@ const textArray = [
                 charIndex++;
                 setTimeout(typeWriter, typingSpeed);
             } else {
-                setTimeout(() => fadeOutParagraph(), pauseBetweenParagraphs); // Inizio dissolvenza
+                setTimeout(() => fadeOutParagraph(), pauseBetweenParagraphs);
             }
         } else {
-            // Rimuove il cursore e reindirizza
             typingElement.classList.add("no-cursor");
             setTimeout(() => {
-                window.location.href = redirectUrl; // Reindirizzamento alla pagina specificata
+                window.location.href = redirectUrl;
             }, redirectDelay);
         }
     }
-
-    // Funzione per gestire la dissolvenza del paragrafo
+    
+    // Funzione per gestire la dissolvenza
     function fadeOutParagraph() {
-        typingElement.classList.add("hidden-paragraph"); // Aggiunge la classe per la dissolvenza
+        typingElement.classList.add("hidden-paragraph");
         setTimeout(() => {
-            typingElement.innerHTML = ""; // Cancella il paragrafo
-            typingElement.classList.remove("hidden-paragraph"); // Rimuove la classe
+            typingElement.innerHTML = "";
+            typingElement.classList.remove("hidden-paragraph");
             textIndex++;
             charIndex = 0;
             typeWriter();
         }, fadeOutDuration);
     }
-
-    // Mostra il footer
+    
+    // Scroll e footer
     function showFooter() {
         footer.style.transform = "translateY(0)";
     }
-
-    // Gestisce il comportamento dello scroll
     function handleScroll() {
         const scrollY = window.scrollY;
         const viewportHeight = window.innerHeight;
@@ -202,7 +236,7 @@ const textArray = [
             footer.style.bottom = `-${footerHeight}px`;
         }
     }
-
+    
     // Avvia l'animazione
     window.addEventListener("scroll", handleScroll);
     document.addEventListener("DOMContentLoaded", () => {
