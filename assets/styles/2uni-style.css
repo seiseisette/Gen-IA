@@ -197,26 +197,11 @@ footer {
 /* --- Typing Effect --- */
 
 
-<<<<<<< HEAD
-/* back up typing effect DO NOT DELETE
-#typing-container {
-    width: 100%;
-    margin: 0 auto;
-    padding: var(--spacing); /* Mantiene il padding coerente *
-    box-sizing: border-box; /* Garantisce che il padding non venga ignorato *
-}
--- do not remove this comment section // BACKUP END */
-=======
->>>>>>> ppa-back1
 
 
 #typing-container {
     width: 100%;
-<<<<<<< HEAD
-    max-width: 1200px; 
-=======
     max-width: 1200px;
->>>>>>> ppa-back1
     margin: 0 auto;
     padding: var(--spacing);
     box-sizing: border-box;
@@ -225,11 +210,7 @@ footer {
 
 #typing-effect {
     font-family: var(--mtx-font);
-<<<<<<< HEAD
-    color: var(--info-text); /* Explicit for readability */
-=======
     color: var(--info-text);
->>>>>>> ppa-back1
     font-size: 1.5rem;
     line-height: 1.5rem;
     white-space: pre-wrap;
@@ -254,61 +235,6 @@ footer {
 
 
 
-<<<<<<< HEAD
-/*BACKUP START // do not remove this comment section
-#typing-container {
-    width: 100%;
-    margin: 0 auto;
-    padding: var(--spacing);
-    box-sizing: border-box;
-    text-align: center;
-    background-color: transparent; /* Lascia trasparente *
-    color: var(--power-color);
-}
-
-#typing-effect {
-    font-family: var(--mtx-font);
-    color: var(--power-color); /* Explicit for readability *
-    font-size: 1.5rem;
-    line-height: 2rem;
-    white-space: pre-wrap;
-    overflow: hidden;
-    transition: opacity 0.9s ease-out; /* Aggiunto per la dissolvenza *
-
-    align-items: center;
-    border: 2px dashed red; /* Aggiungi un bordo per visualizzare l'area *
-    color: white; /* Colore visibile temporaneamente *
-    opacity: 1; /* Assicurati che sia visibile *
-}
-
-
-.hidden-paragraph {
-    opacity: 0;
-    transition: opacity 0.5s ease-in; /* Effetto dissolvenza in *
-}
-
-#typing-effect::after {
-    content: "█";
-
-    font-size: 3rem;
-    animation: blink 1s steps(1) infinite;
-}
-
-.no-cursor::after {
-    content: "";
-    animation: none;
-}
-
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
-}
--- do not remove this comment section // BACKUP END */
-
-
-=======
->>>>>>> ppa-back1
 
 /* --- Cards --- */
 .card {
@@ -361,7 +287,7 @@ footer {
     overflow: hidden; */
     visibility: hidden;
     color: var(--info-bg);
-
+    background-color: var(--bg-color);
 }
 
 /* --- Responsive Design --- */
