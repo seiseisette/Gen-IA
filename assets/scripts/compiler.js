@@ -23,7 +23,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
 const textArray = [
 
-    "style1:: ",
+    "style1::",
 
     "", "",
     "",
@@ -136,7 +136,7 @@ const textArray = [
     "The human is now sufficiently persuaded...",
     "Or so it believes. ;)",
 
-    "", "", "" ,
+    "", "", "",
     "", "",
     "",
     
@@ -156,111 +156,126 @@ const textArray = [
 
     ];
 
-const typingSpeed = 20; 
-const pauseBetweenParagraphs = 1600;
-const fadeOutDuration = 500; 
-const redirectDelay = 500; 
-const redirectUrl = "https://genialabile.com/";
-const typingElement = document.getElementById("typing-effect");
-const footer = document.getElementById("footer-banner");
-const startDelay = 5000;
-
-let textIndex = 0;
-let charIndex = 0;
-let isTag = false;
-let tagBuffer = "";
-let currentStyle = "style1"; // Stile predefinito
-
-// Funzione principale per scrivere il testo con alternanza di stili
-function typeWriter() {
-    if (textIndex < textArray.length) {
-        let currentText = textArray[textIndex];
-        
-        // Controlla il prefisso dello stile e aggiorna currentStyle
-        if (currentText.startsWith("style2::")) {
-            typingElement.classList.add("alternate-style"); // Applica stile alternato
-            currentStyle = "style2";
-            currentText = currentText.replace("style2::", ""); // Rimuove il prefisso
-        } else if (currentText.startsWith("style1::")) {
-            typingElement.classList.remove("alternate-style"); // Rimuove stile alternato
-            currentStyle = "style1";
-            currentText = currentText.replace("style1::", ""); // Rimuove il prefisso
-        } else {
-            // Mantieni lo stile corrente
-            if (currentStyle === "style2") {
-                typingElement.classList.add("alternate-style");
-            } else if (currentStyle === "style1") {
-                typingElement.classList.remove("alternate-style");
-            }
+    const typingSpeed = 20; 
+    const pauseBetweenParagraphs = 1600;
+    const fadeOutDuration = 500; 
+    const redirectDelay = 500; 
+    const redirectUrl = "https://genialabile.com/";
+    const typingElement = document.getElementById("typing-effect");
+    const footer = document.getElementById("footer-banner");
+    const startDelay = 5000;
+    
+    let textIndex = 0;
+    let charIndex = 0;
+    let isTag = false;
+    let tagBuffer = "";
+    let currentStyle = "style1"; // Stile predefinito
+    
+    // Funzione principale per scrivere il testo con alternanza di stili
+    function typeWriter() {
+        if (!typingElement) {
+            console.error("Elemento 'typing-effect' non trovato!");
+            return;
         }
-
-        if (charIndex < currentText.length) {
-            const currentChar = currentText[charIndex];
-            if (currentChar === "<") {
-                isTag = true;
-                tagBuffer = currentChar;
-            } else if (currentChar === ">" && isTag) {
-                isTag = false;
-                tagBuffer += currentChar;
-                typingElement.innerHTML += tagBuffer;
-                tagBuffer = "";
-            } else if (isTag) {
-                tagBuffer += currentChar;
+    
+        if (textIndex < textArray.length) {
+            let currentText = textArray[textIndex];
+            console.log(`Scrivendo testo: ${currentText}`); // Debug
+    
+            // Controlla il prefisso dello stile e aggiorna currentStyle
+            if (currentText.startsWith("style2::")) {
+                typingElement.classList.add("alternate-style"); // Applica stile alternato
+                currentStyle = "style2";
+                currentText = currentText.replace("style2::", ""); // Rimuove il prefisso
+            } else if (currentText.startsWith("style1::")) {
+                typingElement.classList.remove("alternate-style"); // Rimuove stile alternato
+                currentStyle = "style1";
+                currentText = currentText.replace("style1::", ""); // Rimuove il prefisso
             } else {
-                typingElement.innerHTML += currentChar;
+                // Mantieni lo stile corrente
+                if (currentStyle === "style2") {
+                    typingElement.classList.add("alternate-style");
+                } else if (currentStyle === "style1") {
+                    typingElement.classList.remove("alternate-style");
+                }
             }
-            charIndex++;
-            setTimeout(typeWriter, typingSpeed);
+    
+            if (charIndex < currentText.length) {
+                const currentChar = currentText[charIndex];
+                if (currentChar === "<") {
+                    isTag = true;
+                    tagBuffer = currentChar;
+                } else if (currentChar === ">" && isTag) {
+                    isTag = false;
+                    tagBuffer += currentChar;
+                    typingElement.innerHTML += tagBuffer;
+                    tagBuffer = "";
+                } else if (isTag) {
+                    tagBuffer += currentChar;
+                } else {
+                    typingElement.innerHTML += currentChar;
+                }
+                charIndex++;
+                setTimeout(typeWriter, typingSpeed);
+            } else {
+                console.log("Paragrafo completato."); // Debug
+                setTimeout(() => fadeOutParagraph(), pauseBetweenParagraphs);
+            }
         } else {
-            setTimeout(() => fadeOutParagraph(), pauseBetweenParagraphs);
+            console.log("Animazione completata."); // Debug
+            typingElement.classList.add("no-cursor");
+            setTimeout(() => {
+                window.location.href = redirectUrl;
+            }, redirectDelay);
         }
-    } else {
-        typingElement.classList.add("no-cursor");
+    }
+    
+    // Funzione per gestire la dissolvenza del paragrafo
+    function fadeOutParagraph() {
+        console.log("Avvio dissolvenza del paragrafo..."); // Debug
+        typingElement.classList.add("hidden-paragraph");
         setTimeout(() => {
-            window.location.href = redirectUrl;
-        }, redirectDelay);
+            typingElement.innerHTML = "";
+            typingElement.classList.remove("hidden-paragraph");
+            textIndex++;
+            charIndex = 0;
+            typeWriter();
+        }, fadeOutDuration);
     }
-}
-
-// Funzione per gestire la dissolvenza del paragrafo
-function fadeOutParagraph() {
-    if (currentStyle === "style2") {
-        typingElement.innerHTML += ""; //RIMOSSO PER ORA/ Aggiunge uno spazio extra per lo style2
+    
+    // Scroll e footer
+    function showFooter() {
+        footer.style.transform = "translateY(0)";
     }
-
-    typingElement.classList.add("hidden-paragraph");
-    setTimeout(() => {
-        typingElement.innerHTML = "";
-        typingElement.classList.remove("hidden-paragraph");
-        textIndex++;
-        charIndex = 0;
-        typeWriter();
-    }, fadeOutDuration);
-}
-
-// Scroll e footer
-function showFooter() {
-    footer.style.transform = "translateY(0)";
-}
-
-function handleScroll() {
-    const scrollY = window.scrollY;
-    const viewportHeight = window.innerHeight;
-    const documentHeight = document.body.offsetHeight;
-    const footerHeight = footer.offsetHeight;
-    if (scrollY + viewportHeight >= documentHeight - footerHeight) {
-        footer.style.position = "fixed";
-        footer.style.bottom = "0";
-    } else {
-        footer.style.position = "absolute";
-        footer.style.bottom = -${footerHeight}px;
+    
+    function handleScroll() {
+        if (!footer) {
+            console.error("Elemento 'footer-banner' non trovato!");
+            return;
+        }
+    
+        const scrollY = window.scrollY;
+        const viewportHeight = window.innerHeight;
+        const documentHeight = document.body.offsetHeight;
+        const footerHeight = footer.offsetHeight;
+        if (scrollY + viewportHeight >= documentHeight - footerHeight) {
+            footer.style.position = "fixed";
+            footer.style.bottom = "0";
+        } else {
+            footer.style.position = "absolute";
+            footer.style.bottom = `-${footerHeight}px`;
+        }
     }
-}
-
-// Avvia l'animazione
-window.addEventListener("scroll", handleScroll);
-document.addEventListener("DOMContentLoaded", () => {
-    setTimeout(() => {
-        typeWriter();
-    }, startDelay);
-});
+    
+    // Avvia l'animazione
+    window.addEventListener("scroll", handleScroll);
+    document.addEventListener("DOMContentLoaded", () => {
+        console.log("Pagina caricata. Inizio animazione dopo ritardo."); // Debug
+        setTimeout(() => {
+            if (typingElement) {
+                typeWriter();
+            } else {
+                console.error("Elemento 'typing-effect' non trovato!");
+            }
+        }, startDelay);
+    });
