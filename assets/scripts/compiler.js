@@ -23,8 +23,10 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
 const textArray = [
 
-    "style1:: ", " ", " ",
+    "style1:: ",
+
     " ", " ",
+    " ",
 
     "Initializing systems...",
     " ", " ", " ",
@@ -44,9 +46,11 @@ const textArray = [
     "Complete",
     "Checking security protocols...",
     "Complete",
+    " ",
     "Systems online.",
+    "Loading interface...",
 
-    " ", " ", " ", " ",
+    " ", " "," ", " ",
 
     "style2::<h2>🌈 Welcome!</h2>",
     " ", " ",
@@ -143,18 +147,17 @@ const textArray = [
     "Complete",
     "Finalizing redirection protocols...",
     "Complete",
-    "Redirecting in",
+    "Redirecting in:",
     "3...",
     "2...",
     "1...",
-    " "
 
     ];
 
     const typingSpeed = 20; 
-    const pauseBetweenParagraphs = 1100;
+    const pauseBetweenParagraphs = 1300;
     const fadeOutDuration = 500; 
-    const redirectDelay = 1000; 
+    const redirectDelay = 500; 
     const redirectUrl = "https://genialabile.com/";
     const typingElement = document.getElementById("typing-effect");
     const footer = document.getElementById("footer-banner");
