@@ -134,34 +134,14 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 </p>
             </div>
         </main>
-        <!-- TRICK -->
-            <div id="footer-banner">
-                <div id="footer-content"></div>
-            </div>
-        <!-- TRICK -->
-        <footer>
-            <!-- footer.html -->  
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    fetch('https://genialabile.com/2footer.html')
-                        .then(response => response.text())
-                        .then(data => {
-                            const footerContent = document.getElementById('footer-content');
-                            footerContent.innerHTML = data;
-                        })
-                        .catch(error => console.error('Errore nel caricamento del footer-banner:', error));
-                    document.addEventListener("DOMContentLoaded", () => {
-                        console.log("Pagina caricata, ritardo di avvio in corso...");
-                        setTimeout(() => {
-                            console.log("Avvio dell'animazione dopo il ritardo.");
-                            typeWriter();
-                        }, startDelay);
-                    });
-                });
-            </script>
-            <!-- footer.html -->  
-        </footer>
-        <!-- FADE --> 
+
+        <!-- Footer Banner Style -->
+        <div id="footer-banner">
+            <div id="footer-content"></div>
+            <footer></footer>
+        </div>
+        
+        <!-- FADE Effect -->
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 setTimeout(function () {
@@ -169,6 +149,5 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 }, 2000);
             });
         </script>
-        <!-- FADE -->
     </body>
 </html>
