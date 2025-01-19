@@ -204,12 +204,12 @@ footer {
     padding: var(--spacing); /* Mantiene il padding coerente *
     box-sizing: border-box; /* Garantisce che il padding non venga ignorato *
 }
--- do not remove this comment section // BACKUP END */
+-- do not remove this comment section // BACKUP END 
 
 
 #typing-container {
     width: 100%;
-   /* max-width: 1200px;  FAILED TEST */ 
+   /* max-width: 1200px;  FAILED TEST 
     margin: 0 auto;
     padding: var(--spacing);
     box-sizing: border-box;
@@ -218,7 +218,7 @@ footer {
 
 #typing-effect {
     font-family: var(--mtx-font);
-    color: var(--info-text); /* Explicit for readability */
+    color: var(--info-text); /* Explicit for readability 
     font-size: 1.5rem;
     line-height: 1.5rem;
     white-space: pre-wrap;
@@ -227,6 +227,55 @@ footer {
 
 #typing-effect::after {
     content: "█";
+    animation: blink 1s steps(1) infinite;
+}
+
+.no-cursor::after {
+    content: "";
+    animation: none;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+-- do not remove this comment section // BACKUP END */
+
+#typing-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 150%;
+    box-sizing: border-box;
+    
+    align-content: center;
+    
+}
+
+#typing-effect {
+    font-family: var(--mtx-font);
+    color: var(--info-text); /* Explicit for readability */
+    font-size: 1.5rem;
+    line-height: 2rem;
+    white-space: pre-wrap;
+    overflow: hidden;
+    transition: opacity 0.9s ease-out; /* Aggiunto per la dissolvenza */
+
+    align-items: center;
+}
+
+.hidden-paragraph {
+    opacity: 0;
+    transition: opacity 0.5s ease-in; /* Effetto dissolvenza in */
+}
+
+#typing-effect::after {
+    content: "█";
+    font-family: var(--mtx-font);
+    color: var(--info-text); /* Explicit for readability */
+    font-size: 3rem;
     animation: blink 1s steps(1) infinite;
 }
 
