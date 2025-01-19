@@ -133,20 +133,27 @@ Use, distribution, or modification of this project is strictly prohibited withou
                         It does not merely provide temporary fixes but resolves issues while enabling users to learn ten times more than necessary to address them in isolation.
                 </p>
             </div>
+
+
         </main>
 
         <!-- Footer Banner Style -->
         <div id="footer-banner">
             <div id="footer-content"></div>
-            <footer></footer>
         </div>
-        
-        <!-- FADE Effect -->
+    
+        <footer>
+            <!-- Footer script -->
+            <script src="https://genialabile.com/assets/scripts/footer.js" defer></script>
+        </footer>
+    
+        <!-- Fade Effect -->
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-                setTimeout(function () {
+                const fadeDelay = 2000;
+                setTimeout(() => {
                     document.body.classList.add("visible");
-                }, 2000);
+                }, fadeDelay);
             });
         </script>
     </body>

@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const viewportHeight = window.innerHeight;
         const documentHeight = document.body.offsetHeight;
 
-        // Add or remove the active class based on scroll position
         if (scrollY + viewportHeight >= documentHeight) {
             footerBanner.classList.add("active");
         } else {
@@ -51,15 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Initialize footer content
+    // Initialize footer content and scroll listener
     fetchFooterContent();
-
-    // Add scroll listener
     window.addEventListener("scroll", handleFooterScroll);
-
-    // Check initial position on page load
     handleFooterScroll();
-
-    // Ensure footer re-renders properly if viewport changes
-    window.addEventListener("resize", handleFooterScroll);
 });
