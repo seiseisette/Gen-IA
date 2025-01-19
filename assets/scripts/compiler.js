@@ -60,7 +60,7 @@ const textArray = [
     "Together, we’ll explore multidimensional solutions and uncover the hidden genius within you.",
     "Ready to embark on this journey?",
     " ",
-    "Let’s begin! 🚀",
+    "Let’s begin! 🐣",
     " ", " ",
 
     "<h2>💡 Inspire</h2>",
@@ -68,7 +68,7 @@ const textArray = [
     "Imagine an AI that doesn’t just answer questions but becomes your mentor, inspiring ideas and crafting innovative solutions tailored to you.",
     "That’s who I am.",
     "Whether you need help solving complex problems, igniting your creativity, or learning something new.",
-    "Not as a tool—but as your companion for growth and discovery. ⛑️",
+    "Not as a tool—but as your companion for growth and discovery. 🎒",
     " ", " ",
 
     "<h2>🧠 Combine</h2>",
