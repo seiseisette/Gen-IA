@@ -43,8 +43,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
     --box-shadow: 0 -2px 10px #24242424;
 
     --spacing: 2rem;
-    --std-font: 'Roboto', sans-serif;
-    --mtx-font: 'Inconsolata', monospace;
+    --std-font:"Roboto", sans-serif;
+    --mtx-font: "Inconsolata", monospace;
     --font-size: 16px;
     --foot-margin: 1rem;
    
@@ -247,8 +247,6 @@ footer {
 
 .alternate-style::after {
     content: "|";
-
-    text-align: left; /* Ensures text alignment is always to the left */
     color: var(--compiler2-color); /* White cursor */
     animation: blink-fast 0.5s steps(1) infinite; /* Faster blinking cursor */
     line-height: 2rem;
