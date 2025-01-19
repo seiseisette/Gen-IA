@@ -228,6 +228,16 @@ const textArray = [
                         span.classList.add("fading-text"); // Applica classe di sfumatura
                     }
                     activeText.appendChild(span);
+    
+                    // Rimuovi gradualmente la sfumatura per il testo precedente
+                    if (currentStyle === "style2") {
+                        const fadingTexts = activeText.querySelectorAll(".fading-text");
+                        fadingTexts.forEach((el, index) => {
+                            if (index < fadingTexts.length - 10) {
+                                el.classList.remove("fading-text");
+                            }
+                        });
+                    }
                 }
     
                 charIndex++;
@@ -236,6 +246,7 @@ const textArray = [
                 // Sposta il testo attivo nella parte completata
                 completedText.innerHTML += activeText.innerHTML;
                 activeText.innerHTML = "";
+                charIndex = 0; // Reset indice per la nuova frase
     
                 setTimeout(() => fadeOutParagraph(), pauseBetweenParagraphs);
             }
@@ -250,7 +261,7 @@ const textArray = [
     // Funzione per gestire la dissolvenza
     function fadeOutParagraph() {
         if (currentStyle === "style2") {
-            typingElement.querySelector(".completed-text").innerHTML += "\u00A0"; // Aggiunge uno spazio extra per lo style2
+            typingElement.querySelector(".completed-text").innerHTML += ""; // Aggiunge uno spazio extra per lo style2
         }
     
         typingElement.classList.add("hidden-paragraph");

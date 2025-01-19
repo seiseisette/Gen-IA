@@ -265,6 +265,12 @@ footer {
 }
 
 /* --- Style for gradual fade --- */
+
+.emoji-support {
+    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+}
+
+
 .fade-text {
     background: linear-gradient(90deg, #f4f4f4 90%, #00ff0033);
     -webkit-background-clip: text;
