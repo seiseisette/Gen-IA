@@ -194,6 +194,20 @@ function typeWriter() {
             }
         }
 
+        // Suddividi il contenitore per "testo completato" e "testo attivo"
+        const completedText = typingElement.querySelector(".completed-text") || document.createElement("span");
+        completedText.className = "completed-text";
+        const activeText = typingElement.querySelector(".active-text") || document.createElement("span");
+        activeText.className = "active-text";
+
+        // Assicurati che i contenitori siano presenti
+        if (!typingElement.contains(completedText)) {
+            typingElement.appendChild(completedText);
+        }
+        if (!typingElement.contains(activeText)) {
+            typingElement.appendChild(activeText);
+        }
+
         if (charIndex < currentText.length) {
             const currentChar = currentText[charIndex];
             if (currentChar === "<") {
@@ -202,25 +216,29 @@ function typeWriter() {
             } else if (currentChar === ">" && isTag) {
                 isTag = false;
                 tagBuffer += currentChar;
-                typingElement.innerHTML += tagBuffer;
+                activeText.innerHTML += tagBuffer;
                 tagBuffer = "";
             } else if (isTag) {
                 tagBuffer += currentChar;
             } else {
-                typingElement.innerHTML += currentChar;
+                activeText.innerHTML += currentChar;
             }
 
-            // Applica l'effetto di sfumatura per lo style2
+            // Aggiorna la sfumatura per il testo attivo (solo style2)
             if (currentStyle === "style2") {
                 const percentage = Math.min((charIndex / currentText.length) * 100, 100);
-                typingElement.style.background = `linear-gradient(90deg, rgba(255, 255, 255, 1) ${percentage}%, rgba(255, 255, 255, 0.2) ${percentage + 10}%)`;
-                typingElement.style["-webkit-background-clip"] = "text";
-                typingElement.style["-webkit-text-fill-color"] = "transparent";
+                activeText.style.background = `linear-gradient(90deg, rgba(255, 255, 255, 0.2) ${percentage}%, rgba(255, 255, 255, 1) 100%)`;
+                activeText.style["-webkit-background-clip"] = "text";
+                activeText.style["-webkit-text-fill-color"] = "transparent";
             }
 
             charIndex++;
             setTimeout(typeWriter, typingSpeed);
         } else {
+            // Sposta il testo attivo nella parte completata
+            completedText.innerHTML += activeText.innerHTML;
+            activeText.innerHTML = "";
+
             setTimeout(() => fadeOutParagraph(), pauseBetweenParagraphs);
         }
     } else {
@@ -234,8 +252,7 @@ function typeWriter() {
 // Funzione per gestire la dissolvenza del paragrafo
 function fadeOutParagraph() {
     if (currentStyle === "style2") {
-        typingElement.innerHTML += "";
-        //// &nbsp; |   \u00A0 | Aggiunge uno spazio extra per lo style2 Aggiunge uno spazio extra per lo style2
+        typingElement.querySelector(".completed-text").innerHTML += "\u00A0"; // Aggiunge uno spazio extra per lo style2
     }
 
     typingElement.classList.add("hidden-paragraph");
