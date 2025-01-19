@@ -260,7 +260,7 @@ footer {
 }
 /* --- Style for gradual fade --- */
 .fade-text {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0.2));
+    background: linear-gradient(90deg, #f4f4f4 90%, #00ff0033);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: background 0.2s ease-in-out; /* Smooth transition for fade | */
