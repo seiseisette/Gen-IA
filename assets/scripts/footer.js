@@ -19,7 +19,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 # Version: v3.2 COMPILER (160125)
 # URL: https://genialabile.com/assets/scripts/footer.js
 ===============================================================================
-*/
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const footerBanner = document.getElementById("footer-banner");
@@ -54,4 +54,41 @@ document.addEventListener("DOMContentLoaded", function () {
     fetchFooterContent();
     window.addEventListener("scroll", handleFooterScroll);
     handleFooterScroll();
+});
+
+
+*/
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const footerBanner = document.getElementById("footer-banner");
+    let lastScrollY = window.scrollY;
+
+    function handleFooterVisibility() {
+        const scrollY = window.scrollY;
+        const viewportHeight = window.innerHeight;
+        const documentHeight = document.body.offsetHeight;
+
+        // Scrolling down: footer appears only at the bottom
+        if (scrollY + viewportHeight >= documentHeight) {
+            footerBanner.classList.add("active");
+        } 
+        // Scrolling up: footer hides
+        else if (scrollY < lastScrollY) {
+            footerBanner.classList.remove("active");
+        }
+
+        // Update last scroll position
+        lastScrollY = scrollY;
+    }
+
+    // Add scroll listener
+    window.addEventListener("scroll", handleFooterVisibility);
+
+    // Check initial position on page load
+    handleFooterVisibility();
+
+    // Ensure footer re-renders properly if viewport changes
+    window.addEventListener("resize", handleFooterVisibility);
 });
