@@ -128,7 +128,7 @@ const textArray = [
     "style2::<h3>Presentation complete.</h3>",
     " ",
     "The human is now sufficiently persuaded...",
-    "Or so it believes.",
+    "Or so it believes. ;)",
 
     " ", " ", " ",
     " ", " ",
