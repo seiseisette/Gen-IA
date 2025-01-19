@@ -186,16 +186,14 @@ function typeWriter() {
         return;
     }
 
-    // =====================================================================
     // Add fixed height to the container to prevent text jumping
     typingElement.style.height = `${typingElement.offsetHeight}px`;
-    // =====================================================================
 
     if (textIndex < textArray.length) {
         let currentText = textArray[textIndex];
         console.log(`Typing text: ${currentText}`); // Debug
 
-        // Check the style prefix and update currentStyle
+        // Check the style prefix and update the current style
         if (currentText.startsWith("style2::")) {
             typingElement.classList.add("alternate-style"); // Apply alternate style
             currentStyle = "style2";
@@ -256,11 +254,12 @@ function fadeOutParagraph() {
     }, fadeOutDuration);
 }
 
-// Scroll and footer functionality
+// Function to show footer
 function showFooter() {
     footer.style.transform = "translateY(0)";
 }
 
+// Function to handle scroll behavior and footer positioning
 function handleScroll() {
     if (!footer) {
         console.error("Element 'footer-banner' not found!");
@@ -280,7 +279,7 @@ function handleScroll() {
     }
 }
 
-// Start the animation
+// Start the typing animation after the page loads
 window.addEventListener("scroll", handleScroll);
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Page loaded. Starting compiler."); // Debug
