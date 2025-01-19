@@ -25,7 +25,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 :root {
     --bg-color: #000000;
     --info-bg: #000000;
-    --info-text: #eafba2; /* Temporary debug color for titles */
+    --info-text: #f4f4f4; /* Temporary debug color for titles */
     --borders: #000000;
     --posts: #ffffff;
     --spacing: 2rem;
@@ -196,7 +196,6 @@ footer {
 }
 
 
-/* --- Typing Effect --- */
 /* --- Typing Effect --- */
 
 #typing-container {
