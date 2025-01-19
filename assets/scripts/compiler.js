@@ -23,9 +23,9 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
 const textArray = [
 
-    "style1:: ",
+    "style1::",
 
-    " ", " ",
+    "", " ",
     " ",
 
     "Initializing systems...",

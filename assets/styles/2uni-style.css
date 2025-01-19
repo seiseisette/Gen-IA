@@ -251,12 +251,11 @@ footer {
 }
 
 .alternate-style::after {
-    content: "◉" !important; /* White cursor */
+    content: " " !important; /* White cursor */
     font-family: var(--std-font) !important;
     color: var(--compiler2-color) !important; /* White cursor */
-    font-size: 0.9rem;
-    animation: blink-fast 3s steps(1) infinite; /* Faster blinking cursor */
-    line-height: 2rem;
+    animation: blink-fast 0.5s steps(1) infinite !important; /* Faster blinking cursor */
+    line-height: 2rem !important;
 }
 
 .no-cursor::after {
