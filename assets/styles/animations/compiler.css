@@ -80,9 +80,9 @@ overflow: hidden;
     content: "█";
     font-family: var(--mtx-font);
     color: var(--compiler1-color);
+    text-align: left; /* Ensures text alignment is always to the left */
     animation: blink 1s steps(1) infinite;
     line-height: 2rem;
-    vertical-align: middle;
 }
 
 /* Typing Effect - Style2 */
@@ -100,12 +100,11 @@ overflow: hidden;
 }
 
 .alternate-style::after {
-    content: "█";
-    font-family: var(--mtx-font);
-    color: var(--bg-color) !important;
-    animation: blink 0.5s steps(1) infinite;
-    line-height: 2rem;
-    vertical-align: middle;
+    content: "" !important; /* White cursor */
+    font-family: var(--std-font) !important;
+    color: var(--compiler2-color) !important; /* White cursor */
+    animation: blink-fast 0.5s steps(1) infinite !important; /* Faster blinking cursor */
+    line-height: 2rem !important;
 }
 
 /* No Cursor Style */

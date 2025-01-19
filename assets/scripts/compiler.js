@@ -164,130 +164,111 @@ const textArray = [
 
     ];
 
-const typingSpeed = 20; 
-const pauseBetweenParagraphs = 1600;
-const fadeOutDuration = 500; 
-const redirectDelay = 300; 
-const redirectUrl = "https://genialabile.com/";
-const typingElement = document.getElementById("typing-effect");
-const footer = document.getElementById("footer-banner");
-const startDelay = 5000;
-
-let textIndex = 0;
-let charIndex = 0;
-let isTag = false;
-let tagBuffer = "";
-let currentStyle = "style1"; // Default style
-
-// Main function for typing text with alternating styles
-function typeWriter() {
-    if (!typingElement) {
-        console.error("Element 'typing-effect' not found!");
-        return;
-    }
-
-    // Add fixed height to the container to prevent text jumping
-    typingElement.style.height = `${typingElement.offsetHeight}px`;
-
-    if (textIndex < textArray.length) {
-        let currentText = textArray[textIndex];
-        console.log(`Typing text: ${currentText}`); // Debug
-
-        // Check the style prefix and update the current style
-        if (currentText.startsWith("style2::")) {
-            typingElement.classList.add("alternate-style"); // Apply alternate style
-            currentStyle = "style2";
-            currentText = currentText.replace("style2::", ""); // Remove the prefix
-        } else if (currentText.startsWith("style1::")) {
-            typingElement.classList.remove("alternate-style"); // Remove alternate style
-            currentStyle = "style1";
-            currentText = currentText.replace("style1::", ""); // Remove the prefix
-        } else {
-            // Retain the current style
-            if (currentStyle === "style2") {
-                typingElement.classList.add("alternate-style");
-            } else if (currentStyle === "style1") {
-                typingElement.classList.remove("alternate-style");
-            }
-        }
-
-        if (charIndex < currentText.length) {
-            const currentChar = currentText[charIndex];
-            if (currentChar === "<") {
-                isTag = true;
-                tagBuffer = currentChar;
-            } else if (currentChar === ">" && isTag) {
-                isTag = false;
-                tagBuffer += currentChar;
-                typingElement.innerHTML += tagBuffer;
-                tagBuffer = "";
-            } else if (isTag) {
-                tagBuffer += currentChar;
+    const typingSpeed = 20; 
+    const pauseBetweenParagraphs = 1600;
+    const fadeOutDuration = 500; 
+    const redirectDelay = 500; 
+    const redirectUrl = "https://genialabile.com/";
+    const typingElement = document.getElementById("typing-effect");
+    const footer = document.getElementById("footer-banner");
+    const startDelay = 5000;
+    
+    let textIndex = 0;
+    let charIndex = 0;
+    let isTag = false;
+    let tagBuffer = "";
+    let currentStyle = "style1"; // Stile predefinito
+    
+    // Funzione principale per scrivere il testo con alternanza di stili
+    function typeWriter() {
+        if (textIndex < textArray.length) {
+            let currentText = textArray[textIndex];
+            
+            // Controlla il prefisso dello stile e aggiorna `currentStyle`
+            if (currentText.startsWith("style2::")) {
+                typingElement.classList.add("alternate-style"); // Applica stile alternato
+                currentStyle = "style2";
+                currentText = currentText.replace("style2::", ""); // Rimuove il prefisso
+            } else if (currentText.startsWith("style1::")) {
+                typingElement.classList.remove("alternate-style"); // Rimuove stile alternato
+                currentStyle = "style1";
+                currentText = currentText.replace("style1::", ""); // Rimuove il prefisso
             } else {
-                typingElement.innerHTML += currentChar;
+                // Mantieni lo stile corrente
+                if (currentStyle === "style2") {
+                    typingElement.classList.add("alternate-style");
+                } else if (currentStyle === "style1") {
+                    typingElement.classList.remove("alternate-style");
+                }
             }
-            charIndex++;
-            setTimeout(typeWriter, typingSpeed);
+    
+            if (charIndex < currentText.length) {
+                const currentChar = currentText[charIndex];
+                if (currentChar === "<") {
+                    isTag = true;
+                    tagBuffer = currentChar;
+                } else if (currentChar === ">" && isTag) {
+                    isTag = false;
+                    tagBuffer += currentChar;
+                    typingElement.innerHTML += tagBuffer;
+                    tagBuffer = "";
+                } else if (isTag) {
+                    tagBuffer += currentChar;
+                } else {
+                    typingElement.innerHTML += currentChar;
+                }
+                charIndex++;
+                setTimeout(typeWriter, typingSpeed);
+            } else {
+                setTimeout(() => fadeOutParagraph(), pauseBetweenParagraphs);
+            }
         } else {
-            console.log("Paragraph completed."); // Debug
-            setTimeout(() => fadeOutParagraph(), pauseBetweenParagraphs);
+            typingElement.classList.add("no-cursor");
+            setTimeout(() => {
+                window.location.href = redirectUrl;
+            }, redirectDelay);
         }
-    } else {
-        console.log("Typing animation completed."); // Debug
-        typingElement.classList.add("no-cursor");
+    }
+    
+    // Funzione per gestire la dissolvenza del paragrafo
+    function fadeOutParagraph() {
+        if (currentStyle === "style2") {
+            typingElement.innerHTML += ""; // &nbsp; Aggiunge uno spazio extra per lo style2
+        }
+    
+        typingElement.classList.add("hidden-paragraph");
         setTimeout(() => {
-            window.location.href = redirectUrl;
-        }, redirectDelay);
-    }
-}
-
-// Function to handle paragraph fade-out
-function fadeOutParagraph() {
-    console.log("Fading out text line..."); // Debug
-    typingElement.classList.add("hidden-paragraph");
-    setTimeout(() => {
-        typingElement.innerHTML = "";
-        typingElement.classList.remove("hidden-paragraph");
-        textIndex++;
-        charIndex = 0;
-        typeWriter();
-    }, fadeOutDuration);
-}
-
-// Function to show footer
-function showFooter() {
-    footer.style.transform = "translateY(0)";
-}
-
-// Function to handle scroll behavior and footer positioning
-function handleScroll() {
-    if (!footer) {
-        console.error("Element 'footer-banner' not found!");
-        return;
-    }
-
-    const scrollY = window.scrollY;
-    const viewportHeight = window.innerHeight;
-    const documentHeight = document.body.offsetHeight;
-    const footerHeight = footer.offsetHeight;
-    if (scrollY + viewportHeight >= documentHeight - footerHeight) {
-        footer.style.position = "fixed";
-        footer.style.bottom = "0";
-    } else {
-        footer.style.position = "absolute";
-        footer.style.bottom = `-${footerHeight}px`;
-    }
-}
-
-// Start the typing animation after the page loads
-window.addEventListener("scroll", handleScroll);
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("Page loaded. Starting compiler."); // Debug
-    setTimeout(() => {
-        if (typingElement) {
+            typingElement.innerHTML = "";
+            typingElement.classList.remove("hidden-paragraph");
+            textIndex++;
+            charIndex = 0;
             typeWriter();
+        }, fadeOutDuration);
+    }
+    
+    // Scroll e footer
+    function showFooter() {
+        footer.style.transform = "translateY(0)";
+    }
+    
+    function handleScroll() {
+        const scrollY = window.scrollY;
+        const viewportHeight = window.innerHeight;
+        const documentHeight = document.body.offsetHeight;
+        const footerHeight = footer.offsetHeight;
+        if (scrollY + viewportHeight >= documentHeight - footerHeight) {
+            footer.style.position = "fixed";
+            footer.style.bottom = "0";
         } else {
-            console.error("Element 'typing-effect' not found!");
+            footer.style.position = "absolute";
+            footer.style.bottom = `-${footerHeight}px`;
         }
-    }, startDelay);
-});
+    }
+    
+    // Avvia l'animazione
+    window.addEventListener("scroll", handleScroll);
+    document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+            typeWriter();
+        }, startDelay);
+    });
