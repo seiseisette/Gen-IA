@@ -321,11 +321,11 @@ footer {
 
 /*--- robo-hiden-text ---*/ 
 .hidden-text {
-    /* position: absolute;
+    position: absolute;
     left: -9999px;
-    
+    /*TRY IN HIDDEN*/
     height: 0;
-    overflow: hidden; */
+    overflow: hidden;
     visibility: hidden;
     color: var(--info-bg);
     background-color: var(--bg-color);
