@@ -166,19 +166,30 @@ const textArray = [
     let tagBuffer = "";
     
     // Funzione principale per scrivere il testo con alternanza di stili
+    let currentStyle = "style1"; // Stile predefinito
+
     function typeWriter() {
         if (textIndex < textArray.length) {
             let currentText = textArray[textIndex];
             
-            // Verifica prefisso stile
+            // Controlla il prefisso dello stile e aggiorna `currentStyle`
             if (currentText.startsWith("style2::")) {
-                typingElement.classList.add("alternate-style");
+                typingElement.classList.add("alternate-style"); // Applica stile alternato
+                currentStyle = "style2";
                 currentText = currentText.replace("style2::", ""); // Rimuove il prefisso
             } else if (currentText.startsWith("style1::")) {
-                typingElement.classList.remove("alternate-style");
+                typingElement.classList.remove("alternate-style"); // Rimuove stile alternato
+                currentStyle = "style1";
                 currentText = currentText.replace("style1::", ""); // Rimuove il prefisso
+            } else {
+                // Mantieni lo stile corrente
+                if (currentStyle === "style2") {
+                    typingElement.classList.add("alternate-style");
+                } else if (currentStyle === "style1") {
+                    typingElement.classList.remove("alternate-style");
+                }
             }
-    
+
             if (charIndex < currentText.length) {
                 const currentChar = currentText[charIndex];
                 if (currentChar === "<") {
