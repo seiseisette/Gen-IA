@@ -217,7 +217,6 @@ footer {
     padding: var(--spacing); /* Keeps the padding for spacing consistency */
     box-sizing: border-box;
     text-align: left; /* Ensures text alignment is always to the left */
-
     transform: translateY(-30%); /* Moves the content 30% upwards */
     /* Change added for vertical adjustment */
 }
@@ -233,20 +232,28 @@ footer {
 
 #typing-effect::after {
     content: "█";
-    
+    font-family: var(--mtx-font);
+    color: var(--compiler1-color);
     text-align: left; /* Ensures text alignment is always to the left */
     animation: blink 1s steps(1) infinite;
     line-height: 2rem;
 }
 
 /* Style2 Alternate Effect */
+
+#typing-effect.alternate-style {
+    font-family: var(--std-font); /* Override del font */
+    color: var(--compiler2-color); /* White text color */
+}
+
 .alternate-style {
-    font-family: var(--std-font);/* Font Roboto for style2 */
+    font-family: var(--std-font) !important; /* Forza l'applicazione del font */
     color: var(--compiler2-color); /* White text color for style2 */
 }
 
 .alternate-style::after {
     content: "|";
+    font-family: var(--std-font);
     color: var(--compiler2-color); /* White cursor */
     animation: blink-fast 0.5s steps(1) infinite; /* Faster blinking cursor */
     line-height: 2rem;
