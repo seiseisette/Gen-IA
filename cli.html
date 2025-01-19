@@ -61,6 +61,22 @@ Use, distribution, or modification of this project is strictly prohibited withou
                     GENiALABILE
                 </a>
             </h1>
+
+            <!-- Compiler-Force -->
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    
+                    document.querySelectorAll('h1 a').forEach(link => {
+                        link.addEventListener('touchstart', () => {
+                            link.style.opacity = '0.8'; 
+                        });
+                        link.addEventListener('touchend', () => {
+                            link.style.opacity = '1'; // Ripristina l'opacità
+                        });
+                    });
+                });
+            </script>
+
            <!-- compiler.js -->
             <div id="typing-container" aria-hidden="true">
                 <div id="typing-effect"></div>
