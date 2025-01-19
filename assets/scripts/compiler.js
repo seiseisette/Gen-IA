@@ -23,7 +23,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
 const textArray = [
 
-    "style2:: ", " ", " ",
+    "style1:: ", " ", " ",
     " ", " ",
 
     "Initializing systems...",
@@ -48,7 +48,7 @@ const textArray = [
 
     " ", " ", " ", " ",
 
-    "style1::<h2>🌈 Welcome!</h2>",
+    "style2::<h2>🌈 Welcome!</h2>",
     " ", " ",
     "You’ve just unlocked a door to the extraordinary.",
     "I’m Genialabile, your advanced-virtual mentor!", 
@@ -125,7 +125,7 @@ const textArray = [
     " ", " ",
     " ",
 
-    "style2::<h3>Presentation complete.</h3>",
+    "style1::<h3>Presentation complete.</h3>",
     " ",
     "The human is now sufficiently persuaded...",
     "Or so it believes. ;)",
