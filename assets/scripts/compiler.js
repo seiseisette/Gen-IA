@@ -157,7 +157,7 @@ const textArray = [
     ];
 
 const typingSpeed = 20; 
-const pauseBetweenParagraphs = 1600;
+const pauseBetweenParagraphs = 1300;
 const fadeOutDuration = 500; 
 const redirectDelay = 500; 
 const redirectUrl = "https://genialabile.com/";
@@ -171,7 +171,7 @@ let isTag = false;
 let tagBuffer = "";
 let currentStyle = "style1"; // Stile predefinito
 
-// Funzione principale per scrivere il testo con alternanza di stili
+// Funzione principale per scrivere il testo con alternanza di stili e sfumatura progressiva
 function typeWriter() {
     if (textIndex < textArray.length) {
         let currentText = textArray[textIndex];
@@ -209,6 +209,15 @@ function typeWriter() {
             } else {
                 typingElement.innerHTML += currentChar;
             }
+
+            // Applica l'effetto di sfumatura per lo style2
+            if (currentStyle === "style2") {
+                const percentage = Math.min((charIndex / currentText.length) * 100, 100);
+                typingElement.style.background = `linear-gradient(90deg, rgba(255, 255, 255, 1) ${percentage}%, rgba(255, 255, 255, 0.2) ${percentage + 10}%)`;
+                typingElement.style["-webkit-background-clip"] = "text";
+                typingElement.style["-webkit-text-fill-color"] = "transparent";
+            }
+
             charIndex++;
             setTimeout(typeWriter, typingSpeed);
         } else {
@@ -225,7 +234,8 @@ function typeWriter() {
 // Funzione per gestire la dissolvenza del paragrafo
 function fadeOutParagraph() {
     if (currentStyle === "style2") {
-        typingElement.innerHTML += ""; // &nbsp; Aggiunge uno spazio extra per lo style2
+        typingElement.innerHTML += "";
+        //// &nbsp; |   \u00A0 | Aggiunge uno spazio extra per lo style2 Aggiunge uno spazio extra per lo style2
     }
 
     typingElement.classList.add("hidden-paragraph");
