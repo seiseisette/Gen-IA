@@ -156,10 +156,10 @@ const textArray = [
 
     ];
 
-const typingSpeed = 20;
-const pauseBetweenParagraphs = 1300;
-const fadeOutDuration = 500;
-const redirectDelay = 500;
+const typingSpeed = 20; 
+const pauseBetweenParagraphs = 1600;
+const fadeOutDuration = 500; 
+const redirectDelay = 500; 
 const redirectUrl = "https://genialabile.com/";
 const typingElement = document.getElementById("typing-effect");
 const footer = document.getElementById("footer-banner");
@@ -171,12 +171,12 @@ let isTag = false;
 let tagBuffer = "";
 let currentStyle = "style1"; // Stile predefinito
 
-// Funzione principale per scrivere il testo con alternanza di stili e sfumatura sulle nuove parole
+// Funzione principale per scrivere il testo con alternanza di stili
 function typeWriter() {
     if (textIndex < textArray.length) {
         let currentText = textArray[textIndex];
         
-        // Controlla il prefisso dello stile e aggiorna `currentStyle`
+        // Controlla il prefisso dello stile e aggiorna currentStyle
         if (currentText.startsWith("style2::")) {
             typingElement.classList.add("alternate-style"); // Applica stile alternato
             currentStyle = "style2";
@@ -194,20 +194,6 @@ function typeWriter() {
             }
         }
 
-        // Suddividi il contenitore per "testo completato" e "testo in digitazione"
-        const completedText = typingElement.querySelector(".completed-text") || document.createElement("span");
-        completedText.className = "completed-text";
-        const activeText = typingElement.querySelector(".active-text") || document.createElement("span");
-        activeText.className = "active-text";
-
-        // Assicurati che i contenitori siano presenti
-        if (!typingElement.contains(completedText)) {
-            typingElement.appendChild(completedText);
-        }
-        if (!typingElement.contains(activeText)) {
-            typingElement.appendChild(activeText);
-        }
-
         if (charIndex < currentText.length) {
             const currentChar = currentText[charIndex];
             if (currentChar === "<") {
@@ -216,42 +202,17 @@ function typeWriter() {
             } else if (currentChar === ">" && isTag) {
                 isTag = false;
                 tagBuffer += currentChar;
-                activeText.innerHTML += tagBuffer;
+                typingElement.innerHTML += tagBuffer;
                 tagBuffer = "";
             } else if (isTag) {
                 tagBuffer += currentChar;
             } else {
-                // Aggiungi la sfumatura al carattere appena digitato (solo per style2)
-                const span = document.createElement("span");
-                span.textContent = currentChar;
-                if (currentStyle === "style2") {
-                    span.classList.add("fading-text"); // Applica classe di sfumatura
-                }
-                activeText.appendChild(span);
-
-                // Rimuovi gradualmente la sfumatura per il testo precedente
-                if (currentStyle === "style2") {
-                    const fadingTexts = activeText.querySelectorAll(".fading-text");
-                    fadingTexts.forEach((el, index) => {
-                        if (index < fadingTexts.length - 10) {
-                            el.classList.remove("fading-text");
-                        }
-                    });
-                }
+                typingElement.innerHTML += currentChar;
             }
-
             charIndex++;
             setTimeout(typeWriter, typingSpeed);
         } else {
-            // Sposta gradualmente il testo attivo nella parte completata
-            const transferInterval = setInterval(() => {
-                if (activeText.firstChild) {
-                    completedText.appendChild(activeText.firstChild);
-                } else {
-                    clearInterval(transferInterval);
-                    setTimeout(() => fadeOutParagraph(), pauseBetweenParagraphs);
-                }
-            }, typingSpeed);
+            setTimeout(() => fadeOutParagraph(), pauseBetweenParagraphs);
         }
     } else {
         typingElement.classList.add("no-cursor");
@@ -261,10 +222,10 @@ function typeWriter() {
     }
 }
 
-// Funzione per gestire la dissolvenza
+// Funzione per gestire la dissolvenza del paragrafo
 function fadeOutParagraph() {
     if (currentStyle === "style2") {
-        typingElement.querySelector(".completed-text").innerHTML += ""; // Aggiunge uno spazio extra per lo style2
+        typingElement.innerHTML += ""; //RIMOSSO PER ORA/ Aggiunge uno spazio extra per lo style2
     }
 
     typingElement.classList.add("hidden-paragraph");
@@ -292,7 +253,7 @@ function handleScroll() {
         footer.style.bottom = "0";
     } else {
         footer.style.position = "absolute";
-        footer.style.bottom = `-${footerHeight}px`;
+        footer.style.bottom = -${footerHeight}px;
     }
 }
 
