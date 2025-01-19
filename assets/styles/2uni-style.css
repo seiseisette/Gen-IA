@@ -143,6 +143,23 @@ p.txt-mini {
     color: var(--info-text); /* Ensure small text is also readable */
 }
 
+
+
+
+
+
+p.typing-container, p.typing-effect, p.typing-effect::after {
+    color: var(--power-color);
+}
+
+
+
+
+
+
+
+
+
 /* --- Links --- */
 a {
     text-decoration: none;
@@ -251,6 +268,8 @@ footer {
     box-sizing: border-box;
 
     align-content: center;
+
+    z-index: 2;
     
 }
 
@@ -273,8 +292,7 @@ footer {
 
 #typing-effect::after {
     content: "█";
-    font-family: var(--mtx-font);
-     /* color: var(--info-text); Explicit for readability */
+
     font-size: 3rem;
     animation: blink 1s steps(1) infinite;
 }
@@ -342,6 +360,9 @@ footer {
     visibility: hidden;
     color: var(--info-bg);
     background-color: var(--bg-color);
+
+
+    z-index: 1;
 }
 
 /* --- Responsive Design --- */
