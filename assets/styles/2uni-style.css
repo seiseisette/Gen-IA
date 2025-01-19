@@ -248,14 +248,22 @@ footer {
 .alternate-style {
     font-family: var(--std-font) !important; /* Forza l'applicazione del font */
     color: var(--compiler2-color) !important; /* White text color for style2 */
+    line-height: 2rem !important;
 }
 
 .alternate-style::after {
-    content: " " !important; /* White cursor */
+    content: "" !important; /* White cursor */
     font-family: var(--std-font) !important;
     color: var(--compiler2-color) !important; /* White cursor */
     animation: blink-fast 0.5s steps(1) infinite !important; /* Faster blinking cursor */
     line-height: 2rem !important;
+}
+/* --- Style for gradual fade --- */
+.fade-text {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0.2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background 0.2s ease-in-out; /* Smooth transition for fade */
 }
 
 .no-cursor::after {
