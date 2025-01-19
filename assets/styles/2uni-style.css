@@ -240,7 +240,6 @@ footer {
 }
 
 /* Style2 Alternate Effect */
-
 #typing-effect.alternate-style {
     font-family: var(--std-font); /* Override del font */
     color: var(--compiler2-color); /* White text color */

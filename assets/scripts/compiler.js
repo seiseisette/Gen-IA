@@ -125,7 +125,7 @@ const textArray = [
     " ",
     "Together, we can make it extraordinary. 🦄",
 
-    " ", " ", " ",
+    " ",
     " ", " ",
     " ",
 
