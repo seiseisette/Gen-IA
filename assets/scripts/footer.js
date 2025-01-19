@@ -23,15 +23,27 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
 document.addEventListener("DOMContentLoaded", function () {
     const footerBanner = document.getElementById("footer-banner");
-    const dynamicFooter = document.getElementById("dynamic-footer");
+    const footerContainer = document.getElementById("footer-content");
 
-    // Handle footer visibility on scroll
+    async function fetchFooterContent() {
+        try {
+            const response = await fetch('https://genialabile.com/2footer.html');
+            if (!response.ok) {
+                throw new Error('Failed to fetch footer content');
+            }
+            const data = await response.text();
+            footerContainer.innerHTML = data;
+        } catch (error) {
+            console.error('Error fetching footer:', error);
+        }
+    }
+
     function handleFooterScroll() {
         const scrollY = window.scrollY;
         const viewportHeight = window.innerHeight;
         const documentHeight = document.body.offsetHeight;
 
-        // Footer sticks when scrolled to the bottom
+        // Add or remove the active class based on scroll position
         if (scrollY + viewportHeight >= documentHeight) {
             footerBanner.classList.add("active");
         } else {
@@ -39,9 +51,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Initialize footer content
+    fetchFooterContent();
+
     // Add scroll listener
     window.addEventListener("scroll", handleFooterScroll);
 
-    // Initial check in case of short pages
+    // Check initial position on page load
     handleFooterScroll();
+
+    // Ensure footer re-renders properly if viewport changes
+    window.addEventListener("resize", handleFooterScroll);
 });
