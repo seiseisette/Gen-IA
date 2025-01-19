@@ -25,7 +25,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 :root {
     --bg-color: #000000;
     --info-bg: #000000;
-    --info-text: #f4f4f4; /* Base text color */
+    --info-text: #eafba2; /* Temporary debug color for titles */
     --borders: #000000;
     --posts: #ffffff;
     --spacing: 2rem;
@@ -57,11 +57,20 @@ html, body {
     overflow-x: hidden;
 }
 
+/* BACKUP BODY COMment DO NOT DELETe
 body {
     background-color: var(--bg-color);
-    color: var(--info-text); /* Ensure readability */
+    color: var(--info-text); /* Ensure readability *
     font-family: var(--std-font);
     font-size: var(--font-size);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.3s ease-in-out;
+}
+*/
+
+body {
+    
     visibility: hidden;
     opacity: 0;
     transition: opacity 1.3s ease-in-out;
@@ -73,12 +82,32 @@ body.visible {
 }
 
 /* --- Main Layout --- */
+
+
+/* BACKUP BODY COMMEnt DO NOT DELETe
 main {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: var(--spacing);
     padding-bottom: 5rem;
+}
+*/
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing);
+    padding-bottom: 5rem;
+
+    /* from body for testing blackout FOM*/
+    background-color: var(--bg-color);
+    color: var(--info-text); /* Ensure readability */
+    font-family: var(--std-font);
+    font-size: var(--font-size);
+
+
 }
 
 /* --- Headers --- */
@@ -167,7 +196,7 @@ footer {
 
 /* --- Typing Effect --- */
 
-/*BACKUP START 
+/*BACKUP START // do not remove this comment section
 
 #typing-container {
     width: 100%;
@@ -175,14 +204,14 @@ footer {
     padding: var(--spacing); /* Mantiene il padding coerente *
     box-sizing: border-box; /* Garantisce che il padding non venga ignorato *
 }
--- BACKUP END */
+-- do not remove this comment section // BACKUP END */
 
 
 #typing-container {
     width: 100%;
-    max-width: 1200px;
+   /* max-width: 1200px;  FAILED TEST */ 
     margin: 0 auto;
-    padding: var(--spacing); /* Stesso spacing del layout globale */
+    padding: var(--spacing);
     box-sizing: border-box;
 }
 
@@ -190,7 +219,7 @@ footer {
 #typing-effect {
     font-family: var(--mtx-font);
     color: var(--info-text); /* Explicit for readability */
-    font-size: 1rem;
+    font-size: 1.5rem;
     line-height: 1.5rem;
     white-space: pre-wrap;
     overflow: hidden;
@@ -258,9 +287,10 @@ footer {
 .hidden-text {
     /* position: absolute;
     left: -9999px;
-    visibility: hidden;
+    
     height: 0;
     overflow: hidden; */
+    visibility: hidden;
     color: var(--info-bg);
     background-color: var(--bg-color);
 }
