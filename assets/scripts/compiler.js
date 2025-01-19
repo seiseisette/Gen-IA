@@ -27,7 +27,6 @@ const textArray = [
     
     " ", " ",
 
-    " ",
 
     "Initializing systems...",
     " ", " ", " ",

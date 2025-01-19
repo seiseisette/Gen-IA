@@ -40,6 +40,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     --static-color: #ffbbff;
     --power-color: #b0ff0b;
     --hard-color: #ff00ff;
+    --compiler-color: #00ff00cc;
 }
 
 /* --- Base Reset --- */
@@ -194,46 +195,6 @@ footer {
     transform: translateY(0);
 }
 
-/* --- Typing Effect --- */
-
-
-
-/* BACKUP TYPING EFFECT COMMent DO NOT DELETe
-#typing-container {
-    width: 100%;
-    margin: 0 auto;
-    padding: var(--spacing);
-    box-sizing: border-box;
-}
-
-
-#typing-effect {
-    font-family: var(--mtx-font);
-    color: var(--info-text);
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    white-space: pre-wrap;
-    overflow: hidden;
-}
-
-#typing-effect::after {
-    content: "█";
-    animation: blink 1s steps(1) infinite;
-}
-
-.no-cursor::after {
-    content: "";
-    animation: none;
-}
-
-
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
-}
-
- END    */
 
 /* --- Typing Effect --- */
 
@@ -254,7 +215,7 @@ footer {
 
 #typing-effect {
     font-family: var(--mtx-font);
-    color: var(--power-color);
+    color: var(--compiler-color);
     font-size: 1.5rem;
     line-height: 1.5rem;
     white-space: pre-wrap;
@@ -264,6 +225,7 @@ footer {
 #typing-effect::after {
     content: "█";
     animation: blink 1s steps(1) infinite;
+    font-size: 2rem;
 }
 
 .no-cursor::after {
