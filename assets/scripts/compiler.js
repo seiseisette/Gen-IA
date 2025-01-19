@@ -16,8 +16,8 @@ This project is no longer available as open-source. Updated: 10 Jan 2025.
 Use, distribution, or modification of this project is strictly prohibited without prior written authorization.
 -------------------------------------------------------------------------------
 
-# Version: v3.1 COMPILER (160125)
-# URL: https://genialabile.com/compiler.js 
+# Version: v3.2 COMPILER (160125)
+# URL: https://genialabile.com/assets/scripts/compiler.js
 ===============================================================================
 */
 
