@@ -266,16 +266,22 @@ footer {
 
 /* --- Style for gradual fade --- */
 
+#typing-effect, #typing-effect span {
+    font-family: var(--mtx-font), "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+}
+
 .emoji-support {
-    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Twemoji Mozilla", sans-serif;
 }
 
 
 .fade-text {
+    color: #f4f4f4; /* Fallback visibile */
     background: linear-gradient(90deg, #f4f4f4 90%, #00ff0033);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: background 0.2s ease-in-out; /* Smooth transition for fade | */
+    text-fill-color: transparent; /* Per compatibilità futura */
+    transition: background 0.2s ease-in-out;
 }
 
 .fading-text {
@@ -296,15 +302,16 @@ footer {
 @keyframes blink {
     50% {
         opacity: 0;
+        visibility: hidden; /* Migliora l'effetto di lampeggio */
     }
 }
 
 @keyframes blink-fast {
     50% {
         opacity: 0;
+        visibility: hidden;
     }
 }
-
 
 
 /* --- Cards --- */
