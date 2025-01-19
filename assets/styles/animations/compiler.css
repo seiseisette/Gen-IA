@@ -104,7 +104,7 @@ overflow: hidden;
     font-family: var(--std-font) !important;
     color: var(--compiler2-color) !important; /* White cursor *
     line-height: 2rem !important; */
-    animation: blink-fast 20s steps(1) infinite !important; /* Faster blinking cursor */
+    animation: blink-fast 120s steps(1) infinite !important; /* Faster blinking cursor */
   
 }
 
