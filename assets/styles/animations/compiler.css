@@ -100,11 +100,12 @@ overflow: hidden;
 }
 
 .alternate-style::after {
-    content: "|" !important;
-    font-family: var(--std-font) !important;
+    content: "█";
+    font-family: var(--mtx-font);
     color: var(--bg-color) !important;
-    animation: blink-fast 0.5s steps(1) infinite !important;
-    line-height: 2rem !important;
+    animation: blink 0.5s steps(1) infinite;
+    line-height: 2rem;
+    vertical-align: middle;
 }
 
 /* No Cursor Style */
