@@ -258,6 +258,12 @@ footer {
     animation: blink-fast 0.5s steps(1) infinite !important; /* Faster blinking cursor */
     line-height: 2rem !important;
 }
+
+.no-cursor::after {
+    content: "";
+    animation: none;
+}
+
 /* --- Style for gradual fade --- */
 .fade-text {
     background: linear-gradient(90deg, #f4f4f4 90%, #00ff0033);
@@ -266,9 +272,18 @@ footer {
     transition: background 0.2s ease-in-out; /* Smooth transition for fade | */
 }
 
-.no-cursor::after {
-    content: "";
-    animation: none;
+.fading-text {
+    opacity: 0; /* Parte trasparente */
+    animation: fadeIn 0.6s forwards; /* Sfumatura graduale */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.2; /* Leggermente visibile all'inizio */
+    }
+    to {
+        opacity: 1; /* Completamente visibile */
+    }
 }
 
 /* Keyframes for blinking effects */
