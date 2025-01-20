@@ -93,7 +93,7 @@ main {
 h1, h2, h3 {
     font-family: var(--std-font);
     color: var(--posts);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 h1 {
@@ -101,11 +101,12 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    font-weight: normal;
 }
 
 /* --- Paragraphs --- */
