@@ -87,7 +87,7 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: var(--spacing);
-    padding-bottom: 5rem;
+    padding-bottom: 7rem;
 
     margin-bottom: 5rem;
 
@@ -144,17 +144,6 @@ a {
 a:hover {
     color: var(--power-color);
     text-decoration: underline;
-}
-
-.link-live {
-    color: var(--live-color);
-    font-weight: bold;
-    animation: blink 3s infinite;
-}
-
-.link-static {
-    color: var(--static-color);
-    font-weight: bold;
 }
 
 h1 a {
@@ -233,6 +222,24 @@ footer {
 
 #footer-links a:hover {
     color: var(--live-color);
+    text-decoration: underline;
+}
+
+.link-live {
+    font-weight: bold;
+    animation: blink 3s infinite;
+}
+
+#link-live a:hover {
+    color: var(--compiler1-color);
+    text-decoration: underline;
+}
+
+.link-static {
+    font-weight: bold;
+}
+#link-static a:hover {
+    color: var(--static-color);
     text-decoration: underline;
 }
 
@@ -315,7 +322,8 @@ footer {
         font-size: 1.2rem;
         padding-bottom: 1.2rem; 
     }
-    # #typing-container {
+
+    #typing-effect, #typing-container {
         padding-bottom: 0.7rem;
     }
 
@@ -338,7 +346,7 @@ footer {
         font-size: 0.9rem; 
     }
     main {
-        padding-bottom: 7rem;
+        padding-bottom: 8rem;
     }
 
     #typing-effect, #typing-container {
@@ -351,7 +359,7 @@ footer {
     }
 
     #footer-links {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         gap: 0.9rem;
     }
 
@@ -365,7 +373,7 @@ footer {
         font-size: 0.8rem;
     }
     main {
-        padding-bottom: 5rem;
+        padding-bottom: 7rem;
     }
 
     #typing-effect, #typing-container {
