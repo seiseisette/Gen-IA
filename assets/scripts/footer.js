@@ -25,8 +25,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const footerBanner = document.getElementById("footer-banner");
     const footerContainer = document.getElementById("footer-content");
 
-    let lastScrollY = 0;
-    let isFooterVisible = false;
+    let lastScrollY = 0; // Posizione di scorrimento precedente
+    let isFooterVisible = false; // Stato visibilità footer
+    let scrollingTimeout; // Timeout per controllo fluido
 
     async function fetchFooterContent() {
         try {
@@ -50,21 +51,33 @@ document.addEventListener("DOMContentLoaded", function () {
         const atPageTop = scrollY <= 10;
         const scrollingDown = scrollY > lastScrollY;
 
+        clearTimeout(scrollingTimeout);
+
+        // Mostra il footer quando si arriva al fondo
         if (atPageBottom && !isFooterVisible) {
-            // Mostra il footer quando si arriva al fondo
             footerBanner.classList.add("active");
             isFooterVisible = true;
-        } else if (atPageTop && isFooterVisible && scrollingDown) {
-            // Nascondi il footer quando si inizia a scorrere verso il basso dalla cima
+        }
+
+        // Nascondi il footer in cima, quando si inizia a scorrere verso il basso
+        if (atPageTop && isFooterVisible && scrollingDown) {
             footerBanner.classList.remove("active");
             isFooterVisible = false;
         }
 
+        // Evita rimbalzi: controlla il comportamento con un timeout
+        scrollingTimeout = setTimeout(() => {
+            if (!atPageBottom && scrollingDown) {
+                footerBanner.classList.remove("active");
+                isFooterVisible = false;
+            }
+        }, 150);
+
         lastScrollY = scrollY;
     }
 
-    // Velocità animazione
-    const disappearSpeed = 400; // Tempo di scomparsa
+    // Velocità di animazione migliorata
+    const disappearSpeed = 500; // Tempo di scomparsa in ms
     const appearSpeed = disappearSpeed * 0.9; // Tempo di comparsa ridotto del 10%
 
     footerBanner.style.transition = `
@@ -72,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
         opacity ${appearSpeed}ms ease-in-out
     `;
 
-    // Inizializzazione
+    // Inizializza contenuto del footer e ascoltatori
     fetchFooterContent();
     window.addEventListener("scroll", handleScroll);
     handleScroll();

@@ -255,6 +255,22 @@ footer {
 
 
 
+/* --- Footer --- */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--info-bg);
+    color: var(--info-text);
+    text-align: center;
+    padding: var(--foot-margin);
+    font-size: 0.8rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    font-family: var(--std-font);
+    line-height: 1.4; /* Assottiglia la linea del testo */
+}
+
 /* --- Footer Banner --- */
 #footer-banner {
     position: fixed;
@@ -273,6 +289,8 @@ footer {
     padding: 1rem;
     transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
     font-family: var(--std-font);
+    line-height: 1.4;
+    font-size: 0.9rem; /* Font leggermente più grande per leggibilità */
 }
 
 #footer-banner.active {
@@ -289,19 +307,22 @@ footer {
     max-width: 80%;
     margin: 0 auto;
     text-align: center;
+    font-family: var(--std-font);
+    font-size: 0.9rem; /* Uniforma dimensione testo */
+    line-height: 1.4; /* Coerenza con il footer */
 }
-
 
 #footer-links a {
     text-decoration: none;
     color: var(--info-text);
     font-size: 0.9rem;
     transition: color 0.3s ease;
-    font-weight: 400;
+    font-weight: 400; /* Mantieni un peso del font uniforme */
 }
 
 #footer-links a:hover {
     color: var(--accent);
+    text-decoration: underline; /* Aggiungi sottolineatura per migliorare accessibilità */
 }
 
 /* Responsive Adjustments */
@@ -395,7 +416,6 @@ footer {
         font-size: 0.75rem;
     }
 }
-
 
 
 
