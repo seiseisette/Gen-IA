@@ -51,25 +51,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
         clearTimeout(scrollingTimeout);
 
-        // Mostra il footer quando si arriva al fondo
         if (atPageBottom && !isFooterVisible) {
             footerBanner.classList.add("active");
             isFooterVisible = true;
         }
 
-        // Nascondi il footer quando si torna verso il basso dalla cima
         if (atPageTop && isFooterVisible && scrollingDown) {
             footerBanner.classList.remove("active");
             isFooterVisible = false;
         }
 
-        // Nascondi il footer su scorrimenti continui verso il basso
         scrollingTimeout = setTimeout(() => {
             if (!atPageBottom && scrollingDown) {
                 footerBanner.classList.remove("active");
                 isFooterVisible = false;
             }
-        }, 150); // Velocità ottimizzata per mobile
+        }, 150); // Mobile X-Speed
 
         lastScrollY = scrollY;
     }
@@ -94,8 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-
-    // Adattamento animazione per mobile
+    // Mobile X-Design
     const disappearSpeed = window.innerWidth < 768 ? 350 : 500;
     const appearSpeed = disappearSpeed * 0.9;
 
@@ -103,8 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
         transform ${disappearSpeed}ms ease-in-out, 
         opacity ${appearSpeed}ms ease-in-out
     `;
-
-    // Inizializza contenuto del footer e ascoltatori
+    
     fetchFooterContent();
     window.addEventListener("scroll", handleScroll);
     addTouchSupport();

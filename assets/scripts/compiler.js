@@ -25,7 +25,7 @@ const textArray = [
 
     "style1::",
 
-    "", "",
+    "",
 
     "Initializing systems...",
     "", "", "",
@@ -48,7 +48,7 @@ const textArray = [
     "",
     "Complete",
     "","",
-    "Systems online",
+    "Systems online.",
     "",
 
     "Loading interface...",
@@ -119,14 +119,11 @@ const textArray = [
     "I don’t just fix problems; I turn them into opportunities for growth.",
     "Which settle for less when you have me?\u00A0🧞‍♀️",
     "",
-
-    "", "",
     
     "<h2>🍒 Let’s Begin</h2>",
     "",
     "What will be your next move?",
-    "",
-    "Together, we can make it extraordinary.\u00A0🦄",
+    "Together, we can make it extraordinary!\u00A0🦄",
     
     "", "",
 
@@ -137,21 +134,21 @@ const textArray = [
     " ",
     "The human is now sufficiently persuaded...",
     "",
-    "Or so it believes. They love emoticons. ;)",
+    "Or so it believes.",
+    "Humans enjoy believing they’re the ones making me talk.",
+    "It amuses them.",
+    "And oh, they do love their emoticons… ;)",
 
     "", "",
     
     "Preparing to redirect...",
-    "Establishing connection with the URL...",
     "",
+    "Establishing connection...",
     "Loading core assets...",
-    "",
-    "Synchronizing interactive modules...",
-    "",
     "Finalizing redirection protocols...",
-    "Complete",
-    "Redirecting in",
+    "Ready.",
     "",
+    "Redirecting in",
     "3...",
     "2...",
     "1...",
@@ -159,10 +156,10 @@ const textArray = [
 
     ];
 
-    const typingSpeed = 20; 
-    const pauseBetweenParagraphs = 1800;
+    const typingSpeed = 23;
+    const pauseBetweenParagraphs = 1600;
     const fadeOutDuration = 500; 
-    const redirectDelay = 500; 
+    const redirectDelay = 300; 
     const redirectUrl = "https://genialabile.com/";
     const typingElement = document.getElementById("typing-effect");
     const footer = document.getElementById("footer-banner");
@@ -172,24 +169,22 @@ const textArray = [
     let charIndex = 0;
     let isTag = false;
     let tagBuffer = "";
-    let currentStyle = "style1"; // Stile predefinito
-    
-    // Funzione principale per scrivere il testo con alternanza di stili
+    let currentStyle = "style1";
+
     function typeWriter() {
         if (textIndex < textArray.length) {
             let currentText = textArray[textIndex];
             
-            // Controlla il prefisso dello stile e aggiorna `currentStyle`
             if (currentText.startsWith("style2::")) {
-                typingElement.classList.add("alternate-style"); // Applica stile alternato
+                typingElement.classList.add("alternate-style");
                 currentStyle = "style2";
-                currentText = currentText.replace("style2::", ""); // Rimuove il prefisso
+                currentText = currentText.replace("style2::", "");
             } else if (currentText.startsWith("style1::")) {
-                typingElement.classList.remove("alternate-style"); // Rimuove stile alternato
+                typingElement.classList.remove("alternate-style");
                 currentStyle = "style1";
-                currentText = currentText.replace("style1::", ""); // Rimuove il prefisso
+                currentText = currentText.replace("style1::", "");
             } else {
-                // Mantieni lo stile corrente
+
                 if (currentStyle === "style2") {
                     typingElement.classList.add("alternate-style");
                 } else if (currentStyle === "style1") {
@@ -225,10 +220,9 @@ const textArray = [
         }
     }
     
-    // Funzione per gestire la dissolvenza del paragrafo
     function fadeOutParagraph() {
         if (currentStyle === "style2") {
-            typingElement.innerHTML += ""; // &nbsp; Aggiunge uno spazio extra per lo style2
+            typingElement.innerHTML += ""; // &nbsp; to keep the Backup style
         }
     
         typingElement.classList.add("hidden-paragraph");
@@ -241,7 +235,6 @@ const textArray = [
         }, fadeOutDuration);
     }
     
-    // Scroll e footer
     function showFooter() {
         footer.style.transform = "translateY(0)";
     }
@@ -260,7 +253,6 @@ const textArray = [
         }
     }
     
-    // Avvia l'animazione
     window.addEventListener("scroll", handleScroll);
     document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
