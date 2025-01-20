@@ -22,8 +22,8 @@ Advanced-GPT inspiring multidimensional solutions and unlocking creative potenti
     --bg-color: #000000;
     --info-bg: #000000;
     --info-text: #f4f4f4;
-    --accent: #f4f4f4;
-    --posts: #ffffff;
+    --accent: #ffffff;
+    --posts: #f4f4f4;
 
     /* Section Colors */
     --live-color: #00bbff;
@@ -92,7 +92,7 @@ main {
 /* --- Headers --- */
 h1, h2, h3 {
     font-family: var(--std-font);
-    color: var(--accent);
+    color: var(--posts);
     margin-bottom: 1rem;
 }
 
@@ -194,11 +194,12 @@ footer {
 
 /* Footer Links */
 #footer-links {
+    width: 100%;
+    max-width: 100%; /* ——————————————   WAS 80% */
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    /* gap: 1rem; ——————————————   RIMOSSO */
     flex-wrap: wrap;
-    max-width: 80%;
     margin: 0 auto;
     text-align: center;
     font-size: 0.9rem;
@@ -208,12 +209,23 @@ footer {
     text-decoration: none;
     color: var(--info-text);
     transition: color 0.3s ease;
-    font-weight: 400;
+    /* font-weight: 400;    ————————      RIMOSSO    */
 }
 
 #footer-links a:hover {
     color: var(--accent);
     text-decoration: underline;
+}
+
+/* Footer Copyright */
+.footer-copyright {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0.5rem;
+    font-size: 0.7rem; 
+    text-align: center;
+    color: var(--info-text); 
+    line-height: 1.4;
 }
 
 /* --- Utilities --- */
