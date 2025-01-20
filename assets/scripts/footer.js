@@ -43,15 +43,23 @@ document.addEventListener("DOMContentLoaded", function () {
         const viewportHeight = window.innerHeight;
         const documentHeight = document.body.offsetHeight;
 
-        if (scrollY + viewportHeight >= documentHeight) {
+        const triggerOffset = window.innerWidth > 1024 ? 50 : 0; // Aggiunta sensibilità per schermi desktop
+
+        if (scrollY + viewportHeight + triggerOffset >= documentHeight) {
+            // Attiva il footer quando si arriva in fondo
             footerBanner.classList.add("active");
         } else {
+            // Nascondi il footer quando si scorre verso l'alto
             footerBanner.classList.remove("active");
         }
     }
 
-    // Initialize footer content and scroll listener
+    // Inizializza il contenuto del footer
     fetchFooterContent();
+
+    // Aggiungi il listener per lo scroll
     window.addEventListener("scroll", handleFooterScroll);
+
+    // Controllo iniziale per il caricamento della pagina
     handleFooterScroll();
 });
