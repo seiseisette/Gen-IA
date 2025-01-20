@@ -284,14 +284,17 @@ footer {
     }
     
     footer {
-        font-size: 1.1rem;
-        padding: 1.1rem;
+        font-size: 0.95rem;
+        padding: 1rem;
     }
 
     #footer-links {
-        font-size: 1.1rem;
-        gap: 1.1rem;
+        font-size: 0.95rem;
+        gap: 1rem;
     }
+
+    #footer-copyright {
+        font-size: 1.1rem;
 }
 
 @media screen and (max-width: 1024px) {
@@ -311,7 +314,7 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    body, #typing-effect, #typing-container  {   
+    body {   /* #typing-effect, #typing-container*/   
         font-size: 0.9rem; 
     }
 
@@ -326,7 +329,7 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
-    body, #typing-effect, #typing-container {
+    body {  /* #typing-effect, #typing-container*/  
         font-size: 0.8rem;
     }
     footer {
@@ -336,6 +339,7 @@ footer {
 
     #footer-links {
         font-size: 0.75rem;
+        gap: 0.9rem;
     }
 }
 
