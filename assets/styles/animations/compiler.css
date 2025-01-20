@@ -31,18 +31,21 @@ Use, distribution, or modification of this project is strictly prohibited withou
     align-items: center;
     margin: 0 auto;
     padding: var(--spacing);
+
+    padding-bottom: 2rem;
+    
     box-sizing: border-box;
     text-align: left;
-    transform: translateY(-30%);
+    transform: translateY(-20%);
     margin-bottom: 0.5rem;
 }
 
 /* Typing Effect - Style1 */
 #typing-effect {
-    width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    
+    width: 110%;
+    padding-left: 0rem;
+    padding-right: 0rem;
+
     font-family: var(--mtx-font);
     color: var(--compiler1-color);
     font-size: 1.5rem;
