@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const footerContainer = document.getElementById("footer-content");
 
     let lastScrollY = window.scrollY;
+    let isWideScreen = window.innerWidth > 1024; // Definisce se lo schermo è largo
 
     async function fetchFooterContent() {
         try {
@@ -45,18 +46,25 @@ document.addEventListener("DOMContentLoaded", function () {
         const viewportHeight = window.innerHeight;
         const documentHeight = document.body.offsetHeight;
 
+        const sensitivity = isWideScreen ? 20 : 50; // Maggiore sensibilità su schermi larghi
+
         if (currentScrollY + viewportHeight >= documentHeight) {
-            // Se l'utente è al fondo della pagina
+            // Se si raggiunge il fondo
             footerBanner.classList.add("active");
-        } else if (currentScrollY > lastScrollY) {
-            // Se l'utente scorre verso il basso
+        } else if (currentScrollY > lastScrollY + sensitivity) {
+            // Scorrimento verso il basso (nascondi)
             footerBanner.classList.remove("active");
-        } else if (currentScrollY < lastScrollY) {
-            // Se l'utente scorre verso l'alto
+        } else if (currentScrollY < lastScrollY - sensitivity) {
+            // Scorrimento verso l'alto (mostra)
             footerBanner.classList.add("active");
         }
 
         lastScrollY = currentScrollY;
+    }
+
+    function handleResize() {
+        // Aggiorna lo stato dello schermo largo
+        isWideScreen = window.innerWidth > 1024;
     }
 
     // Inizializza il contenuto del footer
@@ -64,6 +72,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Listener per lo scroll
     window.addEventListener("scroll", handleFooterScroll);
+
+    // Listener per il ridimensionamento dello schermo
+    window.addEventListener("resize", handleResize);
 
     // Controllo iniziale
     handleFooterScroll();
