@@ -95,6 +95,8 @@ main {
     color: var(--info-text);
     font-family: var(--std-font);
     font-size: var(--font-size);
+
+                                              outline: 1px dashed red;
    
 }
 
@@ -201,7 +203,7 @@ footer {
     font-family: var(--std-font);
     font-size: 0.9rem;
     line-height: 1.4;
-    /* No more Debug */
+    /* No more Debug */                   outline: 1px dashed rgb(229, 255, 0);
     outline: 1px solid #000000;
 }
 
@@ -313,6 +315,9 @@ footer {
         font-size: 1.2rem;
         padding-bottom: 1.2rem; 
     }
+    # #typing-container {
+        padding-bottom: 0.7rem;
+    }
 
     footer {
         font-size: 0.9rem;
@@ -332,6 +337,10 @@ footer {
     body {  
         font-size: 0.9rem; 
     }
+    main {
+        padding-bottom: 7rem;
+    }
+
     #typing-effect, #typing-container {
         font-size: 0.8rem;
     }
@@ -354,6 +363,9 @@ footer {
 @media screen and (max-width: 480px) {
     body {   
         font-size: 0.8rem;
+    }
+    main {
+        padding-bottom: 5rem;
     }
 
     #typing-effect, #typing-container {
