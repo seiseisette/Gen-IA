@@ -172,7 +172,16 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: var(--info-bg);
+
+                        /* background-color: var(--info-bg); */
+
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px); /* Effetto blur */
+        -webkit-backdrop-filter: blur(10px); /* Supporto per Safari */
+
+
+
+
     color: var(--info-text);
     text-align: center;
     padding: var(--foot-margin);
@@ -187,8 +196,9 @@ footer {
                     -10px 0 300px 50px #000000,
                     10px 0 300px 50px #000000,
                     0 10px 100px 70px #000000;
-    /* (NO MORE Debug */  
-    outline: 1px solid #000000;
+            /* (NO MORE Debug */  
+
+                    outline: 1px solid rgba(0, 0, 0, 0.8);
 
                                     outline: 1px dashed rgb(229, 255, 0);
 
@@ -207,7 +217,15 @@ footer.no-shadow {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: var(--info-bg);
+   
+    
+                        /* background-color: var(--info-bg); */
+
+      background-color: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px); /* Effetto blur */
+      -webkit-backdrop-filter: blur(10px); /* Supporto per Safari */
+
+
     transform: translateY(100%);
     opacity: 0;
     z-index: 999;
@@ -220,13 +238,18 @@ footer.no-shadow {
     font-family: var(--std-font);
     font-size: 0.9rem;
     line-height: 1.4;
-    /* No more Debug */                 
-    outline: 1px solid #000000;
+            /* No more Debug */                 
+                             outline: 1px solid #00f2ff;
 }
 
 #footer-banner.active {
     transform: translateY(0);
     opacity: 1;
+
+
+                    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
 }
 
 /* Footer Links */
@@ -250,7 +273,7 @@ footer.no-shadow {
 }
 
 #footer-links a:hover {
-    color: var(--accent);
+    color: var(--compiler1-color);
     text-decoration: underline;
 }
 
