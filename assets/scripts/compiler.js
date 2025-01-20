@@ -163,7 +163,7 @@ const textArray = [
     const redirectUrl = "https://genialabile.com/";
     const typingElement = document.getElementById("typing-effect");
     const footer = document.getElementById("footer-banner");
-    const startDelay = 5000;
+    const startDelay = 3000;
     
     let textIndex = 0;
     let charIndex = 0;

@@ -186,7 +186,7 @@ footer {
     text-align: center;
     padding: var(--foot-margin);
 
-    padding-top: 0.3rem; /* 0.6 */
+    padding-bottom: 2rem; /* margin-top 0.6 */
 
     font-size: 0.8rem;
     font-family: var(--std-font);
@@ -195,7 +195,7 @@ footer {
     box-shadow: 0 -3px 5px #f4f4f424,    /* -3px 10px #24242424, */
                     -10px 0 300px 50px #000000,
                     10px 0 300px 50px #000000,
-                    0 10px 100px 70px #000000;
+                    0 10px 90px 70px #000000;
             /* (NO MORE Debug */  
 
                     outline: 1px solid rgba(0, 0, 0, 0.8);
@@ -261,6 +261,9 @@ footer.no-shadow {
     gap: 0.3rem;
     flex-wrap: wrap;
     margin: 0 auto;
+    margin-bottom: 0.4rem;
+
+
     text-align: center;
     font-size: 0.8rem;
 }
@@ -351,7 +354,7 @@ footer.no-shadow {
         padding: 1.4rem;
 
     }
-    #typing-effect, #typing-container {
+    #typing-effect {
         padding-bottom: 0.2rem;
     }
     
@@ -360,7 +363,7 @@ footer.no-shadow {
         padding: 0.9rem;
     }
 
-    #footer-links, #footer-copyright {
+    #footer-links a, #footer-copyright {
         font-size: 0.95rem;
         gap: 0.4rem;
     }
@@ -375,7 +378,7 @@ footer.no-shadow {
         padding-bottom: 1.2rem; 
     }
 
-    #typing-effect, #typing-container {
+    #typing-effect {
         padding-bottom: 0.3rem;
     }
 
@@ -402,8 +405,9 @@ footer.no-shadow {
         padding-bottom: 10rem;
     }
 
-    #typing-effect, #typing-container {
-        font-size: 0.8rem;
+    #typing-effect {
+        font-size: 0.7rem;
+        line-height: 0.9rem;
     }
 
     footer {
@@ -411,7 +415,7 @@ footer.no-shadow {
         padding: 0.7rem;
     }
 
-    #footer-links {
+    #footer-links a {
         font-size: 0.7rem;
         gap: 0.9rem;
     }
@@ -429,8 +433,9 @@ footer.no-shadow {
         padding-bottom: 9rem;
     }
 
-    #typing-effect, #typing-container {
-        font-size: 0.8rem;
+    #typing-effect {
+        font-size: 0.7rem;
+        line-height: 0.9rem;
     }
 
     footer {
@@ -438,7 +443,7 @@ footer.no-shadow {
         padding: 0.5rem;
     }
 
-    #footer-links {
+    #footer-links a {
         font-size: 0.75rem;
         gap: 0.8rem;
     }
