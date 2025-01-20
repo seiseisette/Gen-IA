@@ -1,6 +1,6 @@
 /*
 ===============================================================================
-# Project: Gen-IA
+# Project: genialabile.com
 # Website: Minimal welcome website
 ===============================================================================
 
@@ -8,7 +8,7 @@
 Advanced-GPT inspiring multidimensional solutions and unlocking creative potential.
 
 -------------------------------------------------------------------------------
-## License
+### License
 © 2025 GENiALABILE. All Rights Reserved.
 A GPT-Based Project — Designed by seiseisette.
 Repository: https://github.com/seiseisette/
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// SHadow Footer
+// Shadow Footer
 document.addEventListener('scroll', function () {
     const footer = document.querySelector('footer');
     const body = document.body;
