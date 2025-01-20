@@ -297,8 +297,8 @@ footer {
     }
 
     #footer-links {
-        flex-direction: column;
-        gap: 0.8rem;
+       /*  flex-direction: column; /* ——————————————   RIMOSSO */
+       /*  gap: 0.8rem; /* ——————————————   RIMOSSO */
     }
 
     #footer-links a {
@@ -313,8 +313,8 @@ footer {
     }
 
     #footer-links {
-        flex-direction: column;
-        gap: 0.5rem;
+        /* flex-direction: column;  ——————————————   RIMOSSO */
+        /* gap: 0.5rem; ——————————————   RIMOSSO */
     }
 
     #footer-links a {
