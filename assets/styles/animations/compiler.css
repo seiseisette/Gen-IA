@@ -39,12 +39,16 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
 /* Typing Effect - Style1 */
 #typing-effect {
-font-family: var(--mtx-font);
-color: var(--compiler1-color);
-font-size: 1.5rem;
-line-height: 2rem;
-white-space: pre-wrap;
-overflow: hidden;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+    font-family: var(--mtx-font);
+    color: var(--compiler1-color);
+    font-size: 1.5rem;
+    line-height: 2rem;
+    white-space: pre-wrap;
+    overflow: hidden;
 }
 
 #typing-effect::after {
