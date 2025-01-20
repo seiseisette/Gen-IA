@@ -191,6 +191,14 @@ footer {
     outline: 1px solid #000000;
 
                                     outline: 1px dashed rgb(229, 255, 0);
+
+    transition: box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    
+}
+
+footer.no-shadow {
+    box-shadow: none;
+    transition: box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 /* Footer Banner */

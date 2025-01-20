@@ -105,3 +105,25 @@ document.addEventListener("DOMContentLoaded", function () {
     addTouchSupport();
     handleScroll();
 });
+
+
+// SHadow Footer
+document.addEventListener('scroll', function () {
+    const footer = document.querySelector('footer');
+    const body = document.body;
+    const html = document.documentElement;
+
+    // Altezza totale della pagina
+    const documentHeight = Math.max(body.scrollHeight, html.scrollHeight);
+    const viewportHeight = window.innerHeight;
+
+    // Posizione attuale dello scroll
+    const scrollPosition = window.scrollY + viewportHeight;
+
+    // Aggiunge o rimuove la classe "no-shadow" se sei al fondo
+    if (scrollPosition >= documentHeight) {
+        footer.classList.add('no-shadow'); // Rimuove ombra
+    } else {
+        footer.classList.remove('no-shadow'); // Mostra ombra
+    }
+});
