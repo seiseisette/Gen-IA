@@ -201,7 +201,7 @@ footer {
     max-width: 100%;
     display: flex;
     justify-content: center;
-    gap: 1rem; /* Adjusted spacing for links */
+    gap: 0.3rem; /* Adjusted spacing for links */
     flex-wrap: wrap;
     margin: 0 auto;
     text-align: center;
@@ -222,6 +222,7 @@ footer {
 /* Footer Copyright */
 #footer-copyright {
     margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     font-size: 0.7rem; /* Smaller than links */
     text-align: center;
     color: var(--info-text);
