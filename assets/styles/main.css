@@ -263,7 +263,7 @@ footer {
 
 .sr-divider {
     border: none;
-    border-top: 1px dashed #cccccc;
+    border-top: 1px dashed var(--line-color);
     margin: 1rem 0;
     width: 100%;
 }
@@ -271,13 +271,13 @@ footer {
 /* --- Responsive Design --- */
 @media screen and (min-width: 1440px) {
     footer {
-        font-size: 1rem;
-        padding: 1.5rem;
+        font-size: 1.3rem;
+        padding: 1.3rem;
     }
 
     #footer-links {
-        font-size: 1rem;
-        gap: 1.5rem;
+        font-size: 1.1rem;
+        gap: 1.1rem;
     }
 }
 
