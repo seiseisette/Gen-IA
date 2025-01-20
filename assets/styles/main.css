@@ -175,12 +175,12 @@ footer {
     font-family: var(--std-font);
     line-height: 1.4;
     /* Box shadow effects */
-    box-shadow: 0 -3px 5px #f4f4f424, 
+    box-shadow: 0 -3px 5px #24242424, 
                 -10px 0 300px 50px #000000,
                 10px 0 300px 50px #000000,
                 0 10px 90px 70px #000000;
     transition: box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
