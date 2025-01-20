@@ -25,6 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const footerBanner = document.getElementById("footer-banner");
     const footerContainer = document.getElementById("footer-content");
 
+    let lastScrollY = 0;
+    let isScrollingUp = false;
+    let debounceTimeout;
+
     async function fetchFooterContent() {
         try {
             const response = await fetch('https://genialabile.com/2footer.html');
@@ -38,21 +42,41 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    function handleFooterScroll() {
-        const scrollY = window.scrollY;
+    function handleFooterVisibility() {
+        const currentScrollY = window.scrollY;
         const viewportHeight = window.innerHeight;
         const documentHeight = document.body.offsetHeight;
 
-        if (scrollY + viewportHeight >= documentHeight) {
+        // Determine scroll direction
+        isScrollingUp = currentScrollY < lastScrollY;
+
+        if (currentScrollY + viewportHeight >= documentHeight) {
+            // User is at the bottom of the page
+            footerBanner.classList.add("active");
+        } else if (isScrollingUp) {
+            // User is scrolling up
             footerBanner.classList.add("active");
         } else {
+            // User is scrolling down
             footerBanner.classList.remove("active");
         }
+
+        lastScrollY = currentScrollY;
     }
 
-    // Initialize footer content and scroll listener
-    fetchFooterContent();
-    window.addEventListener("scroll", handleFooterScroll);
-    handleFooterScroll();
-});
+    function debounce(func, delay) {
+        clearTimeout(debounceTimeout);
+        debounceTimeout = setTimeout(func, delay);
+    }
 
+    // Initialize footer content
+    fetchFooterContent();
+
+    // Add scroll listener with debounce for better performance
+    window.addEventListener("scroll", () => {
+        debounce(handleFooterVisibility, 100); // Adjust sensitivity by changing delay
+    });
+
+    // Initial check
+    handleFooterVisibility();
+});
