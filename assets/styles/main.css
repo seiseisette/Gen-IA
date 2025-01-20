@@ -71,6 +71,8 @@ html, body {
 }
 
 body {
+    margin: 0;
+    padding: 1rem;
     visibility: hidden;
     opacity: 0;
     transition: opacity 1.3s ease-in-out;
@@ -351,11 +353,17 @@ footer.no-shadow {
 
 /* (max-width: 768px) */
 @media screen and (max-width: 768px) {
-    body {   
+    main {
+        max-width: 100%;
+        padding: 1rem;
+    }
+    
+    body {
+        padding: 1rem;  
         font-size: 1rem;
     }
 
-    #typing-effect, #typing-container {   
+    #typing-effect {   
         font-size: 1rem;
     }
 
@@ -392,7 +400,7 @@ footer.no-shadow {
         backdrop-filter: blur(8px);
     }
 
-    #typing-effect, #typing-container {
+    #typing-effect {
         font-size: 0.9rem;
     }
 

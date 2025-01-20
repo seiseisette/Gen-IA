@@ -8,7 +8,7 @@
 Advanced-GPT inspiring multidimensional solutions and unlocking creative potential.
 
 -------------------------------------------------------------------------------
-## License
+### License
 © 2025 GENiALABILE. All Rights Reserved.
 A GPT-Based Project — Designed by seiseisette.
 Repository: https://github.com/seiseisette/
@@ -34,23 +34,25 @@ Use, distribution, or modification of this project is strictly prohibited withou
     box-sizing: border-box;
     text-align: left;
     transform: translateY(-30%);
+  
+                margin-bottom: 0.5rem;
 }
 
 /* Typing Effect - Style1 */
 #typing-effect {
-    font-family: var(--mtx-font);
-    color: var(--compiler1-color);
-    font-size: 1.5rem;
-    line-height: 2rem;
-    white-space: pre-wrap;
-    overflow: hidden;
+font-family: var(--mtx-font);
+color: var(--compiler1-color);
+font-size: 1.5rem;
+line-height: 2rem;
+white-space: pre-wrap;
+overflow: hidden;
 }
 
 #typing-effect::after {
     content: "█";
     font-family: var(--mtx-font);
     color: var(--compiler1-color);
-    text-align: left; /* Ensures text alignment is always to the left */
+    text-align: left;
     animation: blink 1s steps(1) infinite;
     line-height: 2rem;
 }
@@ -70,12 +72,13 @@ Use, distribution, or modification of this project is strictly prohibited withou
 }
 
 .alternate-style::after {
-    content: "" !important; /* White cursor *
+    content: "" !important;
+    animation: blink-fast 120s steps(1) infinite !important;
+    /*
     font-family: var(--std-font) !important;
-    color: var(--compiler2-color) !important; /* White cursor *
-    line-height: 2rem !important; */
-    animation: blink-fast 120s steps(1) infinite !important; /* Faster blinking cursor */
-  
+    color: var(--compiler2-color) !important;
+    line-height: 2rem !important;
+    */
 }
 
 /* No Cursor Style */
@@ -103,7 +106,10 @@ Use, distribution, or modification of this project is strictly prohibited withou
     transition: opacity 0.5s ease-in;
 }
 
-/* --- Root Variables --- 
+
+
+/*
+--- Root Variables --- 
 :root {
     --bg-color: #000000;
     --info-bg: #000000;
@@ -118,7 +124,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     --box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* --- Base Reset --- 
+/* --- Base Reset --- *
 * {
     margin: 0;
     padding: 0;
@@ -132,4 +138,4 @@ html, body {
     padding: 0;
     overflow-x: hidden;
 }
-*/
+                                */
