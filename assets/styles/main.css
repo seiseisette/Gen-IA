@@ -314,7 +314,7 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    body {   /* #typing-effect, #typing-container*/   
+    body  #typing-effect, #typing-container {  
         font-size: 0.9rem; 
     }
 
@@ -326,12 +326,16 @@ footer {
     #footer-links {
         font-size: 0.8rem;
     }
-}
 
 @media screen and (max-width: 480px) {
     body {  /* #typing-effect, #typing-container*/  
         font-size: 0.8rem;
     }
+
+    #typing-effect, #typing-container {
+        font-size: 0.9rem;
+    }
+    
     footer {
         font-size: 0.75rem;
         padding: 0.5rem;
