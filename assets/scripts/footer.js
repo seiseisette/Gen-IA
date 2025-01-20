@@ -25,16 +25,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const footerBanner = document.getElementById("footer-banner");
     const footerContainer = document.getElementById("footer-content");
 
-    let lastScrollY = 0; // Posizione di scorrimento precedente
-    let isFooterVisible = false; // Stato visibilità footer
-    let scrollingTimeout; // Timeout per controllo fluido
+    let lastScrollY = 0;
+    let isFooterVisible = false;
+    let scrollingTimeout;
 
     async function fetchFooterContent() {
         try {
             const response = await fetch('https://genialabile.com/2footer.html');
-            if (!response.ok) {
-                throw new Error('Failed to fetch footer content');
-            }
+            if (!response.ok) throw new Error('Failed to fetch footer content');
             const data = await response.text();
             footerContainer.innerHTML = data;
         } catch (error) {
@@ -47,8 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const viewportHeight = window.innerHeight;
         const documentHeight = document.body.offsetHeight;
 
-        const atPageBottom = scrollY + viewportHeight >= documentHeight - 10;
-        const atPageTop = scrollY <= 10;
+        const atPageBottom = scrollY + viewportHeight >= documentHeight - 20; // Maggiore sensibilità
+        const atPageTop = scrollY <= 5; // Più sensibile in alto
         const scrollingDown = scrollY > lastScrollY;
 
         clearTimeout(scrollingTimeout);
@@ -59,26 +57,26 @@ document.addEventListener("DOMContentLoaded", function () {
             isFooterVisible = true;
         }
 
-        // Nascondi il footer in cima, quando si inizia a scorrere verso il basso
+        // Nascondi il footer quando si scorre verso il basso dalla cima
         if (atPageTop && isFooterVisible && scrollingDown) {
             footerBanner.classList.remove("active");
             isFooterVisible = false;
         }
 
-        // Evita rimbalzi: controlla il comportamento con un timeout
+        // Nascondi il footer su scorrimenti continui verso il basso
         scrollingTimeout = setTimeout(() => {
             if (!atPageBottom && scrollingDown) {
                 footerBanner.classList.remove("active");
                 isFooterVisible = false;
             }
-        }, 150);
+        }, 100); // Ridotto per maggiore reattività
 
         lastScrollY = scrollY;
     }
 
-    // Velocità di animazione migliorata
-    const disappearSpeed = 500; // Tempo di scomparsa in ms
-    const appearSpeed = disappearSpeed * 0.9; // Tempo di comparsa ridotto del 10%
+    // Adattamento animazione su mobile
+    const disappearSpeed = window.innerWidth < 768 ? 300 : 500; // Più rapido su mobile
+    const appearSpeed = disappearSpeed * 0.9;
 
     footerBanner.style.transition = `
         transform ${disappearSpeed}ms ease-in-out, 
