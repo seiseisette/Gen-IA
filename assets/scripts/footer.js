@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const viewportHeight = window.innerHeight;
         const documentHeight = document.body.offsetHeight;
 
-        const triggerOffset = window.innerWidth > 1024 ? 50 : 0; // Desktop sensitivity
+        const triggerOffset = window.innerWidth > 1024 ? 20 : 0; // Desktop: reduced sensitivity
         if (scrollY + viewportHeight + triggerOffset >= documentHeight) {
             footerBanner.classList.add("active");
         } else {
@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Animation speeds
-    const disappearSpeed = 400; // Disappearance speed in ms
-    const appearSpeed = disappearSpeed * 1.1; // Appearance speed (+10%)
+    const disappearSpeed = 300; // Faster disappearance in ms
+    const appearSpeed = disappearSpeed * 1.1; // Slightly slower appearance
 
     footerBanner.style.transition = `
         transform ${disappearSpeed}ms ease-in-out, 
