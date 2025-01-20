@@ -25,9 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const footerBanner = document.getElementById("footer-banner");
     const footerContainer = document.getElementById("footer-content");
 
-    let lastScrollY = 0;
-    let isScrollingUp = false;
-    let debounceTimeout;
+    let lastScrollY = window.scrollY;
 
     async function fetchFooterContent() {
         try {
@@ -42,41 +40,31 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    function handleFooterVisibility() {
+    function handleFooterScroll() {
         const currentScrollY = window.scrollY;
         const viewportHeight = window.innerHeight;
         const documentHeight = document.body.offsetHeight;
 
-        // Determine scroll direction
-        isScrollingUp = currentScrollY < lastScrollY;
-
         if (currentScrollY + viewportHeight >= documentHeight) {
-            // User is at the bottom of the page
+            // Se l'utente è al fondo della pagina
             footerBanner.classList.add("active");
-        } else if (isScrollingUp) {
-            // User is scrolling up
-            footerBanner.classList.add("active");
-        } else {
-            // User is scrolling down
+        } else if (currentScrollY > lastScrollY) {
+            // Se l'utente scorre verso il basso
             footerBanner.classList.remove("active");
+        } else if (currentScrollY < lastScrollY) {
+            // Se l'utente scorre verso l'alto
+            footerBanner.classList.add("active");
         }
 
         lastScrollY = currentScrollY;
     }
 
-    function debounce(func, delay) {
-        clearTimeout(debounceTimeout);
-        debounceTimeout = setTimeout(func, delay);
-    }
-
-    // Initialize footer content
+    // Inizializza il contenuto del footer
     fetchFooterContent();
 
-    // Add scroll listener with debounce for better performance
-    window.addEventListener("scroll", () => {
-        debounce(handleFooterVisibility, 100); // Adjust sensitivity by changing delay
-    });
+    // Listener per lo scroll
+    window.addEventListener("scroll", handleFooterScroll);
 
-    // Initial check
-    handleFooterVisibility();
+    // Controllo iniziale
+    handleFooterScroll();
 });
