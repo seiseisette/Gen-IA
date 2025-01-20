@@ -353,16 +353,14 @@ footer.no-shadow {
 
 /* (max-width: 768px) */
 @media screen and (max-width: 768px) {
-    /*
-    main {
-        max-width: 100%;
-        padding: 1rem;
-    }
-    */
-    
     body {
         padding: 1rem;  
         font-size: 0.9rem;
+    }
+
+    main {
+        max-width: 100%;
+        padding: 1rem;
     }
 
     #typing-effect {   
@@ -370,7 +368,6 @@ footer.no-shadow {
         line-height: 1.7rem;
     }
     
-
     footer {
         font-size: 0.75rem;
         padding: 0.7rem;
@@ -396,6 +393,11 @@ footer.no-shadow {
 @media screen and (max-width: 480px) {
     body {
         font-size: 0.8rem;
+    }
+    
+    main {
+        max-width: 100%;
+        padding: 1rem;
     }
 
     footer {
