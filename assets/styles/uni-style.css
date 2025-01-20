@@ -118,7 +118,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     }
 
     @media screen and (max-width: 480px) {
-        bod, #typing-effect, #typing-container {
+        body, #typing-effect, #typing-container {
             font-size: 0.7rem;
         }
         #footer-banner {
