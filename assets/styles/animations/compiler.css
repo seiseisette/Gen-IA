@@ -34,8 +34,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     box-sizing: border-box;
     text-align: left;
     transform: translateY(-30%);
-  
-                margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Typing Effect - Style1 */
@@ -105,8 +104,6 @@ overflow: hidden;
     opacity: 0;
     transition: opacity 0.5s ease-in;
 }
-
-
 
 /*
 --- Root Variables --- 

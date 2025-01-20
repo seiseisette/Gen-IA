@@ -106,8 +106,9 @@ document.addEventListener("DOMContentLoaded", function () {
     handleScroll();
 });
 
-
-// Shadow Footer
+// ===================================
+// Shadow Footer Runners
+// ===================================
 document.addEventListener('scroll', function () {
     const footer = document.querySelector('footer');
     const body = document.body;
