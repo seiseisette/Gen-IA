@@ -351,7 +351,11 @@ footer.no-shadow {
 
 /* (max-width: 768px) */
 @media screen and (max-width: 768px) {
-    body, #typing-effect, #typing-container  {   
+    body {   
+        font-size: 1rem;
+    }
+
+    #typing-effect, #typing-container {   
         font-size: 1rem;
     }
 
@@ -378,7 +382,7 @@ footer.no-shadow {
 
 /* (max-width: 480px) */
 @media screen and (max-width: 480px) {
-    body, #typing-effect, #typing-container {
+    body {
         font-size: 0.9rem;
     }
 
@@ -386,6 +390,10 @@ footer.no-shadow {
         font-size: 0.7rem;
         padding: 0.6rem;
         backdrop-filter: blur(8px);
+    }
+
+    #typing-effect, #typing-container {
+        font-size: 0.9rem;
     }
 
     #footer-banner {
