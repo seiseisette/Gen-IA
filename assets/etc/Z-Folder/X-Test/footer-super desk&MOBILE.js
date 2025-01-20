@@ -45,8 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const viewportHeight = window.innerHeight;
         const documentHeight = document.body.offsetHeight;
 
-        const atPageBottom = scrollY + viewportHeight >= documentHeight - 20; // Maggiore sensibilità
-        const atPageTop = scrollY <= 5; // Più sensibile in alto
+        const atPageBottom = scrollY + viewportHeight >= documentHeight - 20;
+        const atPageTop = scrollY <= 5;
         const scrollingDown = scrollY > lastScrollY;
 
         clearTimeout(scrollingTimeout);
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
             isFooterVisible = true;
         }
 
-        // Nascondi il footer quando si scorre verso il basso dalla cima
+        // Nascondi il footer quando si torna verso il basso dalla cima
         if (atPageTop && isFooterVisible && scrollingDown) {
             footerBanner.classList.remove("active");
             isFooterVisible = false;
@@ -69,13 +69,34 @@ document.addEventListener("DOMContentLoaded", function () {
                 footerBanner.classList.remove("active");
                 isFooterVisible = false;
             }
-        }, 100); // Ridotto per maggiore reattività
+        }, 150); // Velocità ottimizzata per mobile
 
         lastScrollY = scrollY;
     }
 
-    // Adattamento animazione su mobile
-    const disappearSpeed = window.innerWidth < 768 ? 300 : 500; // Più rapido su mobile
+    function addTouchSupport() {
+        let touchStartY = 0;
+        let touchEndY = 0;
+
+        window.addEventListener("touchstart", (e) => {
+            touchStartY = e.touches[0].clientY;
+        });
+
+        window.addEventListener("touchmove", (e) => {
+            touchEndY = e.touches[0].clientY;
+
+            if (touchEndY < touchStartY && !isFooterVisible) {
+                footerBanner.classList.add("active");
+                isFooterVisible = true;
+            } else if (touchEndY > touchStartY && isFooterVisible) {
+                footerBanner.classList.remove("active");
+                isFooterVisible = false;
+            }
+        });
+    }
+
+    // Adattamento animazione per mobile
+    const disappearSpeed = window.innerWidth < 768 ? 350 : 500;
     const appearSpeed = disappearSpeed * 0.9;
 
     footerBanner.style.transition = `
@@ -86,5 +107,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Inizializza contenuto del footer e ascoltatori
     fetchFooterContent();
     window.addEventListener("scroll", handleScroll);
+    addTouchSupport();
     handleScroll();
 });
