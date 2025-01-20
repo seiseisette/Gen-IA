@@ -89,7 +89,7 @@ main {
     padding: var(--spacing);
     padding-bottom: 7rem;
 
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 
     background-color: var(--bg-color);
     color: var(--info-text);
@@ -171,6 +171,8 @@ footer {
                     0 10px 100px 70px #000000;
     /* (NO MORE Debug */  
     outline: 1px solid #000000;
+
+                                    outline: 1px dashed rgb(229, 255, 0);
 }
 
 /* Footer Banner */
@@ -192,7 +194,7 @@ footer {
     font-family: var(--std-font);
     font-size: 0.9rem;
     line-height: 1.4;
-    /* No more Debug */                   outline: 1px dashed rgb(229, 255, 0);
+    /* No more Debug */                 
     outline: 1px solid #000000;
 }
 
@@ -215,15 +217,17 @@ footer {
 }
 
 #footer-links a {
-    text-decoration: none;
-    color: var(--accent);
+   /**  text-decoration: none;
+    color: var(--accent); **/
     transition: color 0.3s ease;
 }
 
+ /*
 #footer-links a:hover {
     color: var(--live-color);
     text-decoration: underline;
 }
+**/
 
 .link-live {
     font-weight: bold;
@@ -299,8 +303,8 @@ footer {
         padding: 1.4rem;
 
     }
-    #typing-container {
-        padding-bottom: 0.5rem;
+    #typing-effect, #typing-container {
+        padding-bottom: 0.3rem;
     }
     
     footer {
@@ -324,7 +328,7 @@ footer {
     }
 
     #typing-effect, #typing-container {
-        padding-bottom: 0.7rem;
+        padding-bottom: 0.5rem;
     }
 
     footer {
@@ -346,7 +350,7 @@ footer {
         font-size: 0.9rem; 
     }
     main {
-        padding-bottom: 8rem;
+        padding-bottom: 10rem;
     }
 
     #typing-effect, #typing-container {
@@ -354,7 +358,7 @@ footer {
     }
 
     footer {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         padding: 0.8rem;
     }
 
@@ -373,7 +377,7 @@ footer {
         font-size: 0.8rem;
     }
     main {
-        padding-bottom: 7rem;
+        padding-bottom: 9rem;
     }
 
     #typing-effect, #typing-container {
