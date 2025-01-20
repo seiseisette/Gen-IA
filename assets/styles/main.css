@@ -404,10 +404,12 @@ footer.no-shadow {
         backdrop-filter: blur(8px);
     }
 
+    /*
     #typing-effect {
         font-size: 1.1rem;
         line-height: 0.7rem;
     }
+    */
 
     #footer-banner {
         backdrop-filter: blur(8px);
