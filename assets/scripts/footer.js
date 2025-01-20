@@ -25,6 +25,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const footerBanner = document.getElementById("footer-banner");
     const footerContainer = document.getElementById("footer-content");
 
+    let lastScrollY = 0;
+    let isFooterVisible = false;
+
     async function fetchFooterContent() {
         try {
             const response = await fetch('https://genialabile.com/2footer.html');
@@ -38,30 +41,39 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    function handleFooterScroll() {
+    function handleScroll() {
         const scrollY = window.scrollY;
         const viewportHeight = window.innerHeight;
         const documentHeight = document.body.offsetHeight;
 
-        const triggerOffset = window.innerWidth > 1024 ? 20 : 0; // Desktop: reduced sensitivity
-        if (scrollY + viewportHeight + triggerOffset >= documentHeight) {
+        const atPageBottom = scrollY + viewportHeight >= documentHeight - 10;
+        const atPageTop = scrollY <= 10;
+        const scrollingDown = scrollY > lastScrollY;
+
+        if (atPageBottom && !isFooterVisible) {
+            // Mostra il footer quando si arriva al fondo
             footerBanner.classList.add("active");
-        } else {
+            isFooterVisible = true;
+        } else if (atPageTop && isFooterVisible && scrollingDown) {
+            // Nascondi il footer quando si inizia a scorrere verso il basso dalla cima
             footerBanner.classList.remove("active");
+            isFooterVisible = false;
         }
+
+        lastScrollY = scrollY;
     }
 
-    // Animation speeds
-    const disappearSpeed = 300; // Faster disappearance in ms
-    const appearSpeed = disappearSpeed * 1.1; // Slightly slower appearance
+    // Velocità animazione
+    const disappearSpeed = 400; // Tempo di scomparsa
+    const appearSpeed = disappearSpeed * 0.9; // Tempo di comparsa ridotto del 10%
 
     footerBanner.style.transition = `
         transform ${disappearSpeed}ms ease-in-out, 
         opacity ${appearSpeed}ms ease-in-out
     `;
 
-    // Initialize footer content and scroll listener
+    // Inizializzazione
     fetchFooterContent();
-    window.addEventListener("scroll", handleFooterScroll);
-    handleFooterScroll();
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
 });

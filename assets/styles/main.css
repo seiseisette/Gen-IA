@@ -249,6 +249,12 @@ footer {
     line-height: 1.4; /* Assottiglia la linea del testo */
 }
 
+
+
+
+
+
+
 /* --- Footer Banner --- */
 #footer-banner {
     position: fixed;
@@ -256,39 +262,42 @@ footer {
     left: 0;
     width: 100%;
     background-color: var(--info-bg);
-    transform: translateY(100%);
-    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+    transform: translateY(100%); /* Default nascosto */
+    opacity: 0; /* Invisibile inizialmente */
     z-index: 999;
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem; /* Margine uniforme per il contenuto */
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    font-family: var(--std-font);
 }
 
 #footer-banner.active {
-    transform: translateY(0);
+    transform: translateY(0); /* Mostra il footer */
     opacity: 1;
 }
 
-/* Footer Links */
+/* --- Footer Links --- */
 #footer-links {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
-    max-width: 80%; /* Limita la larghezza per centratura migliorata */
+    max-width: 80%;
     margin: 0 auto;
     text-align: center;
 }
+
 
 #footer-links a {
     text-decoration: none;
     color: var(--info-text);
     font-size: 0.9rem;
     transition: color 0.3s ease;
-    font-weight: 400; /* Evita pesantezza visiva */
+    font-weight: 400;
 }
 
 #footer-links a:hover {
