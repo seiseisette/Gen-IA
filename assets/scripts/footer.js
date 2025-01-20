@@ -25,9 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const footerBanner = document.getElementById("footer-banner");
     const footerContainer = document.getElementById("footer-content");
 
-    let lastScrollY = window.scrollY;
-    let isWideScreen = window.innerWidth > 1024; // Definisce se lo schermo è largo
-
     async function fetchFooterContent() {
         try {
             const response = await fetch('https://genialabile.com/2footer.html');
@@ -42,40 +39,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function handleFooterScroll() {
-        const currentScrollY = window.scrollY;
+        const scrollY = window.scrollY;
         const viewportHeight = window.innerHeight;
         const documentHeight = document.body.offsetHeight;
 
-        const sensitivity = isWideScreen ? 20 : 50; // Maggiore sensibilità su schermi larghi
-
-        if (currentScrollY + viewportHeight >= documentHeight) {
-            // Se si raggiunge il fondo
+        if (scrollY + viewportHeight >= documentHeight) {
             footerBanner.classList.add("active");
-        } else if (currentScrollY > lastScrollY + sensitivity) {
-            // Scorrimento verso il basso (nascondi)
+        } else {
             footerBanner.classList.remove("active");
-        } else if (currentScrollY < lastScrollY - sensitivity) {
-            // Scorrimento verso l'alto (mostra)
-            footerBanner.classList.add("active");
         }
-
-        lastScrollY = currentScrollY;
     }
 
-    function handleResize() {
-        // Aggiorna lo stato dello schermo largo
-        isWideScreen = window.innerWidth > 1024;
-    }
-
-    // Inizializza il contenuto del footer
+    // Initialize footer content and scroll listener
     fetchFooterContent();
-
-    // Listener per lo scroll
     window.addEventListener("scroll", handleFooterScroll);
-
-    // Listener per il ridimensionamento dello schermo
-    window.addEventListener("resize", handleResize);
-
-    // Controllo iniziale
     handleFooterScroll();
 });
