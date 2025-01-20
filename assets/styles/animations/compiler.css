@@ -24,7 +24,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 /* --- Typing Container --- */
 #typing-container {
     width: 100%;
-    max-width: 110%; /* 1200px; */
+    max-width: 1200px;
     height: 100vh;
     display: flex;
     justify-content: center;
