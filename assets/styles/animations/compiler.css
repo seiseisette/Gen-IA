@@ -30,7 +30,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    padding: 0rem;
+    padding: -1rem;
     box-sizing: border-box;
     text-align: left;
     transform: translateY(-20%);
