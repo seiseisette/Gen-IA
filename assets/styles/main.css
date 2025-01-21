@@ -213,7 +213,7 @@ footer.no-shadow {
     background-color: rgba(0, 0, 0, 0.1);
 
 
-    
+
     transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -306,7 +306,7 @@ footer.no-shadow {
 @media screen and (min-width: 1440px) {
     body, #typing-effect, #typing-container {
         font-size: 1.8rem;
-        padding: 3rem;
+        padding: 1.5rem 3rem;
         /* padding-bottom: 1.5rem; */
     }
 
