@@ -70,7 +70,6 @@ Use, distribution, or modification of this project is strictly prohibited withou
     line-height: 2rem;
     max-width: 100%; /* Adatta la larghezza al contenitore */
     text-align: left; /* Allineamento a sinistra */
-    overflow: hidden; /* Evita fuoriuscite */
 
     white-space: nowrap;
     overflow: hidden;
