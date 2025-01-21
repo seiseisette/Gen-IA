@@ -110,6 +110,7 @@ ORDINE CORRETTO in direzione scrittura
     overflow: visible;
     word-break: break-word; /* Forza il testo lungo a spezzarsi solo se necessario */
     max-width: 100%; /* Occupa tutto lo spazio disponibile */
+    width: 100%;
 
 
 
