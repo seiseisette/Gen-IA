@@ -42,7 +42,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 #typing-container {
     width: 100%;
     max-width: 1200px;
-    height: 80vh;
+    height: 120vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -65,6 +65,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
     font-weight: bold;
 
+    overflow: hidden; /* Evita fuoriuscite */
+    word-break: normal; /* Mantiene il testo intero */
 
     font-size: 1.5rem;
     line-height: 2rem;
