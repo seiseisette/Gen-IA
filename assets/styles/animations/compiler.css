@@ -66,7 +66,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     font-weight: bold;
 
     overflow: hidden; /* Evita fuoriuscite */
-    word-break: normal; /* Mantiene il testo intero */
+    word-break:  break-word; /* Mantiene il  */
 
     font-size: 1.5rem;
     line-height: 2rem;
