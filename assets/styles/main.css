@@ -304,12 +304,12 @@ footer.no-shadow {
 /* --- Structure Padding --- */
 .divider-with-padding {
     width: 100%; /* Full-width divider */
-    height: 1px; /* Divider thickness */
+    height: 0px; /* Divider thickness */
     background-color: #00000000; /* Divider color */
     padding: var(--spacer-size);
     box-sizing: border-box;
     position: relative; /* Ensures pseudo-elements position relative to this */
-    
+
     border: 1px dashed purple; /* Debug*/
 }
 
