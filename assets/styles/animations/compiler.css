@@ -21,6 +21,23 @@ Use, distribution, or modification of this project is strictly prohibited withou
 ===============================================================================
 */
 
+
+
+#typing-container {
+    border: 1px dashed fuchsia; /* Debug contenitore */
+}
+
+#typing-effect {
+    border: 1px dashed lime; /* Debug area testo */
+}
+
+#typing-effect.alternate-style {
+    border: 1px dashed rgb(255, 248, 47); /* Bordo per il debug */
+}
+
+
+
+
 /* --- Typing Container --- */
 #typing-container {
     width: 100%;
@@ -36,6 +53,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
     transform: translateY(-30%);
   
     margin-bottom: 0.5rem;
+
+
 }
 
 /* Typing Effect - Style1 */
