@@ -211,6 +211,9 @@ footer.no-shadow {
     line-height: 1.4;
      /* Box shadow effects */
     background-color: rgba(0, 0, 0, 0.1);
+
+
+    
     transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
