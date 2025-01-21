@@ -28,7 +28,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 }
 
 #typing-effect {
-    border: 1px dashed green; /* Debug area testo */
+    border: 1px dashed blue; /* Debug area testo */
 }
 
 #typing-effect.alternate-style {
@@ -42,14 +42,14 @@ Use, distribution, or modification of this project is strictly prohibited withou
 #typing-container {
 
 
-    
+
     margin-top: 10%;
 
 
 
     width: 100%;
     max-width: 1200px;
-    height: 30vh;
+    height: auto;
     display: flex;
     justify-content: flex-start;
     align-items: flex start; /* ______CENTER */
