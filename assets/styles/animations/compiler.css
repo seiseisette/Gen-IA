@@ -79,6 +79,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
     white-space: normal;
     overflow: hidden;
+
+    min-height: 2rem;
 }
 
 #typing-effect::after {
