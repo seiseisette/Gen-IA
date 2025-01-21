@@ -24,16 +24,16 @@ Use, distribution, or modification of this project is strictly prohibited withou
 /* --- Typing Container --- */
 #typing-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 80%; /* 1200px; */
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    padding: var(--spacing);
+    padding: 1rem;
     box-sizing: border-box;
     text-align: left;
-    transform: translateY(-30%);
+    transform: translateY(-400%);
   
                 margin-bottom: 0.5rem;
 }
