@@ -306,13 +306,13 @@ footer.no-shadow {
 @media screen and (min-width: 1440px) {
     body, #typing-effect, #typing-container {
         font-size: 1.8rem;
-        padding: 1.5rem 3rem;
+        padding: 2rem 5rem; /* Aumenta il padding orizzontale */
         /* padding-bottom: 1.5rem; */
     }
 
     main {
-        max-width: 80%;
-        padding-bottom: 4rem;
+        max-width: 70%;
+        padding-bottom: 5rem;
 
     }
 
@@ -338,7 +338,7 @@ footer.no-shadow {
         padding: 1.5rem;
     }
     main {
-        max-width: 90%;
+        max-width: 80%;
         padding-bottom: 5rem;
     }
 
@@ -398,7 +398,7 @@ footer.no-shadow {
 
     #footer-copyright {
         font-size: 0.7rem;
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.3rem;
     }
 }
 
@@ -438,7 +438,7 @@ footer.no-shadow {
 
     #footer-copyright {
         font-size: 0.6rem;
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.3rem;
     }
 }
 
