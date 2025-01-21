@@ -41,15 +41,27 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
 
 
-                #typing-container {
-                    border: 1px dashed red; /* Controllo contenitore */
-                }
-                
-                #typing-effect {
-                    border: 1px dashed green; /* Controllo area testo */
-                }
+/* --- Typing Container --- 
+#typing-container {
+    width: 100%;
+    max-width: 1200px; /* Allineato al contenuto del sito 
+    height: auto; /* Lasciamo che si adatti al contenuto *
+    display: flex;
+    justify-content: center; /* Centra l'animazione *
+    align-items: flex-start; /* Allinea in alto *
+    margin: 0 auto;
+    padding: 0 2rem; /* Spazi laterali *
+    box-sizing: border-box;
+    text-align: left;
+    transform: translateY(-30); /* Assicuriamoci che sia visibile *
+    overflow: visible; /* Rende tutto visibile *
+    
+            border: 1px dashed red; /* Bordo per il debug 
+}
 
-/* --- Typing Container --- */
+ORDINE CORRETTO in direzione scrittura
+*/
+
 #typing-container {
     width: 100%;
     max-width: 1200px; /* Spazio massimo per dispositivi più grandi */
@@ -63,6 +75,18 @@ Use, distribution, or modification of this project is strictly prohibited withou
     text-align: center; /* Testo centrato */
     transform: translateY(0); /* Assicura che non sia troppo in alto */
 }
+
+
+
+                    #typing-container {
+                        border: 1px dashed red; /* Controllo contenitore */
+                    }
+
+                    #typing-effect {
+                        border: 1px dashed green; /* Controllo area testo */
+                    }
+
+
 
 /* Typing Effect - Style1
 #typing-effect {
