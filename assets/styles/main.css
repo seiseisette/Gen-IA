@@ -313,8 +313,8 @@ footer.no-shadow {
     }
 
     footer {
-        font-size: 0.95rem;
-        padding: 0.9rem;
+        font-size: 0.8rem;
+        padding: 0rem;
         backdrop-filter: blur(12px);
     }
 
@@ -339,8 +339,8 @@ footer.no-shadow {
     }
 
     footer {
-        font-size: 0.8rem;
-        padding: 0.8rem;
+        font-size: 0.7rem;
+        padding: 0rem;
         backdrop-filter: blur(11px);
     }
 
@@ -378,8 +378,8 @@ footer.no-shadow {
     }
     
     footer {
-        font-size: 0.75rem;
-        padding: 0.7rem;
+        font-size: 0.7rem;
+        padding: 0rem;
         backdrop-filter: blur(9px);
     }
 
