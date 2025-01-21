@@ -21,10 +21,10 @@ Use, distribution, or modification of this project is strictly prohibited withou
 ===============================================================================
 */
 
-/* --- Typing Container --- */
+/* --- Typing Container --- 
 #typing-container {
     width: 110%;
-    max-width: 100%; /* 1200px; */
+    max-width: 100%; /* 1200px; 
     height: 100vh;
     display: flex;
     justify-content: flex-start;
@@ -37,8 +37,26 @@ Use, distribution, or modification of this project is strictly prohibited withou
   
                 margin-bottom: -3rem;
 }
+                */
 
-/* Typing Effect - Style1 */
+
+
+/* --- Typing Container --- */
+#typing-container {
+    width: 100%; /* Mantieni il contenitore largo quanto il main */
+    max-width: 1200px; /* Allineato al resto del contenuto */
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Centrare il contenuto */
+    align-items: flex-start; /* Allinea l'animazione in alto */
+    margin: 0 auto;
+    padding: 0 2rem; /* Spazi laterali simili al contenuto principale */
+    box-sizing: border-box;
+    text-align: left;
+    transform: translateY(-10%); /* Regola la posizione verticale */
+}
+
+/* Typing Effect - Style1
 #typing-effect {
     font-family: var(--mtx-font);
     color: var(--compiler1-color);
@@ -46,6 +64,19 @@ Use, distribution, or modification of this project is strictly prohibited withou
     line-height: 2rem;
     white-space: pre-wrap;
     overflow: hidden;
+}
+    */
+
+/* Typing Effect - Style1 */
+#typing-effect {
+    font-family: var(--mtx-font);
+    color: var(--compiler1-color);
+    font-size: 1.5rem;
+    line-height: 2rem;
+    white-space: normal; /* Permette il wrapping naturale */
+    word-wrap: break-word; /* Evita parole troppo lunghe */
+    overflow: hidden;
+    max-width: 100%; /* Limita il testo alla larghezza del contenitore */
 }
 
 #typing-effect::after {
