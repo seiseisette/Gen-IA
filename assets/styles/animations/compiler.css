@@ -27,7 +27,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     max-width: 1200px;
     height: 100%; /*100vh; */
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin: 0 auto;
     padding: var(--spacing);
