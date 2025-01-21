@@ -81,7 +81,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
 .alternate-style::after {
     content: "" !important;
-    animation: blink-fast 120s steps(1) infinite !important;
+    animation: blink-fast 180s steps(1) infinite !important;
 }
 
 /* No Cursor Style */
