@@ -42,7 +42,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 #typing-container {
     width: 100%;
     max-width: 1200px;
-    height: 100%; /*100vh; */
+    height: *100vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -61,6 +61,11 @@ Use, distribution, or modification of this project is strictly prohibited withou
 #typing-effect {
 font-family: var(--mtx-font);
 color: var(--compiler1-color);
+
+
+font-weight: bold;
+
+
 font-size: 1.5rem;
 line-height: 2rem;
 white-space: pre-wrap;
