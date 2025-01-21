@@ -306,7 +306,7 @@ footer.no-shadow {
 @media screen and (min-width: 1440px) {
     body, #typing-effect, #typing-container {
         font-size: 1.8rem;
-        padding: 2rem 5rem; /* Aumenta il padding orizzontale */
+        padding: 2rem;
         /* padding-bottom: 1.5rem; */
     }
 
@@ -335,7 +335,7 @@ footer.no-shadow {
 /* (max-width: 1024px) */
 @media screen and (max-width: 1024px) {
     body, #typing-effect, #typing-container {
-        padding: 2rem 5rem; /* Aumenta il padding orizzontale */
+        padding: 1.5rem;
     }
     main {
         max-width: 80%;
