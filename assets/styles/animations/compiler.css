@@ -80,7 +80,7 @@ ORDINE CORRETTO in direzione scrittura
 
 
                     #typing-container {
-                        border: 1px dashed fuchsia; /* Controllo contenitore */
+                        border: 1px dashed red; /* Controllo contenitore */
                     }
 
                     #typing-effect {
@@ -117,9 +117,7 @@ ORDINE CORRETTO in direzione scrittura
 
 
     text-align: left; /* Allinea il testo */
-    padding-left:-3rem;
-    padding-right: -3rem;
-}
+   
 
 #typing-effect::after {
     content: "█";
