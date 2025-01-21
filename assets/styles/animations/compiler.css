@@ -74,17 +74,17 @@ ORDINE CORRETTO in direzione scrittura
     padding-top:var(--spacing);
     box-sizing: border-box;
     text-align: left; 
-    transform: translateY(0); /* Assicura che non sia troppo in alto */
+    transform: translateY(-30); /* Assicura che non sia troppo in alto */
 }
 
 
 
                     #typing-container {
-                        border: 1px dashed red; /* Controllo contenitore */
+                        border: 1px dashed pink; /* Controllo contenitore */
                     }
 
                     #typing-effect {
-                        border: 1px dashed green; /* Controllo area testo */
+                        border: 1px dashed lightgreen; /* Controllo area testo */
                     }
 
 
