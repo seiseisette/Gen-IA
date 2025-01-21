@@ -84,7 +84,7 @@ ORDINE CORRETTO in direzione scrittura
                     }
 
                     #typing-effect {
-                        border: 1px dashed green; /* Controllo area testo */
+                        border: 1px dashed rgb(16, 215, 255); /* Controllo area testo */
                     }
 
 
@@ -110,13 +110,13 @@ ORDINE CORRETTO in direzione scrittura
     overflow: visible;
     word-break: break-word; /* Forza il testo lungo a spezzarsi solo se necessario */
     max-width: 100%; /* Occupa tutto lo spazio disponibile */
-
+    margin: 0;
 
 
 
 
     text-align: left; /* Allinea il testo */
-   
+}
 
 #typing-effect::after {
     content: "█";
