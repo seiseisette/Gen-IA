@@ -304,7 +304,7 @@ footer.no-shadow {
     body, #typing-effect, #typing-container {
         font-size: 1.8rem;
         padding: 1.4rem;
-        padding-bottom: 1.4rem;
+        padding-bottom: 1.5rem;
     }
 
     footer {
@@ -327,7 +327,7 @@ footer.no-shadow {
 @media screen and (max-width: 1024px) {
     body, #typing-effect, #typing-container {
         padding: 1.2rem;
-        padding-bottom: 1.2rem;
+        padding-bottom: 3rem;
     }
 
     footer {
@@ -361,6 +361,7 @@ footer.no-shadow {
     main {
         max-width: 100%;
         padding: 1rem;
+        padding-bottom: 5rem;
     }
 
     #typing-effect {   
@@ -394,10 +395,11 @@ footer.no-shadow {
     body {
         font-size: 0.8rem;
     }
-    
+
     main {
         max-width: 100%;
         padding: 1rem;
+        padding-bottom: 6rem;
     }
 
     footer {
