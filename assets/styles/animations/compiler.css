@@ -63,28 +63,30 @@ ORDINE CORRETTO in direzione scrittura
 */
 
 /* --- Typing Container --- */
+/* --- Typing Container --- */
 #typing-container {
     width: 100%;
-    max-width: 1200px; /* Allineato al contenuto del sito */
+    max-width: 1200px; /* Stessa larghezza del contenuto del sito */
     height: auto; /* Adatta l'altezza al contenuto */
     display: flex;
     justify-content: flex-start; /* Testo allineato a sinistra */
-    align-items: flex-start; /* Allinea in alto */
+    align-items: flex-start; /* Posizionamento in alto */
     margin: 0 auto;
-    padding: 0 2rem; /* Spazi laterali */
+    padding: 0 2rem; /* Margini laterali */
     box-sizing: border-box;
     text-align: left; /* Allineamento a sinistra */
-    transform: translateY(-30%); /* Posizionato a -30% verticale */
-    overflow: visible; /* Permette di vedere tutto il contenuto */
-    border: 1px dashed red; /* Bordo per il debug */
+    transform: translateY(-30%); /* Posizionamento verticale */
+    overflow: visible; /* Permette al contenuto di essere visibile */
+    border: 1px dashed red; /* Debug */
 }
 
+
                                         #typing-container {
-                                            border: 1px dashed red; /* Debug contenitore */
+                                            border: 1px dashed fuchsia; /* Debug contenitore */
                                         }
 
                                         #typing-effect {
-                                            border: 1px dashed green; /* Debug area testo */
+                                            border: 1px dashed lime; /* Debug area testo */
                                         }
 
 /* Typing Effect - Style1
@@ -100,17 +102,20 @@ ORDINE CORRETTO in direzione scrittura
 
 /* Typing Effect - Style1 */
 /* --- Typing Effect --- */
+
+/* --- Typing Effect --- */
 #typing-effect {
     font-family: var(--mtx-font);
     color: var(--compiler1-color);
-    font-size: 1.5rem;
-    line-height: 2rem;
-    white-space: pre-wrap; /* Consente al testo di andare a capo in modo naturale */
-    overflow: hidden; /* Limita eventuali fuoriuscite indesiderate */
-    word-break: break-word; /* Spezza parole lunghe solo se necessario */
-    max-width: 100%; /* Adatta alla larghezza del contenitore */
+    font-size: 1.8rem; /* Aumenta la leggibilità */
+    line-height: 2.2rem; /* Spaziatura tra le righe */
+    white-space: nowrap; /* Impedisce che il testo vada a capo */
+    overflow: hidden; /* Evita fuoriuscite */
+    word-break: normal; /* Mantiene il testo intero */
+    max-width: 100%; /* Adatta la larghezza al contenitore */
     text-align: left; /* Allineamento a sinistra */
 }
+
 
 
 #typing-effect::after {
@@ -120,9 +125,6 @@ ORDINE CORRETTO in direzione scrittura
     text-align: left;
     animation: blink 1s steps(1) infinite;
     line-height: 2rem;
-
-
-    margin: 0;
 }
 
 /* Typing Effect - Style2 */
