@@ -24,7 +24,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
 
 #typing-container {
-    border: 1px dashed red; /* Debug contenitore */
+    border: 1px dashed rgb(0, 255, 38); /* Debug contenitore */
 }
 
 #typing-effect {
