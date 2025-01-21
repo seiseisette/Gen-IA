@@ -21,67 +21,34 @@ Use, distribution, or modification of this project is strictly prohibited withou
 ===============================================================================
 */
 
-
-
-#typing-container {
-    border: 1px dashed rgb(0, 255, 38); /* Debug contenitore */
-}
-
-#typing-effect {
-    border: 1px dashed blue; /* Debug area testo */
-}
-
-#typing-effect.alternate-style {
-    border: 1px dashed rgb(255, 248, 47); /* Bordo per il debug */
-}
-
-
-
-
 /* --- Typing Container --- */
 #typing-container {
-
-
-
     margin-top: 10%;
-
-
-
     width: 100%;
     max-width: 1200px;
     height: auto;
     display: flex;
-
-
-    flex-direction: column; /* Posiziona i figli verticalmente */
-
-
+    flex-direction: column; /* */
     justify-content: flex-start;
-    align-items: flex start; /* ______CENTER */
+    align-items: flex start; /* */
     margin: 0 auto;
     padding: var(--spacing);
     box-sizing: border-box;
     text-align: left;
     transform: translateY(0%);
-  
     margin-bottom: 0.5rem;
-
-
 }
 
 /* Typing Effect - Style1 */
 #typing-effect {
     font-family: var(--mtx-font);
     color: var(--compiler1-color);
-
-    overflow: visible; /* Evita fuoriuscite */
-    word-break:  break-word; /* Mantiene il  */
-
+    overflow: visible; /*  */
+    word-break:  break-word; /*   */
     font-size: 1.5rem;
     line-height: 2rem;
-    max-width: 100%; /* Adatta la larghezza al contenitore */
-    text-align: left; /* Allineamento a sinistra */
-
+    max-width: 100%; /*  */
+    text-align: left; /*  */
     white-space: normal;
     overflow: hidden;
     font-weight: normal;
@@ -103,7 +70,6 @@ Use, distribution, or modification of this project is strictly prohibited withou
     color: var(--compiler2-color);
     font-weight: normal;
     min-height: 2rem;
-
 }
 
 .alternate-style {
@@ -116,11 +82,6 @@ Use, distribution, or modification of this project is strictly prohibited withou
 .alternate-style::after {
     content: "" !important;
     animation: blink-fast 120s steps(1) infinite !important;
-    /*
-    font-family: var(--std-font) !important;
-    color: var(--compiler2-color) !important;
-    line-height: 2rem !important;
-    */
 }
 
 /* No Cursor Style */
@@ -148,36 +109,32 @@ Use, distribution, or modification of this project is strictly prohibited withou
     transition: opacity 0.5s ease-in;
 }
 
+/*--- Debug ---*/
+/*
+#typing-container {
+    border: 1px dashed green(0, 255, 38);
+}
 
+#typing-effect {
+    border: 1px dashed blue;
+}
+
+#typing-effect.alternate-style {
+    border: 1px dashed yellow; 
+}
+*/
 
 /*
---- Root Variables --- 
-:root {
-    --bg-color: #000000;
-    --info-bg: #000000;
-    --info-text: #f4f4f4;
-    --compiler1-color: #00ff00cc;
-    --compiler2-color: #f4f4f4;
-    --std-font: 'Roboto', sans-serif;
-    --mtx-font: 'Inconsolata', monospace;
-    --spacing: 2rem;
-    --accent: #ff00ff;
-    --line-color: rgba(244, 244, 244, 0.5);
-    --box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
-}
+**************
 
-/* --- Base Reset --- *
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+.alternate-style::after {
+    content: "" !important;
+    animation: blink-fast 120s steps(1) infinite !important;
+    *****
+    font-family: var(--std-font) !important;
+    color: var(--compiler2-color) !important;
+    line-height: 2rem !important;
+    *****
 
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-                                */
+
+*/
