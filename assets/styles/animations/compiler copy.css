@@ -62,30 +62,32 @@ Use, distribution, or modification of this project is strictly prohibited withou
 ORDINE CORRETTO in direzione scrittura
 */
 
-/* --- Typing Container --- */
 #typing-container {
     width: 100%;
-    max-width: 1200px; /* Allineato al contenuto del sito */
-    height: auto; /* Adatta l'altezza al contenuto */
+    max-width: 1200px; /* Spazio massimo per dispositivi più grandi */
+    height: auto;
     display: flex;
-    justify-content: flex-start; /* Testo allineato a sinistra */
-    align-items: flex-start; /* Allinea in alto */
+    justify-content: center; /* Centra il testo */
+    align-items: flex-start; /* Mantieni il testo in alto */
     margin: 0 auto;
-    padding: 0 2rem; /* Spazi laterali */
+    padding: 0 2rem; /* Riduci lo spazio laterale per migliorare l’uso */
+    padding-top: 6rem;
     box-sizing: border-box;
-    text-align: left; /* Allineamento a sinistra */
-    transform: translateY(-30%); /* Posizionato a -30% verticale */
-    overflow: visible; /* Permette di vedere tutto il contenuto */
-    border: 1px dashed red; /* Bordo per il debug */
+    text-align: left; 
+    transform: translateY(-30); /* Assicura che non sia troppo in alto */
 }
 
-                                        #typing-container {
-                                            border: 1px dashed red; /* Debug contenitore */
-                                        }
 
-                                        #typing-effect {
-                                            border: 1px dashed green; /* Debug area testo */
-                                        }
+
+                    #typing-container {
+                        border: 1px dashed fuchsia; /* Controllo contenitore */
+                    }
+
+                    #typing-effect {
+                        border: 1px dashed rgb(16, 215, 255); /* Controllo area testo */
+                    }
+
+
 
 /* Typing Effect - Style1
 #typing-effect {
@@ -99,19 +101,22 @@ ORDINE CORRETTO in direzione scrittura
     */
 
 /* Typing Effect - Style1 */
-/* --- Typing Effect --- */
 #typing-effect {
     font-family: var(--mtx-font);
     color: var(--compiler1-color);
     font-size: 1.5rem;
     line-height: 2rem;
-    white-space: pre-wrap; /* Consente al testo di andare a capo in modo naturale */
-    overflow: hidden; /* Limita eventuali fuoriuscite indesiderate */
-    word-break: break-word; /* Spezza parole lunghe solo se necessario */
-    max-width: 100%; /* Adatta alla larghezza del contenitore */
-    text-align: left; /* Allineamento a sinistra */
-}
+    white-space: normal; /* Permette di andare a capo solo quando serve */
+    overflow: visible;
+    word-break: break-word; /* Forza il testo lungo a spezzarsi solo se necessario */
+    max-width: 100%; /* Occupa tutto lo spazio disponibile */
+    margin: 0;
 
+
+
+
+    text-align: left; /* Allinea il testo */
+}
 
 #typing-effect::after {
     content: "█";
@@ -120,8 +125,6 @@ ORDINE CORRETTO in direzione scrittura
     text-align: left;
     animation: blink 1s steps(1) infinite;
     line-height: 2rem;
-
-
     margin: 0;
 }
 
