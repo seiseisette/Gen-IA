@@ -45,7 +45,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     height: 30vh;
     display: flex;
     justify-content: flex-start;
-    align-items: flex start;
+    align-items: flex start; /* ______CENTER */
     margin: 0 auto;
     padding: var(--spacing);
     box-sizing: border-box;
@@ -61,9 +61,6 @@ Use, distribution, or modification of this project is strictly prohibited withou
 #typing-effect {
     font-family: var(--mtx-font);
     color: var(--compiler1-color);
-
-
-    font-weight: bold;
 
     overflow: visible; /* Evita fuoriuscite */
     word-break:  break-word; /* Mantiene il  */
