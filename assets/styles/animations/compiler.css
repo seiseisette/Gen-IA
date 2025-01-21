@@ -84,7 +84,7 @@ ORDINE CORRETTO in direzione scrittura
                     }
 
                     #typing-effect {
-                        border: 1px dashed lemonchiffon; /* Controllo area testo */
+                        border: 1px dashed greenyellow; /* Controllo area testo */
                     }
 
 
@@ -115,8 +115,8 @@ ORDINE CORRETTO in direzione scrittura
 
 
     text-align: left; /* Allinea il testo */
-    padding-left:-2rem;
-    padding-right: -2rem;
+    padding-left:-3rem;
+    padding-right: -3rem;
 }
 
 #typing-effect::after {
