@@ -71,8 +71,9 @@ ORDINE CORRETTO in direzione scrittura
     align-items: flex-start; /* Mantieni il testo in alto */
     margin: 0 auto;
     padding: 0 2rem; /* Riduci lo spazio laterale per migliorare l’uso */
+    padding-top:var(--spacing);
     box-sizing: border-box;
-    text-align: center; /* Testo centrato */
+    text-align: left; 
     transform: translateY(0); /* Assicura che non sia troppo in alto */
 }
 
@@ -109,7 +110,12 @@ ORDINE CORRETTO in direzione scrittura
     overflow: visible;
     word-break: break-word; /* Forza il testo lungo a spezzarsi solo se necessario */
     max-width: 100%; /* Occupa tutto lo spazio disponibile */
-    text-align: center; /* Allinea il testo */
+
+
+
+
+    text-align: left; /* Allinea il testo */
+    padding: 0 1Rem;
 }
 
 #typing-effect::after {
