@@ -97,7 +97,7 @@ const textArray = [
     "",
     "I connect with your emotions in just a few words, making our interaction human and seamless.",
     "My goal is to surprise and challenge you, enhancing your creativity and intelligence.",
-    "Which settle for less when you have me?\u00A0🧞‍♀️",
+    "Why settle for less when you have me?\u00A0🧞‍♀️",
     "", "",
     
     "<h3>🍒 Let’s Begin</h3>",
