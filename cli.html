@@ -41,10 +41,11 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 .catch(error => console.error('Error fetching header:', error));
         </script>
 
-        <!-- compiler.css -->
-        <link rel="preload" href="https://genialabile.com/assets/styles/animations/compiler.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
-        <noscript><link rel="stylesheet" href="https://genialabile.com/assets/styles/animations/compiler.css" crossorigin="anonymous"></noscript>
-
+        <!-- compiler.css --><!-- compiler.css --><!-- compiler.css --><!-- compiler.css --><!-- compiler.css --><!-- compiler.css -->
+        <link rel="preload" href="https://genialabile.com/assets/styles/compiler.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+        <noscript><link rel="stylesheet" href="https://genialabile.com/assets/styles/compiler.css" crossorigin="anonymous"></noscript>
+        <!-- compiler.css --><!-- compiler.css --><!-- compiler.css --><!-- compiler.css --><!-- compiler.css --><!-- compiler.css -->
+         
     </head>
 
     <!-- SHIFT -->
@@ -325,26 +326,9 @@ Use, distribution, or modification of this project is strictly prohibited withou
         <footer>
             <!-- Footer script -->
             <script src="https://genialabile.com/assets/scripts/footer.js" defer></script>
+            <!-- Preloader script -->
+            <script src="https://genialabile.com/assets/scripts/preloader.js" defer></script>
         </footer>
-    
-        <!-- Preloader and Fade Effect -->
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const preloader = document.getElementById("preloader");
-                const fadeDelay = 2000; // Ritardo per il fade effect
-
-                // Simula un caricamento (rimuovere in produzione se non necessario)
-                setTimeout(() => {
-                    // Nasconde il preloader
-                    preloader.classList.add("hidden");
-
-                    // Attiva il fade effect
-                    setTimeout(() => {
-                        document.body.classList.add("visible");
-                    }, 500); // Ritardo per il fade effect dopo il preloader
-                }, fadeDelay); // Sincronizza con il ritardo del fade effect
-            });
-        </script>
 
     </body>
 
