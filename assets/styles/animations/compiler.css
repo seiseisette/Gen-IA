@@ -30,12 +30,12 @@ Use, distribution, or modification of this project is strictly prohibited withou
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0rem;
     box-sizing: border-box;
     text-align: left;
     transform: translateY(-20%);
   
-                margin-bottom: 0.5rem;
+                margin-bottom: -3rem;
 }
 
 /* Typing Effect - Style1 */
