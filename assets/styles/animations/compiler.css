@@ -115,7 +115,8 @@ ORDINE CORRETTO in direzione scrittura
 
 
     text-align: left; /* Allinea il testo */
-    padding: 0 -2rem;
+    padding-left:-2rem;
+    padding-right: -2rem;
 }
 
 #typing-effect::after {
