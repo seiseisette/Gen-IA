@@ -55,6 +55,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
     text-align: left;
     transform: translateY(-30); /* Assicuriamoci che sia visibile */
     overflow: visible; /* Rende tutto visibile */
+    
+            border: 1px dashed red; /* Bordo per il debug */
 }
 
 /* Typing Effect - Style1
@@ -79,6 +81,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
     overflow: visible; /* Garantisce che tutto sia visibile */
     max-width: 100%; /* Assicura che non ecceda il contenitore */
     padding: 0; /* Rimuove padding che potrebbe nascondere il testo */
+
+            border: 1px dashed lightblue; /* Bordo per il debug */
 }
 
 #typing-effect::after {
@@ -95,6 +99,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
     font-family: var(--std-font);
     color: var(--compiler2-color);
     min-height: 2rem;
+
+                border: 1px dashed greenyellow; /* Bordo per il debug */
 }
 
 .alternate-style {
