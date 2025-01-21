@@ -73,7 +73,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     max-width: 100%; /* Adatta la larghezza al contenitore */
     text-align: left; /* Allineamento a sinistra */
 
-    white-space: nowrap;
+    white-space: normal;
     overflow: hidden;
 }
 
