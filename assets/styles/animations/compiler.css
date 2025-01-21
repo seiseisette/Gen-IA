@@ -84,7 +84,7 @@ ORDINE CORRETTO in direzione scrittura
                     }
 
                     #typing-effect {
-                        border: 1px dashed greenyellow; /* Controllo area testo */
+                        border: 1px dashed green; /* Controllo area testo */
                     }
 
 
@@ -110,7 +110,8 @@ ORDINE CORRETTO in direzione scrittura
     overflow: visible;
     word-break: break-word; /* Forza il testo lungo a spezzarsi solo se necessario */
     max-width: 100%; /* Occupa tutto lo spazio disponibile */
-    width: 100%;
+
+    margin: 0;
 
 
 
