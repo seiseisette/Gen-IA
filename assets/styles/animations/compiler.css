@@ -24,11 +24,11 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
 
 #typing-container {
-    border: 1px dashed fuchsia; /* Debug contenitore */
+    border: 1px dashed red; /* Debug contenitore */
 }
 
 #typing-effect {
-    border: 1px dashed lime; /* Debug area testo */
+    border: 1px dashed green; /* Debug area testo */
 }
 
 #typing-effect.alternate-style {
@@ -42,7 +42,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 #typing-container {
     width: 100%;
     max-width: 1200px;
-    height: 50vh;
+    height: 30vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -50,7 +50,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     padding: var(--spacing);
     box-sizing: border-box;
     text-align: left;
-    transform: translateY(-20%);
+    transform: translateY(0%);
   
     margin-bottom: 0.5rem;
 
