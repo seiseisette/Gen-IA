@@ -133,7 +133,7 @@ ORDINE CORRETTO in direzione scrittura
     color: var(--compiler2-color);
     min-height: 2rem;
 
-                border: 1px dashed greenyellow; /* Bordo per il debug */
+                border: 1px dashed rgb(255, 248, 47); /* Bordo per il debug */
 }
 
 .alternate-style {
