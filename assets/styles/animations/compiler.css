@@ -51,6 +51,11 @@ Use, distribution, or modification of this project is strictly prohibited withou
     max-width: 1200px;
     height: auto;
     display: flex;
+
+
+    flex-direction: column; /* Posiziona i figli verticalmente */
+
+
     justify-content: flex-start;
     align-items: flex start; /* ______CENTER */
     margin: 0 auto;
@@ -79,7 +84,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
     white-space: normal;
     overflow: hidden;
-
+    font-weight: normal;
     min-height: 2rem;
 }
 
