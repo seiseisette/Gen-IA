@@ -42,7 +42,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 #typing-container {
     width: 100%;
     max-width: 1200px;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
