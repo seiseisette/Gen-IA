@@ -18,112 +18,35 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
 # Version: v3.2 (190125)
 # URL: https://genialabile.com/assets/styles/animations/compiler.css
-
-
-
-
-QUESTO AVEVA LA SCRITTA FUNIONANTE
-
-
 ===============================================================================
 */
 
-/* --- Typing Container --- 
+/* --- Typing Container --- */
 #typing-container {
-    width: 110%;
-    max-width: 100%; /* 1200px; 
-    height: 100vh;
+    width: 100%;
+    max-width: 1200px;
+    height: auto; /*100vh; */
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     margin: 0 auto;
-    padding: -2rem;
+    padding: var(--spacing);
     box-sizing: border-box;
     text-align: left;
-    transform: translateY(-20%);
+    transform: translateY(-30%);
   
-                margin-bottom: -3rem;
+    margin-bottom: 0.5rem;
 }
-                */
-
-
-
-/* --- Typing Container --- 
-#typing-container {
-    width: 100%;
-    max-width: 1200px; /* Allineato al contenuto del sito 
-    height: auto; /* Lasciamo che si adatti al contenuto *
-    display: flex;
-    justify-content: center; /* Centra l'animazione *
-    align-items: flex-start; /* Allinea in alto *
-    margin: 0 auto;
-    padding: 0 2rem; /* Spazi laterali *
-    box-sizing: border-box;
-    text-align: left;
-    transform: translateY(-30); /* Assicuriamoci che sia visibile *
-    overflow: visible; /* Rende tutto visibile *
-    
-            border: 1px dashed red; /* Bordo per il debug 
-}
-
-ORDINE CORRETTO in direzione scrittura
-*/
-
-/* --- Typing Container --- */
-/* --- Typing Container --- */
-#typing-container {
-    width: 100%;
-    max-width: 1200px; /* Stessa larghezza del contenuto del sito */
-    height: auto; /* Adatta l'altezza al contenuto */
-    display: flex;
-    justify-content: flex-start; /* Testo allineato a sinistra */
-    align-items: flex-start; /* Posizionamento in alto */
-    margin: 0 auto;
-    padding: 0 2rem; /* Margini laterali */
-    box-sizing: border-box;
-    text-align: left; /* Allineamento a sinistra */
-    transform: translateY(-30%); /* Posizionamento verticale */
-    overflow: visible; /* Permette al contenuto di essere visibile */
-    border: 1px dashed red; /* Debug */
-}
-
-
-                                        #typing-container {
-                                            border: 1px dashed fuchsia; /* Debug contenitore */
-                                        }
-
-                                        #typing-effect {
-                                            border: 1px dashed blue; /* Debug area testo */
-                                        }
-
-/* Typing Effect - Style1
-#typing-effect {
-    font-family: var(--mtx-font);
-    color: var(--compiler1-color);
-    font-size: 1.5rem;
-    line-height: 2rem;
-    white-space: pre-wrap;
-    overflow: hidden;
-}
-    */
 
 /* Typing Effect - Style1 */
-/* --- Typing Effect --- */
-
-/* --- Typing Effect --- */
 #typing-effect {
-    font-family: var(--mtx-font);
-    color: var(--compiler1-color);
-    font-size: 1.8rem; /* Aumenta la leggibilità */
-    line-height: 2.2rem; /* Spaziatura tra le righe */
-    white-space: nowrap; /* Impedisce che il testo vada a capo */
-    overflow: hidden; /* Evita fuoriuscite */
-    word-break: normal; /* Mantiene il testo intero */
-    max-width: 100%; /* Adatta la larghezza al contenitore */
-    text-align: left; /* Allineamento a sinistra */
+font-family: var(--mtx-font);
+color: var(--compiler1-color);
+font-size: 1.5rem;
+line-height: 2rem;
+white-space: pre-wrap;
+overflow: hidden;
 }
-
-
 
 #typing-effect::after {
     content: "█";
@@ -139,8 +62,6 @@ ORDINE CORRETTO in direzione scrittura
     font-family: var(--std-font);
     color: var(--compiler2-color);
     min-height: 2rem;
-
-                border: 1px dashed rgb(255, 248, 47); /* Bordo per il debug */
 }
 
 .alternate-style {
