@@ -8,7 +8,7 @@
 Advanced-GPT inspiring multidimensional solutions and unlocking creative potential.
 
 -------------------------------------------------------------------------------
-## License
+### License
 © 2025 GENiALABILE. All Rights Reserved.
 A GPT-Based Project — Designed by seiseisette.
 Repository: https://github.com/seiseisette/
