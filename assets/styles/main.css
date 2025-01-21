@@ -313,6 +313,10 @@ footer.no-shadow {
     main {
         max-width: 80%;
         padding-bottom: 4rem;
+
+    }
+    #typing-effect {
+        font-weight: normal;
     }
 
     footer {
@@ -339,6 +343,10 @@ footer.no-shadow {
     main {
         max-width: 90%;
         padding-bottom: 5rem;
+    }
+
+    #typing-effect {
+        font-weight: normal;
     }
 
     footer {

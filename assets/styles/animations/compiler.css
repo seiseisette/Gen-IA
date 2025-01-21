@@ -50,7 +50,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     padding: var(--spacing);
     box-sizing: border-box;
     text-align: left;
-    transform: translateY(-30%);
+    transform: translateY(-20%);
   
     margin-bottom: 0.5rem;
 
