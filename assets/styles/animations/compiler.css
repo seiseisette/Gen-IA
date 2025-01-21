@@ -42,7 +42,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 #typing-container {
     width: 100%;
     max-width: 1200px;
-    height: 120vh;
+    height: 50vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -90,7 +90,9 @@ Use, distribution, or modification of this project is strictly prohibited withou
 #typing-effect.alternate-style {
     font-family: var(--std-font);
     color: var(--compiler2-color);
+    font-weight: normal;
     min-height: 2rem;
+
 }
 
 .alternate-style {
