@@ -45,7 +45,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     height: 30vh;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex start;
     margin: 0 auto;
     padding: var(--spacing);
     box-sizing: border-box;
