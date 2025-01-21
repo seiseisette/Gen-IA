@@ -314,6 +314,9 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
         </main>
 
+        <!-- Preloader -->
+        <div id="preloader"></div>
+
         <!-- Footer Banner Style -->
         <div id="footer-banner">
             <div id="footer-content"></div>
@@ -324,14 +327,25 @@ Use, distribution, or modification of this project is strictly prohibited withou
             <script src="https://genialabile.com/assets/scripts/footer.js" defer></script>
         </footer>
     
-        <!-- Fade Effect -->
+        <!-- Preloader and Fade Effect -->
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-                const fadeDelay = 2000;
+                const preloader = document.getElementById("preloader");
+                const fadeDelay = 2000; // Ritardo per il fade effect
+
+                // Simula un caricamento (rimuovere in produzione se non necessario)
                 setTimeout(() => {
-                    document.body.classList.add("visible");
-                }, fadeDelay);
+                    // Nasconde il preloader
+                    preloader.classList.add("hidden");
+
+                    // Attiva il fade effect
+                    setTimeout(() => {
+                        document.body.classList.add("visible");
+                    }, 500); // Ritardo per il fade effect dopo il preloader
+                }, fadeDelay); // Sincronizza con il ritardo del fade effect
             });
         </script>
+
     </body>
+
 </html>
