@@ -308,8 +308,8 @@ footer.no-shadow {
     }
 
     main {
-        max-width: 100%;
-        padding-bottom: 3rem;
+        max-width: 80%;
+        padding-bottom: 4rem;
     }
 
     footer {
@@ -334,8 +334,8 @@ footer.no-shadow {
         padding: 1.5rem;
     }
     main {
-        max-width: 100%;
-        padding-bottom: 4rem;
+        max-width: 90%;
+        padding-bottom: 5rem;
     }
 
     footer {
