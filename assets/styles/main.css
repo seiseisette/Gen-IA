@@ -44,6 +44,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     --box-shadow: 0 -2px 10px #24242424;
     --spacing: 2rem;
     --foot-margin: 1rem;
+    --spacer-size: 5rem;
     /* Fonts */
     --std-font: "Roboto", sans-serif;
     --mtx-font: "Inconsolata", monospace;
@@ -298,6 +299,18 @@ footer.no-shadow {
     border-top: 1px dashed var(--line-color);
     margin: 1rem 0;
     width: 100%;
+}
+
+/* --- Structure Padding --- */
+.divider-with-padding {
+    width: 100%; /* Full-width divider */
+    height: 1px; /* Divider thickness */
+    background-color: #00000000; /* Divider color */
+    padding: var(--spacer-size);
+    box-sizing: border-box;
+    position: relative; /* Ensures pseudo-elements position relative to this */
+    
+    border: 1px dashed purple; /* Debug*/
 }
 
 /* --- Responsive Design --- */
