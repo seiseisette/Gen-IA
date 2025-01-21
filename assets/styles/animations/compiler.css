@@ -42,7 +42,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 #typing-container {
     width: 100%;
     max-width: 1200px;
-    height: *100vh;
+    height: 100vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -59,17 +59,21 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
 /* Typing Effect - Style1 */
 #typing-effect {
-font-family: var(--mtx-font);
-color: var(--compiler1-color);
+    font-family: var(--mtx-font);
+    color: var(--compiler1-color);
 
 
-font-weight: bold;
+    font-weight: bold;
 
 
-font-size: 1.5rem;
-line-height: 2rem;
-white-space: pre-wrap;
-overflow: hidden;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    max-width: 100%; /* Adatta la larghezza al contenitore */
+    text-align: left; /* Allineamento a sinistra */
+    overflow: hidden; /* Evita fuoriuscite */
+
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 #typing-effect::after {
