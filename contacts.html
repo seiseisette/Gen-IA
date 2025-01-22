@@ -1,6 +1,6 @@
 <!-- 
 ===============================================================================
-# Project: Gen-ia
+# Project: genialabile.com
 # Website: Minimal welcome website
 ===============================================================================
 
@@ -16,7 +16,7 @@ This project is no longer available as open-source. Updated: 10 Jan 2025.
 Use, distribution, or modification of this project is strictly prohibited without prior written authorization.
 -------------------------------------------------------------------------------
 
-# Version: v3.1 (160125)
+# Version: v3.2 (190125)
 # URL: https://genialabile.com/contacts.html
 ===============================================================================
 -->
@@ -25,9 +25,12 @@ Use, distribution, or modification of this project is strictly prohibited withou
 <html lang="en">
     <head>
         <title>Genialabile | Contacts</title>
-        <meta name="description" content="Genialabile - Contacts & Social Media and Credits">
-        <link rel="canonical" href="https://genialabile.com/contacts.html">
-        <!-- header.html -->
+        <meta name="description" content="Genialabile - Contacts & Social Media, Credits">
+         <!-- Meta tags for search engines -->
+         <meta name="keywords" content="Genialabile, Links Page, Social Media, Credits, Contact Information">
+         <link rel="canonical" href="https://genialabile.com/contacts.html">
+        
+         <!-- Fetching header dynamically -->
         <script>
             fetch('https://genialabile.com/header.html')
                 .then(response => response.text())
@@ -36,22 +39,23 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 })
                 .catch(error => console.error('Error fetching header:', error));
         </script>
-        <!-- header.html --> 
     </head>
-    <!-- SHIFT -->
-    <body style="background-color: #000000; color: #000000; link: #000000; visited: #000000;">
+
+    <body style="background-color: #000000; color: #000000;">
         <main>
             <h1>
                <a href="https://genialabile.com/contacts" aria-label="Visit Genialabile Contacts Page">
-                CONTACTS
-            </a>
+                CONTACTS</a>
             </h1>
-            <div class="imp-l">
-                <p>
-                    <h3><br>
-                        🎗️ Welcome
-                    </h3>
+
+            <!-- Spacer Divider -->
+            <div class="divider-with-padding"></div>
+
+            <div id="imp-links">
+                <section>
+                    <h2>🎗️ Welcome</h2>
                     <hr class="thin-line">
+                    <p>
                         If you have any questions, feedback, or inquiries about Genialabile, feel free to reach out to us using the information below.
                         We are always looking for new ways to improve our mission and would love to hear about your experience.
                         Continuing to evolve and improve our Gen-ia Operative Framework and knowledge is our primary goal.
@@ -60,47 +64,61 @@ Use, distribution, or modification of this project is strictly prohibited withou
                         <a href="mailto:genialabile@gmail.com?subject=Beta%20Access&body=Hello!" aria-label="Join Genialabile Beta Access">Join</a>
                         our preview access for beta testers or early adopters to explore the efficiency of our Models.
                         It is a pleasure to have you here, as explorers of the future we are building together.
-                </p>
-                <p>
-                    <h3><br>
-                        🌐 Website
-                    </h3>
+                    </p>
+                </section>
+            
+                <section><br></section>
+            
+                <section>
+                    <h2>🌐 Website</h2>
                     <hr class="thin-line">
-                        Live: 
-                        <a href="https://genialabile.com/gpt"
-                        aria-label="Visit Genialabile Live Homepage">
-                        genialabile.com/gpt</a>
-                        <a href="https://genialabile.com/gpt" class="link-live" style="color: #00bbff; font-size: 0.6rem"
-                        aria-label="Visit Genialabile Live Homepage">◉</a>
+                    <p>
+                        Live CLI: https:// 
+                        <a href="https://genialabile.com/cli"
+                        aria-label="Visit Genialabile Live CLI Presentation">
+                        genialabile.com/cli</a>
+                        <a href="https://genialabile.com/gpt" id="typing-effect::after" style="color: #00ff00cc; font-size: 0.6rem"
+                        aria-label="Visit Genialabile Live Homepage">█</a>
                         <br><br>
-                        Static: 
+                        Home Page : https:// 
                         <a href="https://genialabile.com/"
                         aria-label="Visit Genialabile Static Homepage">
                         genialabile.com</a>
+                        <!--
                         <a href="https://genialabile.com/" class="link-static" style="color: #ffbbff; font-size: 0.6rem;"
                         aria-label="Visit Genialabile Static Homepage">◎</a>
-                </p>
-                <p>
-                    <h3><br>
-                        ✉️ Mail
-                    </h3> 
+                        -->
+                    </p>
+                </section>
+            
+                <section><br></section>
+            
+                <section>
+                    <h2>✉️ Mail</h2>
                     <hr class="thin-line">
-                        Email:
-                        <a href="mailto:info@genialabile.com?subject=Contact%20Request"
+                    <p>
+                        mailto:
+                        <a href="mailto:info@genialabile.com?subject=Mail%20Request"
                         aria-label="Email Genialabile at info@genialabile.com">
                         info@genialabile.com</a>
-                        <i>(limited uptime)</i>
-                    <br><br>
-                        Gmail:
-                        <a href="mailto:genialabile@gmail.com?subject=Contact%20Request"
-                        aria-label="Email Genialabile at genialabile@gmail.com">
-                        genialabile@gmail.com</a>
-                </p>
-                <p>
-                    <h3><br>
-                        👻 Social
-                    </h3>
+                    </p>
+                        <!-- <i>(limited uptime)</i> -->
+                    <!--
+                        <p>
+                            Gmail:
+                            <a href="mailto:genialabile@gmail.com?subject=Contact%20Request"
+                            aria-label="Email Genialabile at genialabile@gmail.com">
+                            genialabile@gmail.com</a>
+                        </p>
+                    -->
+                </section>
+            
+                <section><br></section>
+            
+                <section>
+                    <h2>👻 Social</h2>
                     <hr class="thin-line">
+                    <p>
                         Twitter—X.com/<a href="https://x.com/genialabile/"
                         aria-label="Visit Genialabile on Twitter">genialabile</a>
                         <br><br>
@@ -112,22 +130,22 @@ Use, distribution, or modification of this project is strictly prohibited withou
                         <br><br>
                         Threads.net/<a href="https://threads.net/@genialabile/"
                         aria-label="Visit Genialabile on Threads">@genialabile</a>
-                        <!--<br><br>
-                        LinkedIn.com/
-                        <a href="https://linkedin.com/company/genialabile" aria-label="Visit Genialabile on LinkedIn">genialabile</a>-->
-                </p>
-                <p>
-                    <h3><br>
-                        👾 Credits
-                    </h3>
+                    </p>
+                </section>
+            
+                <section><br></section>
+            
+                <section>
+                    <h2>👾 Credits</h2>
                     <hr class="thin-line">
+                    <p>
                         Develop & Designed by
                         <a href="https://x.com/seiseisette/"
                         aria-label="Visit seiseisette on X (Twitter)">seiseisette</a>.
                         <br><br>
                         Website & Repository Hosted by GitHub:
                         <a href="https://github.com/seiseisette/genialabile.com/"
-                        aria-label="Visit Gen-ia repository on GitHub">Repo</a>.
+                        aria-label="Visit Genialabile website repository on">GitHub</a>.
                         <br><br>
                         Genialabile is evolving and running on ChatGPT.
                         <br>
@@ -142,75 +160,23 @@ Use, distribution, or modification of this project is strictly prohibited withou
                         <a href="https://orcid.org/0009-0002-6309-2937" target="_blank" rel="noopener noreferrer" style="width: normal; color: #f4f4f4;"
                         aria-label="Visit seiseisette's ORCID profile 0009-0002-6309-2937">
                         0009-0002-6309-2937</a>
-                </p>
-                <!--
-                <p>
-                    <h3><br>
-                        ❤️ Thanks
-                    </h3>
-                    <hr class="thin-line">
-                        <div class="card">
-                            <div class="card-image-container">
-                                <img src="https://genialabile.com/gen-fav-rd.png?v=2" alt="Genialabile Logo" class="card-image" loading="lazy">
-                            </div>
-                            <div class="card-text">
-                                <p class="imp-p">
-                                    GENiALABILE <span style="font-family:'Inconsolata', monospace;"> *⌝</span>
-                                    <br>
-                                    Multidimensional Ave,
-                                    <br>
-                                    GPT's</a> City, AI, 2025
-                                </p>
-                            </div>
-                        </div>
-                </p>
-                -->
+                    </p>
+                </section>
             </div>
         </main>
-        <!-- TRICK -->
-            <div id="footer-banner">
-                <div id="footer-content"></div>
-            </div>
-        <!-- TRICK -->
+
+        <!-- Preloader -->
+        <div id="preloader"></div>
+
+        <!-- Footer Banner Style -->
+        <div id="footer-banner">
+            <div id="footer-content"></div>
+        </div>
+
+        <!-- Footer -->
         <footer>
-            <!-- footer.html --> 
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    fetch('https://genialabile.com/footer.html')
-                        .then(response => response.text())
-                        .then(data => {
-                            const footerContent = document.getElementById('footer-content');
-                            footerContent.innerHTML = data;
-                        })
-                        .catch(error => console.error('Errore nel caricamento del footer-banner:', error));
-                document.addEventListener("DOMContentLoaded", () => {
-                            console.log("Pagina caricata, ritardo di avvio in corso...");
-                            setTimeout(() => {
-                                console.log("Avvio dell'animazione dopo il ritardo.");
-                                typeWriter();
-                            }, startDelay);
-                        });
-                    });
-            </script>
-            <!-- footer.html --> 
+            <script src="https://genialabile.com/assets/scripts/footer.js" defer></script>
+            <script src="https://genialabile.com/assets/scripts/preloader.js" defer></script>
         </footer>
-            <!-- FADE --> 
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    setTimeout(function () {
-                        document.body.classList.add("visible");
-                    }, 2000);
-                });
-            </script>
-            <!-- FADE -->
-            <!-- HACK-BUGS --> 
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    setTimeout(function () {
-                        document.body.classList.add("visible");
-                    }, 2000);
-                });
-            </script>
-            <!-- FADE -->  
     </body>
 </html>
