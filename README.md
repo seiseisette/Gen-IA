@@ -27,7 +27,7 @@ Designed by **[seiseisette](https://github.com/seiseisette)**.
 
 Access the project at: **[genialabile.com](https://genialabile.com/)**
 
-Live Pitch (beta): **[genialabile.com/gpt](https://genialabile.com/gpt)**
+Live Pitch (beta): **[genialabile.com/gpt](https://genialabile.com/cli)**
 
 ---
 
@@ -35,13 +35,22 @@ Live Pitch (beta): **[genialabile.com/gpt](https://genialabile.com/gpt)**
 
 - **Responsive Design**: Fully optimized for multiple devices, now with improved scaling parameters and rules for enhanced resizing across various screens.  
 - **Accessibility Enhancements**: Additional support for users with navigation difficulties, ensuring a smoother and more inclusive browsing experience.  
-- **Dynamic Content Animations**: Updated content animations in the live website to introduce a new "GPT-like" copying effect, mimicking the conversational flow of ChatGPT.
-- **Privacy-Focused**: No tracking cookies are used, ensuring compliance with GDPR and CCPA.
-
+- **Improved Animation System**: Smooth, automated, and natural transitions with Mobile & Desktop UI effects and clear appearance.  
+- **CLI Platform Redesign**: Enhanced CLI interface with dynamic interactions, modernized visuals, and GPT-style typing effects for a seamless experience.  
+- **Privacy-Focused**: No tracking cookies or unnecessary user data collection, ensuring compliance with GDPR and CCPA regulations.  
+- **Global Configuration**: Unified theme management system for easier global customization and improved maintainability of core design variables.
 
 ---
 
 ## 🪵 Version Log
+
+### **Version 3.2** (21 January 2025)
+
+- **CLI Platform Redesign**: The Command Line Interface has been completely redesigned, featuring enhanced aesthetics, dynamic interactions, and new GPT-like typing effects for a more immersive user experience.  
+- **Advanced Accessibility**: Enhanced support for screen readers and navigation tools, with newly added high-contrast modes and improved keyboard navigation for a smoother and more inclusive experience.  
+- **Improved Animation System**: Resolved footer-related issues and introduced automated, smooth, and natural transitions. The animations now feature a modern UI style with light transparency effects for a polished appearance.  
+- **Optimized Mobile Experience**: Fully optimized for Smartphone  and larger screens, with improved padding, adaptive margins, and a layout that seamlessly adjusts to ultra-large displays.   
+- **Bug Fixes**: Addressed minor inconsistencies in responsiveness and improved rendering of assets across all supported devices.
 
 ### **Version 3.1** (18 January 2025)
 - **Enhanced Manifest File**: Improved support for multi-device PWA compatibility, ensuring proper favicon and icon rendering across platforms.

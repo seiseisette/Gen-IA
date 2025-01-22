@@ -1,0 +1,214 @@
+/*
+===============================================================================
+# Project: genialabile.com
+# Website: Minimal welcome website
+===============================================================================
+
+## GENiALABILE
+Advanced-GPT inspiring multidimensional solutions and unlocking creative potential.
+
+-------------------------------------------------------------------------------
+### License
+© 2025 GENiALABILE. All Rights Reserved.
+A GPT-Based Project — Designed by seiseisette.
+Repository: https://github.com/seiseisette/
+This project is no longer available as open-source. Updated: 10 Jan 2025.
+Use, distribution, or modification of this project is strictly prohibited without prior written authorization.
+-------------------------------------------------------------------------------
+
+# Version: v3.2 (190125)
+# URL: https://genialabile.com/assets/styles/animations/compiler.css
+===============================================================================
+*/
+
+/* --- Typing Container --- 
+#typing-container {
+    width: 110%;
+    max-width: 100%; /* 1200px; 
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 auto;
+    padding: -2rem;
+    box-sizing: border-box;
+    text-align: left;
+    transform: translateY(-20%);
+  
+                margin-bottom: -3rem;
+}
+                */
+
+
+
+/* --- Typing Container --- 
+#typing-container {
+    width: 100%;
+    max-width: 1200px; /* Allineato al contenuto del sito 
+    height: auto; /* Lasciamo che si adatti al contenuto *
+    display: flex;
+    justify-content: center; /* Centra l'animazione *
+    align-items: flex-start; /* Allinea in alto *
+    margin: 0 auto;
+    padding: 0 2rem; /* Spazi laterali *
+    box-sizing: border-box;
+    text-align: left;
+    transform: translateY(-30); /* Assicuriamoci che sia visibile *
+    overflow: visible; /* Rende tutto visibile *
+    
+            border: 1px dashed red; /* Bordo per il debug 
+}
+
+ORDINE CORRETTO in direzione scrittura
+*/
+
+#typing-container {
+    width: 100%;
+    max-width: 1200px; /* Spazio massimo per dispositivi più grandi */
+    height: auto;
+    display: flex;
+    justify-content: center; /* Centra il testo */
+    align-items: flex-start; /* Mantieni il testo in alto */
+    margin: 0 auto;
+    padding: 0 2rem; /* Riduci lo spazio laterale per migliorare l’uso */
+    padding-top: 6rem;
+    box-sizing: border-box;
+    text-align: left; 
+    transform: translateY(-30); /* Assicura che non sia troppo in alto */
+}
+
+
+
+                    #typing-container {
+                        border: 1px dashed fuchsia; /* Controllo contenitore */
+                    }
+
+                    #typing-effect {
+                        border: 1px dashed rgb(16, 215, 255); /* Controllo area testo */
+                    }
+
+
+
+/* Typing Effect - Style1
+#typing-effect {
+    font-family: var(--mtx-font);
+    color: var(--compiler1-color);
+    font-size: 1.5rem;
+    line-height: 2rem;
+    white-space: pre-wrap;
+    overflow: hidden;
+}
+    */
+
+/* Typing Effect - Style1 */
+#typing-effect {
+    font-family: var(--mtx-font);
+    color: var(--compiler1-color);
+    font-size: 1.5rem;
+    line-height: 2rem;
+    white-space: normal; /* Permette di andare a capo solo quando serve */
+    overflow: visible;
+    word-break: break-word; /* Forza il testo lungo a spezzarsi solo se necessario */
+    max-width: 100%; /* Occupa tutto lo spazio disponibile */
+    margin: 0;
+
+
+
+
+    text-align: left; /* Allinea il testo */
+}
+
+#typing-effect::after {
+    content: "█";
+    font-family: var(--mtx-font);
+    color: var(--compiler1-color);
+    text-align: left;
+    animation: blink 1s steps(1) infinite;
+    line-height: 2rem;
+    margin: 0;
+}
+
+/* Typing Effect - Style2 */
+#typing-effect.alternate-style {
+    font-family: var(--std-font);
+    color: var(--compiler2-color);
+    min-height: 2rem;
+
+                border: 1px dashed rgb(255, 248, 47); /* Bordo per il debug */
+}
+
+.alternate-style {
+    font-family: var(--std-font) !important;
+    color: var(--compiler2-color) !important;
+    line-height: 2rem !important;
+    min-height: 2rem !important;
+}
+
+.alternate-style::after {
+    content: "" !important;
+    animation: blink-fast 120s steps(1) infinite !important;
+    /*
+    font-family: var(--std-font) !important;
+    color: var(--compiler2-color) !important;
+    line-height: 2rem !important;
+    */
+}
+
+/* No Cursor Style */
+.no-cursor::after {
+    content: "";
+    animation: none;
+}
+
+/* Keyframes for Blink Animations */
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes blink-fast {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* --- Utilities --- */
+.hidden-paragraph {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+
+
+/*
+--- Root Variables --- 
+:root {
+    --bg-color: #000000;
+    --info-bg: #000000;
+    --info-text: #f4f4f4;
+    --compiler1-color: #00ff00cc;
+    --compiler2-color: #f4f4f4;
+    --std-font: 'Roboto', sans-serif;
+    --mtx-font: 'Inconsolata', monospace;
+    --spacing: 2rem;
+    --accent: #ff00ff;
+    --line-color: rgba(244, 244, 244, 0.5);
+    --box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Base Reset --- *
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+                                */
