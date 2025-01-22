@@ -67,7 +67,7 @@ const textArray = [
     "From managing emotions to brainstorming strategies or translating abstract ideas into practical steps, I’m here to support you.\u00A0🌟",
     "", "",
 
-    "<h3>🌱 Began</h3>",
+    "<h3>🌱 Grow</h3>",
     "",
     "Every journey starts with a single step. Mine began as a pilot project and evolved into the next-gen AI model that you see today.",
     "Through constant learning and real-time innovations, I’ve grown to offer unparalleled experiences.",
