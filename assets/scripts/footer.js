@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     async function fetchFooterContent() {
         try {
-            const response = await fetch('https://genialabile.com/2footer.html');
+            const response = await fetch('https://genialabile.com/footer.html');
             if (!response.ok) throw new Error('Failed to fetch footer content');
             const data = await response.text();
             footerContainer.innerHTML = data;
