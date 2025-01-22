@@ -355,6 +355,8 @@ footer.no-shadow {
     main {
         max-width: 70%;
         padding-bottom: 5rem;
+        padding: 0 6rem; 
+
 
     }
 
