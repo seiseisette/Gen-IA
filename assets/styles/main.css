@@ -27,7 +27,6 @@ Use, distribution, or modification of this project is strictly prohibited withou
     --bg-color: #000000;
     --info-bg: #000000;
     --info-text: #f4f4f4;
-    --posts: #f4f4f4;
     --accent: #ffffff;
     /* Section Colors */
     --live-color: #00bbff;
@@ -101,7 +100,7 @@ main {
 /* --- Headers --- */
 h1, h2, h3 {
     font-family: var(--std-font);
-    color: var(--posts);
+    color: var(--info-text);
     margin-bottom: 0.4rem;
 }
 
@@ -145,6 +144,7 @@ a:hover {
     font-weight: bold;
 }
 
+/*
 a.imp {
     text-decoration: underline;
     color: var(--accent);
@@ -156,11 +156,12 @@ a.imp:hover {
     color: var(--compiler1-color);
     font-weight: bold;
 }
+*/
 
 h1 a {
     position: relative;
     z-index: 10;
-    color: var(--posts);
+    color: var(--info-text);
     font-weight: bold;
 }
 
@@ -257,6 +258,18 @@ footer.no-shadow {
     text-align: center;
     color: var(--info-text);
     line-height: 1.4;
+}
+
+#imp-links a {
+    text-decoration: underline;
+    color: var(--accent);
+    font-weight: normal;
+}
+
+#imp-links a:hover {
+    text-decoration: none;
+    color: var(--compiler1-color);
+    font-weight: bold;
 }
 
 /* Preloader Styles */
