@@ -27,7 +27,7 @@ const textArray = [
 
     " ", " ",
 
-    "     įñiz","Initializing systems...",
+    "į","Initializing systems...",
     "", "", " ",
     "Loading core protocols...",
     "", "",
