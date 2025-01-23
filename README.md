@@ -31,14 +31,10 @@ Live Pitch (beta): **[genialabile.com/gpt](https://genialabile.com/cli)**
 
 ### Checkers
 
-- Speed:
-**[PageSpeed](https://pagespeed.web.dev/analysis/https-genialabile-com/we3htll2lx?hl=en&form_factor=mobile)**
+Speed: **[PageSpeed](https://pagespeed.web.dev/analysis/https-genialabile-com/we3htll2lx?hl=en&form_factor=mobile)**
+SEO: **[SeoTester](https://suite.seotesteronline.com/seo-checker/aHR0cHM6Ly9nZW5pYWxhYmlsZS5jb20=/#)**
+Code: **[CodeFactor](https://www.codefactor.io/repository/github/seiseisette/genialabile.com)**
 
-- SEO:
-**[SeoTester](https://suite.seotesteronline.com/seo-checker/aHR0cHM6Ly9nZW5pYWxhYmlsZS5jb20=/#)**
-
-- Code:
-**[CodeFactor](https://www.codefactor.io/repository/github/seiseisette/genialabile.com)**
 - [![CodeFactor](https://www.codefactor.io/repository/github/seiseisette/genialabile.com/badge)](https://www.codefactor.io/repository/github/seiseisette/genialabile.com)
 
 ---
