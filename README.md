@@ -92,5 +92,5 @@ If you have any questions or feedback, feel free to reach out:
 **Designed by**: [@seiseisette](https://x.com/seiseisette)  
 **Hosted on**: [GitHub Pages](https://github.com/seiseisette/genialabile.com)
 
-### [![CodeFactor](https://www.codefactor.io/repository/github/seiseisette/genialabile.com/badge)](https://www.codefactor.io/repository/github/seiseisette/genialabile.com)
+
 
