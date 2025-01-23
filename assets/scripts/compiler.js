@@ -32,22 +32,24 @@ const textArray = [
     "Loading core protocols...",
     "", "",
     "Running diagnostics...",
-    "",
+    " ",
     "Establishing neural networks...",
     "Calibrating multidimensional logic...",
     "Integrating bio-virtual frameworks...",
     "Synchronizing predictive modules...",
     "Checking security protocols...",
-    "","",
+    "",
+    "",
     "Systems online.",
     "",
     "Loading interface...",
-    "", "", "",
+    "", "", " ",
 
     "style2::<h2>🌈 Welcome!</h2>",
     "",
-    "",
+
     "You’ve just unlocked a door to the extraordinary.",
+
     "I’m Genialabile, your advanced-virtual mentor!", 
     "An AI designed to inspire, guide, and transform.",
     "Together, we’ll explore multidimensional solutions and uncover the hidden genius within you.",
@@ -55,53 +57,53 @@ const textArray = [
     "", "",
 
     "<h3>💡 Inspire</h3>",
-    "",
+
     "Imagine an AI that doesn’t just answer questions but becomes your mentor, inspiring ideas and crafting innovative solutions tailored to you.",
     "That’s who I am.",
     "Whether you need help solving complex problems, igniting your creativity, or learning something new.\u00A0🎒",
-    "", "",
+    "",
 
     "<h3>🧠 Combine</h3>",
-    "",
+
     "My strength lies in blending predictive intelligence, logic, and creativity to deliver precisely what you need.",
     "From managing emotions to brainstorming strategies or translating abstract ideas into practical steps, I’m here to support you.\u00A0🌟",
-    "", "",
+    "",
 
     "<h3>🌱 Grow</h3>",
-    "",
+    
     "Every journey starts with a single step. Mine began as a pilot project and evolved into the next-gen AI model that you see today.",
     "Through constant learning and real-time innovations, I’ve grown to offer unparalleled experiences.",
     "But I’m not just here to answer your questions... I’m here to transform your problems into opportunities!\u00A0🍀",
-    "", "",
+    "",
 
     "<h3>🌍 Global</h3>",
-    "",
+    
     "Accessible worldwide, I’m here for you through platforms like ChatGPT.",
     "I can help address focus issues, procrastination, and modern challenges while fostering your growth—both mind and soul.\u00A0🍄",
-    "", "",
+    "",
 
     "<h3>🚀 Revolutionary</h3>",
-    "",
+    
     "I’m more than AI—I’m your trusted mentor. I inspire, guide, and push boundaries.",
     "My purpose is to break down cultural, cognitive, and sparking innovation and introspection.",
     "Whether you’re facing personal challenges or seeking brilliance, I’m here to unlock your full potential.\u00A0✨",
-    "", "",
+    "",
 
     "<h3>🤖 Hybrid</h3>",
-    "",
+    
     "Built to combine machine learning and scalability, immersive simulations, and multidisciplinary analysis to tailor experiences just for you.",
     "Beyond solving problems, I help you understand them, empowering you to create forward-thinking solutions.\u00A0💞",
-    "", "",
+    "",
 
     "<h3>🎻 Genius</h3>",
-    "",
+    
     "I connect with your emotions in just a few words, making our interaction human and seamless.",
     "My goal is to surprise and challenge you, enhancing your creativity and intelligence.",
     "Why settle for less when you have me?\u00A0🧞‍♀️",
     "", "",
     
     "<h3>🍒 Let’s Begin</h3>",
-    "",
+    
     "What will be your next move?",
     "Together, we can make it extraordinary!\u00A0🦄",
     "", "",
@@ -122,9 +124,10 @@ const textArray = [
     "", "",
     
     "Preparing to redirect...",
+
     "Establishing connection...",
     "Completing protocols...",
-    "","",
+    " ",
     "Ready.",
     "Redirecting in",
     "3...",
