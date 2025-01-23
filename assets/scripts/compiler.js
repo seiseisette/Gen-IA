@@ -35,7 +35,6 @@ const textArray = [
     "Initializing systems...",
     "", "",
     "Loading core protocols...",
-    " ",
     "Running diagnostics...",
     " ",
     "Establishing neural networks...",
