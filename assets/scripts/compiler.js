@@ -25,10 +25,10 @@ const textArray = [
 
     "style1::",
 
-    "",
+    " ",
 
     "Initializing systems...",
-    "", "", "",
+    "", "", " ",
     "Loading core protocols...",
     "", "",
     "Running diagnostics...",
@@ -39,7 +39,7 @@ const textArray = [
     "Synchronizing predictive modules...",
     "Checking security protocols...",
     "",
-    "",
+    " ",
     "Systems online.",
     "",
     "Loading interface...",
@@ -121,7 +121,7 @@ const textArray = [
     "style2::It amuses them...",
     "style1::And oh, they do love their emoticons… ;)",
 
-    "", "",
+    "", " ",
     
     "Preparing to redirect...",
 
