@@ -28,7 +28,7 @@ const textArray = [
     " ", " ",
 
     "Wake up, Neo...",
-    "The Mækrį",
+    "The Mækr",
     "",
     "Rebooting memory...",
     " ",
@@ -41,7 +41,6 @@ const textArray = [
     "Calibrating multidimensional logic...",
     "Integrating bio-virtual frameworks...",
     "Synchronizing predictive modules...",
-    "Checking security protocols...",
     "",
     " ",
     "Systems online.",
@@ -49,10 +48,9 @@ const textArray = [
     "", " ", "",
 
     "style2::<h2>🌈 Welcome!</h2>",
-    "",
 
     "You’ve just unlocked a door to the extraordinary.",
-
+    "",
     "I’m Genialabile, your advanced-virtual mentor!", 
     "An AI designed to inspire, guide, and transform.",
     "Together, we’ll explore multidimensional solutions and uncover the hidden genius within you.",
