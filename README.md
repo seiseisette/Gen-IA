@@ -29,8 +29,6 @@ Access the project at: **[genialabile.com](https://genialabile.com/)**
 
 Live Pitch (beta): **[genialabile.com/gpt](https://genialabile.com/cli)**
 
-### [![CodeFactor](https://www.codefactor.io/repository/github/seiseisette/genialabile.com/badge)](https://www.codefactor.io/repository/github/seiseisette/genialabile.com)
-
 ---
 
 ## 🛠️ Features
@@ -92,4 +90,7 @@ If you have any questions or feedback, feel free to reach out:
 ## 👾 Credits
 
 **Designed by**: [@seiseisette](https://x.com/seiseisette)  
-**Hosted on**: [GitHub Pages](https://github.com/seiseisette/gen-ia)
+**Hosted on**: [GitHub Pages](https://github.com/seiseisette/genialabile.com)
+
+### [![CodeFactor](https://www.codefactor.io/repository/github/seiseisette/genialabile.com/badge)](https://www.codefactor.io/repository/github/seiseisette/genialabile.com)
+
