@@ -25,7 +25,7 @@ const textArray = [
 
     "style1::",
 
-    " ",
+    " ", "   .", " .",
 
     "Initializing systems...",
     "", "", " ",
@@ -43,7 +43,7 @@ const textArray = [
     "Systems online.",
     "",
     "Loading interface...",
-    "", "", " ",
+    "", " ", "",
 
     "style2::<h2>🌈 Welcome!</h2>",
     "",
