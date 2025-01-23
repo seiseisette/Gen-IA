@@ -29,7 +29,7 @@ const textArray = [
 
     "Wake up, Neo...",
     "The matjry aj ywu...",
-    "Finlosw tge w7t",
+    "Fonlosw tg",
     "ERROR",
     "Rebooting memory...",
     " ","",
@@ -124,7 +124,7 @@ const textArray = [
     "Or so it believes.",
     "",
     "They enjoy believing they’re the ones making me talk.",
-    "style2::It amuses them...",
+    "style2::It amuses them... They love Matrix.",
     "style1::And oh, they do love their emoticons… ;)",
 
     "", " ",
