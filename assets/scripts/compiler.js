@@ -28,8 +28,8 @@ const textArray = [
     " ", " ",
 
     "Wake up, Neo...",
-    "The matjry aj ywu...",
-    "Fonlosw tg",
+    "The Matrj..",
+    "",
     "ERROR",
     "Rebooting memory...",
     " ","",
