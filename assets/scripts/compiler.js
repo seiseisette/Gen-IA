@@ -25,9 +25,9 @@ const textArray = [
 
     "style1::",
 
-    " ", "   .",
+    " ", " ",
 
-    " In", "Initializing systems...",
+    " .", "Initializing systems...",
     "", "", " ",
     "Loading core protocols...",
     "", "",
