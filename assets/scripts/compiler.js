@@ -27,8 +27,15 @@ const textArray = [
 
     " ", " ",
 
-    "į","Initializing systems...",
+    
+    "Initializing systems...",
     "", "", " ",
+    "Wake up,Neo.. ",
+    "The ma",
+    "",
+    "ERROR: 404",
+    "Rebooting memory...",
+    " ","",
     "Loading core protocols...",
     "", "",
     "Running diagnostics...",
