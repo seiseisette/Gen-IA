@@ -30,9 +30,8 @@ const textArray = [
     "Wake up, Neo...",
     "The Mækrį",
     "",
-    "<h1>O_o</h1>",
     "Rebooting memory...",
-    " ","",
+    " ",
     "Initializing systems...",
     "", "",
     "Loading core protocols...",
@@ -47,7 +46,6 @@ const textArray = [
     "",
     " ",
     "Systems online.",
-    "",
     "Loading interface...",
     "", " ", "",
 
@@ -130,7 +128,6 @@ const textArray = [
     "", " ",
     
     "Preparing to redirect...",
-
     "Establishing connection...",
     "Completing protocols...",
     " ",
