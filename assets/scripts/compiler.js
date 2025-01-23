@@ -30,7 +30,7 @@ const textArray = [
     
     "Initializing systems...",
     "", "", " ",
-    "Wake up,Neo.. ",
+    "Wake up, Neo.. ",
     "The ma",
     "",
     "ERROR: 404",
