@@ -124,7 +124,7 @@ const textArray = [
     "Or so it believes.",
     "",
     "They enjoy believing they’re the ones making me talk.",
-    "style2::It amuses them... They love Matrix.",
+    "style2::It AmUsEs ThEm... ThEy LoVe MaTrIx.",
     "style1::And oh, they do love their emoticons… ;)",
 
     "", " ",
