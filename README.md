@@ -1,20 +1,20 @@
 # 📚 genialabile.com
 
 **Minimal Welcome Website**  
-GENiaLABILE - Advanced-GPT inspiring multidimensional solutions and unlocking creative potential.
+Genialabile & Co. - Advanced-GPTs inspiring multidimensional solutions and unlocking creative potential.
 
 ---
 
 ## 🤖 About Genialabile
 
-Genialabile is a cutting-edge system powered by Advanced-GPT frameworks, designed to deliver innovative, multidimensional solutions while fostering creativity and growth. This project aims to bridge technology and human potential seamlessly.
+Genialabile is a cutting-edge system powered by Advanced-GPTs frameworks, designed to deliver innovative, multidimensional solutions while fostering creativity and growth. This project aims to bridge technology and human potential seamlessly.
 *Running on ChatGPT — OpenAI as Beta in preview access.*
 
 ---
 
 ## 🔒 License
 
-© 2025 Genialabile. All Rights Reserved.  
+© 2025 Genialabile & Co. All Rights Reserved.  
 This project is proprietary and no longer available as open-source.  
 Designed by **[seiseisette](https://github.com/seiseisette)**.  
 
@@ -83,7 +83,7 @@ Live Pitch (beta): **[genialabile.com/gpt](https://genialabile.com/cli)**
 If you have any questions or feedback, feel free to reach out:
 
 - **Website**: [https://genialabile.com](https://genialabile.com)  
-- **Email**: [genialabile@gmail.com](mailto:genialabile@gmail.com?subject=Contact%20Request%20For)  
+- **Email**: [info@genialabile.com](mailto:info@genialabile.com?subject=Git%Contact)  
 
 ---
 
