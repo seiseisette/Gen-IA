@@ -27,40 +27,6 @@ Use, distribution, or modification of this project is strictly prohibited withou
     margin: 0 auto;
     /* padding: var(--spacing); */
 }
-
-/*************************/
-.gpt-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    font-size: 1rem;
-    line-height: 1rem;
-    color: var(--info-text);
-}
-
-.gpt-icon {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    margin-right: 10px;
-    object-fit: cover;
-    border: 1px solid #000000; /* Bordo sottile attorno all'immagine */
-}
-/*************************/
-
-.gpt-item a {
-    color:var(--acent);
-    text-decoration: underline;
-}
-
-.gpt-item a:hover {
-    text-decoration: none;
-    color: var(--compiler1-color);
-    font-weight: bold;
-}
-
-
-
 .menu-title {
     display: flex;
     align-items: center;
