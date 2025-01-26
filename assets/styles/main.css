@@ -79,6 +79,7 @@ body {
     visibility: hidden;
     opacity: 0;
     transition: opacity 1.3s ease-in-out;
+    background-color: var(--bg-color);
 }
 
 body.visible {
