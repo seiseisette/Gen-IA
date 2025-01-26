@@ -24,7 +24,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
 function toggleMenu() {
     const menuContent = document.getElementById('menuContent');
-    const toggleIcon = document.querySelector('.menu-title .toggle-icon');
+    const toggleIcon = document.querySelector('.gpts-title .toggle-icon');
     
     if (menuContent.style.display === 'none' || menuContent.style.display === '') {
         menuContent.style.display = 'block';
