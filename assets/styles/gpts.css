@@ -70,6 +70,9 @@ Use, distribution, or modification of this project is strictly prohibited withou
     width: 45px;
     height: 45px;
     border-radius: 50%;
+
+    object-fit: cover;
+    
     margin-right: 10px;
 }
 .menu-content .gpt-item span {
