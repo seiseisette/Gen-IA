@@ -17,7 +17,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 -------------------------------------------------------------------------------
 
 # Version: v3.5 (250125)
-# URL: https://genialabile.com/assets/styles/gpt.css
+# URL: https://genialabile.com/assets/styles/gpts.css
 ===============================================================================
 */
 
@@ -27,14 +27,16 @@ Use, distribution, or modification of this project is strictly prohibited withou
     /* padding: var(--spacing); */
 }
 
-.gpts-title {
+.menu-title {
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
     /* background-color: var(--bg-color); */
+
     /* padding: 10px; */
     border-radius: 5px;
+
     /* transition: background-color 3s;*/
 }
 
@@ -44,11 +46,11 @@ Use, distribution, or modification of this project is strictly prohibited withou
 }
 */
 
-.gpts-title h3 {
+.menu-title h3 {
     margin: 0;
 }
 
-.gpts-title .toggle-icon {
+.menu-title .toggle-icon {
     font-size: 1.5rem; /* 20px; */
 }
 
@@ -59,7 +61,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     font-weight: bold;
 }
 
-.gpts-content {
+.menu-content {
     display: none;
     padding: 15px;
     background-color: var(--info-bg);
@@ -68,19 +70,19 @@ Use, distribution, or modification of this project is strictly prohibited withou
     margin-top: 10px;
 }
 
-.gpts-content .gpt-item {
+.menu-content .gpt-item {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.gpts-content .gpt-item img {
+.menu-content .gpt-item img {
     width: 45px;
     height: 45px;
     border-radius: 50%;
     margin-right: 10px;
 }
 
-.gpts-content .gpt-item span {
+.menu-content .gpt-item span {
     font-size: 16px;
 }
