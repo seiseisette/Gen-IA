@@ -58,6 +58,43 @@ Use, distribution, or modification of this project is strictly prohibited withou
          <link rel="preload" href="https://genialabile.com/assets/styles/gpts.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
          <noscript><link rel="stylesheet" href="https://genialabile.com/assets/styles/gpts.css" crossorigin="anonymous"></noscript>
     
+
+
+         <style>
+            /* General styles for the banner */
+            #ad-block-warning {
+                display: none; /* Initially hidden */
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #000;
+                color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+                text-align: center;
+                z-index: 1000;
+            }
+            #ad-block-warning button {
+                margin-top: 15px;
+                background-color: #f0f0f0;
+                color: #000;
+                border: none;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+            #ad-block-warning button:hover {
+                background-color: #ddd;
+            }
+        </style>
+
+
+
+
+
     </head>
 
     <body style="background-color: #000000; color: #000000;">
@@ -302,6 +339,43 @@ Use, distribution, or modification of this project is strictly prohibited withou
             <script src="https://genialabile.com/assets/scripts/preloader.js" defer></script>
             <script src="https://genialabile.com/assets/scripts/folding.js" defer></script>
         </footer>
+
+
+
+        <!-- Warning Banner -->
+        <div id="ad-block-warning">
+            <p>This website does not use trackers or ads. Please disable your Ad-blocker or use another browser for the best experience.</p>
+            <button onclick="closeWarning()">Got It</button>
+        </div>
+
+        <script>
+            function detectBrowserAndAdBlock() {
+                const userAgent = navigator.userAgent;
+                const isArc = userAgent.includes("Arc");
+
+                // Create a dummy ad element to detect Ad-blocker
+                const adElement = document.createElement('div');
+                adElement.className = 'ad';
+                adElement.style.display = 'none';
+                document.body.appendChild(adElement);
+                const adBlocked = getComputedStyle(adElement).display === 'none';
+                document.body.removeChild(adElement);
+
+                // If Arc browser or Ad-blocker detected, show the banner
+                if (isArc || adBlocked) {
+                    document.getElementById('ad-block-warning').style.display = 'block';
+                }
+            }
+
+            function closeWarning() {
+                document.getElementById('ad-block-warning').style.display = 'none';
+            }
+
+            // Run detection on page load
+            window.onload = detectBrowserAndAdBlock;
+        </script>
+
+
 
     </body>
 </html>
