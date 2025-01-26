@@ -28,9 +28,9 @@ function toggleMenu() {
     
     if (menuContent.style.display === 'none' || menuContent.style.display === '') {
         menuContent.style.display = 'block';
-        toggleIcon.textContent = '◉';
+        toggleIcon.textContent = '-';
     } else {
         menuContent.style.display = 'none';
-        toggleIcon.textContent = '◎';
+        toggleIcon.textContent = '+';
     }
 }

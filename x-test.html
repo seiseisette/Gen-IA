@@ -40,9 +40,11 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 .catch(error => console.error('Error fetching header:', error));
        </script>
 
-        <!-- Preload CSS -->
-        <link rel="preload" href="https://genialabile.com/assets/styles/gpts.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+        <!-- Styles GPTs CSS -->
+        <link rel="stylesheet" href="https://genialabile.com/assets/styles/gpts.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+        <!--
         <noscript><link rel="stylesheet" href="https://genialabile.com/assets/styles/gpts.css" crossorigin="anonymous"></noscript>
+        -->
     </head>
 
     <body style="background-color: #000000; color: #000000;">
@@ -163,7 +165,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
                 <section>
                 <div class="gpts-title" onclick="toggleMenu()">
-                    <h3>🤖 GPTs <span class="toggle-icon">◎</span></h3> <!--[+]-->
+                    <h3>🤖 GPTs <span class="toggle-icon">+</span></h3> <!--[+]-->
                      
                 </div>
                 <hr class="thin-line">
@@ -204,7 +206,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                         <br>
                         Feel free to explore our GPTs and discover the power of AI in your hands.
                         <br>
-                        Use the <b>"◎"</b> sign to expand the list of Genialabile's GPTs.
+                        Use the <b>"+"</b> sign to expand the list of Genialabile's GPTs.
                     </p>
                 </section>
             
@@ -249,7 +251,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
         <!-- Footer Banner Style -->
         <div id="footer-info">
-            <div id="footer-info"></div>
+            <div id="footer-content"></div>
         </div>
 
         <!-- Footer -->
