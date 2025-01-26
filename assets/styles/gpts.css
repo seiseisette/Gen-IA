@@ -17,7 +17,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 -------------------------------------------------------------------------------
 
 # Version: v3.5 (250125)
-# URL: https://genialabile.com/assets/styles/main.css
+# URL: https://genialabile.com/assets/styles/gpt.css
 ===============================================================================
 */
 
@@ -27,7 +27,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     /* padding: var(--spacing); */
 }
 
-.menu-title {
+.gpts-title {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -46,11 +46,11 @@ Use, distribution, or modification of this project is strictly prohibited withou
 }
 */
 
-.menu-title h3 {
+.gpts-title h3 {
     margin: 0;
 }
 
-.menu-title .toggle-icon {
+.gpts-title .toggle-icon {
     font-size: 1.5rem; /* 20px; */
 }
 
@@ -61,7 +61,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     font-weight: bold;
 }
 
-.menu-content {
+.gpts-content {
     display: none;
     padding: 15px;
     background-color: var(--info-bg);
