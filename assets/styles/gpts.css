@@ -32,17 +32,24 @@ Use, distribution, or modification of this project is strictly prohibited withou
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    background-color: var(--bg-color);
+    /* background-color: var(--bg-color); */
+
     /* padding: 10px; */
     border-radius: 5px;
-    transition: background-color 3s;
+
+    /* transition: background-color 3s;*/
 }
+
+/*
 .menu-title:hover {
-    background-color: #242424;
+     background-color: #242424;
 }
+*/
+
 .menu-title h3 {
     margin: 0;
 }
+
 .menu-title .toggle-icon {
     font-size: 1.5rem; /* 20px; */
 }
@@ -53,6 +60,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
     transition: color 0.3s;
     font-weight: bold;
 }
+
 .menu-content {
     display: none;
     padding: 15px;
@@ -61,81 +69,20 @@ Use, distribution, or modification of this project is strictly prohibited withou
     border-radius: 13px; /* 5px; */
     margin-top: 10px;
 }
+
 .menu-content .gpt-item {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
+
 .menu-content .gpt-item img {
     width: 45px;
     height: 45px;
     border-radius: 50%;
     margin-right: 10px;
 }
+
 .menu-content .gpt-item span {
     font-size: 16px;
 }
-
-/*
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        h1, h2, h3 {
-    margin: 10px 0;
-}
-
-.gpt-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.menu-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    background-color: #f0f0f0;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-.menu-title:hover {
-    background-color: #e0e0e0;
-}
-.menu-title h3 {
-    margin: 0;
-}
-.menu-title .toggle-icon {
-    font-size: 20px;
-}
-.menu-content {
-    display: none;
-    padding: 15px;
-    background-color: #fafafa;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-.menu-content .gpt-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-.menu-content .gpt-item img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-.menu-content .gpt-item span {
-    font-size: 16px;
-}
-
-
-
-*/

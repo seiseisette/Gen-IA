@@ -22,7 +22,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 */
 
 document.addEventListener("DOMContentLoaded", function () {
-    const footerBanner = document.getElementById("footer-banner");
+    const footerBanner = document.getElementById("footer-info");
     const footerContainer = document.getElementById("footer-content");
 
     let lastScrollY = 0;
