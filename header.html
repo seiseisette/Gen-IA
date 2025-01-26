@@ -70,45 +70,14 @@ Use, distribution, or modification of this project is strictly prohibited withou
 <!-- About -->
 <link rel="author" href="https://genialabile.com/contact">
 
+
 <!-- Redirect HTTP to HTTPS -->
 <script>
     if (location.protocol === 'http:') {
-        console.log('Redirecting to HTTPS...');
         location.replace(`https://${location.hostname}${location.pathname}${location.search}`);
     }
 </script>
-
-<!-- Style Fallback -->
-<style>
-    body:not(.loaded) {
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity 1.3s ease-in-out;
-    }
-    body.loaded {
-        visibility: visible;
-        opacity: 1;
-    }
-</style>
-
-<!-- Preload JS -->
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        document.body.classList.add("loaded");
-    });
-</script>
-
-
-
-<!-- // SCRIPT // 
-
-<!-- Redirect HTTP to HTTPS -
-<script>
-    if (location.protocol === 'http:') {
-        location.replace(`https://${location.hostname}${location.pathname}${location.search}`);
-    }
-</script>
-<!--Style Fallback -
+<!--Style Fallback -->
 <style>
     body {
         visibility: hidden;
@@ -120,10 +89,9 @@ Use, distribution, or modification of this project is strictly prohibited withou
         opacity: 1;
     }
 </style>
-<!-- Preload JS -
+<!-- Preload JS -->
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.add("loaded");
     });
 </script>
--->
