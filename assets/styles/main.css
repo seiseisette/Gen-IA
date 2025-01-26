@@ -195,7 +195,7 @@ footer.no-shadow {
 }
 
 /* Footer Banner */
-#footer-banner {
+#footer-info {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -219,7 +219,7 @@ footer.no-shadow {
     transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
-#footer-banner.active {
+#footer-info.active {
     transform: translateY(0);
     opacity: 1;
     transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out; /* Smooth transition */
