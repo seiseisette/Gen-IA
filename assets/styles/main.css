@@ -342,6 +342,75 @@ footer.no-shadow {
     border: 1px dashed purple;  Debug*/
 }
 
+
+/* --- GPTS Effect --- */
+
+
+.gpt-container {
+    max-width: 100%; /*1200px; /* 800px; */
+    margin: 0 auto;
+    /* padding: var(--spacing); */
+}
+
+.gpts-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    /* background-color: var(--bg-color); */
+    /* padding: 10px; */
+    border-radius: 5px;
+    /* transition: background-color 3s;*/
+}
+
+/*
+.menu-title:hover {
+     background-color: #242424;
+}
+*/
+
+.gpts-title h3 {
+    margin: 0;
+}
+
+.gpts-title .toggle-icon {
+    font-size: 1.5rem; /* 20px; */
+}
+
+.toggle-icon:hover{
+    color: var(--compiler1-color);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+.gpts-content {
+    display: none;
+    padding: 15px;
+    background-color: var(--info-bg);
+    border: 1px solid #000;
+    border-radius: 13px; /* 5px; */
+    margin-top: 10px;
+}
+
+.gpts-content .gpt-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.gpts-content .gpt-item img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.gpts-content .gpt-item span {
+    font-size: 16px;
+}
+
+
 /* --- Responsive Design --- */
 
 /* (min-width: 1440px) */
