@@ -27,6 +27,19 @@ Use, distribution, or modification of this project is strictly prohibited withou
     margin: 0 auto;
     /* padding: var(--spacing); */
 }
+
+.gpt-item a {
+    color: #00aaff; /* Colore del link */
+    text-decoration: none;
+}
+
+.gpt-item a:hover {
+    text-decoration: underline;
+    color: #00ffcc;
+}
+
+
+
 .menu-title {
     display: flex;
     align-items: center;
