@@ -363,11 +363,9 @@ footer.no-shadow {
     /* transition: background-color 3s;*/
 }
 
-/*
-.menu-title:hover {
-     background-color: #242424;
+.gpts-title:hover {
+     background-color: #00000000;
 }
-*/
 
 .gpts-title h3 {
     margin: 0;
@@ -407,8 +405,9 @@ footer.no-shadow {
 }
 
 .gpts-content .gpt-item span {
-    font-size: 1.5rem;
+    font-size: 16px;
 }
+
 
 
 /* --- Responsive Design --- */
