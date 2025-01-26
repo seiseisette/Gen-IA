@@ -70,19 +70,19 @@ Use, distribution, or modification of this project is strictly prohibited withou
     margin-top: 10px;
 }
 
-.menu-content .gpt-item {
+.gpts-content .gpt-item {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.menu-content .gpt-item img {
+.gpts-content .gpt-item img {
     width: 45px;
     height: 45px;
     border-radius: 50%;
     margin-right: 10px;
 }
 
-.menu-content .gpt-item span {
+.gpts-content .gpt-item span {
     font-size: 16px;
 }
