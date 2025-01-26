@@ -179,7 +179,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
 
                 <section>
                     <div class="menu-title" onclick="toggleMenu()">
-                        <h3>🤖 GPTs <span class="toggle-icon" aria-label="Toggle Menu">+</span></h3>
+                        <h3>🤖 GPTs <span class="toggle-icon" aria-label="Toggle Menu">⊕</span></h3>
                     </div>
                     <hr class="thin-line">
                     <div class="menu-content" id="menuContent">
@@ -282,7 +282,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                             | The Puppet: Pulling the Strings of Justice.</span>
                     </div>                   
                 </section>
-                
+
                 -->
 
                 <section>
@@ -355,7 +355,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 // Debug: Check if the menu content exists
                 if (!menuContent) {
                     console.error("Debug: 'menuContent' not found. Ensure the element with ID 'menuContent' exists in the HTML.");
-                    alert("Error: Menu section not found. Please disable Ad-Block, especially on browsers like Arc.");
+                    alert("Error: Menu section not found. Please disable Ad-Block, especially on browsers like Arc Browser.");
                     return;
                 }
 
@@ -373,11 +373,11 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 // Toggle menu visibility
                 if (menuContent.style.display === 'none' || menuContent.style.display === '') {
                     menuContent.style.display = 'block';
-                    toggleIcon.textContent = '-';
+                    toggleIcon.textContent = '⊖';
                     console.log("Debug: Menu opened.");
                 } else {
                     menuContent.style.display = 'none';
-                    toggleIcon.textContent = '+';
+                    toggleIcon.textContent = '⊕';
                     console.log("Debug: Menu closed.");
                 }
             }
@@ -389,7 +389,7 @@ Use, distribution, or modification of this project is strictly prohibited withou
                 
                 // Debug: Check if critical elements are loaded
                 if (!menuContent || !toggleIcon) {
-                    console.warn("Warning: The menu or its toggle icon failed to load. If you're using a browser like Arc, try disabling Ad-Block.");
+                    console.warn("Warning: The menu or its toggle icon failed to load. If you're using a browser like Arc Browser, try disabling Ad-Block.");
                 } else {
                     console.log("Debug: Menu and toggle icon loaded successfully.");
                 }
