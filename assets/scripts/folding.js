@@ -44,45 +44,8 @@ Use, distribution, or modification of this project is strictly prohibited withou
 ===============================================================================
 */
 
-function toggleMenu() {
-    const menuContent = document.getElementById('menuContent');
-    const toggleIcon = document.querySelector('.gpts-title .toggle-icon');
-
-    // Debugging: Check if the element exists
-    if (!menuContent) {
-        console.error('Error: Element with ID "menuContent" not found.');
-        return;
-    }
-    if (!toggleIcon) {
-        console.error('Error: Element with class "toggle-icon" not found.');
-        return;
-    }
-
-    // Toggle display state
-    if (menuContent.style.display === 'none' || menuContent.style.display === '') {
-        menuContent.style.display = 'block';
-        toggleIcon.textContent = '-';
-        console.log('Menu opened.'); // Debugging log
-    } else {
-        menuContent.style.display = 'none';
-        toggleIcon.textContent = '+';
-        console.log('Menu closed.'); // Debugging log
-    }
-}
-
-// Ensure the DOM is fully loaded before attaching event listeners
-document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.querySelector('.gpts-title');
-    if (menuToggle) {
-        menuToggle.addEventListener('click', toggleMenu);
-        console.log('Event listener attached to menu toggle.');
-    } else {
-        console.error('Error: Menu toggle element not found.');
-    }
-});
 
 
-/*
 function toggleMenu() {
     const menuContent = document.getElementById('menuContent');
     const toggleIcon = document.querySelector('.gpts-title .toggle-icon');
@@ -95,4 +58,3 @@ function toggleMenu() {
         toggleIcon.textContent = '+';
     }
 }
-*/
