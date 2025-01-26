@@ -21,6 +21,9 @@ Use, distribution, or modification of this project is strictly prohibited withou
 ===============================================================================
 */
 
+/* -- Fonts -- */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
 /* --- Typing Container --- */
 #typing-container {
     margin-top: 10%;
