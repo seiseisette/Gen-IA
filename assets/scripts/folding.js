@@ -45,7 +45,20 @@ Use, distribution, or modification of this project is strictly prohibited withou
 */
 
 
+    function toggleMenu() {
+        const menuContent = document.getElementById('menuContent');
+        const toggleIcon = document.querySelector('.gpts-title .toggle-icon');
+        if (menuContent.style.display === 'none') {
+            menuContent.style.display = 'block';
+            toggleIcon.textContent = '-';
+        } else {
+            menuContent.style.display = 'none';
+            toggleIcon.textContent = '+';
+        }
+    }
 
+
+/*
 function toggleMenu() {
     const menuContent = document.getElementById('menuContent');
     const toggleIcon = document.querySelector('.gpts-title .toggle-icon');
@@ -58,3 +71,5 @@ function toggleMenu() {
         toggleIcon.textContent = '+';
     }
 }
+
+*()
