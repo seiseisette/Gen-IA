@@ -136,7 +136,7 @@ const textArray = [
 
     ];
 
-    const typingSpeed = 23;
+    const typingSpeed = 33;
     const pauseBetweenParagraphs = 1600;
     const fadeOutDuration = 500; 
     const redirectDelay = 250; 
