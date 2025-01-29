@@ -28,7 +28,7 @@ const textArray = [
     " ", " ",
 
     "Wake up, Neo...",
-    "The Mækr",
+    "The Mætrįz",
     "O_o",
     "Rebooting memory...",
     " ",
