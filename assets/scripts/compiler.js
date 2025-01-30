@@ -136,9 +136,9 @@ const textArray = [
 
     ];
 
-    const typingSpeed = 33;
+    const typingSpeed = 42; //33
     const pauseBetweenParagraphs = 1600;
-    const fadeOutDuration = 500; 
+    const fadeOutDuration = 350; //500
     const redirectDelay = 250; 
     const redirectUrl = "https://genialabile.com/";
     const typingElement = document.getElementById("typing-effect");
